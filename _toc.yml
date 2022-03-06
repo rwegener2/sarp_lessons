@@ -5,6 +5,7 @@ format: jb-book
 root: intro
 parts:
   - caption: Lessons
+    maxdepth: 5
     chapters:
     - file: lessons/general_python/index.md
       sections:
@@ -19,11 +20,12 @@ parts:
         - file: lessons/raster_data/3_accessing_coordinates
     - file: lessons/tabular_data/index.md
       sections:
-        - file: lessons/tabular_data/3_pandas
-        - file: lessons/tabular_data/4_filtering_groupby
-        - file: lessons/tabular_data/5_geopandas
+        - file: lessons/tabular_data/1_pandas
+        - file: lessons/tabular_data/2_filtering_groupby
+        - file: lessons/tabular_data/3_geopandas
 
   - caption: Additional Lectures
+    maxdepth: 1
     chapters:
     - file: additional_lectures/Debugging/debugging_lesson
     - file: additional_lectures/Time Series Statistics/oceans_stats_examples
