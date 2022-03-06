@@ -499,7 +499,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/rwegener2/sarp_lessons/jupyterbook?urlpath=tree/lessons/tabular_data/2_filtering_groupby.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rwegener2/sarp_lessons/main?urlpath=tree/lessons/tabular_data/2_filtering_groupby.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -886,7 +886,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.1</td>
       <td>8.3</td>
       <td>8.1</td>
-      <td>True</td>
+      <td>False</td>
       <td>medium</td>
     </tr>
     <tr>
@@ -896,8 +896,8 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.1</td>
       <td>8.2</td>
       <td>8.1</td>
-      <td>False</td>
-      <td>medium</td>
+      <td>True</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>3</th>
@@ -906,7 +906,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.1</td>
       <td>8.2</td>
       <td>8.1</td>
-      <td>False</td>
+      <td>True</td>
       <td>low</td>
     </tr>
     <tr>
@@ -956,8 +956,8 @@ const thebe_selector_output = ".output, .cell_output"
       <td>6.7</td>
       <td>9.9</td>
       <td>7.9</td>
-      <td>True</td>
-      <td>medium</td>
+      <td>False</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>144</th>
@@ -966,8 +966,8 @@ const thebe_selector_output = ".output, .cell_output"
       <td>6.7</td>
       <td>10.2</td>
       <td>7.9</td>
-      <td>False</td>
-      <td>medium</td>
+      <td>True</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>145</th>
@@ -976,8 +976,8 @@ const thebe_selector_output = ".output, .cell_output"
       <td>6.7</td>
       <td>10.3</td>
       <td>7.9</td>
-      <td>True</td>
-      <td>medium</td>
+      <td>False</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>146</th>
@@ -986,7 +986,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>6.6</td>
       <td>10.3</td>
       <td>7.9</td>
-      <td>False</td>
+      <td>True</td>
       <td>high</td>
     </tr>
   </tbody>
@@ -1058,44 +1058,14 @@ const thebe_selector_output = ".output, .cell_output"
   </thead>
   <tbody>
     <tr>
-      <th>1</th>
-      <td>2021-03-12 00:00</td>
-      <td>44.5</td>
-      <td>8.1</td>
-      <td>8.3</td>
-      <td>8.1</td>
-      <td>True</td>
-      <td>medium</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2021-03-12 00:15</td>
+      <th>3</th>
+      <td>2021-03-12 00:30</td>
       <td>44.5</td>
       <td>8.1</td>
       <td>8.2</td>
       <td>8.1</td>
-      <td>False</td>
-      <td>medium</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2021-03-12 00:45</td>
-      <td>44.5</td>
-      <td>8.1</td>
-      <td>8.1</td>
-      <td>8.1</td>
       <td>True</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>2021-03-12 01:00</td>
-      <td>44.5</td>
-      <td>8.1</td>
-      <td>8.1</td>
-      <td>8.1</td>
-      <td>False</td>
-      <td>high</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>6</th>
@@ -1103,6 +1073,36 @@ const thebe_selector_output = ".output, .cell_output"
       <td>44.5</td>
       <td>8.1</td>
       <td>8.1</td>
+      <td>8.1</td>
+      <td>False</td>
+      <td>low</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2021-03-12 01:30</td>
+      <td>44.5</td>
+      <td>8.0</td>
+      <td>8.0</td>
+      <td>8.1</td>
+      <td>True</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>2021-03-12 01:45</td>
+      <td>44.5</td>
+      <td>8.0</td>
+      <td>8.0</td>
+      <td>8.1</td>
+      <td>False</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2021-03-12 02:00</td>
+      <td>44.5</td>
+      <td>8.0</td>
+      <td>8.0</td>
       <td>8.1</td>
       <td>False</td>
       <td>medium</td>
@@ -1118,58 +1118,58 @@ const thebe_selector_output = ".output, .cell_output"
       <td>...</td>
     </tr>
     <tr>
-      <th>133</th>
-      <td>2021-03-13 09:00</td>
-      <td>46.5</td>
-      <td>6.8</td>
-      <td>8.9</td>
-      <td>7.8</td>
+      <th>140</th>
+      <td>2021-03-13 10:45</td>
+      <td>44.5</td>
+      <td>6.7</td>
+      <td>9.6</td>
+      <td>7.9</td>
       <td>False</td>
       <td>low</td>
     </tr>
     <tr>
-      <th>134</th>
-      <td>2021-03-13 09:15</td>
-      <td>46.5</td>
-      <td>6.8</td>
-      <td>9.0</td>
+      <th>141</th>
+      <td>2021-03-13 11:00</td>
+      <td>42.6</td>
+      <td>6.7</td>
+      <td>9.7</td>
+      <td>7.9</td>
+      <td>True</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <th>142</th>
+      <td>2021-03-13 11:15</td>
+      <td>42.6</td>
+      <td>6.7</td>
+      <td>9.8</td>
+      <td>7.9</td>
+      <td>True</td>
+      <td>low</td>
+    </tr>
+    <tr>
+      <th>143</th>
+      <td>2021-03-13 11:30</td>
+      <td>42.6</td>
+      <td>6.7</td>
+      <td>9.9</td>
+      <td>7.9</td>
+      <td>False</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>2021-03-13 12:15</td>
+      <td>NaN</td>
+      <td>6.6</td>
+      <td>10.3</td>
       <td>7.9</td>
       <td>True</td>
       <td>high</td>
     </tr>
-    <tr>
-      <th>136</th>
-      <td>2021-03-13 09:45</td>
-      <td>46.5</td>
-      <td>6.8</td>
-      <td>9.2</td>
-      <td>7.9</td>
-      <td>False</td>
-      <td>medium</td>
-    </tr>
-    <tr>
-      <th>139</th>
-      <td>2021-03-13 10:30</td>
-      <td>44.5</td>
-      <td>6.8</td>
-      <td>9.6</td>
-      <td>7.9</td>
-      <td>True</td>
-      <td>medium</td>
-    </tr>
-    <tr>
-      <th>144</th>
-      <td>2021-03-13 11:45</td>
-      <td>42.6</td>
-      <td>6.7</td>
-      <td>10.2</td>
-      <td>7.9</td>
-      <td>False</td>
-      <td>medium</td>
-    </tr>
   </tbody>
 </table>
-<p>76 rows × 7 columns</p>
+<p>86 rows × 7 columns</p>
 </div></div></div>
 </div>
 <p>That returned only the rows where the value in the list was True!</p>
@@ -1225,8 +1225,8 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.1</td>
       <td>8.2</td>
       <td>8.1</td>
-      <td>False</td>
-      <td>medium</td>
+      <td>True</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>3</th>
@@ -1235,7 +1235,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.1</td>
       <td>8.2</td>
       <td>8.1</td>
-      <td>False</td>
+      <td>True</td>
       <td>low</td>
     </tr>
     <tr>
@@ -1245,8 +1245,8 @@ const thebe_selector_output = ".output, .cell_output"
       <td>7.1</td>
       <td>8.2</td>
       <td>7.9</td>
-      <td>True</td>
-      <td>high</td>
+      <td>False</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>28</th>
@@ -1255,8 +1255,8 @@ const thebe_selector_output = ".output, .cell_output"
       <td>7.0</td>
       <td>8.2</td>
       <td>7.9</td>
-      <td>False</td>
-      <td>medium</td>
+      <td>True</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>29</th>
@@ -1266,7 +1266,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.2</td>
       <td>7.9</td>
       <td>False</td>
-      <td>high</td>
+      <td>medium</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1286,7 +1286,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.2</td>
       <td>7.9</td>
       <td>True</td>
-      <td>low</td>
+      <td>medium</td>
     </tr>
     <tr>
       <th>122</th>
@@ -1295,8 +1295,8 @@ const thebe_selector_output = ".output, .cell_output"
       <td>7.2</td>
       <td>8.2</td>
       <td>7.9</td>
-      <td>True</td>
-      <td>high</td>
+      <td>False</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>123</th>
@@ -1305,8 +1305,8 @@ const thebe_selector_output = ".output, .cell_output"
       <td>7.1</td>
       <td>8.2</td>
       <td>7.9</td>
-      <td>False</td>
-      <td>medium</td>
+      <td>True</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>124</th>
@@ -1315,7 +1315,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>7.1</td>
       <td>8.2</td>
       <td>7.9</td>
-      <td>True</td>
+      <td>False</td>
       <td>high</td>
     </tr>
     <tr>
@@ -1376,8 +1376,8 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.1</td>
       <td>8.2</td>
       <td>8.1</td>
-      <td>False</td>
-      <td>medium</td>
+      <td>True</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>3</th>
@@ -1386,7 +1386,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.1</td>
       <td>8.2</td>
       <td>8.1</td>
-      <td>False</td>
+      <td>True</td>
       <td>low</td>
     </tr>
     <tr>
@@ -1396,8 +1396,8 @@ const thebe_selector_output = ".output, .cell_output"
       <td>7.1</td>
       <td>8.2</td>
       <td>7.9</td>
-      <td>True</td>
-      <td>high</td>
+      <td>False</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>28</th>
@@ -1406,8 +1406,8 @@ const thebe_selector_output = ".output, .cell_output"
       <td>7.0</td>
       <td>8.2</td>
       <td>7.9</td>
-      <td>False</td>
-      <td>medium</td>
+      <td>True</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>29</th>
@@ -1417,7 +1417,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.2</td>
       <td>7.9</td>
       <td>False</td>
-      <td>high</td>
+      <td>medium</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1437,7 +1437,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.2</td>
       <td>7.9</td>
       <td>True</td>
-      <td>low</td>
+      <td>medium</td>
     </tr>
     <tr>
       <th>122</th>
@@ -1446,8 +1446,8 @@ const thebe_selector_output = ".output, .cell_output"
       <td>7.2</td>
       <td>8.2</td>
       <td>7.9</td>
-      <td>True</td>
-      <td>high</td>
+      <td>False</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>123</th>
@@ -1456,8 +1456,8 @@ const thebe_selector_output = ".output, .cell_output"
       <td>7.1</td>
       <td>8.2</td>
       <td>7.9</td>
-      <td>False</td>
-      <td>medium</td>
+      <td>True</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>124</th>
@@ -1466,7 +1466,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>7.1</td>
       <td>8.2</td>
       <td>7.9</td>
-      <td>True</td>
+      <td>False</td>
       <td>high</td>
     </tr>
     <tr>
@@ -1557,14 +1557,14 @@ True
   </thead>
   <tbody>
     <tr>
-      <th>27</th>
-      <td>2021-03-12 06:30</td>
+      <th>28</th>
+      <td>2021-03-12 06:45</td>
       <td>48.5</td>
-      <td>7.1</td>
+      <td>7.0</td>
       <td>8.2</td>
       <td>7.9</td>
       <td>True</td>
-      <td>high</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>30</th>
@@ -1574,17 +1574,7 @@ True
       <td>8.2</td>
       <td>7.9</td>
       <td>True</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>2021-03-12 07:30</td>
-      <td>48.5</td>
-      <td>6.9</td>
-      <td>8.3</td>
-      <td>7.9</td>
-      <td>True</td>
-      <td>high</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>32</th>
@@ -1592,6 +1582,16 @@ True
       <td>48.5</td>
       <td>6.8</td>
       <td>8.3</td>
+      <td>7.9</td>
+      <td>True</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>2021-03-12 08:00</td>
+      <td>48.5</td>
+      <td>6.8</td>
+      <td>8.4</td>
       <td>7.9</td>
       <td>True</td>
       <td>high</td>
@@ -1604,7 +1604,7 @@ True
       <td>8.4</td>
       <td>7.9</td>
       <td>True</td>
-      <td>low</td>
+      <td>medium</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1617,11 +1617,11 @@ True
       <td>...</td>
     </tr>
     <tr>
-      <th>139</th>
-      <td>2021-03-13 10:30</td>
+      <th>138</th>
+      <td>2021-03-13 10:15</td>
       <td>44.5</td>
       <td>6.8</td>
-      <td>9.6</td>
+      <td>9.4</td>
       <td>7.9</td>
       <td>True</td>
       <td>medium</td>
@@ -1647,28 +1647,28 @@ True
       <td>low</td>
     </tr>
     <tr>
-      <th>143</th>
-      <td>2021-03-13 11:30</td>
+      <th>144</th>
+      <td>2021-03-13 11:45</td>
       <td>42.6</td>
       <td>6.7</td>
-      <td>9.9</td>
+      <td>10.2</td>
       <td>7.9</td>
       <td>True</td>
-      <td>medium</td>
+      <td>low</td>
     </tr>
     <tr>
-      <th>145</th>
-      <td>2021-03-13 12:00</td>
-      <td>46.5</td>
-      <td>6.7</td>
+      <th>146</th>
+      <td>2021-03-13 12:15</td>
+      <td>NaN</td>
+      <td>6.6</td>
       <td>10.3</td>
       <td>7.9</td>
       <td>True</td>
-      <td>medium</td>
+      <td>high</td>
     </tr>
   </tbody>
 </table>
-<p>34 rows × 7 columns</p>
+<p>25 rows × 7 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -1707,14 +1707,24 @@ True
   </thead>
   <tbody>
     <tr>
-      <th>1</th>
-      <td>2021-03-12 00:00</td>
+      <th>2</th>
+      <td>2021-03-12 00:15</td>
       <td>44.5</td>
       <td>8.1</td>
-      <td>8.3</td>
+      <td>8.2</td>
       <td>8.1</td>
       <td>True</td>
-      <td>medium</td>
+      <td>low</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2021-03-12 00:30</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.2</td>
+      <td>8.1</td>
+      <td>True</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>4</th>
@@ -1727,8 +1737,8 @@ True
       <td>high</td>
     </tr>
     <tr>
-      <th>9</th>
-      <td>2021-03-12 02:00</td>
+      <th>7</th>
+      <td>2021-03-12 01:30</td>
       <td>44.5</td>
       <td>8.0</td>
       <td>8.0</td>
@@ -1737,20 +1747,10 @@ True
       <td>high</td>
     </tr>
     <tr>
-      <th>11</th>
-      <td>2021-03-12 02:30</td>
+      <th>10</th>
+      <td>2021-03-12 02:15</td>
       <td>44.5</td>
-      <td>7.9</td>
       <td>8.0</td>
-      <td>8.1</td>
-      <td>True</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>2021-03-12 03:00</td>
-      <td>44.5</td>
-      <td>7.8</td>
       <td>8.0</td>
       <td>8.1</td>
       <td>True</td>
@@ -1783,8 +1783,8 @@ True
       <td>6.7</td>
       <td>9.9</td>
       <td>7.9</td>
-      <td>True</td>
-      <td>medium</td>
+      <td>False</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>144</th>
@@ -1793,8 +1793,8 @@ True
       <td>6.7</td>
       <td>10.2</td>
       <td>7.9</td>
-      <td>False</td>
-      <td>medium</td>
+      <td>True</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>145</th>
@@ -1803,8 +1803,8 @@ True
       <td>6.7</td>
       <td>10.3</td>
       <td>7.9</td>
-      <td>True</td>
-      <td>medium</td>
+      <td>False</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>146</th>
@@ -1813,12 +1813,12 @@ True
       <td>6.6</td>
       <td>10.3</td>
       <td>7.9</td>
-      <td>False</td>
+      <td>True</td>
       <td>high</td>
     </tr>
   </tbody>
 </table>
-<p>101 rows × 7 columns</p>
+<p>96 rows × 7 columns</p>
 </div></div></div>
 </div>
 <p>There is more than one way to do this type of filtering in pandas, but it is fine to start with one method and feel really comfortable with it before moving to the others.  <a class="reference external" href="https://www.listendata.com/2019/07/how-to-filter-pandas-dataframe.html">This article</a> has a pretty nice overview of some other methods.</p>
@@ -2066,12 +2066,12 @@ Name: Hassan A, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>discharge            40.8
-temperature           7.4
-dissolved oxygen     11.6
-pH                    8.1
-dam release         False
-safety level          low
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>discharge           40.8
+temperature          7.4
+dissolved oxygen    11.6
+pH                   8.1
+dam release         True
+safety level        high
 Name: 2021-03-12 13:00, dtype: object
 </pre></div>
 </div>
@@ -2173,7 +2173,7 @@ Name: 2021-03-12 13:00, dtype: object
   <tbody>
     <tr>
       <th>high</th>
-      <td>40.8</td>
+      <td>39.0</td>
       <td>6.6</td>
       <td>7.9</td>
       <td>7.8</td>
@@ -2317,9 +2317,9 @@ Name: 2021-03-12 13:00, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>safety level
-high      45.437255
-low       44.906667
-medium    44.051020
+high      44.610417
+low       44.997917
+medium    44.804082
 Name: discharge, dtype: float64
 </pre></div>
 </div>
