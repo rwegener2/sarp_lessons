@@ -1,6 +1,6 @@
 # General Python
 
-These first two lessons are general Python topics.
+Lessons on Python that pertain to both raster and tabular data.
 
 ```{tableofcontents}
 ```
