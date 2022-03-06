@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to the website for Programming at SARP &#8212; SARP Programming Lessons</title>
+    <title>Welcome to the SARP Programming Website &#8212; SARP Programming Lessons</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -93,7 +93,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1 current">
   <a class="reference internal" href="#">
-   Welcome to the website for Programming at SARP
+   Welcome to the SARP Programming Website
   </a>
  </li>
 </ul>
@@ -210,34 +210,56 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="additional_lectures/Debugging/debugging_lesson.html">
+  <a class="reference internal" href="additional_lectures/debugging/debugging_lesson.html">
    Debugging
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="additional_lectures/Time%20Series%20Statistics/oceans_stats_examples.html">
+  <a class="reference internal" href="additional_lectures/time_series_statistics/oceans_stats_examples.html">
    Time Series Statistics
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="additional_lectures/Hierarchical%20Data/hierarchical%20data.html">
+  <a class="reference internal" href="additional_lectures/hierarchical_data/hierarchical_data.html">
    Hierarchical Data Structure
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="additional_lectures/Visualization/Dynamic%20Visualization.html">
-   Dynamic Visualization
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="additional_lectures/visualization/index.html">
+   Visualization
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="additional_lectures/Visualization/Viewing%20images.html">
-   Viewing Images
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="additional_lectures/Visualization/Viz%20with%20matplotlib/viz%20with%20matplotlib.html">
-   Static Data Visualization in Python
-  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="additional_lectures/visualization/1_static_viz_with_matplotlib.html">
+     Static Data Visualization in Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="additional_lectures/visualization/2_building_on_matplotlib.html">
+     Building on top of
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="additional_lectures/visualization/3_dynamic_visualization.html">
+     Dynamic Visualization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="additional_lectures/visualization/viewing_images.html">
+     Viewing Images
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -247,11 +269,11 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="lessons/general_python/practice/index.html">
-   General Python Practice Sheets
+  <a class="reference internal" href="lessons/index_practice.html">
+   General Python Practice
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -268,12 +290,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="lessons/general_python/practice/datetimes_practice.html">
-     Part 1
+     Datetimes Practice
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="lessons/general_python/practice/spatial_data_practice.html">
-     Part 1
+     Spatial Data Practice
     </a>
    </li>
    <li class="toctree-l2">
@@ -282,13 +304,114 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="lessons/general_python/practice/2_lists_dicts_answers.html">
+     Lists and Dictionaries Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="lessons/general_python/practice/datetimes_answers.html">
-     Part 1
+     Datetimes Answers
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="lessons/general_python/practice/spatial_data_answers.html">
-     Part 1
+     Spatial Data Answers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="lessons/index_practice_raster.html">
+   Raster Data Practice
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lessons/raster_data/practice/1_arrays_numpy_practice.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+     Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lessons/raster_data/practice/2_raster_fundamentals_practice.html">
+     Raster Fundamentals Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lessons/raster_data/practice/3_accessing_coordinates_practice.html">
+     Accessing Coordinates Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lessons/raster_data/practice/1_arrays_numpy_answers.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+     Answers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="lessons/index_practice_tabular.html">
+   Tabular Data Practice
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lessons/tabular_data/practice/1_pandas_practice.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
+     Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lessons/tabular_data/practice/2_filtering_groupby_practice.html">
+     Filtering and Groupby Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lessons/tabular_data/practice/3_geopandas_practice.html">
+     Practice with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       geopandas
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lessons/tabular_data/practice/1_pandas_answers.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
+     Answers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lessons/tabular_data/practice/2_filtering_groupby_answers.html">
+     Filtering and Groupby Answers
     </a>
    </li>
   </ul>
@@ -382,7 +505,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Welcome to the website for Programming at SARP</h1>
+                <h1>Welcome to the SARP Programming Website</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -393,10 +516,20 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="welcome-to-the-website-for-programming-at-sarp">
-<h1>Welcome to the website for Programming at SARP<a class="headerlink" href="#welcome-to-the-website-for-programming-at-sarp" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://www.nasa.gov/centers/ames/earthscience/programs/airbornescience/studentairborneresearchprogram">SARP</a> is a NASA-run reasearch intership for earth science undergraduates held in Califonria, USA every summer. This website hosts content for the programming portion of the internship.</p>
-<p>This is not a NASA run website.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="welcome-to-the-sarp-programming-website">
+<h1>Welcome to the SARP Programming Website<a class="headerlink" href="#welcome-to-the-sarp-programming-website" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://www.nasa.gov/centers/ames/earthscience/programs/airbornescience/studentairborneresearchprogram">SARP</a> is a NASA-run reasearch intership for earth science undergraduates held in California, USA every summer. This website hosts content for the programming portion of the internship.</p>
+<p>The contents of this site include:</p>
+<ul class="simple">
+<li><p>lessons - notebooks used in a lesson during the first two weeks, coding-intenstive part of the internship. Many lessons include practie problems and answers in that section below</p></li>
+<li><p>additional lectures - less formal notebooks accompanying more sporadic as-needed instruction throughout the summer</p></li>
+<li><p>practice sheets - notebooks with practice problems to accompany some of the lessons</p></li>
+</ul>
+<p>Lessons are divided into two groups:</p>
+<ol class="simple">
+<li><p>raster data - data that fills regular grids. These are often satellite images</p></li>
+<li><p>tabular data - data with rows and columns; the type of data that would fit in an excel sheet</p></li>
+</ol>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lessons</span></p>
 <ul>
@@ -424,28 +557,47 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Lectures</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="additional_lectures/Debugging/debugging_lesson.html">Debugging</a></li>
-<li class="toctree-l1"><a class="reference internal" href="additional_lectures/Time%20Series%20Statistics/oceans_stats_examples.html">Time Series Statistics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="additional_lectures/Hierarchical%20Data/hierarchical%20data.html">Hierarchical Data Structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="additional_lectures/Hierarchical%20Data/hierarchical%20data.html#file-format-structure">File Format Structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="additional_lectures/Hierarchical%20Data/hierarchical%20data.html#hdf4">HDF4</a></li>
-<li class="toctree-l1"><a class="reference internal" href="additional_lectures/Hierarchical%20Data/hierarchical%20data.html#hdf5">HDF5</a></li>
-<li class="toctree-l1"><a class="reference internal" href="additional_lectures/Hierarchical%20Data/hierarchical%20data.html#netcdf">netCDF</a></li>
-<li class="toctree-l1"><a class="reference internal" href="additional_lectures/Visualization/Dynamic%20Visualization.html">Dynamic Visualization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="additional_lectures/Visualization/Dynamic%20Visualization.html#interactive-plotting-with-bokeh">Interactive Plotting with <code class="docutils literal notranslate"><span class="pre">bokeh</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="additional_lectures/Visualization/Dynamic%20Visualization.html#example-1-line-aviris">Example 1: Line  (AVIRIS)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="additional_lectures/Visualization/Dynamic%20Visualization.html#example-2-scatter-plot-was-data">Example 2: Scatter plot (WAS data)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="additional_lectures/Visualization/Viewing%20images.html">Viewing Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="additional_lectures/Visualization/Viz%20with%20matplotlib/viz%20with%20matplotlib.html">Static Data Visualization in Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="additional_lectures/Visualization/Viz%20with%20matplotlib/viz%20with%20matplotlib.html#contextualizing-plotting">Contextualizing Plotting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="additional_lectures/Visualization/Viz%20with%20matplotlib/viz%20with%20matplotlib.html#the-classic-matplotlib">The Classic <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="additional_lectures/Visualization/Viz%20with%20matplotlib/viz%20with%20matplotlib.html#closing-concepts">Closing concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional_lectures/debugging/debugging_lesson.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional_lectures/time_series_statistics/oceans_stats_examples.html">Time Series Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional_lectures/hierarchical_data/hierarchical_data.html">Hierarchical Data Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional_lectures/visualization/index.html">Visualization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="additional_lectures/visualization/1_static_viz_with_matplotlib.html">Static Data Visualization in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="additional_lectures/visualization/2_building_on_matplotlib.html">Building on top of <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="additional_lectures/visualization/3_dynamic_visualization.html">Dynamic Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="additional_lectures/visualization/viewing_images.html">Viewing Images</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Practice Sheets</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="lessons/general_python/practice/index.html">General Python Practice Sheets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lessons/index_practice.html">General Python Practice</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lessons/general_python/practice/1_variables_data_practice.html">Variables, Data Types and If statements Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lessons/general_python/practice/2_lists_dicts_practice.html">Lists and Dictionaries Answers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lessons/general_python/practice/datetimes_practice.html">Datetimes Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lessons/general_python/practice/spatial_data_practice.html">Spatial Data Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lessons/general_python/practice/1_variables_data_answers.html">Variables, Data Types and If statements Answers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lessons/general_python/practice/2_lists_dicts_answers.html">Lists and Dictionaries Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lessons/general_python/practice/datetimes_answers.html">Datetimes Answers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lessons/general_python/practice/spatial_data_answers.html">Spatial Data Answers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lessons/index_practice_raster.html">Raster Data Practice</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lessons/raster_data/practice/1_arrays_numpy_practice.html">Arrays and <code class="docutils literal notranslate"><span class="pre">numpy</span></code> Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lessons/raster_data/practice/2_raster_fundamentals_practice.html">Raster Fundamentals Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lessons/raster_data/practice/3_accessing_coordinates_practice.html">Accessing Coordinates Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lessons/raster_data/practice/1_arrays_numpy_answers.html">Arrays and <code class="docutils literal notranslate"><span class="pre">numpy</span></code> Answers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lessons/index_practice_tabular.html">Tabular Data Practice</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lessons/tabular_data/practice/1_pandas_practice.html"><code class="docutils literal notranslate"><span class="pre">pandas</span></code> Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lessons/tabular_data/practice/2_filtering_groupby_practice.html">Filtering and Groupby Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lessons/tabular_data/practice/3_geopandas_practice.html">Practice with <code class="docutils literal notranslate"><span class="pre">geopandas</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="lessons/tabular_data/practice/1_pandas_answers.html"><code class="docutils literal notranslate"><span class="pre">pandas</span></code> Answers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lessons/tabular_data/practice/2_filtering_groupby_answers.html">Filtering and Groupby Answers</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
