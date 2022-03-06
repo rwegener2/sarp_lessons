@@ -1,9 +1,9 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: SARP Lessons
-author: The Jupyter Book Community
-logo: logo.png
+title: SARP Programming Lessons
+author: Rachel Wegener
+logo: sarp_logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -17,7 +17,7 @@ only_build_toc_files: true
 # Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
-    targetname: book.tex
+    targetname: sarp_programming.tex
 
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
@@ -25,9 +25,9 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/executablebooks/jupyter-book  # Online location of your book
-  path_to_book: docs  # Optional path to your book, relative to the repository root
-  branch: master  # Which branch of the repository should be used when creating links (optional)
+  url: https://github.com/rwegener2/sarp_lessons  # Online location of your book
+  path_to_book: /  # Optional path to your book, relative to the repository root
+  branch: main  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
