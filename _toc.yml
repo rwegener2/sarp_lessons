@@ -6,29 +6,28 @@ root: intro
 parts:
   - caption: Lessons
     chapters:
-    - file: lessons/general_python.md
+    - file: lessons/general_python/index.md
       sections:
-        - file: lessons/lesson_1/lesson_1
-        - file: lessons/lesson_2/lesson_2
-        - file: lessons/lesson_5/tabular/datetimes_tabular
-        - file: lessons/lesson_6/spatial_data
-    - file: lessons/raster_data.md
+        - file: lessons/general_python/1_variables_types_ifstatements
+        - file: lessons/general_python/2_lists_dictionaries
+        - file: lessons/general_python/datetimes
+        - file: lessons/general_python/spatial_data
+    - file: lessons/raster_data/index.md
       sections:
-        - file: lessons/lesson_3/lesson_3_raster
-        - file: lessons/lesson_4/raster/lesson_4_raster
-        - file: lessons/lesson_7/raster/accessing_coordinates_raster_lesson
-    - file: lessons/tabular_data.md
+        - file: lessons/raster_data/1_arrays_numpy
+        - file: lessons/raster_data/2_raster_fundamentals
+        - file: lessons/raster_data/3_accessing_coordinates
+    - file: lessons/tabular_data/index.md
       sections:
-        - file: lessons/lesson_3/lesson_3_tabular
-        - file: lessons/lesson_4/tabular/lesson_4_tabular
-        - file: lessons/lesson_7/tabular/geopandas_lesson
+        - file: lessons/tabular_data/3_pandas
+        - file: lessons/tabular_data/4_filtering_groupby
+        - file: lessons/tabular_data/5_geopandas
 
   - caption: Additional Lectures
     chapters:
     - file: additional_lectures/Debugging/debugging_lesson
     - file: additional_lectures/Time Series Statistics/oceans_stats_examples
     - file: additional_lectures/Hierarchical Data/hierarchical data
-    - file: additional_lectures/rasterio/raster_fundamentals
     - file: additional_lectures/Visualization/Dynamic Visualization
     - file: additional_lectures/Visualization/Viewing images
     - file: additional_lectures/Visualization/Viz with matplotlib/viz with matplotlib
