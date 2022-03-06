@@ -1,0 +1,1305 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>geopandas &#8212; SARP Programming Lessons</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Debugging" href="../../additional_lectures/Debugging/debugging_lesson.html" />
+    <link rel="prev" title="Filtering and groupby" href="2_filtering_groupby.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/sarp_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SARP Programming Lessons</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   Welcome to the website for Programming at SARP
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lessons
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../general_python/index.html">
+   General Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/1_variables_types_ifstatements.html">
+     Variables, Data types, and if Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/2_lists_dictionaries.html">
+     Lists and Dictionaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/datetimes.html">
+     Datetimes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/spatial_data.html">
+     Spatial Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../raster_data/index.html">
+   Raster Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../raster_data/1_arrays_numpy.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../raster_data/2_raster_fundamentals.html">
+     Working with rasters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../raster_data/3_accessing_coordinates.html">
+     Accessing Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Tabular Data
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_pandas.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2_filtering_groupby.html">
+     Filtering and groupby
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       geopandas
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Additional Lectures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../additional_lectures/Debugging/debugging_lesson.html">
+   Debugging
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../additional_lectures/Time%20Series%20Statistics/oceans_stats_examples.html">
+   Time Series Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../additional_lectures/Hierarchical%20Data/hierarchical%20data.html">
+   Hierarchical Data Structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../additional_lectures/Visualization/Dynamic%20Visualization.html">
+   Dynamic Visualization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../additional_lectures/Visualization/Viewing%20images.html">
+   Viewing Images
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../additional_lectures/Visualization/Viz%20with%20matplotlib/viz%20with%20matplotlib.html">
+   Static Data Visualization in Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Practice Sheets
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../general_python/practice/index.html">
+   General Python Practice Sheets
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/practice/1_variables_data_practice.html">
+     Variables, Data Types and If statements Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/practice/2_lists_dicts_practice.html">
+     Lists and Dictionaries Answers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/practice/datetimes_practice.html">
+     Part 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/practice/spatial_data_practice.html">
+     Part 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/practice/1_variables_data_answers.html">
+     Variables, Data Types and If statements Answers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/practice/datetimes_answers.html">
+     Part 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/practice/spatial_data_answers.html">
+     Part 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/lessons/tabular_data/3_geopandas.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/rwegener2/sarp_lessons"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/rwegener2/sarp_lessons/issues/new?title=Issue%20on%20page%20%2Flessons/tabular_data/3_geopandas.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rwegener2/sarp_lessons/master?urlpath=tree/docs/lessons/tabular_data/3_geopandas.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#context">
+   Context
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     geopandas
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#converting-our-pandas-dataframe-to-a-geodataframe">
+   Converting our
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     pandas
+    </span>
+   </code>
+   dataframe to a GeoDataFrame
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatial-data-operations">
+   Spatial data operations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reprojecting-to-meters">
+     Reprojecting to meters
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filtering-a-geodataframe-by-a-vector">
+   Filtering a geodataframe by a vector
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>geopandas</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#context">
+   Context
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     geopandas
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#converting-our-pandas-dataframe-to-a-geodataframe">
+   Converting our
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     pandas
+    </span>
+   </code>
+   dataframe to a GeoDataFrame
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatial-data-operations">
+   Spatial data operations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reprojecting-to-meters">
+     Reprojecting to meters
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filtering-a-geodataframe-by-a-vector">
+   Filtering a geodataframe by a vector
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="geopandas">
+<h1><code class="docutils literal notranslate"><span class="pre">geopandas</span></code><a class="headerlink" href="#geopandas" title="Permalink to this headline">¶</a></h1>
+<div class="note dropdown admonition">
+<p class="admonition-title">Lesson Content</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">geopandas</span></code> vs. <code class="docutils literal notranslate"><span class="pre">pandas</span></code></p></li>
+<li><p>spatial data operations</p></li>
+<li><p>reprojecting to meters</p></li>
+<li><p>filtering a geodataframe by a vector</p></li>
+</ul>
+</div>
+<div class="section" id="context">
+<h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
+<p>🐼➕🌐 = 🚀🎉❤️</p>
+<p>We’ve used <code class="docutils literal notranslate"><span class="pre">pandas</span></code> to help us get the most out of our csv and excel data.  We talked yesterday about how spatial data is stored and organized.  Today we combine both worlds with <code class="docutils literal notranslate"><span class="pre">geopandas</span></code>, an extenions of <code class="docutils literal notranslate"><span class="pre">pandas</span></code> specific to spatial data.</p>
+<p>Just like how we saw that converting datetime strings to Python datetime objects, converting our latitudes and longitudes to points allows us to use a world more of spatial data analysis techniques.  It’s so exciting!</p>
+</div>
+<div class="section" id="id1">
+<h2><code class="docutils literal notranslate"><span class="pre">geopandas</span></code><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>GeoPandas is an extension of Pandas. GeoDataFrames have the same row, column structure with indexes that are accessed in the same way as Pandas. The difference is that they also have a <code class="docutils literal notranslate"><span class="pre">geometry</span></code> column.</p>
+<p><img alt="Geodataframe" src="../../_images/geodataframe.png" /></p>
+<p>Let’s look at an example geodataframe that comes pre-loaded on geopandas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">gpd</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="s1">&#39;naturalearth_lowres&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>pop_est</th>
+      <th>continent</th>
+      <th>name</th>
+      <th>iso_a3</th>
+      <th>gdp_md_est</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>920938</td>
+      <td>Oceania</td>
+      <td>Fiji</td>
+      <td>FJI</td>
+      <td>8374.0</td>
+      <td>MULTIPOLYGON (((180.00000 -16.06713, 180.00000...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>53950935</td>
+      <td>Africa</td>
+      <td>Tanzania</td>
+      <td>TZA</td>
+      <td>150600.0</td>
+      <td>POLYGON ((33.90371 -0.95000, 34.07262 -1.05982...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>603253</td>
+      <td>Africa</td>
+      <td>W. Sahara</td>
+      <td>ESH</td>
+      <td>906.5</td>
+      <td>POLYGON ((-8.66559 27.65643, -8.66512 27.58948...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>35623680</td>
+      <td>North America</td>
+      <td>Canada</td>
+      <td>CAN</td>
+      <td>1674000.0</td>
+      <td>MULTIPOLYGON (((-122.84000 49.00000, -122.9742...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>326625791</td>
+      <td>North America</td>
+      <td>United States of America</td>
+      <td>USA</td>
+      <td>18560000.0</td>
+      <td>MULTIPOLYGON (((-122.84000 49.00000, -120.0000...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>172</th>
+      <td>7111024</td>
+      <td>Europe</td>
+      <td>Serbia</td>
+      <td>SRB</td>
+      <td>101800.0</td>
+      <td>POLYGON ((18.82982 45.90887, 18.82984 45.90888...</td>
+    </tr>
+    <tr>
+      <th>173</th>
+      <td>642550</td>
+      <td>Europe</td>
+      <td>Montenegro</td>
+      <td>MNE</td>
+      <td>10610.0</td>
+      <td>POLYGON ((20.07070 42.58863, 19.80161 42.50009...</td>
+    </tr>
+    <tr>
+      <th>174</th>
+      <td>1895250</td>
+      <td>Europe</td>
+      <td>Kosovo</td>
+      <td>-99</td>
+      <td>18490.0</td>
+      <td>POLYGON ((20.59025 41.85541, 20.52295 42.21787...</td>
+    </tr>
+    <tr>
+      <th>175</th>
+      <td>1218208</td>
+      <td>North America</td>
+      <td>Trinidad and Tobago</td>
+      <td>TTO</td>
+      <td>43570.0</td>
+      <td>POLYGON ((-61.68000 10.76000, -61.10500 10.890...</td>
+    </tr>
+    <tr>
+      <th>176</th>
+      <td>13026129</td>
+      <td>Africa</td>
+      <td>S. Sudan</td>
+      <td>SSD</td>
+      <td>20880.0</td>
+      <td>POLYGON ((30.83385 3.50917, 29.95350 4.17370, ...</td>
+    </tr>
+  </tbody>
+</table>
+<p>177 rows × 6 columns</p>
+</div></div></div>
+</div>
+<p>What is the data type of the <code class="docutils literal notranslate"><span class="pre">geometry</span></code> column?</p>
+</div>
+<div class="section" id="converting-our-pandas-dataframe-to-a-geodataframe">
+<h2>Converting our <code class="docutils literal notranslate"><span class="pre">pandas</span></code> dataframe to a GeoDataFrame<a class="headerlink" href="#converting-our-pandas-dataframe-to-a-geodataframe" title="Permalink to this headline">¶</a></h2>
+<p>geodataframe = pandas dataframe + geometry column of shapely objects</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+
+<span class="c1"># This line shortens the output</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>This dataset holds data from the firex campaign. We will be using just a few columns for this lesson</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">firex_filepath</span> <span class="o">=</span> <span class="s2">&quot;./data/Copy of SARP 2009 to 2020 sent to Alex with plotting.xlsx&quot;</span>
+<span class="n">firex</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">firex_filepath</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span>
+<span class="n">firex</span> <span class="o">=</span> <span class="n">firex</span><span class="p">[[</span><span class="s1">&#39;Can#&#39;</span><span class="p">,</span> <span class="s1">&#39;Jday&#39;</span><span class="p">,</span> <span class="s1">&#39;Latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;Longitude&#39;</span><span class="p">,</span> <span class="s1">&#39;State&#39;</span><span class="p">,</span> <span class="s1">&#39;CH4 (ppmv)&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;CO (ppbv)&#39;</span><span class="p">,</span> <span class="s1">&#39;CO2_ppm&#39;</span><span class="p">,</span> <span class="s1">&#39;OCS (MS)&#39;</span><span class="p">,</span> <span class="s1">&#39;DMS (MS)&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">4490</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Drop columns where Latitude or Longitude are nan</span>
+<span class="n">firex</span> <span class="o">=</span> <span class="n">firex</span><span class="p">[</span><span class="n">firex</span><span class="p">[</span><span class="s1">&#39;Longitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notna</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you have string latitude and longitude columns (as in this dataframe) there is a function prebuilt for that common case: <code class="docutils literal notranslate"><span class="pre">gpd.points_from_xy()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">firex</span><span class="p">[</span><span class="s1">&#39;Longitude&#39;</span><span class="p">],</span> <span class="n">firex</span><span class="p">[</span><span class="s1">&#39;Latitude&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;GeometryArray&gt;
+[&lt;shapely.geometry.point.Point object at 0x15c94a160&gt;,
+ &lt;shapely.geometry.point.Point object at 0x10777daf0&gt;,
+ &lt;shapely.geometry.point.Point object at 0x107778190&gt;,
+ &lt;shapely.geometry.point.Point object at 0x15bc48c10&gt;,
+ &lt;shapely.geometry.point.Point object at 0x15bc48e20&gt;,
+ &lt;shapely.geometry.point.Point object at 0x15bc48880&gt;,
+ &lt;shapely.geometry.point.Point object at 0x15bc48d60&gt;,
+ &lt;shapely.geometry.point.Point object at 0x15c94a220&gt;,
+ &lt;shapely.geometry.point.Point object at 0x15c94a1c0&gt;,
+ &lt;shapely.geometry.point.Point object at 0x15c94a070&gt;,
+ ...
+ &lt;shapely.geometry.point.Point object at 0x15caa1d90&gt;,
+ &lt;shapely.geometry.point.Point object at 0x15caa1df0&gt;,
+ &lt;shapely.geometry.point.Point object at 0x15caa1e50&gt;,
+ &lt;shapely.geometry.point.Point object at 0x15caa1eb0&gt;,
+ &lt;shapely.geometry.point.Point object at 0x15caa1f10&gt;,
+ &lt;shapely.geometry.point.Point object at 0x15caa1f70&gt;,
+ &lt;shapely.geometry.point.Point object at 0x15caa1fd0&gt;,
+ &lt;shapely.geometry.point.Point object at 0x15ca9d070&gt;,
+ &lt;shapely.geometry.point.Point object at 0x15ca9d0d0&gt;,
+ &lt;shapely.geometry.point.Point object at 0x15ca9d130&gt;]
+Length: 4405, dtype: geometry
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geoFIREX</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span>
+    <span class="n">firex</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">firex</span><span class="p">[</span><span class="s1">&#39;Longitude&#39;</span><span class="p">],</span> <span class="n">firex</span><span class="p">[</span><span class="s1">&#39;Latitude&#39;</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geoFIREX</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Can#</th>
+      <th>Jday</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>State</th>
+      <th>CH4 (ppmv)</th>
+      <th>CO (ppbv)</th>
+      <th>CO2_ppm</th>
+      <th>OCS (MS)</th>
+      <th>DMS (MS)</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>8198</td>
+      <td>202.0</td>
+      <td>35.000000</td>
+      <td>-118.943333</td>
+      <td>NaN</td>
+      <td>1.947</td>
+      <td>-999.0</td>
+      <td>-999.0</td>
+      <td>518.0</td>
+      <td>-888.0</td>
+      <td>POINT (-118.94333 35.00000)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>7167</td>
+      <td>202.0</td>
+      <td>35.081667</td>
+      <td>-119.101000</td>
+      <td>NaN</td>
+      <td>1.808</td>
+      <td>-999.0</td>
+      <td>-999.0</td>
+      <td>519.0</td>
+      <td>-888.0</td>
+      <td>POINT (-119.10100 35.08167)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6354</td>
+      <td>202.0</td>
+      <td>35.170000</td>
+      <td>-119.233333</td>
+      <td>NaN</td>
+      <td>1.940</td>
+      <td>-999.0</td>
+      <td>-999.0</td>
+      <td>495.0</td>
+      <td>14.0</td>
+      <td>POINT (-119.23333 35.17000)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>7226</td>
+      <td>202.0</td>
+      <td>35.346667</td>
+      <td>-119.381667</td>
+      <td>NaN</td>
+      <td>1.944</td>
+      <td>-999.0</td>
+      <td>-999.0</td>
+      <td>505.0</td>
+      <td>11.9</td>
+      <td>POINT (-119.38167 35.34667)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>6269</td>
+      <td>202.0</td>
+      <td>35.438333</td>
+      <td>-119.433333</td>
+      <td>NaN</td>
+      <td>1.922</td>
+      <td>-999.0</td>
+      <td>-999.0</td>
+      <td>487.0</td>
+      <td>17.4</td>
+      <td>POINT (-119.43333 35.43833)</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>4485</th>
+      <td>5090</td>
+      <td>NaN</td>
+      <td>29.717200</td>
+      <td>-95.341600</td>
+      <td>Texas</td>
+      <td>-999.000</td>
+      <td>-999.0</td>
+      <td>-999.0</td>
+      <td>553.0</td>
+      <td>4.0</td>
+      <td>POINT (-95.34160 29.71720)</td>
+    </tr>
+    <tr>
+      <th>4486</th>
+      <td>5028</td>
+      <td>NaN</td>
+      <td>29.717200</td>
+      <td>-95.341600</td>
+      <td>Texas</td>
+      <td>-999.000</td>
+      <td>-999.0</td>
+      <td>-999.0</td>
+      <td>528.0</td>
+      <td>5.5</td>
+      <td>POINT (-95.34160 29.71720)</td>
+    </tr>
+    <tr>
+      <th>4487</th>
+      <td>5017</td>
+      <td>NaN</td>
+      <td>29.717200</td>
+      <td>-95.341600</td>
+      <td>Texas</td>
+      <td>-999.000</td>
+      <td>-999.0</td>
+      <td>-999.0</td>
+      <td>583.0</td>
+      <td>8.6</td>
+      <td>POINT (-95.34160 29.71720)</td>
+    </tr>
+    <tr>
+      <th>4488</th>
+      <td>5091</td>
+      <td>NaN</td>
+      <td>29.717200</td>
+      <td>-95.341600</td>
+      <td>Texas</td>
+      <td>-999.000</td>
+      <td>-999.0</td>
+      <td>-999.0</td>
+      <td>534.0</td>
+      <td>3.9</td>
+      <td>POINT (-95.34160 29.71720)</td>
+    </tr>
+    <tr>
+      <th>4489</th>
+      <td>5046</td>
+      <td>NaN</td>
+      <td>29.717200</td>
+      <td>-95.341600</td>
+      <td>Texas</td>
+      <td>-999.000</td>
+      <td>-999.0</td>
+      <td>-999.0</td>
+      <td>530.0</td>
+      <td>9.1</td>
+      <td>POINT (-95.34160 29.71720)</td>
+    </tr>
+  </tbody>
+</table>
+<p>4405 rows × 11 columns</p>
+</div></div></div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">📝 Check your understanding</p>
+<p>What type of data should be in the <code class="docutils literal notranslate"><span class="pre">geometry</span></code> column?</p>
+</div>
+</div>
+<div class="section" id="spatial-data-operations">
+<h2>Spatial data operations<a class="headerlink" href="#spatial-data-operations" title="Permalink to this headline">¶</a></h2>
+<p>By using <code class="docutils literal notranslate"><span class="pre">shapely</span></code> points we get the advantages of spatial operations built into our DataFrame.</p>
+<p>Example question: <em>How far are all of my data points from Mt. St. Helens?</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="kn">import</span> <span class="n">Point</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mt_st_helens</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="o">-</span><span class="mf">122.1956</span><span class="p">,</span> <span class="mf">46.1914</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geoFIREX</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">distance</span><span class="p">(</span><span class="n">mt_st_helens</span><span class="p">)</span> <span class="o">/</span> <span class="mi">100000</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0       0.000117
+1       0.000115
+2       0.000114
+3       0.000112
+4       0.000111
+          ...   
+4485    0.000315
+4486    0.000315
+4487    0.000315
+4488    0.000315
+4489    0.000315
+Length: 4405, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="reprojecting-to-meters">
+<h3>Reprojecting to meters<a class="headerlink" href="#reprojecting-to-meters" title="Permalink to this headline">¶</a></h3>
+<p>Reprojecting a GeoDataFrame is really smooth, it only takes one <code class="docutils literal notranslate"><span class="pre">.to_crs()</span></code> method.  The only thing to be careful of is to make sure first that you have a crs set for your dataframe.  If you don’t and your points are in lat/lon then EPSG:4326 is the CRS you should give it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the CRS</span>
+<span class="n">geoFIREX</span> <span class="o">=</span> <span class="n">geoFIREX</span><span class="o">.</span><span class="n">set_crs</span><span class="p">(</span><span class="n">epsg</span><span class="o">=</span><span class="mi">4326</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">geoFIREX</span><span class="o">.</span><span class="n">crs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>epsg:4326
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geoFIREX</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0       POINT (-118.94333 35.00000)
+1       POINT (-119.10100 35.08167)
+2       POINT (-119.23333 35.17000)
+3       POINT (-119.38167 35.34667)
+4       POINT (-119.43333 35.43833)
+                   ...             
+4485     POINT (-95.34160 29.71720)
+4486     POINT (-95.34160 29.71720)
+4487     POINT (-95.34160 29.71720)
+4488     POINT (-95.34160 29.71720)
+4489     POINT (-95.34160 29.71720)
+Name: geometry, Length: 4405, dtype: geometry
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geoFIREXprojcrs</span> <span class="o">=</span> <span class="n">geoFIREX</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">epsg</span><span class="o">=</span><span class="mi">3857</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geoFIREXprojcrs</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0       POINT (-13240711.300 4163881.144)
+1       POINT (-13258262.673 4174984.864)
+2       POINT (-13272993.952 4187007.530)
+3       POINT (-13289506.343 4211092.125)
+4       POINT (-13295257.850 4223609.598)
+                      ...                
+4485    POINT (-10613378.363 3467250.090)
+4486    POINT (-10613378.363 3467250.090)
+4487    POINT (-10613378.363 3467250.090)
+4488    POINT (-10613378.363 3467250.090)
+4489    POINT (-10613378.363 3467250.090)
+Name: geometry, Length: 4405, dtype: geometry
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">📝 Check your understanding</p>
+<p>I run the block of code <code class="docutils literal notranslate"><span class="pre">geoFIREX.to_crs(epsg=3857)</span></code> and get the following error:</p>
+<p><code class="docutils literal notranslate"><span class="pre">ValueError:</span> <span class="pre">Cannot</span> <span class="pre">transform</span> <span class="pre">naive</span> <span class="pre">geometries.</span>&#160; <span class="pre">Please</span> <span class="pre">set</span> <span class="pre">a</span> <span class="pre">crs</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">object</span> <span class="pre">first.</span></code></p>
+<p>What is likely my problem?</p>
+</div>
+</div>
+</div>
+<div class="section" id="filtering-a-geodataframe-by-a-vector">
+<h2>Filtering a geodataframe by a vector<a class="headerlink" href="#filtering-a-geodataframe-by-a-vector" title="Permalink to this headline">¶</a></h2>
+<p>Let’s say we want to know how many measurements were taken within 150 km of mt. st. helens.  We start with our mt. st. helens point and then we buffer it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># convert our mt st helens 4326 point to 3857</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyproj</span> <span class="kn">import</span> <span class="n">Transformer</span>
+<span class="kn">from</span> <span class="nn">shapely.ops</span> <span class="kn">import</span> <span class="n">transform</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uc_irvine</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="o">-</span><span class="mf">117.835</span><span class="p">,</span> <span class="mf">33.644</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">from_crs</span><span class="p">(</span><span class="s1">&#39;epsg:4326&#39;</span><span class="p">,</span> <span class="s1">&#39;epsg:3857&#39;</span><span class="p">,</span> <span class="n">always_xy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">transform</span>
+<span class="n">uc_irvine_projcrs</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">uc_irvine</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Buffer the point</span>
+<span class="n">buff_uc_irvine</span> <span class="o">=</span> <span class="n">uc_irvine_projcrs</span><span class="o">.</span><span class="n">buffer</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geoFIREXprojcrs</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">intersects</span><span class="p">(</span><span class="n">buff_uc_irvine</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0       False
+1       False
+2       False
+3       False
+4       False
+        ...  
+4485    False
+4486    False
+4487    False
+4488    False
+4489    False
+Length: 4405, dtype: bool
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Notice that we indexed one dataframe by a different dataframe</span>
+<span class="n">geoFIREX</span><span class="p">[</span><span class="n">geoFIREXprojcrs</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">intersects</span><span class="p">(</span><span class="n">buff_uc_irvine</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Can#</th>
+      <th>Jday</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>State</th>
+      <th>CH4 (ppmv)</th>
+      <th>CO (ppbv)</th>
+      <th>CO2_ppm</th>
+      <th>OCS (MS)</th>
+      <th>DMS (MS)</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1779</th>
+      <td>9068</td>
+      <td>174.0</td>
+      <td>33.667200</td>
+      <td>-117.847000</td>
+      <td>NaN</td>
+      <td>1.810</td>
+      <td>55.0</td>
+      <td>409.0</td>
+      <td>570.0</td>
+      <td>-888.0</td>
+      <td>POINT (-117.84700 33.66720)</td>
+    </tr>
+    <tr>
+      <th>2206</th>
+      <td>6343</td>
+      <td>177.0</td>
+      <td>33.615195</td>
+      <td>-117.784866</td>
+      <td>NaN</td>
+      <td>1.826</td>
+      <td>56.0</td>
+      <td>414.0</td>
+      <td>593.0</td>
+      <td>0.5</td>
+      <td>POINT (-117.78487 33.61519)</td>
+    </tr>
+    <tr>
+      <th>2234</th>
+      <td>9309</td>
+      <td>177.0</td>
+      <td>33.640604</td>
+      <td>-117.806361</td>
+      <td>NaN</td>
+      <td>1.820</td>
+      <td>-999.0</td>
+      <td>419.0</td>
+      <td>572.0</td>
+      <td>-888.0</td>
+      <td>POINT (-117.80636 33.64060)</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">📝 Check your understanding</p>
+<p>I want to buffer the mt_st_helens point by 10000m.  What is the problem with the following code I’ve written below to do that?</p>
+<p><code class="docutils literal notranslate"><span class="pre">Point(-122.1956,</span> <span class="pre">46.1914).buffer(10000)</span></code></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons/tabular_data"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="2_filtering_groupby.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Filtering and groupby</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../../additional_lectures/Debugging/debugging_lesson.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Debugging</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Rachel Wegener<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

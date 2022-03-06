@@ -1,0 +1,1503 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3.1. Lesson 4, Tabular data &#8212; SARP Lessons</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="3.3. geopandas, Tabular data group" href="../../lesson_7/tabular/geopandas_lesson.html" />
+    <link rel="prev" title="3. Tabular Data" href="../../tabular_data.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SARP Lessons</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lessons
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../general_python.html">
+   1. General Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../general_python/variables_types_ifstatements.html">
+     1.1. 1 - Variables, Data types, and if Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../general_python/lesson_2.html">
+     1.7. 2 - Lists and Dictionaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lesson_5/tabular/datetimes_tabular.html">
+     1.11. Tabular Data, Week 3 Lesson 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lesson_6/spatial_data.html">
+     1.12. Spatial Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../raster_data.html">
+   2. Raster Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../raster_data/lesson_3_raster.html">
+     2.1. Lesson 3, Raster data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../raster/lesson_4_raster.html">
+     2.4. Lesson 4, Raster data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lesson_7/raster/accessing_coordinates_raster_lesson.html">
+     2.8. Accessing Data with Coordinates, Raster Data Lesson
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../../tabular_data.html">
+   3. Tabular Data
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     3.1. Lesson 4, Tabular data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lesson_7/tabular/geopandas_lesson.html">
+     3.3.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       geopandas
+      </span>
+     </code>
+     , Tabular data group
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Additional Lectures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../additional_lectures/Debugging/debugging_lesson.html">
+   Debugging
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../additional_lectures/Time%20Series%20Statistics/oceans_stats_examples.html">
+   Time Series Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../additional_lectures/Hierarchical%20Data/hierarchical%20data.html">
+   Hierarchical Data Structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../additional_lectures/rasterio/raster_fundamentals.html">
+   Working with rasters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../additional_lectures/Visualization/Dynamic%20Visualization.html">
+   Read in Datasets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../additional_lectures/Visualization/Viewing%20images.html">
+   Read in Datasets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../additional_lectures/Visualization/Viz%20with%20matplotlib/viz%20with%20matplotlib.html">
+   Static Data Visualization in Python
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/lessons/lesson_4/tabular/lesson_4_tabular.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flessons/lesson_4/tabular/lesson_4_tabular.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lessons/lesson_4/tabular/lesson_4_tabular.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   3.1. Lesson 4, Tabular data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#content">
+     3.1.1. Content
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#context">
+     3.1.2. Context
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#loading-our-data">
+     3.1.3. Loading our data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#filtering">
+     3.1.4. Filtering
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#using-and-and-or">
+       3.1.4.1. Using
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         and
+        </span>
+       </code>
+       and
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         or
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#checking-in">
+       3.1.4.2. 📝 Checking In
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setting-an-index">
+     3.1.5. Setting an Index
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#iloc-vs-loc">
+       3.1.5.1.
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .iloc
+        </span>
+       </code>
+       vs.
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         loc
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#one-more-example-datetime-indices">
+       3.1.5.2. One more example - datetime indices
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       3.1.5.3. 📝 Checking In
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#groupby">
+   3.2. Groupby
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#breaking-groupby-into-conceptual-parts">
+     3.2.1. Breaking
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       groupby
+      </span>
+     </code>
+     into conceptual parts
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       3.2.1.1. 📝 Checking In
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#groupby-syntax">
+     3.2.2.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       groupby
+      </span>
+     </code>
+     syntax
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#which-group">
+       3.2.2.1.
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'WHICH_GROUP'
+        </span>
+       </code>
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#watch-out">
+         3.2.2.1.1. 🌟 Watch out!
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#aggregation-functions">
+       3.2.2.2. Aggregation Functions
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-third-input">
+       3.2.2.3. The third input
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       3.2.2.4. 📝 Checking In
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#breaking-down-the-process">
+     3.2.3. Breaking down the process
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Lesson 4, Tabular data</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   3.1. Lesson 4, Tabular data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#content">
+     3.1.1. Content
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#context">
+     3.1.2. Context
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#loading-our-data">
+     3.1.3. Loading our data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#filtering">
+     3.1.4. Filtering
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#using-and-and-or">
+       3.1.4.1. Using
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         and
+        </span>
+       </code>
+       and
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         or
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#checking-in">
+       3.1.4.2. 📝 Checking In
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setting-an-index">
+     3.1.5. Setting an Index
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#iloc-vs-loc">
+       3.1.5.1.
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .iloc
+        </span>
+       </code>
+       vs.
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         loc
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#one-more-example-datetime-indices">
+       3.1.5.2. One more example - datetime indices
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       3.1.5.3. 📝 Checking In
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#groupby">
+   3.2. Groupby
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#breaking-groupby-into-conceptual-parts">
+     3.2.1. Breaking
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       groupby
+      </span>
+     </code>
+     into conceptual parts
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       3.2.1.1. 📝 Checking In
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#groupby-syntax">
+     3.2.2.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       groupby
+      </span>
+     </code>
+     syntax
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#which-group">
+       3.2.2.1.
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         'WHICH_GROUP'
+        </span>
+       </code>
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#watch-out">
+         3.2.2.1.1. 🌟 Watch out!
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#aggregation-functions">
+       3.2.2.2. Aggregation Functions
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-third-input">
+       3.2.2.3. The third input
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       3.2.2.4. 📝 Checking In
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#breaking-down-the-process">
+     3.2.3. Breaking down the process
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="lesson-4-tabular-data">
+<h1><span class="section-number">3.1. </span>Lesson 4, Tabular data<a class="headerlink" href="#lesson-4-tabular-data" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="content">
+<h2><span class="section-number">3.1.1. </span>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>🗑️ Filtering</p></li>
+<li><p>📍 Setting an Index</p></li>
+<li><p>🔪 Groupby</p></li>
+</ul>
+</div>
+<div class="section" id="context">
+<h2><span class="section-number">3.1.2. </span>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
+<p>We spent yesterday getting comfortable in <code class="docutils literal notranslate"><span class="pre">pandas</span></code>. We opened some data, explored it, and ran a few functions.  Today we are going to expand on what we are doing by learning a few powerful ways to interrogate our data – filtering and grouping.  These manipulations help us get at the specific part of a dataset that we need.</p>
+</div>
+<div class="section" id="loading-our-data">
+<h2><span class="section-number">3.1.3. </span>Loading our data<a class="headerlink" href="#loading-our-data" title="Permalink to this headline">¶</a></h2>
+<p>We’ll be using the same USGS water dataset as lesson 3.  Here we read and pre-process the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read in the data</span>
+<span class="n">water_vars</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/englewood_3_12_21_usgs_water.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="c1"># There are a lot of variables here, so let&#39;s shorten our dataframe to a few variables</span>
+<span class="n">water_vars</span> <span class="o">=</span> <span class="n">water_vars</span><span class="p">[[</span><span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;210920_00060&#39;</span><span class="p">,</span> <span class="s1">&#39;210922_00010&#39;</span><span class="p">,</span> <span class="s1">&#39;210924_00300&#39;</span><span class="p">,</span> <span class="s1">&#39;210925_00400&#39;</span><span class="p">]]</span>
+<span class="c1"># Get rid of the first row of hard-coded datatype info</span>
+<span class="n">water_vars</span> <span class="o">=</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1"># Rename the columns from their USGS codes to more human-readible names</span>
+<span class="n">name_codes</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;210920_00060&#39;</span><span class="p">:</span> <span class="s1">&#39;discharge&#39;</span><span class="p">,</span><span class="s1">&#39;210922_00010&#39;</span><span class="p">:</span> <span class="s1">&#39;temperature&#39;</span><span class="p">,</span> <span class="s1">&#39;210924_00300&#39;</span><span class="p">:</span> <span class="s1">&#39;dissolved oxygen&#39;</span><span class="p">,</span> <span class="s1">&#39;210925_00400&#39;</span><span class="p">:</span> <span class="s1">&#39;pH&#39;</span><span class="p">}</span>
+<span class="n">water_vars</span> <span class="o">=</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">name_codes</span><span class="p">)</span>
+<span class="c1"># Convert columns with numbers to a numeric type</span>
+<span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;discharge&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;discharge&#39;</span><span class="p">])</span>
+<span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">])</span>
+<span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;dissolved oxygen&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;dissolved oxygen&#39;</span><span class="p">])</span>
+<span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;pH&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;pH&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3276</span><span class="o">/</span><span class="mf">3093898767.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Read in the data</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">water_vars</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/englewood_3_12_21_usgs_water.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># There are a lot of variables here, so let&#39;s shorten our dataframe to a few variables</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">water_vars</span> <span class="o">=</span> <span class="n">water_vars</span><span class="p">[[</span><span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;210920_00060&#39;</span><span class="p">,</span> <span class="s1">&#39;210922_00010&#39;</span><span class="p">,</span> <span class="s1">&#39;210924_00300&#39;</span><span class="p">,</span> <span class="s1">&#39;210925_00400&#39;</span><span class="p">]]</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Get rid of the first row of hard-coded datatype info</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/util/_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">309</span>                     <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">310</span>                 <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">311</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">312</span> 
+<span class="g g-Whitespace">    </span><span class="mi">313</span>         <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">584</span>     <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">585</span> 
+<span class="ne">--&gt; </span><span class="mi">586</span>     <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">587</span> 
+<span class="g g-Whitespace">    </span><span class="mi">588</span> 
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">480</span> 
+<span class="g g-Whitespace">    </span><span class="mi">481</span>     <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">482</span>     <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">483</span> 
+<span class="g g-Whitespace">    </span><span class="mi">484</span>     <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">809</span>             <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">810</span> 
+<span class="ne">--&gt; </span><span class="mi">811</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">812</span> 
+<span class="g g-Whitespace">    </span><span class="mi">813</span>     <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_make_engine</span><span class="nt">(self, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1038</span>             <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1039</span>         <span class="c1"># error: Too many arguments for &quot;ParserBase&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1040</span>         <span class="k">return</span> <span class="n">mapping</span><span class="p">[</span><span class="n">engine</span><span class="p">](</span><span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>  <span class="c1"># type: ignore[call-arg]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1041</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1042</span>     <span class="k">def</span> <span class="nf">_failover_to_python</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/parsers/c_parser_wrapper.py</span> in <span class="ni">__init__</span><span class="nt">(self, src, **kwds)</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span> 
+<span class="g g-Whitespace">     </span><span class="mi">50</span>         <span class="c1"># open handles</span>
+<span class="ne">---&gt; </span><span class="mi">51</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_open_handles</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span> 
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/parsers/base_parser.py</span> in <span class="ni">_open_handles</span><span class="nt">(self, src, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">220</span>         <span class="n">Let</span> <span class="n">the</span> <span class="n">readers</span> <span class="nb">open</span> <span class="n">IOHandles</span> <span class="n">after</span> <span class="n">they</span> <span class="n">are</span> <span class="n">done</span> <span class="k">with</span> <span class="n">their</span> <span class="n">potential</span> <span class="n">raises</span><span class="o">.</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">222</span><span class="s2">         self.handles = get_handle(</span>
+<span class="g g-Whitespace">    </span><span class="mi">223</span><span class="s2">             src,</span>
+<span class="g g-Whitespace">    </span><span class="mi">224</span><span class="s2">             &quot;r&quot;,</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/common.py</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">700</span><span class="s2">         if ioargs.encoding and &quot;b&quot; not in ioargs.mode:</span>
+<span class="g g-Whitespace">    </span><span class="mi">701</span><span class="s2">             # Encoding</span>
+<span class="ne">--&gt; </span><span class="mi">702</span><span class="s2">             handle = open(</span>
+<span class="g g-Whitespace">    </span><span class="mi">703</span><span class="s2">                 handle,</span>
+<span class="g g-Whitespace">    </span><span class="mi">704</span><span class="s2">                 ioargs.mode,</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./data/englewood_3_12_21_usgs_water.tsv&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Today I’m also going to add two fake columns of data, “dam release” and “safety level”, that will help us as we go through some of the new concepts.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;dam release&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">water_vars</span><span class="p">))]</span>
+<span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;safety level&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;low&#39;</span><span class="p">,</span> <span class="s1">&#39;medium&#39;</span><span class="p">,</span> <span class="s1">&#39;high&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">water_vars</span><span class="p">))]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3276</span><span class="o">/</span><span class="mf">2012749904.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;dam release&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">water_vars</span><span class="p">))]</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;safety level&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;low&#39;</span><span class="p">,</span> <span class="s1">&#39;medium&#39;</span><span class="p">,</span> <span class="s1">&#39;high&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">water_vars</span><span class="p">))]</span>
+
+<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">water_vars</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3276</span><span class="o">/</span><span class="mf">1489515612.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span>
+
+<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="filtering">
+<h2><span class="section-number">3.1.4. </span>Filtering<a class="headerlink" href="#filtering" title="Permalink to this headline">¶</a></h2>
+<p>So let’s start with a general question.  We learned about booleans and comparisons on Monday of this week.</p>
+<blockquote>
+<div><p>What would happen if we used a comparison on a pandas dataframe?</p>
+</div></blockquote>
+<p>Give this a think:
+<code class="docutils literal notranslate"><span class="pre">water_vars['discharge']</span> <span class="pre">==</span> <span class="pre">8.1</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># water_vars[&#39;dissolved oxygen&#39;] == 8.2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The answer?  We get another dataframe. This dataframe is the size and shape as the thing used in comparison, but it is full of Boolean values telling us if the comparsion was true.</p>
+<p>So what is the use of a list of booleans?  Let’s start with a simplified list of booleans and experiment.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create just a list of booleans, instead of a full dataframe</span>
+<span class="n">random_booleans</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">146</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the list of booleans with square brackets, sort of like a key in a dictionary</span>
+<span class="n">water_vars</span><span class="p">[</span><span class="n">random_booleans</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3276</span><span class="o">/</span><span class="mf">2909428621.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Use the list of booleans with square brackets, sort of like a key in a dictionary</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">water_vars</span><span class="p">[</span><span class="n">random_booleans</span><span class="p">]</span>
+
+<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>That returned only the rows where the value in the list was True!</p>
+<p>This is exciting, because this is the basis for filtering rows in <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.  Trying it again with our conditional statement from above <code class="docutils literal notranslate"><span class="pre">water_vars['dissolved</span> <span class="pre">oxygen']</span> <span class="pre">==</span> <span class="pre">8.2</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make a dataframe indicating where dissolved oxygen == 8.2</span>
+<span class="n">boolean_dataframe</span> <span class="o">=</span> <span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;dissolved oxygen&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mf">8.2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3276</span><span class="o">/</span><span class="mf">3508995608.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># make a dataframe indicating where dissolved oxygen == 8.2</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">boolean_dataframe</span> <span class="o">=</span> <span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;dissolved oxygen&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mf">8.2</span>
+
+<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># returns only the rows where dissolved oxygen == 8.2</span>
+<span class="n">water_vars</span><span class="p">[</span><span class="n">boolean_dataframe</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3276</span><span class="o">/</span><span class="mf">3702312996.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># returns only the rows where dissolved oxygen == 8.2</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">water_vars</span><span class="p">[</span><span class="n">boolean_dataframe</span><span class="p">]</span>
+
+<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>While there are several steps, this process is most commonly done in a single step:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">water_vars</span><span class="p">[</span><span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;dissolved oxygen&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mf">8.2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3276</span><span class="o">/</span><span class="mf">2893389648.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="p">[</span><span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;dissolved oxygen&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mf">8.2</span><span class="p">]</span>
+
+<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="using-and-and-or">
+<h3><span class="section-number">3.1.4.1. </span>Using <code class="docutils literal notranslate"><span class="pre">and</span></code> and <code class="docutils literal notranslate"><span class="pre">or</span></code><a class="headerlink" href="#using-and-and-or" title="Permalink to this headline">¶</a></h3>
+<p>You can continue to make your filter more specific by using multiple filters.  The syntax that we used in the first lesson was:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_cats</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">num_dogs</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">num_cats</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">num_dogs</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">num_cats</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="ow">or</span> <span class="n">num_dogs</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+True
+</pre></div>
+</div>
+</div>
+</div>
+<p>While the meaning of <code class="docutils literal notranslate"><span class="pre">and</span></code> and <code class="docutils literal notranslate"><span class="pre">or</span></code> is the same in <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, the syntax is slightly different.  In pandas:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Python</p></th>
+<th class="text-align:center head"><p>Pandas</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>and</p></td>
+<td class="text-align:center"><p>&amp;</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>or</p></td>
+<td class="text-align:center"><p>|</p></td>
+</tr>
+</tbody>
+</table>
+<p>You also have to be sure to wrap each individual conditional statement in parenthesis <code class="docutils literal notranslate"><span class="pre">()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cells where pH &lt; 8 and dam release was True</span>
+<span class="n">water_vars</span><span class="p">[(</span><span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;pH&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;dam release&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3276</span><span class="o">/</span><span class="mf">1701165318.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Cells where pH &lt; 8 and dam release was True</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">water_vars</span><span class="p">[(</span><span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;pH&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;dam release&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)]</span>
+
+<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">water_vars</span><span class="p">[(</span><span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;pH&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;dam release&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3276</span><span class="o">/</span><span class="mf">1665423187.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="p">[(</span><span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;pH&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;dam release&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)]</span>
+
+<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>There is more than one way to do this type of filtering in pandas, but it is fine to start with one method and feel really comfortable with it before moving to the others.  <a class="reference external" href="https://www.listendata.com/2019/07/how-to-filter-pandas-dataframe.html">This article</a> has a pretty nice overview of some other methods.</p>
+</div>
+<div class="section" id="checking-in">
+<h3><span class="section-number">3.1.4.2. </span>📝 Checking In<a class="headerlink" href="#checking-in" title="Permalink to this headline">¶</a></h3>
+<p>Write a cell of code that returns only the rows of the <code class="docutils literal notranslate"><span class="pre">water_vars</span></code> dataframe where discharge is greater than 46.</p>
+</div>
+</div>
+<div class="section" id="setting-an-index">
+<h2><span class="section-number">3.1.5. </span>Setting an Index<a class="headerlink" href="#setting-an-index" title="Permalink to this headline">¶</a></h2>
+<p>Whether using pandas or excel or a SQL database, the index is an important part of your organization.</p>
+<blockquote>
+<div><p>The most important part of in index is that it is <strong>unique</strong>, meaning no two rows of data is allowed to have the same index</p>
+</div></blockquote>
+<p>This is important for keeping the data organized, not just practically but also conceptually.</p>
+<p>One of the powerful componenets of pandas is that you aren’t required to have a number as the index of a dataframe.  Let’s look at this with an example dataframe</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grades</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Beatriz S&#39;</span><span class="p">,</span> <span class="s1">&#39;Sara H&#39;</span><span class="p">,</span> <span class="s1">&#39;Joel T&#39;</span><span class="p">,</span> <span class="s1">&#39;Ari T&#39;</span><span class="p">,</span> <span class="s1">&#39;Hassan A&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;history&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">78</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">79</span><span class="p">],</span>
+        <span class="s1">&#39;science&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">85</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">91</span><span class="p">],</span>
+        <span class="s1">&#39;music&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">81</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">69</span><span class="p">],</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grades</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>history</th>
+      <th>science</th>
+      <th>music</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Beatriz S</td>
+      <td>78</td>
+      <td>85</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Sara H</td>
+      <td>72</td>
+      <td>80</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Joel T</td>
+      <td>80</td>
+      <td>80</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Ari T</td>
+      <td>91</td>
+      <td>73</td>
+      <td>73</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Hassan A</td>
+      <td>79</td>
+      <td>91</td>
+      <td>69</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>In this dataframe we have default indexes of 0 -&gt; 4 set.  We could pretty smoothly use these if we wanted and just know in our heads that Beatriz is index 0, Sara is index 1 and so on.</p>
+<p>Alternatively, we could skip the step of remembering index numbers and just use the names of the students as the index.  We do that with the <code class="docutils literal notranslate"><span class="pre">.set_index()</span></code> method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grades</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>history</th>
+      <th>science</th>
+      <th>music</th>
+    </tr>
+    <tr>
+      <th>name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Beatriz S</th>
+      <td>78</td>
+      <td>85</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <th>Sara H</th>
+      <td>72</td>
+      <td>80</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <th>Joel T</th>
+      <td>80</td>
+      <td>80</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>Ari T</th>
+      <td>91</td>
+      <td>73</td>
+      <td>73</td>
+    </tr>
+    <tr>
+      <th>Hassan A</th>
+      <td>79</td>
+      <td>91</td>
+      <td>69</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># update the original dataframe with the new index</span>
+<span class="n">grades</span> <span class="o">=</span> <span class="n">grades</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="iloc-vs-loc">
+<h3><span class="section-number">3.1.5.1. </span><code class="docutils literal notranslate"><span class="pre">.iloc</span></code> vs. <code class="docutils literal notranslate"><span class="pre">loc</span></code><a class="headerlink" href="#iloc-vs-loc" title="Permalink to this headline">¶</a></h3>
+<p>So now that we have names as indexes, how do we select specific rows?</p>
+<p>We can still use the same method we already know, <code class="docutils literal notranslate"><span class="pre">iloc</span></code>, with an integer index number and we will still get the same result.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grades</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>history    72
+science    80
+music      81
+Name: Sara H, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Alternatively we can also use a similar but slightly different method - <code class="docutils literal notranslate"><span class="pre">.loc</span></code>.  <code class="docutils literal notranslate"><span class="pre">.loc</span></code> allows us to find specific rows based on an index label, not the integer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grades</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;Hassan A&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>history    79
+science    91
+music      69
+Name: Hassan A, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you want a deep dive on <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> vs. <code class="docutils literal notranslate"><span class="pre">.loc</span></code> <a class="reference external" href="https://towardsdatascience.com/how-to-use-loc-and-iloc-for-selecting-data-in-pandas-bd09cb4c3d79">this article</a> is for you.</p>
+</div>
+<div class="section" id="one-more-example-datetime-indices">
+<h3><span class="section-number">3.1.5.2. </span>One more example - datetime indices<a class="headerlink" href="#one-more-example-datetime-indices" title="Permalink to this headline">¶</a></h3>
+<p>To move away from our toy example baack to our real data, we have a great column in the <code class="docutils literal notranslate"><span class="pre">water_vars</span></code> table just waiting to be an index – <code class="docutils literal notranslate"><span class="pre">datetime</span></code>.</p>
+<p>Dates and times are generally fantastic indices, because, if the world is working in proper order, they only happen once, so they are really common as indices.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># water_vars = water_vars.set_index(pd.to_datetime(water_vars[&#39;datetime&#39;]))</span>
+<span class="c1"># # Drop the old datetime column</span>
+<span class="c1"># water_vars = water_vars.drop(columns=&#39;datetime&#39;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">water_vars</span> <span class="o">=</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;datetime&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3276</span><span class="o">/</span><span class="mf">2222447629.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span> <span class="o">=</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;datetime&#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">water_vars</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2021-03-12 13:00&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3276</span><span class="o">/</span><span class="mf">2862230510.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2021-03-12 13:00&#39;</span><span class="p">]</span>
+
+<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3><span class="section-number">3.1.5.3. </span>📝 Checking In<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Write a cell of code that returns only the rows of the <code class="docutils literal notranslate"><span class="pre">water_vars</span></code> dataframe where discharge is greater than 46.</p>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="groupby">
+<h1><span class="section-number">3.2. </span>Groupby<a class="headerlink" href="#groupby" title="Permalink to this headline">¶</a></h1>
+<p>While we have 146 individual readings in our dataset sometimes we don’t care about each individual reading.  Instead we probably care about the aggregate of a specific group of readings.</p>
+<p>For example:</p>
+<ul class="simple">
+<li><p>Given the average temperature of every county in the US, what is the average temperature in each state?</p></li>
+<li><p>Given a list of the opening dates of every Chuck E Cheese stores, how many Chuck E Cheeses were opened each year? 🧀</p></li>
+</ul>
+<p>In pandas (and tabular data in general) we answer questions like that that with <code class="docutils literal notranslate"><span class="pre">groupby</span></code>.</p>
+<div class="section" id="breaking-groupby-into-conceptual-parts">
+<h2><span class="section-number">3.2.1. </span>Breaking <code class="docutils literal notranslate"><span class="pre">groupby</span></code> into conceptual parts<a class="headerlink" href="#breaking-groupby-into-conceptual-parts" title="Permalink to this headline">¶</a></h2>
+<p>In addition to the dataframe, there are three main parts to a groupby:</p>
+<ol class="simple">
+<li><p>Which variable we want to group together</p></li>
+<li><p>How we want to group</p></li>
+<li><p>The variable we want to see in the end</p></li>
+</ol>
+<p>Without getting into syntax yet we can start by identifiying these in our two example questions.</p>
+<p><strong>Given the average temperature of every county in the US, what is the average temperature in each state?</strong></p>
+<ul class="simple">
+<li><p><em>Which variable to group together?</em> -&gt; We want to group counties into states</p></li>
+<li><p><em>How do we want to group?</em> -&gt; Take the average</p></li>
+<li><p><em>What variable do we want to look at?</em> Temperature</p></li>
+</ul>
+<p><strong>Given a list of the opening dates of every Chuck E Cheese stores, how many Chuck E Cheeses were opened each year?</strong></p>
+<ul class="simple">
+<li><p><em>Which variable to group together?</em> -&gt; We want to group individual days into years</p></li>
+<li><p><em>How do we want to group?</em> -&gt; Count them</p></li>
+<li><p><em>What variable do we want to look at?</em> Number of stores</p></li>
+</ul>
+<div class="section" id="id2">
+<h3><span class="section-number">3.2.1.1. </span>📝 Checking In<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Identify each of three main groupby parts in the following scenario:</p>
+<p><strong>Given the hourly temperatures for a location over the course of a month, what were the daily highs?</strong></p>
+<ol class="simple">
+<li><p><em>Which variable to group together?</em></p></li>
+<li><p><em>How do we want to group?</em></p></li>
+<li><p><em>What variable do we want to look at?</em></p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="groupby-syntax">
+<h2><span class="section-number">3.2.2. </span><code class="docutils literal notranslate"><span class="pre">groupby</span></code> syntax<a class="headerlink" href="#groupby-syntax" title="Permalink to this headline">¶</a></h2>
+<p>We can take these <code class="docutils literal notranslate"><span class="pre">groupby</span></code> concepts and translate them into syntax.  The first two parts (which variable to group &amp; how do we want to group) are required for pandas.  The third one is optional.</p>
+<p>Starting with just the two required variables, the general syntax is:</p>
+<p><code class="docutils literal notranslate"><span class="pre">DATAFRAME.groupby(WHICH_GROUP).AGGREGATION()</span></code></p>
+<p>Words in all capitals are variables.  We’ll go into each part a little more below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">water_vars</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;safety level&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3276</span><span class="o">/</span><span class="mf">3846281247.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;safety level&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="which-group">
+<h3><span class="section-number">3.2.2.1. </span><code class="docutils literal notranslate"><span class="pre">'WHICH_GROUP'</span></code><a class="headerlink" href="#which-group" title="Permalink to this headline">¶</a></h3>
+<p>This variable can be any of the columns in the dataframe that can be put into discrete piles.  We used <code class="docutils literal notranslate"><span class="pre">'safety_level'</span></code> because it can easily be put into piles – <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">medium</span></code> and <code class="docutils literal notranslate"><span class="pre">high</span></code>.</p>
+<p>We are still allowed to group on other columns, it’s just that the practicality can become questionable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">water_vars</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;pH&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3276</span><span class="o">/</span><span class="mf">115259404.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;pH&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="watch-out">
+<h4><span class="section-number">3.2.2.1.1. </span>🌟 Watch out!<a class="headerlink" href="#watch-out" title="Permalink to this headline">¶</a></h4>
+<p>Because they are right next to each other it can be really tempting to want to put the variable you are most interested in seeing in place of <code class="docutils literal notranslate"><span class="pre">WHICH_GROUP</span></code>.  If you do this and use a column that can’t be grouped, so consider <code class="docutils literal notranslate"><span class="pre">WHICH_GROUP</span></code> variable if you are debugging.</p>
+</div>
+</div>
+<div class="section" id="aggregation-functions">
+<h3><span class="section-number">3.2.2.2. </span>Aggregation Functions<a class="headerlink" href="#aggregation-functions" title="Permalink to this headline">¶</a></h3>
+<p>The functions you can use in a groupby are limited, but there are still lots of options.  Common ones include:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.count()</span></code> - find the total number of rows</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.min()</span></code>- find the minimum value of those rows</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.max()</span></code> - find the maximum value of those rows</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.mean()</span></code>- find the mean value of those rows</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.sum()</span></code> - find the sum of the values of those rows</p></li>
+</ul>
+</div>
+<div class="section" id="the-third-input">
+<h3><span class="section-number">3.2.2.3. </span>The third input<a class="headerlink" href="#the-third-input" title="Permalink to this headline">¶</a></h3>
+<p>In the conceptual explanation we often also specify which variable we want to look at.  In <code class="docutils literal notranslate"><span class="pre">pandas</span></code> this isn’t always as important, since by default it gives us the full dataframe.  If for some reason we do need to specify the exact variable of interest (ex. we have a very large dataframe, we are making a plot), we do that by adding the column name in after the groupby.</p>
+<p><code class="docutils literal notranslate"><span class="pre">DATAFRAME.groupby(WHICH_GROUP)[INTEREST_VAR].AGGREGATION()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Group our water dataframe by saftey level and take the mean of the discharge values for each safety level group</span>
+<span class="n">water_vars</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;safety level&quot;</span><span class="p">)[</span><span class="s1">&#39;discharge&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3276</span><span class="o">/</span><span class="mf">3960829099.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Group our water dataframe by saftey level and take the mean of the discharge values for each safety level group</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;safety level&quot;</span><span class="p">)[</span><span class="s1">&#39;discharge&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3><span class="section-number">3.2.2.4. </span>📝 Checking In<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>What is the maximum pH value during low safety level?</p></li>
+<li><p>What is the mean discharge when dam releases are happening?</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="breaking-down-the-process">
+<h2><span class="section-number">3.2.3. </span>Breaking down the process<a class="headerlink" href="#breaking-down-the-process" title="Permalink to this headline">¶</a></h2>
+<p>There is a lot that happens in a single step with <code class="docutils literal notranslate"><span class="pre">groupby</span></code> and it can be a lot to take in.  One way to mentally situate this process is to think about <strong>split-apply-combine</strong>.</p>
+<p><strong>split-apply-combine</strong> breaks down the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> process into those three steps:</p>
+<ol class="simple">
+<li><p>SPLIT the full data set into groups.  Split is related to the question <em>Which variable to group together?</em></p></li>
+<li><p>APPLY the aggregation function to the individual groups.  Apply is related to the question <em>How do we want to group?</em></p></li>
+<li><p>COMBINE the aggregated data into a new dataframe</p></li>
+</ol>
+<img src="https://static.packt-cdn.com/products/9781783985128/graphics/5128OS_09_01.jpg" width=550>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons/lesson_4/tabular"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../../tabular_data.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">3. </span>Tabular Data</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../../lesson_7/tabular/geopandas_lesson.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3.3. </span><code class="docutils literal notranslate"><span class="pre">geopandas</span></code>, Tabular data group</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The Jupyter Book Community<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1305 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debugging &#8212; SARP Programming Lessons</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Time Series Statistics" href="../Time%20Series%20Statistics/oceans_stats_examples.html" />
+    <link rel="prev" title="geopandas" href="../../lessons/tabular_data/3_geopandas.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/sarp_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SARP Programming Lessons</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   Welcome to the website for Programming at SARP
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lessons
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../lessons/general_python/index.html">
+   General Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/general_python/1_variables_types_ifstatements.html">
+     Variables, Data types, and if Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/general_python/2_lists_dictionaries.html">
+     Lists and Dictionaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/general_python/datetimes.html">
+     Datetimes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/general_python/spatial_data.html">
+     Spatial Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../lessons/raster_data/index.html">
+   Raster Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/raster_data/1_arrays_numpy.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/raster_data/2_raster_fundamentals.html">
+     Working with rasters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/raster_data/3_accessing_coordinates.html">
+     Accessing Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../lessons/tabular_data/index.html">
+   Tabular Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/tabular_data/1_pandas.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/tabular_data/2_filtering_groupby.html">
+     Filtering and groupby
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/tabular_data/3_geopandas.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       geopandas
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Additional Lectures
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Debugging
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Time%20Series%20Statistics/oceans_stats_examples.html">
+   Time Series Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Hierarchical%20Data/hierarchical%20data.html">
+   Hierarchical Data Structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Visualization/Dynamic%20Visualization.html">
+   Dynamic Visualization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Visualization/Viewing%20images.html">
+   Viewing Images
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Visualization/Viz%20with%20matplotlib/viz%20with%20matplotlib.html">
+   Static Data Visualization in Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Practice Sheets
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../lessons/general_python/practice/index.html">
+   General Python Practice Sheets
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/general_python/practice/1_variables_data_practice.html">
+     Variables, Data Types and If statements Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/general_python/practice/2_lists_dicts_practice.html">
+     Lists and Dictionaries Answers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/general_python/practice/datetimes_practice.html">
+     Part 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/general_python/practice/spatial_data_practice.html">
+     Part 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/general_python/practice/1_variables_data_answers.html">
+     Variables, Data Types and If statements Answers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/general_python/practice/datetimes_answers.html">
+     Part 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/general_python/practice/spatial_data_answers.html">
+     Part 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/additional_lectures/Debugging/debugging_lesson.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/rwegener2/sarp_lessons"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/rwegener2/sarp_lessons/issues/new?title=Issue%20on%20page%20%2Fadditional_lectures/Debugging/debugging_lesson.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rwegener2/sarp_lessons/master?urlpath=tree/docs/additional_lectures/Debugging/debugging_lesson.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-a-python-traceback">
+   1) Using a Python Traceback
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python-error-messages">
+     Python Error Messages
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#indexerror">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         IndexError
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#keyerror">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         KeyError
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#nameerror">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         NameError
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#syntaxerror">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         SyntaxError
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#typeerror">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         TypeError
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#attributeerror">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         AttributeError
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#valueerror">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         ValueError
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sometimes-it-s-mixed">
+     Sometimes it’s mixed
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#libraries">
+     Libraries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#an-example">
+     An Example
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-2-pandas">
+     Example 2 (pandas)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reading-documentation">
+   3) Reading Documentation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remembering-arguments-args-and-keyword-arguments-kwargs">
+     Remembering arguments (
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       args
+      </span>
+     </code>
+     ) and keyword arguments (
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       kwargs
+      </span>
+     </code>
+     )
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-with-rasters-matplotlib-plot-imshow">
+     Example with rasters:
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib.plot.imshow
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-with-pandas-plot-scatter">
+     Example with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
+     :
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       .plot.scatter()
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Debugging</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-a-python-traceback">
+   1) Using a Python Traceback
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python-error-messages">
+     Python Error Messages
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#indexerror">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         IndexError
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#keyerror">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         KeyError
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#nameerror">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         NameError
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#syntaxerror">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         SyntaxError
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#typeerror">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         TypeError
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#attributeerror">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         AttributeError
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#valueerror">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         ValueError
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sometimes-it-s-mixed">
+     Sometimes it’s mixed
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#libraries">
+     Libraries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#an-example">
+     An Example
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-2-pandas">
+     Example 2 (pandas)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reading-documentation">
+   3) Reading Documentation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remembering-arguments-args-and-keyword-arguments-kwargs">
+     Remembering arguments (
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       args
+      </span>
+     </code>
+     ) and keyword arguments (
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       kwargs
+      </span>
+     </code>
+     )
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-with-rasters-matplotlib-plot-imshow">
+     Example with rasters:
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib.plot.imshow
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-with-pandas-plot-scatter">
+     Example with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
+     :
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       .plot.scatter()
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="debugging">
+<h1>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="using-a-python-traceback">
+<h2>1) Using a Python Traceback<a class="headerlink" href="#using-a-python-traceback" title="Permalink to this headline">¶</a></h2>
+<p>(Also called a slacktrace)</p>
+<img src="https://files.realpython.com/media/python_traceback_2.b27a4eb060a8.png">
+<ol class="simple">
+<li><p><strong>blue box</strong> - Type of error</p></li>
+<li><p><strong>green box</strong> - Error message</p></li>
+<li><p><strong>red line</strong> - The specific line that caused the error</p></li>
+<li><p><strong>yellow box</strong> - The files and functions/methods where the error occured</p></li>
+</ol>
+<p>Key point:</p>
+<blockquote>
+<div><p>Read a Python traceback from bottom to top</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;location&#39;</span><span class="p">:</span> <span class="s1">&#39;Nairobi&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;quality_flag&#39;</span><span class="p">:</span> <span class="mi">5</span>
+    <span class="s1">&#39;zenith&#39;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> 
+    <span class="s1">&#39;clouds&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;data_center&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;LPDAAC&#39;</span><span class="p">,</span> <span class="s1">&#39;ASDC&#39;</span><span class="p">],</span>
+<span class="p">}</span>
+<span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;Zenith&quot;] == &#39;</span><span class="mi">7</span><span class="s1">&#39;</span>
+<span class="n">rotated_zenith</span> <span class="o">=</span> <span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;zenith&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">90</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rotated_zenith</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/f8/rh42xb3d1tnbw2bxsjwgym1c0000gn/T/ipykernel_1910/3949122566.py&quot;</span><span class="gt">, line </span><span class="mi">4</span>
+    <span class="s1">&#39;zenith&#39;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>Indentify the parts of the slacktrace in the error message above.</em></p>
+<div class="section" id="python-error-messages">
+<h3>Python Error Messages<a class="headerlink" href="#python-error-messages" title="Permalink to this headline">¶</a></h3>
+<p>Python error messages are shown <strong>at the bottom</strong> of a Traceback.  This is the first thing you often read in the traceback.</p>
+<div class="section" id="indexerror">
+<h4><code class="docutils literal notranslate"><span class="pre">IndexError</span></code><a class="headerlink" href="#indexerror" title="Permalink to this headline">¶</a></h4>
+<p>An <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> occurs when you try to access a value using an index and that index does not exist in the object.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pollutants</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;co&#39;</span><span class="p">,</span> <span class="s1">&#39;co2&#39;</span><span class="p">,</span> <span class="s1">&#39;no2&#39;</span><span class="p">,</span> <span class="s1">&#39;o3&#39;</span><span class="p">]</span>
+<span class="n">pollutants</span><span class="p">[</span><span class="mi">50</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_1910</span><span class="o">/</span><span class="mf">1585203070.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">pollutants</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;co&#39;</span><span class="p">,</span> <span class="s1">&#39;co2&#39;</span><span class="p">,</span> <span class="s1">&#39;no2&#39;</span><span class="p">,</span> <span class="s1">&#39;o3&#39;</span><span class="p">]</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">pollutants</span><span class="p">[</span><span class="mi">50</span><span class="p">]</span>
+
+<span class="ne">IndexError</span>: list index out of range
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="keyerror">
+<h4><code class="docutils literal notranslate"><span class="pre">KeyError</span></code><a class="headerlink" href="#keyerror" title="Permalink to this headline">¶</a></h4>
+<p>A <code class="docutils literal notranslate"><span class="pre">KeyError</span></code> occurs when you are trying to access a named value of an object (a key) that does not exist.  This is common in dictionaries and pandas DataFrames.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;location&#39;</span><span class="p">:</span> <span class="s1">&#39;Nairobi&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;quality_flag&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> 
+    <span class="s1">&#39;zenith&#39;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> 
+    <span class="s1">&#39;clouds&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;data_center&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;LPDAAC&#39;</span><span class="p">,</span> <span class="s1">&#39;ASDC&#39;</span><span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;start_date&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_1910</span><span class="o">/</span><span class="mf">1341323874.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;start_date&#39;</span><span class="p">]</span>
+
+<span class="ne">KeyError</span>: &#39;start_date&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="nameerror">
+<h4><code class="docutils literal notranslate"><span class="pre">NameError</span></code><a class="headerlink" href="#nameerror" title="Permalink to this headline">¶</a></h4>
+<p>A <code class="docutils literal notranslate"><span class="pre">NameError</span></code> occurs when you try to use a variable that doesn’t exist.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">max_no2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_1910</span><span class="o">/</span><span class="mf">3548658577.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">len</span><span class="p">(</span><span class="n">max_no2</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;max_no2&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="syntaxerror">
+<h4><code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code><a class="headerlink" href="#syntaxerror" title="Permalink to this headline">¶</a></h4>
+<p>A <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> occurs when you have typed something that breaks the grammar rules of the core Python language. This could be extra parenthesis, mismatching quotes, backwards brackets, or a variety of other things.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">pollutants</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/f8/rh42xb3d1tnbw2bxsjwgym1c0000gn/T/ipykernel_1910/1418259943.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="nb">len</span><span class="p">(</span><span class="n">pollutants</span>
+                  <span class="o">^</span>
+<span class="ne">SyntaxError</span>: unexpected EOF while parsing
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;zenith&quot;]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/f8/rh42xb3d1tnbw2bxsjwgym1c0000gn/T/ipykernel_1910/2767718900.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;zenith&quot;]</span>
+                      <span class="o">^</span>
+<span class="ne">SyntaxError</span>: EOL while scanning string literal
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="typeerror">
+<h4><code class="docutils literal notranslate"><span class="pre">TypeError</span></code><a class="headerlink" href="#typeerror" title="Permalink to this headline">¶</a></h4>
+<p>A <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> is raised when you try to do something to an object, for example using a function, method, or operator, that the object can’t handle.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">max_o3</span> <span class="o">=</span> <span class="mi">95</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">max_o3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_1910</span><span class="o">/</span><span class="mf">3449978028.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">max_o3</span> <span class="o">=</span> <span class="mi">95</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">len</span><span class="p">(</span><span class="n">max_o3</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: object of type &#39;int&#39; has no len()
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="attributeerror">
+<h4><code class="docutils literal notranslate"><span class="pre">AttributeError</span></code><a class="headerlink" href="#attributeerror" title="Permalink to this headline">¶</a></h4>
+<p>An <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> occurs when you try to get information from an object and the type of information you are looking for doesn’t exist on that type of object.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pollutants</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;co&#39;</span><span class="p">,</span> <span class="s1">&#39;co2&#39;</span><span class="p">,</span> <span class="s1">&#39;no2&#39;</span><span class="p">,</span> <span class="s1">&#39;o3&#39;</span><span class="p">]</span>
+<span class="n">pollutants</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_1910</span><span class="o">/</span><span class="mf">1491194648.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">pollutants</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;co&#39;</span><span class="p">,</span> <span class="s1">&#39;co2&#39;</span><span class="p">,</span> <span class="s1">&#39;no2&#39;</span><span class="p">,</span> <span class="s1">&#39;o3&#39;</span><span class="p">]</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">pollutants</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+
+<span class="ne">AttributeError</span>: &#39;list&#39; object has no attribute &#39;keys&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="valueerror">
+<h4><code class="docutils literal notranslate"><span class="pre">ValueError</span></code><a class="headerlink" href="#valueerror" title="Permalink to this headline">¶</a></h4>
+<p>A <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> is raised when a function/method gets an input value that has the right type but the value is not appropriate.  It is a very broad reaching error so it sometimes isn’t obvious what the problem is if you get a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;8&#39;</span><span class="p">)</span>  <span class="c1"># This is fine</span>
+<span class="nb">float</span><span class="p">(</span><span class="s1">&#39;pineapples&#39;</span><span class="p">)</span>  <span class="c1"># This isn&#39;t</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_1910</span><span class="o">/</span><span class="mf">1402898198.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;8&#39;</span><span class="p">)</span>  <span class="c1"># This is fine</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;pineapples&#39;</span><span class="p">)</span>  <span class="c1"># This isn&#39;t</span>
+
+<span class="ne">ValueError</span>: could not convert string to float: &#39;pineapples&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="sometimes-it-s-mixed">
+<h3>Sometimes it’s mixed<a class="headerlink" href="#sometimes-it-s-mixed" title="Permalink to this headline">¶</a></h3>
+<p>At times the error message you get won’t be the most helpful thing to lead to you to the solution. Keep this in mind - while the error message is a very useful place to start your debugging be open to considering additional avenues of error.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sometimes error messages are more cryptic</span>
+<span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;data_center&#39;</span><span class="p">[</span><span class="s1">&#39;LPDAAC&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;&gt;:2: SyntaxWarning: str indices must be integers or slices, not str; perhaps you missed a comma?
+&lt;&gt;:2: SyntaxWarning: str indices must be integers or slices, not str; perhaps you missed a comma?
+/var/folders/f8/rh42xb3d1tnbw2bxsjwgym1c0000gn/T/ipykernel_1910/3611029950.py:2: SyntaxWarning: str indices must be integers or slices, not str; perhaps you missed a comma?
+  metadata[&#39;data_center&#39;[&#39;LPDAAC&#39;]]
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_1910</span><span class="o">/</span><span class="mf">3611029950.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Sometimes error messages are more cryptic</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;data_center&#39;</span><span class="p">[</span><span class="s1">&#39;LPDAAC&#39;</span><span class="p">]]</span>
+
+<span class="ne">TypeError</span>: string indices must be integers
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="libraries">
+<h3>Libraries<a class="headerlink" href="#libraries" title="Permalink to this headline">¶</a></h3>
+<p>Additional libraries will have their own custom errors that you will learn as you use them.  Read the error message type to become familiar with the terminology then move on to reading the error message.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rasterio</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;./my_favorite_file.tif&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">CPLE_OpenFailedError</span><span class="g g-Whitespace">                      </span>Traceback (most recent call last)
+<span class="nn">rasterio/_base.pyx</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
+
+<span class="nn">rasterio/_shim.pyx</span> in <span class="ni">rasterio._shim.open_dataset</span><span class="nt">()</span>
+
+<span class="nn">rasterio/_err.pyx</span> in <span class="ni">rasterio._err.exc_wrap_pointer</span><span class="nt">()</span>
+
+<span class="ne">CPLE_OpenFailedError</span>: ./my_favorite_file.tif: No such file or directory
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">RasterioIOError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_1910</span><span class="o">/</span><span class="mf">2104435563.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;./my_favorite_file.tif&#39;</span><span class="p">)</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/rasterio/env.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">435</span> 
+<span class="g g-Whitespace">    </span><span class="mi">436</span>         <span class="k">with</span> <span class="n">env_ctor</span><span class="p">(</span><span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">437</span>             <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">438</span> 
+<span class="g g-Whitespace">    </span><span class="mi">439</span>     <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/rasterio/__init__.py</span> in <span class="ni">open</span><span class="nt">(fp, mode, driver, width, height, count, crs, transform, dtype, nodata, sharing, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">218</span>         <span class="c1"># None.</span>
+<span class="g g-Whitespace">    </span><span class="mi">219</span>         <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s1">&#39;r&#39;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">220</span>             <span class="n">s</span> <span class="o">=</span> <span class="n">DatasetReader</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="n">sharing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span>         <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;r+&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">222</span>             <span class="n">s</span> <span class="o">=</span> <span class="n">get_writer_for_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">)(</span>
+
+<span class="nn">rasterio/_base.pyx</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
+
+<span class="ne">RasterioIOError</span>: ./my_favorite_file.tif: No such file or directory
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="an-example">
+<h3>An Example<a class="headerlink" href="#an-example" title="Permalink to this headline">¶</a></h3>
+<p>Take a few minutes to debug the following block of code.  Keep note of what strategies you use to find and fix errors.</p>
+<ul class="simple">
+<li><p>How do you know when something isn’t working?</p></li>
+<li><p>How do you decide what to try?</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Goal: Set a new value of 7 to the zenith then print the `rotated_zenith` value</span>
+<span class="c1"># The output value should be 97.</span>
+<span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;location&#39;</span><span class="p">:</span> <span class="s1">&#39;Nairobi&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;quality_flag&#39;</span><span class="p">:</span> <span class="mi">5</span>
+    <span class="s1">&#39;zenith&#39;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> 
+    <span class="s1">&#39;clouds&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;data_center&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;LPDAAC&#39;</span><span class="p">,</span> <span class="s1">&#39;ASDC&#39;</span><span class="p">],</span>
+<span class="p">}</span>
+<span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;Zenith&quot;] == &#39;</span><span class="mi">7</span><span class="s1">&#39;</span>
+<span class="n">rotated_zenith</span> <span class="o">=</span> <span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;zenith&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">90</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rotated_zenith</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/f8/rh42xb3d1tnbw2bxsjwgym1c0000gn/T/ipykernel_1910/3028054094.py&quot;</span><span class="gt">, line </span><span class="mi">6</span>
+    <span class="s1">&#39;zenith&#39;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="example-2-pandas">
+<h3>Example 2 (pandas)<a class="headerlink" href="#example-2-pandas" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import example WAS data</span>
+<span class="n">was_2020_filepath</span> <span class="o">=</span> <span class="s2">&quot;./data/SARP 2020 final.xlsx&quot;</span>
+<span class="n">was_2020</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">was_2020_filepath</span><span class="p">,</span> <span class="s2">&quot;INPUT&quot;</span><span class="p">,</span> <span class="n">skipfooter</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">was_2020</span><span class="p">[</span><span class="s1">&#39;Box&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">was_2020</span><span class="p">[</span><span class="s1">&#39;Box&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The goal of the following piece of code is to show all ~20 rows where CH4 was greater than 1 from box 37.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">was_2020</span><span class="p">[(</span><span class="n">was_2020</span><span class="p">[</span><span class="s1">&#39;Box&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">37</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">was_2020</span><span class="p">[</span><span class="s1">&#39;CH4 (ppmv height)&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)][</span><span class="s1">&#39;i-Pentane (E/B)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/f8/rh42xb3d1tnbw2bxsjwgym1c0000gn/T/ipykernel_1910/2200275038.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="n">was_2020</span><span class="p">[(</span><span class="n">was_2020</span><span class="p">[</span><span class="s1">&#39;Box&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">37</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">was_2020</span><span class="p">[</span><span class="s1">&#39;CH4 (ppmv height)&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)][</span><span class="s1">&#39;i-Pentane (E/B)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">())</span>
+                                                                                                     <span class="o">^</span>
+<span class="ne">SyntaxError</span>: unmatched &#39;)&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="reading-documentation">
+<h2>3) Reading Documentation<a class="headerlink" href="#reading-documentation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="remembering-arguments-args-and-keyword-arguments-kwargs">
+<h3>Remembering arguments (<code class="docutils literal notranslate"><span class="pre">args</span></code>) and keyword arguments (<code class="docutils literal notranslate"><span class="pre">kwargs</span></code>)<a class="headerlink" href="#remembering-arguments-args-and-keyword-arguments-kwargs" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pollutants</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;co&#39;</span><span class="p">,</span> <span class="s1">&#39;co2&#39;</span><span class="p">,</span> <span class="s1">&#39;no2&#39;</span><span class="p">,</span> <span class="s1">&#39;o3&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># &#39;ch4&#39; is an argument</span>
+<span class="n">pollutants</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;ch4&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># reverse=False is a key word argument</span>
+<span class="n">pollutants</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pollutants</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ch4&#39;, &#39;co&#39;, &#39;co2&#39;, &#39;no2&#39;, &#39;o3&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="example-with-rasters-matplotlib-plot-imshow">
+<h3>Example with rasters: <code class="docutils literal notranslate"><span class="pre">matplotlib.plot.imshow</span></code><a class="headerlink" href="#example-with-rasters-matplotlib-plot-imshow" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html">documentation page</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_1910</span><span class="o">/</span><span class="mf">1221060185.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;np&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_1910</span><span class="o">/</span><span class="mf">1862399075.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;matrix&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;BuGn&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_1910</span><span class="o">/</span><span class="mf">2995920205.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;BuGn&#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;matrix&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="example-with-pandas-plot-scatter">
+<h3>Example with <code class="docutils literal notranslate"><span class="pre">pandas</span></code>: <code class="docutils literal notranslate"><span class="pre">.plot.scatter()</span></code><a class="headerlink" href="#example-with-pandas-plot-scatter" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.scatter.html">documentation page</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import example WAS data</span>
+<span class="n">was_2020_filepath</span> <span class="o">=</span> <span class="s2">&quot;./data/SARP 2020 final.xlsx&quot;</span>
+<span class="n">was_2020</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">was_2020_filepath</span><span class="p">,</span> <span class="s2">&quot;INPUT&quot;</span><span class="p">,</span> <span class="n">skipfooter</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">was_2020</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;i-Butane (E/B)&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;n-Butane (E/B)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;i-Butane (E/B)&#39;, ylabel=&#39;n-Butane (E/B)&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../_images/debugging_lesson_48_1.png" src="../../_images/debugging_lesson_48_1.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./additional_lectures/Debugging"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../../lessons/tabular_data/3_geopandas.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">geopandas</span></code></p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../Time%20Series%20Statistics/oceans_stats_examples.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Time Series Statistics</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Rachel Wegener<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

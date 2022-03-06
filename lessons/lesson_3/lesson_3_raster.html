@@ -1,0 +1,1308 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 3, Raster data &#8212; SARP Lessons</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lesson 4, Raster data" href="../lesson_4/raster/lesson_4_raster.html" />
+    <link rel="prev" title="Raster Data" href="../raster_data.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SARP Lessons</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lessons
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../general_python.html">
+   General Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/lesson_1.html">
+     1 - Variables, Data types, and if Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/lesson_2.html">
+     2 - Lists and Dictionaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson_5/tabular/datetimes_tabular.html">
+     Tabular Data, Week 3 Lesson 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson_6/spatial_data.html">
+     Spatial Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../raster_data.html">
+   Raster Data
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Lesson 3, Raster data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson_4/raster/lesson_4_raster.html">
+     Lesson 4, Raster data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson_7/raster/accessing_coordinates_raster_lesson.html">
+     Accessing Data with Coordinates, Raster Data Lesson
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../tabular_data.html">
+   Tabular Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson_4/tabular/lesson_4_tabular.html">
+     Lesson 4, Tabular data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson_7/tabular/geopandas_lesson.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       geopandas
+      </span>
+     </code>
+     , Tabular data group
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Additional Lectures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../additional_lectures/Debugging/debugging_lesson.html">
+   Debugging
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../additional_lectures/Time%20Series%20Statistics/oceans_stats_examples.html">
+   Time Series Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../additional_lectures/Hierarchical%20Data/hierarchical%20data.html">
+   Hierarchical Data Structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../additional_lectures/rasterio/raster_fundamentals.html">
+   Working with rasters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../additional_lectures/Visualization/Dynamic%20Visualization.html">
+   Read in Datasets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../additional_lectures/Visualization/Viewing%20images.html">
+   Read in Datasets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../additional_lectures/Visualization/Viz%20with%20matplotlib/viz%20with%20matplotlib.html">
+   Static Data Visualization in Python
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/lessons/lesson_3/lesson_3_raster.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flessons/lesson_3/lesson_3_raster.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lessons/lesson_3/lesson_3_raster.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Lesson 3, Raster data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#content">
+     Content
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#context">
+     Context
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#libraries">
+   🗃️ Libraries
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#side-conversation-standard-vs-non-standard-libraries">
+     🌀Side Conversation: Standard vs. Non-standard Libraries
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-structure-arrays">
+   🧊 Data structure: Arrays
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numpy-library">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+     library
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#side-conversation-xarray">
+       🌀 Side conversation:
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         xarray
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-and-inspecting-numpy-arrays">
+     Creating and Inspecting
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+     arrays
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#notice">
+       👀 Notice
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#array-indexes">
+       Array Indexes
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#checking-in">
+       📝 Checking In
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-than-one-dimension">
+     More than one dimension
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#indexing-multi-dimensional-arrays">
+       Indexing multi-dimensional arrays
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       📝 Checking In
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#array-math-and-aggregations">
+     Array Math and Aggregations
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#more-math">
+       More math
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aggregations">
+     Aggregations
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       📝 Checking In
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Lesson 3, Raster data</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Lesson 3, Raster data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#content">
+     Content
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#context">
+     Context
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#libraries">
+   🗃️ Libraries
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#side-conversation-standard-vs-non-standard-libraries">
+     🌀Side Conversation: Standard vs. Non-standard Libraries
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-structure-arrays">
+   🧊 Data structure: Arrays
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numpy-library">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+     library
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#side-conversation-xarray">
+       🌀 Side conversation:
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         xarray
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-and-inspecting-numpy-arrays">
+     Creating and Inspecting
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+     arrays
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#notice">
+       👀 Notice
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#array-indexes">
+       Array Indexes
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#checking-in">
+       📝 Checking In
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-than-one-dimension">
+     More than one dimension
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#indexing-multi-dimensional-arrays">
+       Indexing multi-dimensional arrays
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       📝 Checking In
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#array-math-and-aggregations">
+     Array Math and Aggregations
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#more-math">
+       More math
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aggregations">
+     Aggregations
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       📝 Checking In
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="lesson-3-raster-data">
+<h1>Lesson 3, Raster data<a class="headerlink" href="#lesson-3-raster-data" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="content">
+<h2>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>🗃️ Libraries</p></li>
+<li><p>🧊 <code class="docutils literal notranslate"><span class="pre">numpy</span></code> Data structures</p></li>
+<li><p>📁 Creating and Inspecting <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays</p></li>
+<li><p>🚅 More than one dimension</p></li>
+<li><p>➕ Math and Aggregations</p></li>
+</ul>
+</div>
+<div class="section" id="context">
+<h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
+<p>Today we are building up our arsenal of data structures with a really exiting one - the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array.  Numpy arrays can be used on their own but they also underlie many really useful libraries.  <code class="docutils literal notranslate"><span class="pre">xarray</span></code>, the primary library we will use to manipulate rasters, uses <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays to store the data.  <code class="docutils literal notranslate"><span class="pre">numpy</span></code> is also highly optimized for large computations, which is the benefit we gain from stepping from the generic <code class="docutils literal notranslate"><span class="pre">list</span></code> Python structure to the more specialized <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array.</p>
+<img src="./summaryslide_3raster.jpg" width=800></div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="libraries">
+<h1>🗃️ Libraries<a class="headerlink" href="#libraries" title="Permalink to this headline">¶</a></h1>
+<p>Today we are going to dig into our first library in Python!  A <strong>library</strong> is a like an “extras” package for a programming language (think Settlers of Catan expansion pack).  It is a set of commands that doesn’t automatically come activated when you use Python, but that you can still use if you just tell Python that you plan to do so.  You let python know you are going to use a library with an <code class="docutils literal notranslate"><span class="pre">import</span></code> statment.  After you do that the additional commands become availble.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Attempting to use the `math` libray before importing</span>
+<span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_2879</span><span class="o">/</span><span class="mf">642619898.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Attempting to use the `math` libray before importing</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;math&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importing a Python library</span>
+<span class="kn">import</span> <span class="nn">math</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Attempt #2 to use the `math` libray, after importing</span>
+<span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<p>Once we have imported the library we can use the new commands that the library contains.  The <code class="docutils literal notranslate"><span class="pre">math</span></code> library was just an example and it isn’t the focus of this lesson, but if you want you can see a list of <code class="docutils literal notranslate"><span class="pre">math</span></code> commands <a class="reference external" href="https://docs.python.org/3/library/math.html">here</a>.</p>
+<div class="section" id="side-conversation-standard-vs-non-standard-libraries">
+<h2>🌀Side Conversation: Standard vs. Non-standard Libraries<a class="headerlink" href="#side-conversation-standard-vs-non-standard-libraries" title="Permalink to this headline">¶</a></h2>
+<p>One large chunk of libraries are together referred to as the <strong>Python Standard Library</strong>. These libraries are not a part of the “core” language (everything we can do without import statments) but have still been offically accepted into the Python distribution package and are maintained in the same way as the rest of the core language.  You can read more <a class="reference external" href="https://docs.python.org/3/tutorial/stdlib.html">here</a>.</p>
+<p>There are also libraries which aren’t a part of this designation, and are still widely used and developed, but they are simply not included when you hit the “Download Python” button.  Non-standard libraries are maintained by groups of developers outside of the Python Software Foundation and anyone can make one.  That includes you!</p>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="data-structure-arrays">
+<h1>🧊 Data structure: Arrays<a class="headerlink" href="#data-structure-arrays" title="Permalink to this headline">¶</a></h1>
+<p>Arrays are the new data structure of this lesson.  They are similar to lists in that they represent a group of values.  Arrays are also simliar to list because you reference specific values using an index.  The main difference between lists and arrays is that arrays can have multiple dimensions.</p>
+<p>Still, if you array only has 1 dimension (like a list), why not just use a list?  Because:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays are super optimized for speed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays have lots of funcions build in that let you do extra things to a list</p></li>
+</ul>
+<p>In the end the choice between an array and a list depends on what kind of data you have and what you want to do with it.  There is also an element of personal preference.</p>
+<img src="../images/L3_numpy-arrays.png" width=550>
+<p><em>Image ammended from
+<a class="reference external" href="https://indianaiproduction.com/python-numpy-tutorial/">Indian AI Production</a>.</em></p>
+<div class="section" id="numpy-library">
+<h2><code class="docutils literal notranslate"><span class="pre">numpy</span></code> library<a class="headerlink" href="#numpy-library" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> is the standard Python library for dealing with arrays and matricies.  A lot of time and energy has gone into making <code class="docutils literal notranslate"><span class="pre">numpy</span></code> fast.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="side-conversation-xarray">
+<h3>🌀 Side conversation: <code class="docutils literal notranslate"><span class="pre">xarray</span></code><a class="headerlink" href="#side-conversation-xarray" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">xarray</span></code> is another array/matrix library that has gained a LOT of traction among scientists.  It is a great library and it is developed by a group of scientists in the earthdata community so it often works really well for earth science applications.</p>
+<p>There are two big problems with <code class="docutils literal notranslate"><span class="pre">xarray</span></code> right now:</p>
+<ul class="simple">
+<li><p>it doesn’t have good spatial referencing.  This means that there isn’t good tooling for people to, for example, pick a data point based on latitude and longitude</p></li>
+<li><p>There isn’t a great way to read <code class="docutils literal notranslate"><span class="pre">xarray</span></code> data from the cloud</p></li>
+</ul>
+<p>These are both problems that are being actively worked on by members of the community and will, I think, be resolved in the near future.  Until then, though, and for the sake of stability, this summer we are focused on <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.  If you are interested in trying <code class="docutils literal notranslate"><span class="pre">xarray</span></code>, certainly go for it or talk to me.</p>
+</div>
+</div>
+<div class="section" id="creating-and-inspecting-numpy-arrays">
+<h2>Creating and Inspecting <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays<a class="headerlink" href="#creating-and-inspecting-numpy-arrays" title="Permalink to this headline">¶</a></h2>
+<p>Because arrays are so similar to lists one common way to make an array is by starting with a list.</p>
+<p>We use <code class="docutils literal notranslate"><span class="pre">np.array()</span></code> to convert a list to an array.  In that line <code class="docutils literal notranslate"><span class="pre">np.</span></code> reminds Python which library we are referecing.  Here <code class="docutils literal notranslate"><span class="pre">np.</span></code> means <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, which is what we told Python to call <code class="docutils literal notranslate"><span class="pre">numpy</span></code> when we imported it with <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">np</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reflectance_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">54</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reflectance_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">25</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">54</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reflectance_array</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([25, 65, 43, 13, 54])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nothing very special so far.</p>
+<p>What we get with the array, though, is some extra <strong>properties</strong> (information) and <strong>methods</strong> (actions).  To continue with our analogy from the previous lessons, if data structures are <em>nouns</em>, and functions/methods are <em>verbs</em>, properties are the <em>adjectives</em>.  They describe the object to you.</p>
+<p>Some useful properties of an array are:</p>
+<ul class="simple">
+<li><p><strong>dtype</strong>: the data type of the array (Ex. integer, float, etc.)</p></li>
+<li><p><strong>shape</strong>: the number of items along each dimension</p></li>
+</ul>
+<p>Properties are applied using a period <code class="docutils literal notranslate"><span class="pre">.</span></code> at the end of the object:</p>
+<ul class="simple">
+<li><p>Ex. <code class="docutils literal notranslate"><span class="pre">my_array.property</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reflectance_array</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dtype(&#39;int64&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reflectance_array</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(5,)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will look at some useful methods in a bit.</p>
+<p>Vocab note: You will sometimes hear the word <strong>attribute</strong> in place of <strong>property</strong>.  Either one works.</p>
+<div class="section" id="notice">
+<h3>👀 Notice<a class="headerlink" href="#notice" title="Permalink to this headline">¶</a></h3>
+<p>We have seen both properties and methods before for lists.  Now that we have seen them in multiple places, you might start noticing a pattern.</p>
+<ul class="simple">
+<li><p>Properties of objects you access with <code class="docutils literal notranslate"><span class="pre">data_structure.property</span></code>.  They <strong>tell</strong> you something about the object</p></li>
+<li><p>Methods of objects you access with <code class="docutils literal notranslate"><span class="pre">data_structure.method()</span></code>.  They <strong>do</strong> something to the object.</p></li>
+</ul>
+<p><em>Starting Structures</em></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">list_ex</span> <span class="pre">=</span> <span class="pre">['co','co2','ch4']</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">array_ex</span> <span class="pre">=</span> <span class="pre">np.array([6.5,</span> <span class="pre">7.3.</span> <span class="pre">2.9])</span></code></p></li>
+</ul>
+<p><em>Examples of properties</em></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">print(array_ex.shape)</span>&#160; <span class="pre">#</span> <span class="pre">returns</span> <span class="pre">(3,)</span></code></p></li>
+</ul>
+<p><em>Examples of methods</em></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">list_ex.append('o3')</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">array_ex.full(3)</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="array-indexes">
+<h3>Array Indexes<a class="headerlink" href="#array-indexes" title="Permalink to this headline">¶</a></h3>
+<p>You can access elements of the array by index, just like with lists.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Return the 5th value in the array</span>
+<span class="n">reflectance_array</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>54
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Return the last value in the array</span>
+<span class="n">reflectance_array</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>54
+</pre></div>
+</div>
+</div>
+</div>
+<p>With a one-dimensional array this looks exactly the same as a list.  With higher-dimensional arrays there is a little more to keep track of.</p>
+</div>
+<div class="section" id="checking-in">
+<h3>📝 Checking In<a class="headerlink" href="#checking-in" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Get the shape of the array</p></li>
+<li><p>Get the value of the 3rd item in the array</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="more-than-one-dimension">
+<h2>More than one dimension<a class="headerlink" href="#more-than-one-dimension" title="Permalink to this headline">¶</a></h2>
+<p>The array we made so far is a one-dimensional array.  Very often when working with arrays you will have two or more dimensions.  You can create arrays like this by putting lists inside of lists, or <strong>nesting</strong> them.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nested_list</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]]</span>
+<span class="n">array_2d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">nested_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The array we just created looks like this:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>5</p></td>
+<td><p>6</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">array_2d</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 2, 3],
+       [4, 5, 6]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">array_2d</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2, 3)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Oen thing that you have to start keeping track of once your arrays have more than one dimension is their <strong>axes</strong>. An axis is a number assigned to each new dimension to keep track of it.</p>
+<img src="https://codeguru.academy/wp-content/uploads/2020/11/numpy-intro-01.png" width=450>
+<p><em>Image from <a class="reference external" href="https://codeguru.academy/?p=335">Code Guru</a></em></p>
+<p>You might often hear/read arrays called <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>s.  This is short for an n-dimensional array, which refers to the fact that it can have any, or “n”, number of dimensions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reflectance_list</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reflectance_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">reflectance_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="indexing-multi-dimensional-arrays">
+<h3>Indexing multi-dimensional arrays<a class="headerlink" href="#indexing-multi-dimensional-arrays" title="Permalink to this headline">¶</a></h3>
+<p>When indexing multi-dimensional arrays we use the same square bracket <code class="docutils literal notranslate"><span class="pre">[]</span></code> syntax.  To get a single number we need to specify the index for each of the axes that we have in the array.  So if we have a 3 dimensional array we need 3 indexes to specify exactly which value we want.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Reflectance_array has two dimensions, accessed using the property `ndim` (number of dimensions)</span>
+<span class="n">reflectance_array</span><span class="o">.</span><span class="n">ndim</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reflectance_array</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 2, 3],
+       [4, 5, 6]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># lets get the second value down and the third value across</span>
+<span class="n">reflectance_array</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you would like to see an entire slice of data (for example, the whole second row) you don’t have to specify an index for every dimension.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reflectance_array</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4, 5, 6])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, note that you can also use the slice operator <code class="docutils literal notranslate"><span class="pre">:</span></code> with the mutli-dimensional indexes as well:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reflectance_array</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2, 3])
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>What is the use of this?</strong></p>
+<p>With these small examples it isn’t that much of a mystery what any particular value is.  Once you start working with real data it will become much more challenging to get a sense of your dataset, so you will likely spend a few minutes after opening any new dataset inspecting it using indexes and probably also using some of the aggregations from the next section.</p>
+</div>
+<div class="section" id="id1">
+<h3>📝 Checking In<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Consider an array of the following form called <code class="docutils literal notranslate"><span class="pre">example_array</span></code>:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>7</p></td>
+<td><p>8</p></td>
+<td><p>9</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>12</p></td>
+<td><p>13</p></td>
+<td><p>14</p></td>
+<td><p>15</p></td>
+</tr>
+<tr class="row-odd"><td><p>16</p></td>
+<td><p>17</p></td>
+<td><p>18</p></td>
+<td><p>19</p></td>
+<td><p>20</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="simple">
+<li><p>What is the value at index [0, 2]?</p></li>
+<li><p>What is the result of <code class="docutils literal notranslate"><span class="pre">example_array[4]</span></code>?</p></li>
+<li><p>What is the result of <code class="docutils literal notranslate"><span class="pre">example_array[1:3,</span> <span class="pre">2]</span></code>?</p></li>
+<li><p>Give the index to return the value 15.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="array-math-and-aggregations">
+<h2>Array Math and Aggregations<a class="headerlink" href="#array-math-and-aggregations" title="Permalink to this headline">¶</a></h2>
+<p>Once we start getting into manipulating the values of matrices we are approaching some of the principles of linear algebra.  If you have taken linear algebra before then you’ll be right at home.  If not, don’t worry too much.  The operations that you are most likely to use don’t get too deep.</p>
+<p>Because we are working with matricies instead of single numbers, if you want to do addition on a matrix, you have two options:</p>
+<ol class="simple">
+<li><p>Add the same number to every item in the array</p></li>
+<li><p>Add a value depending on the position of the item to the items in an array</p></li>
+</ol>
+<p>With method 2 the most important thing to remember when you start trying to add/subtract/multiply values to an array is that the shape of you array is important. So, if you have a 3x2 array and you want to add some values, you need to add another matrix which has the shape 3x2.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reflectance_array</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 2, 3],
+       [4, 5, 6]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Adding the same value to the whole matrix</span>
+<span class="n">reflectance_array</span> <span class="o">+</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[11, 12, 13],
+       [14, 15, 16]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creating a new array of shape 4x2</span>
+<span class="n">second_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">second_array</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4, 2)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reflectance_array</span> <span class="o">+</span> <span class="n">second_array</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_2879</span><span class="o">/</span><span class="mf">1917030642.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">reflectance_array</span> <span class="o">+</span> <span class="n">second_array</span>
+
+<span class="ne">ValueError</span>: operands could not be broadcast together with shapes (2,3) (4,2) 
+</pre></div>
+</div>
+</div>
+</div>
+<p>One thing to be careful of is that numpy will try to help you out by changing the shape of your matrix if it doesn’t make sense.  This is called <em>broadcasting</em> and it can be helpful, but it can also lead to errors if you aren’t aware that it is happening.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2x3 matrix + 1x3 matrix -&gt; no error</span>
+<span class="n">reflectance_array</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[2, 4, 6],
+       [5, 7, 9]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>If this concept is confusing there are some really great visuals of adding arrays <a class="reference external" href="https://numpy.org/doc/stable/user/absolute_beginners.html#basic-array-operations">in the numpy docs</a>.</p>
+<div class="section" id="more-math">
+<h3>More math<a class="headerlink" href="#more-math" title="Permalink to this headline">¶</a></h3>
+<p>Since numpy in a library intended for computational mathematics it has most any function built ito it that you could ever want.  In general, googling “numpy”, then the function you want (Ex. “numpy dot product”) will get you want you need.  There is also a list of functions <a class="reference external" href="https://numpy.org/doc/stable/user/quickstart.html#universal-functions">in the docs</a>.</p>
+</div>
+</div>
+<div class="section" id="aggregations">
+<h2>Aggregations<a class="headerlink" href="#aggregations" title="Permalink to this headline">¶</a></h2>
+<p>Another really common operation, both during processing and while inspecting a dataset, is to run some kind of aggregation.  There are lots of them build into <code class="docutils literal notranslate"><span class="pre">numpy</span></code>:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Syntax</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.max()</span></code></p></td>
+<td><p>Maximum value</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.min()</span></code></p></td>
+<td><p>Minimum value</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.std()</span></code></p></td>
+<td><p>Standard deviation</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.mean()</span></code></p></td>
+<td><p>Mean value</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.sum()</span></code></p></td>
+<td><p>Sum total of all the values</p></td>
+</tr>
+</tbody>
+</table>
+<p>These methods are all run with the <code class="docutils literal notranslate"><span class="pre">object.method()</span></code> syntax.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reflectance_array</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>21
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reflectance_array</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<p>The aggregation functions have an additional option with arrays of specifying over which axis you would like to take the aggregation.  This is done using a <strong>key word argument</strong>.</p>
+<p>We saw un-named arguments when we used the <code class="docutils literal notranslate"><span class="pre">.append()</span></code> method to add methane to our list of pollutants in the lists lesson:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pollutants</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;o3&#39;</span><span class="p">,</span> <span class="s1">&#39;co2&#39;</span><span class="p">,</span><span class="s1">&#39; nox&#39;</span><span class="p">]</span>
+<span class="n">pollutants</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;ch4&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In that case ‘ch4’ is the argument.  Sometimes, though, to use an argument you have to tell the method what you want it to do with that argument.  This is the use of Key word arguments.</p>
+<p>Vocab note: You will often see in documentation the options for arguments listed as <strong>args</strong> (pronounced like a pirate) and the key word argument options listed under <strong>kwargs</strong> (pronounced like a pirate that just accidently ran into something).</p>
+<p>The syntax for a kwarg is to put it inside the parenthesis of the method with an equals sign:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Specifying axis as a kwarg</span>
+<span class="n">reflectance_array</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 7, 9])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reflectance_array</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4, 5, 6])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is a visual showing how an aggregation over an axis returns a value for the aggregation for each element along that axis:
+<img src="../images/L3_aggregations_axis.png" width=900></p>
+<p><em>Image from <a class="reference external" href="https://numpy.org/doc/stable/user/absolute_beginners.html#creating-matrices">the numpy docs</a></em></p>
+<p>There are more great visuals for aggregations <a class="reference external" href="https://numpy.org/doc/stable/user/absolute_beginners.html#creating-matrices">in the numpy docs</a>.</p>
+<div class="section" id="id2">
+<h3>📝 Checking In<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Consider an array of the following form called <code class="docutils literal notranslate"><span class="pre">example_array</span></code>:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>4</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>10</p></td>
+<td><p>12</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="simple">
+<li><p>What is the output of <code class="docutils literal notranslate"><span class="pre">example_array.max()</span></code>?</p></li>
+<li><p>Over which axis (0 or 1) was the <code class="docutils literal notranslate"><span class="pre">sum()</span></code> method run to get a result of <code class="docutils literal notranslate"><span class="pre">[10,</span> <span class="pre">14,</span> <span class="pre">18]</span></code>?</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons/lesson_3"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../raster_data.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Raster Data</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../lesson_4/raster/lesson_4_raster.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lesson 4, Raster data</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The Jupyter Book Community<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

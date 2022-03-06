@@ -1,0 +1,1142 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Working with rasters &#8212; SARP Lessons</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Read in Datasets" href="../Visualization/Dynamic%20Visualization.html" />
+    <link rel="prev" title="Hierarchical Data Structure" href="../Hierarchical%20Data/hierarchical%20data.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SARP Lessons</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lessons
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../lessons/general_python/index.html">
+   General Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/general_python/variables_types_ifstatements.html">
+     1 - Variables, Data types, and if Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/general_python/lists_dictionaries.html">
+     2 - Lists and Dictionaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/general_python/datetimes.html">
+     Datetimes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/general_python/spatial_data.html">
+     Spatial Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../lessons/raster_data/index.html">
+   Raster Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/raster_data/lesson_3_raster.html">
+     Lesson 3, Raster data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/raster_data/accessing_coordinates.html">
+     Accessing Data with Coordinates, Raster Data Lesson
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../lessons/tabular_data/index.html">
+   Tabular Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/tabular_data/lesson_3_tabular.html">
+     Lecture 3, Tabular data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/tabular_data/lesson_4_tabular.html">
+     Lesson 4, Tabular data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/tabular_data/geopandas.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       geopandas
+      </span>
+     </code>
+     , Tabular data group
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Additional Lectures
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Debugging/debugging_lesson.html">
+   Debugging
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Time%20Series%20Statistics/oceans_stats_examples.html">
+   Time Series Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Hierarchical%20Data/hierarchical%20data.html">
+   Hierarchical Data Structure
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Working with rasters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Visualization/Dynamic%20Visualization.html">
+   Read in Datasets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Visualization/Viewing%20images.html">
+   Read in Datasets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Visualization/Viz%20with%20matplotlib/viz%20with%20matplotlib.html">
+   Static Data Visualization in Python
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/additional_lectures/rasterio/raster_fundamentals.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fadditional_lectures/rasterio/raster_fundamentals.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/additional_lectures/rasterio/raster_fundamentals.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-contents">
+   Table of Contents
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-anatomy-of-a-raster">
+   🧠 The Anatomy of a raster
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#checking-in">
+     📝 Checking In
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#opening-a-file">
+   📖 Opening a file
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#opening-a-file-with-rasterio">
+     Opening a file with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       rasterio
+      </span>
+     </code>
+     :
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#filepaths">
+     Filepaths
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reading-a-raster-band-with-rasterio">
+     Reading a raster band with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       rasterio
+      </span>
+     </code>
+     :
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getting-a-quick-visual-of-the-data">
+     Getting a quick visual of the data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#extra-background-context-managers">
+     🌀 Extra background - Context managers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     📝 Checking In
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inspecting-the-metadata">
+   🔍 Inspecting the Metadata
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example">
+     Example
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     📝 Checking In
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#working-with-the-data">
+   🚜 Working with the Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indexing">
+     Indexing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exploratory-statistics">
+     Exploratory statistics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matrix-operations">
+     Matrix Operations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting">
+     Plotting
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     📝 Checking In
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#saving-a-file">
+   💾 Saving a file
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Working with rasters</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-contents">
+   Table of Contents
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-anatomy-of-a-raster">
+   🧠 The Anatomy of a raster
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#checking-in">
+     📝 Checking In
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#opening-a-file">
+   📖 Opening a file
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#opening-a-file-with-rasterio">
+     Opening a file with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       rasterio
+      </span>
+     </code>
+     :
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#filepaths">
+     Filepaths
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reading-a-raster-band-with-rasterio">
+     Reading a raster band with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       rasterio
+      </span>
+     </code>
+     :
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getting-a-quick-visual-of-the-data">
+     Getting a quick visual of the data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#extra-background-context-managers">
+     🌀 Extra background - Context managers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     📝 Checking In
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inspecting-the-metadata">
+   🔍 Inspecting the Metadata
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example">
+     Example
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     📝 Checking In
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#working-with-the-data">
+   🚜 Working with the Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indexing">
+     Indexing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exploratory-statistics">
+     Exploratory statistics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matrix-operations">
+     Matrix Operations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting">
+     Plotting
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     📝 Checking In
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#saving-a-file">
+   💾 Saving a file
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="working-with-rasters">
+<h1>Working with rasters<a class="headerlink" href="#working-with-rasters" title="Permalink to this headline">¶</a></h1>
+<p>This is the notebook to start with in this repository.  After this notebook move on to any of the notebooks in this folder.</p>
+<div class="section" id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>🧠Anatomy of a raster</p></li>
+<li><p>📖Opening a file</p></li>
+<li><p>🔍Inspecting the metadata</p></li>
+<li><p>🚜Working with the data</p></li>
+<li><p>💾Saving a file</p></li>
+</ul>
+</div>
+<div class="section" id="the-anatomy-of-a-raster">
+<h2>🧠 The Anatomy of a raster<a class="headerlink" href="#the-anatomy-of-a-raster" title="Permalink to this headline">¶</a></h2>
+<p>Working with raster data involves understanding how rasters are organized.</p>
+<img src="./images/raster_anatomy.jpg" width="550"><div class="section" id="checking-in">
+<h3>📝 Checking In<a class="headerlink" href="#checking-in" title="Permalink to this headline">¶</a></h3>
+<p>You open a raster file and see that the count is 224.  What have you just learned about the raster?</p>
+</div>
+</div>
+<div class="section" id="opening-a-file">
+<h2>📖 Opening a file<a class="headerlink" href="#opening-a-file" title="Permalink to this headline">¶</a></h2>
+<p>When you open data files in Python you usually need to use a library.  When dealing with raster data there are several common libraries, most of which cater to a specific data type:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>File Format</p></th>
+<th class="head"><p>File Extension</p></th>
+<th class="head"><p>Python Library</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>netCDF</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.nc</span></code></p></td>
+<td><p>netCDF4</p></td>
+</tr>
+<tr class="row-odd"><td><p>HDF5</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.hdf5</span></code></p></td>
+<td><p>h5py</p></td>
+</tr>
+<tr class="row-even"><td><p>HDF4</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.hdf4</span></code></p></td>
+<td><p>pyhdf</p></td>
+</tr>
+<tr class="row-odd"><td><p>geoTIFF</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.tiff</span></code></p></td>
+<td><p>rasterio</p></td>
+</tr>
+<tr class="row-even"><td><p>zarr</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.zarr</span></code></p></td>
+<td><p>zarr</p></td>
+</tr>
+</tbody>
+</table>
+<p>While each of these libraries works best with their associated file type, I really like to use <code class="docutils literal notranslate"><span class="pre">rasterio</span></code> because it does a particularly good job of accomodating <a class="reference external" href="https://gdal.org/drivers/raster/index.html">many data types</a>.  I usually start with <code class="docutils literal notranslate"><span class="pre">rasterio</span></code> and switch to the a different file-specific library only if I need something extra <code class="docutils literal notranslate"><span class="pre">rasterio</span></code> doesn’t already provide.</p>
+<div class="section" id="opening-a-file-with-rasterio">
+<h3>Opening a file with <code class="docutils literal notranslate"><span class="pre">rasterio</span></code>:<a class="headerlink" href="#opening-a-file-with-rasterio" title="Permalink to this headline">¶</a></h3>
+<p>We open our rasters with the <code class="docutils literal notranslate"><span class="pre">rasterio.open()</span></code> method.  The general syntax is</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">FILEPATH_TO_RASTER</span><span class="p">,</span> <span class="n">DATAMODE</span><span class="p">)</span> <span class="k">as</span> <span class="n">src</span><span class="p">:</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(src)
+</pre></div>
+</div>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>where <code class="docutils literal notranslate"><span class="pre">FILEPATH_TO_RASTER</span></code> is the place on your computer where the data is stored and <code class="docutils literal notranslate"><span class="pre">DATAMODE</span></code> is usually either ‘r’ for read (opening existing data) or ‘w’ for write (creating new data).  There are other data modes but these are two very common ones.</p>
+<p>An example of opening a file using test AVIRIS data:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the filepath to our raster</span>
+<span class="c1"># filepath_rad = &#39;./data/subset_f180628t01p00r02_corr_v1k1_img&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="filepaths">
+<h3>Filepaths<a class="headerlink" href="#filepaths" title="Permalink to this headline">¶</a></h3>
+<p>Ahe <strong>filepath</strong> and is a string that describes the location of the data that you want to open.  A few pieces of the anatomy of a filepath to notice:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">/</span></code> - forward slashes signal that you have entered a new folder.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.</span></code> - the period at the beginning tells the computer to start looking for data in the same place tht the code is being run in.</p></li>
+</ul>
+<p>Choosing to start your filepath with a <code class="docutils literal notranslate"><span class="pre">.</span></code> is called specificying a <strong>relative filepath</strong>, because you are telling the computer to start looking for the file relative to where the file is being run. If you move this file to another place on your computer and don’t move the data with it the import statment won’t work anymore.  The alternative to a relative filepath is an <strong>aboslute filepath</strong>, in which case you start your file path at the very tippy top of your computer’s organizational structure (the root directory).</p>
+<p>Other vocab notes:</p>
+<ul class="simple">
+<li><p><strong>directory</strong> is the same thing as a folder.</p></li>
+</ul>
+<p>To loop back to our example, we put together our filepath by defining the following directions for our computer:</p>
+<ol class="simple">
+<li><p>start by specifing the current directory as the starting point: <code class="docutils literal notranslate"><span class="pre">.</span></code></p></li>
+<li><p>go into the data folder: <code class="docutils literal notranslate"><span class="pre">./data</span></code></p></li>
+<li><p>choose the file named “subset_f180628t01p00r02_corr_v1k1_img”:
+<code class="docutils literal notranslate"><span class="pre">'./data/subset_f180628t01p00r02_corr_v1k1_img'</span></code></p></li>
+</ol>
+<p>🎉 And there we have our file</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import ra/sterio</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Open the file</span>
+<span class="c1"># with rasterio.open(filepath_rad, &#39;r&#39;) as src:</span>
+<span class="c1">#     print(src)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The object that gets returned here <code class="docutils literal notranslate"><span class="pre">&lt;open</span> <span class="pre">DatasetReader</span> <span class="pre">name='./data/subset_f180628t01p00r02_corr_v1k1_img'</span> <span class="pre">mode='r'&gt;</span></code> is the “Dataset Reader” object.  This object connects you to the file in Python, but it isn’t actually the data.  To get to the data you need to use <code class="docutils literal notranslate"><span class="pre">src.read()</span></code>.</p>
+</div>
+<div class="section" id="reading-a-raster-band-with-rasterio">
+<h3>Reading a raster band with <code class="docutils literal notranslate"><span class="pre">rasterio</span></code>:<a class="headerlink" href="#reading-a-raster-band-with-rasterio" title="Permalink to this headline">¶</a></h3>
+<p>General syntax:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">FILEPATH_TO_RASTER</span><span class="p">,</span> <span class="n">DATAMODE</span><span class="p">)</span> <span class="k">as</span> <span class="n">src</span><span class="p">:</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(src.read(BAND_INDEX))
+</pre></div>
+</div>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>where <code class="docutils literal notranslate"><span class="pre">FILEPATH_TO_RASTER</span></code> is the place on your computer where the data is <code class="docutils literal notranslate"><span class="pre">DATAMODE</span></code> is usually either ‘r’ for read (opening existing data) or ‘w’ for write (creating new data).  <code class="docutils literal notranslate"><span class="pre">BAND_INDEX</span></code> indicates which band you want to read.  Leaving <code class="docutils literal notranslate"><span class="pre">BAND_INDEX</span></code> blank reads the entire raster (all bands).</p>
+<p>An example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Reading the first band from our file</span>
+<span class="c1"># with rasterio.open(filepath_rad, &#39;r&#39;) as src:</span>
+<span class="c1">#     print(src.read(5))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>What gets printed here are our actual data values! 🎉</p>
+</div>
+<div class="section" id="getting-a-quick-visual-of-the-data">
+<h3>Getting a quick visual of the data<a class="headerlink" href="#getting-a-quick-visual-of-the-data" title="Permalink to this headline">¶</a></h3>
+<p>Another way to quickly get eyes on our data is to use the <code class="docutils literal notranslate"><span class="pre">show</span></code> command.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># from matplotlib import pyplot</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># with rasterio.open(filepath_rad, &#39;r&#39;) as src:</span>
+<span class="c1">#     pyplot.imshow(src.read(5))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The plot and the array might not be very useful right now, but at least we have validated that we can open our raster and that it contains data.</p>
+<p>If you like viewing quick plots as a way of interacting with your data you can read more about it in the <a class="reference external" href="https://rasterio.readthedocs.io/en/latest/topics/plotting.html">rasterio docs</a>.</p>
+</div>
+<div class="section" id="extra-background-context-managers">
+<h3>🌀 Extra background - Context managers<a class="headerlink" href="#extra-background-context-managers" title="Permalink to this headline">¶</a></h3>
+<p>It might be new to you that I used the syntax:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="o">...</span> <span class="k">as</span> <span class="n">src</span><span class="p">:</span>
+    <span class="n">src</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This syntax is called the <strong>Context manager</strong>.  When we read files we are opening them up, like a book, and they stay open until we tell the program to close them.  The benefit of the context manager is that it opens up a file when you use the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement, runs all your lines of indented code, and the closes the file after.  This is important if you are opening up large files.  Your computer only has so much memory, so if you try to open too many 8GB files at once without closing them you can crash your program.</p>
+<p>If you don’t want to use the contect manager another way to this same task is to run:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">src</span> <span class="o">=</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filepath_rad</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">src</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">src</span><span class="p">)</span>
+<span class="n">src</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4394</span><span class="o">/</span><span class="mf">387520394.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">src</span> <span class="o">=</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filepath_rad</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">src</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">src</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">src</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;rasterio&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you do this, though, make sure to only be working with a few files at a time or to close your files.</p>
+</div>
+<div class="section" id="id1">
+<h3>📝 Checking In<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>What is happening in the following piece of code?  How many bands will be affected?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;./data/f180628t01p00r02_corr_v1k1_img&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">src</span><span class="p">:</span>
+    <span class="n">src</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="inspecting-the-metadata">
+<h2>🔍 Inspecting the Metadata<a class="headerlink" href="#inspecting-the-metadata" title="Permalink to this headline">¶</a></h2>
+<p>When you first open a dataset it is often helpful to get your bearings by inspecting the metadata.  In rasterio we do this by inspecting the DatasetReader object (<code class="docutils literal notranslate"><span class="pre">src</span></code>) that was returned when you opened the object.</p>
+<p>There are <a class="reference external" href="https://rasterio.readthedocs.io/en/latest/api/rasterio._base.html#rasterio._base.DatasetBase">lots of attributes</a> that you check a dataset reader for.  If you want to get an general overview I like to use <code class="docutils literal notranslate"><span class="pre">src.meta</span></code>.  To extract specific values here are some more attributes that I find useful:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://rasterio.readthedocs.io/en/latest/api/rasterio._base.html#id1"><code class="docutils literal notranslate"><span class="pre">src.bounds</span></code></a> - Returns the lower left and upper right bounds of the dataset in the units of its coordinate reference system. (lower left x, lower left y, upper right x, upper right y)</p></li>
+<li><p><a class="reference external" href="https://rasterio.readthedocs.io/en/latest/api/rasterio._base.html#id5"><code class="docutils literal notranslate"><span class="pre">src.count</span></code></a> - The number of raster bands in the dataset</p></li>
+<li><p><a class="reference external" href="https://rasterio.readthedocs.io/en/latest/api/rasterio._base.html#id6"><code class="docutils literal notranslate"><span class="pre">src.crs</span></code></a> - The dataset’s coordinate reference system</p></li>
+<li><p><a class="reference external" href="https://rasterio.readthedocs.io/en/latest/api/rasterio._base.html#id7"><code class="docutils literal notranslate"><span class="pre">src.descriptions</span></code></a> - Descriptions for each dataset band</p></li>
+<li><p><a class="reference external" href="https://rasterio.readthedocs.io/en/latest/api/rasterio._base.html#rasterio._base.DatasetBase.dtypes"><code class="docutils literal notranslate"><span class="pre">src.dtypes</span></code></a> - The data types of each band in index order</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">src.height</span></code> - The number of pixels in each column</p></li>
+<li><p><a class="reference external" href="https://rasterio.readthedocs.io/en/latest/api/rasterio._base.html#id11"><code class="docutils literal notranslate"><span class="pre">src.indexes</span></code></a> - The 1-based indexes of each band in the dataset</p></li>
+<li><p><a class="reference external" href="https://rasterio.readthedocs.io/en/latest/api/rasterio._base.html#id14"><code class="docutils literal notranslate"><span class="pre">src.meta</span></code></a> - The basic metadata of this dataset.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">src.name</span></code> - Relative filepath of the dataset</p></li>
+<li><p><a class="reference external" href="https://rasterio.readthedocs.io/en/latest/api/rasterio._base.html#id17"><code class="docutils literal notranslate"><span class="pre">src.nodata</span></code></a> - The dataset’s single nodata value</p></li>
+<li><p><a class="reference external" href="https://rasterio.readthedocs.io/en/latest/api/rasterio._base.html#id22"><code class="docutils literal notranslate"><span class="pre">src.res</span></code></a> - Returns the (width, height) of pixels in the units of its coordinate reference system.</p></li>
+<li><p><a class="reference external" href="https://rasterio.readthedocs.io/en/latest/api/rasterio._base.html#id24"><code class="docutils literal notranslate"><span class="pre">src.transform</span></code></a> - The dataset’s georeferencing transformation matrix</p></li>
+<li><p><a class="reference external" href="https://rasterio.readthedocs.io/en/latest/api/rasterio._base.html#id25"><code class="docutils literal notranslate"><span class="pre">src.units</span></code></a> - one units string for each dataset band</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">src.width</span></code> - the number of pixels in each row</p></li>
+</ul>
+<p>All of the parts of the raster that were addressed in the first section of this notebook  <em>Anatomy of a raster</em> are accessible using these attributes.</p>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Try substituting any of the above attributes in for this dataset</span>
+<span class="c1"># with rasterio.open(filepath_rad, &#39;r&#39;) as src:</span>
+<span class="c1">#     pprint(src.meta)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># with rasterio.open(filepath_rad, &#39;r&#39;) as src:</span>
+<span class="c1">#     print(src.read().shape)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>With the above print statement we learned from the <code class="docutils literal notranslate"><span class="pre">src.meta</span></code> information that the raster has 224 bands (<code class="docutils literal notranslate"><span class="pre">count</span></code>) it has the coordinate reference system EPSG code 32610 (<code class="docutils literal notranslate"><span class="pre">crs</span></code>), it is an ENVI filetype (<code class="docutils literal notranslate"><span class="pre">driver</span></code>), the datatype is float32 (<code class="docutils literal notranslate"><span class="pre">dtype</span></code>), it has 250 rows or is 250 pixels tall (<code class="docutils literal notranslate"><span class="pre">height</span></code>), there isn’t a nodata value set (<code class="docutils literal notranslate"><span class="pre">nodata</span></code>), the affine tranform is (1.02258007728804e-15, 16.7, 769855.79, 16.7, -1.02258007728804e-15, 3751257.6) (<code class="docutils literal notranslate"><span class="pre">tranform</span></code>), and that the raster has 375 columns or is 375 pixels wide.  We also see the relative filepath of the raster from the <code class="docutils literal notranslate"><span class="pre">src.name</span></code> attribute.</p>
+</div>
+<div class="section" id="id2">
+<h3>📝 Checking In<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Which of the following are metadata in an AVIRIS reflectance dataset?</p>
+<ul class="simple">
+<li><p>A) Number of bands</p></li>
+<li><p>B) Coordinate information</p></li>
+<li><p>C) Reflectance values</p></li>
+<li><p>D) Height/Lines and Width/Samples</p></li>
+</ul>
+<p>Answer with all of the letters that are metadata.</p>
+</div>
+</div>
+<div class="section" id="working-with-the-data">
+<h2>🚜 Working with the Data<a class="headerlink" href="#working-with-the-data" title="Permalink to this headline">¶</a></h2>
+<p>While the raster file is is accessed through a unique filetype-specific library, the actual data is almost always just a common matrix datatype.  Numpy is the most common library used, but xarray is also used by some data libraries.</p>
+<p>This means that everything we working on last week for matricies applies to the data inside the raster file.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># with rasterio.open(filepath_rad, &#39;r&#39;) as src:</span>
+<span class="c1">#     red_band = src.read(50)</span>
+<span class="c1">#     blue_band = src.read(10)</span>
+<span class="c1">#     green_band = src.read(20)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="indexing">
+<h3>Indexing<a class="headerlink" href="#indexing" title="Permalink to this headline">¶</a></h3>
+<p>A reminder about matrix indexing:</p>
+<ul class="simple">
+<li><p>2D matrices use row, column order</p></li>
+<li><p>3D matrices use height, row, column order</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># red_band[249, 374]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># red_band[144, 100]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># One long row of data</span>
+<span class="c1"># red_band[4]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exploratory-statistics">
+<h3>Exploratory statistics<a class="headerlink" href="#exploratory-statistics" title="Permalink to this headline">¶</a></h3>
+<p>When I open a dataset I often like to get a sense of it by just looking at looking at statistics for one of the bands.  We can use the aggregation functions from last week for this.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print(&#39;max value: &#39;, green_band.max())</span>
+<span class="c1"># print(&#39;mean value: &#39;, green_band.mean())</span>
+<span class="c1"># print(&#39;min value: &#39;, green_band.min())</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="matrix-operations">
+<h3>Matrix Operations<a class="headerlink" href="#matrix-operations" title="Permalink to this headline">¶</a></h3>
+<p>Adding and subtracting two matrices</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># red + green</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># blue - red</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Multiplying or dividing a matrix by a constant</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># red*5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># green/7</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Some other built in operations</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We have to take the absolute value of red because the nodata values are negative and that throws an error</span>
+<span class="c1"># np.sqrt(abs(red))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># np.power(red, 5)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are lots more built in functions.  <a class="reference external" href="https://www.oreilly.com/library/view/python-for-data/9781449323592/ch04.html#table_unary_ufuncs">This table</a> has a nice list.</p>
+</div>
+<div class="section" id="plotting">
+<h3>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h3>
+<p>Also notice that plotting works for a single band</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pyplot.imshow(band5, cmap=&#39;pink&#39;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>📝 Checking In<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Say that the variable <code class="docutils literal notranslate"><span class="pre">reflectance</span></code> hold all of the data for an AVIRIS raster – count 224 with 1000 rows and 350 columns.</p>
+<p>What is the index you need to use to get the all the data for band 100?</p>
+</div>
+</div>
+<div class="section" id="saving-a-file">
+<h2>💾 Saving a file<a class="headerlink" href="#saving-a-file" title="Permalink to this headline">¶</a></h2>
+<p>At a certain point you may want to do it.  Let’s start by getting some data to save</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get our data setup</span>
+<span class="c1"># with rasterio.open(filepath_rad, &#39;r&#39;) as src:</span>
+<span class="c1">#     red_src = src.read(50)</span>
+<span class="c1">#     blue_src = src.read(20)</span>
+<span class="c1">#     green_src = src.read(10)</span>
+<span class="c1">#     meta = src.meta.copy()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>It is best practice to persist or update as much of the metadata from your old raster as you can.  As you may have experienced working with data, complete and accurate metadata can make someone else’s life (and maybe even your own) much easier down the road.  Make sure you look at it, though, to make sure all the information still applies to your new raster.</p>
+<p>Count has changed, since we are only saving 3 of the 224 total bands, so we need to upadate the <code class="docutils literal notranslate"><span class="pre">count</span></code> value.  I am also going to set -50 as the nodata value.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># meta[&#39;count&#39;] = 3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Another thing you could do is add tags to your bands so that you remember what band number you used.  You do this when you write out the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make the output directory if it does not exist yet</span>
+<span class="c1"># import os</span>
+<span class="c1"># if not os.path.exists(&#39;../output_data&#39;):</span>
+<span class="c1">#     os.makedirs(&#39;../output_data&#39;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># with rasterio.open(</span>
+<span class="c1">#     &#39;../output_data/rgb&#39;,</span>
+<span class="c1">#     &#39;w&#39;,</span>
+<span class="c1">#     **meta</span>
+<span class="c1"># ) as dst:</span>
+<span class="c1">#     # Write data matrices</span>
+<span class="c1">#     dst.write(red_src, 1)</span>
+<span class="c1">#     dst.write(green_src, 2)</span>
+<span class="c1">#     dst.write(blue_src, 3)</span>
+<span class="c1">#     # Add band tags</span>
+<span class="c1">#     dst.update_tags(1, src_band=50)</span>
+<span class="c1">#     dst.update_tags(2, src_band=10)</span>
+<span class="c1">#     dst.update_tags(3, src_band=20)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we want to confirm that our dataset saved properly we can open it back up and look at what we saved.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># with rasterio.open(&#39;../output_data/rgb&#39;, &#39;r&#39;) as src:</span>
+<span class="c1">#     red_dst = src.read(1)</span>
+<span class="c1">#     green_dst = src.read(2)</span>
+<span class="c1">#     blue_dst = src.read(3)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print(&#39;Source stats: &#39;)</span>
+<span class="c1"># print(&#39;red: &#39;, red_src.mean(), red_src.max())</span>
+<span class="c1"># print(&#39;green: &#39;, green_src.mean(), green_src.max())</span>
+<span class="c1"># print(&#39;blue: &#39;, blue_src.mean(), blue_src.max())</span>
+<span class="c1"># print(&#39;Destination stats: &#39;)</span>
+<span class="c1"># print(&#39;red: &#39;, red_dst.mean(), red_dst.max())</span>
+<span class="c1"># print(&#39;green: &#39;, green_dst.mean(), green_dst.max())</span>
+<span class="c1"># print(&#39;blue: &#39;, blue_dst.mean(), blue_dst.max())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Our values line up!  And the new values came from the raster we made ourselves.  😄</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./additional_lectures/rasterio"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../Hierarchical%20Data/hierarchical%20data.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Hierarchical Data Structure</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../Visualization/Dynamic%20Visualization.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Read in Datasets</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The Jupyter Book Community<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

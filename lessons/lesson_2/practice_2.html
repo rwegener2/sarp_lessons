@@ -1,0 +1,786 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Problems Part 1 &#8212; SARP Lessons</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Lesson 2" href="lesson_2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SARP Lessons</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lesson 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson_1/Teaching%20Notes.html">
+   Wrap Up Questions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson_1/answers_1.html">
+   Practice Problems Part 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson_1/lesson_1.html">
+   Lecture 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson_1/practice_1.html">
+   Practice Problems Part 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lesson 2
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="answers_2.html">
+   Practice Problems Part 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson_2.html">
+   Lesson 2
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Practice Problems Part 1
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/lessons/lesson_2/practice_2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flessons/lesson_2/practice_2.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lessons/lesson_2/practice_2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Practice Problems Part 1
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lists">
+     Lists
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#indexing">
+       Indexing
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#functions-methods">
+       Functions/Methods
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dictionaries">
+     Dictionaries
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#adding-or-changing-items">
+       Adding or changing items
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-structures">
+     Data Structures
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#practice-problems-part-2">
+   Practice Problems Part 2
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-1">
+     Question 1
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-2">
+     Question 2
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-3">
+     Question 3
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-4">
+     Question 4
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-5">
+     Question 5
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Practice Problems Part 1</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Practice Problems Part 1
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lists">
+     Lists
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#indexing">
+       Indexing
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#functions-methods">
+       Functions/Methods
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dictionaries">
+     Dictionaries
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#adding-or-changing-items">
+       Adding or changing items
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-structures">
+     Data Structures
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#practice-problems-part-2">
+   Practice Problems Part 2
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-1">
+     Question 1
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-2">
+     Question 2
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-3">
+     Question 3
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-4">
+     Question 4
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-5">
+     Question 5
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <p>This notebook provides practice problems associated with lesson 2. It is divided into several parts:</p>
+<ul class="simple">
+<li><p><strong>Part 1</strong> - most approachable place to start.  Practices syntax and concepts</p></li>
+<li><p><strong>Part 2</strong> - a step up from part 1.  Integrates concepts from accross the lesson in more applied scenarios</p></li>
+</ul>
+<div class="tex2jax_ignore mathjax_ignore section" id="practice-problems-part-1">
+<h1>Practice Problems Part 1<a class="headerlink" href="#practice-problems-part-1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="lists">
+<h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Create a list with 4-6 items that represents some foods.</p></li>
+</ol>
+<ol class="simple">
+<li><p>Create a list which contains some fake data, for example relative humidity measurements. Include a print statement which displays <code class="docutils literal notranslate"><span class="pre">Number</span> <span class="pre">of</span> <span class="pre">samples</span> <span class="pre">is:</span> <span class="pre">x</span></code> where <code class="docutils literal notranslate"><span class="pre">x</span></code> is calculated based on the number of items in your list.</p></li>
+</ol>
+<ol class="simple">
+<li><p>🐞 Debugging: Find and fix the error in the following block of code.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pollutants</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;co&quot; &#39;</span><span class="n">co2</span><span class="s1">&#39;, &#39;</span><span class="n">no2</span><span class="s1">&#39;, &#39;</span><span class="n">o3</span><span class="s1">&#39;]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/f8/rh42xb3d1tnbw2bxsjwgym1c0000gn/T/ipykernel_7769/2054215986.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="n">pollutants</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;co&quot; &#39;</span><span class="n">co2</span><span class="s1">&#39;, &#39;</span><span class="n">no2</span><span class="s1">&#39;, &#39;</span><span class="n">o3</span><span class="s1">&#39;]</span>
+                        <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="indexing">
+<h3>Indexing<a class="headerlink" href="#indexing" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>For each of the bullets print out the colors from the <code class="docutils literal notranslate"><span class="pre">colors</span></code> list using indices.</p></li>
+</ol>
+<ul class="simple">
+<li><p>red</p></li>
+<li><p>your favorite color</p></li>
+<li><p>blue, yellow, white (together)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="s1">&#39;black&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>🐞 Debugging: The goal of the following block of code is to print out the value <code class="docutils literal notranslate"><span class="pre">o3</span></code>.  Find and fix the error.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pollutants</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;co&#39;</span><span class="p">,</span> <span class="s1">&#39;co2&#39;</span><span class="p">,</span> <span class="s1">&#39;no2&#39;</span><span class="p">,</span> <span class="s1">&#39;o3&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pollutants</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_7769</span><span class="o">/</span><span class="mf">3907938299.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">pollutants</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;co&#39;</span><span class="p">,</span> <span class="s1">&#39;co2&#39;</span><span class="p">,</span> <span class="s1">&#39;no2&#39;</span><span class="p">,</span> <span class="s1">&#39;o3&#39;</span><span class="p">]</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">pollutants</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="ne">IndexError</span>: list index out of range
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="functions-methods">
+<h3>Functions/Methods<a class="headerlink" href="#functions-methods" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Returning to our list of pollutants, let’s say we learned that <code class="docutils literal notranslate"><span class="pre">no2</span></code> is the wrong value.  Instead we want that item to be <code class="docutils literal notranslate"><span class="pre">nox</span></code>.  Update the pollutants list below so the output is <code class="docutils literal notranslate"><span class="pre">['co',</span> <span class="pre">'co2',</span> <span class="pre">'nox',</span> <span class="pre">'o3']</span></code>.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pollutants</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;co&#39;</span><span class="p">,</span> <span class="s1">&#39;co2&#39;</span><span class="p">,</span> <span class="s1">&#39;no2&#39;</span><span class="p">,</span> <span class="s1">&#39;o3&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p><a class="reference external" href="https://towardsdatascience.com/python-list-methods-fa7c53010300">This article</a> linked in the lecture describes a few common list methods.  Scroll down to where the article talks about <code class="docutils literal notranslate"><span class="pre">sort()</span></code> and apply that to our <code class="docutils literal notranslate"><span class="pre">pollutants</span></code> list.  Sort first forward and then in reverse, alphabetically.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="dictionaries">
+<h2>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Create a dictionary that has an item for each of the last 4 days and displays the weather condition on each of those days.</p></li>
+</ol>
+<ol class="simple">
+<li><p>Using the dictionary you made in the previous question:</p></li>
+</ol>
+<ul class="simple">
+<li><p>print all the keys</p></li>
+<li><p>print all the values</p></li>
+<li><p>pick one specific key and print its value</p></li>
+</ul>
+<ol class="simple">
+<li><p>🐞 Debugging: Find and fix the error in the following block of code.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;location&#39;</span><span class="p">:</span> <span class="s1">&#39;Nairobi&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;quality_flag&#39;</span><span class="p">:</span> <span class="mi">5</span>
+    <span class="s1">&#39;zenith&#39;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> 
+    <span class="s1">&#39;clouds&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;data_center&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;LPDAAC&#39;</span><span class="p">,</span> <span class="s1">&#39;ASDC&#39;</span><span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/f8/rh42xb3d1tnbw2bxsjwgym1c0000gn/T/ipykernel_7769/3427454620.py&quot;</span><span class="gt">, line </span><span class="mi">4</span>
+    <span class="s1">&#39;zenith&#39;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>🐞 Debugging: The goal of the following block of code is to print out the keys of the dictionary <code class="docutils literal notranslate"><span class="pre">metadata</span></code>. Find and fix the error.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;location&#39;</span><span class="p">:</span> <span class="s1">&#39;Nairobi&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;quality_flag&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="s1">&#39;zenith&#39;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> 
+    <span class="s1">&#39;clouds&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;data_center&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;LPDAAC&#39;</span><span class="p">,</span> <span class="s1">&#39;ASDC&#39;</span><span class="p">],</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">metadata</span><span class="o">.</span><span class="n">keys</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;built-in method keys of dict object at 0x10ebd9e00&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="adding-or-changing-items">
+<h3>Adding or changing items<a class="headerlink" href="#adding-or-changing-items" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Using the following dictionary change the value for <code class="docutils literal notranslate"><span class="pre">state</span></code> to <code class="docutils literal notranslate"><span class="pre">PA</span></code>.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">census_block7</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;state&#39;</span><span class="p">:</span> <span class="s1">&#39;NY&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;block_groups&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;01&#39;</span><span class="p">,</span> <span class="s1">&#39;02&#39;</span><span class="p">,</span> <span class="s1">&#39;03&#39;</span><span class="p">,</span> <span class="s1">&#39;04&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;median_education&#39;</span><span class="p">:</span> <span class="s1">&#39;some_bachelors&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;total_housing_units&#39;</span><span class="p">:</span> <span class="mi">9329432</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Using the <code class="docutils literal notranslate"><span class="pre">census_block7</span></code> dictionary add the value 78.2 for a new item called <code class="docutils literal notranslate"><span class="pre">employment_rate</span></code>.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="data-structures">
+<h2>Data Structures<a class="headerlink" href="#data-structures" title="Permalink to this headline">¶</a></h2>
+<p>Come up with 1-2 fake datasets that make sense as a list and type out an example list.  Do the same for 1-2 dictionaries.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example</span>
+<span class="n">max_daily_temperatures_NYC</span> <span class="o">=</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">60</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="practice-problems-part-2">
+<h1>Practice Problems Part 2<a class="headerlink" href="#practice-problems-part-2" title="Permalink to this headline">¶</a></h1>
+<p>Assign the value of a dictionary to another variable</p>
+<div class="section" id="question-1">
+<h2>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h2>
+<p>The list below represents the smallest size of <a class="reference external" href="https://www.epa.gov/pm-pollution/particulate-matter-pm-basics#:~:text=PM%20stands%20for%20particulate%20matter,seen%20with%20the%20naked%20eye.">particulate matter (PM)</a> measured in a series of air samples.  Find the number of occurances of PM2.5 and PM10 in the list.  (One of the methods from the <a class="reference external" href="https://towardsdatascience.com/python-list-methods-fa7c53010300">list methods article</a> could be a good place to start).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pm_levels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;PM1&#39;</span><span class="p">,</span> <span class="s1">&#39;PM2.5&#39;</span><span class="p">,</span> <span class="s1">&#39;PM1&#39;</span><span class="p">,</span> <span class="s1">&#39;PM10&#39;</span><span class="p">,</span> <span class="s1">&#39;PM10&#39;</span><span class="p">,</span> <span class="s1">&#39;PM10&#39;</span><span class="p">,</span> <span class="s1">&#39;PM2.5&#39;</span><span class="p">,</span> <span class="s1">&#39;PM10&#39;</span><span class="p">,</span> <span class="s1">&#39;PM1&#39;</span><span class="p">,</span> <span class="s1">&#39;PM2.5&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="question-2">
+<h2>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h2>
+<p>One very common practice in dictionaries is called nesting.  <strong>Nesting</strong> is the practice of putting one data structure inside of another data structure.  So a <em>nested dictionary</em> is a dictionary inside of another dictionary.</p>
+<img src="https://i.pinimg.com/originals/a0/40/4b/a0404bf8ec04d32660aee70ecca5055b.gif" align="left"><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">state_info</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;state&#39;</span><span class="p">:</span> <span class="s1">&#39;AK&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;motto&#39;</span><span class="p">:</span> <span class="s1">&#39;north to the future&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;num_of_counties&#39;</span><span class="p">:</span> <span class="mi">29</span><span class="p">,</span>
+    <span class="s1">&#39;population&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;ages_0_25&#39;</span><span class="p">:</span> <span class="mi">28393</span><span class="p">,</span>
+        <span class="s1">&#39;ages_25_50&#39;</span><span class="p">:</span> <span class="mi">25920</span><span class="p">,</span>
+        <span class="s1">&#39;ages_over_50&#39;</span><span class="p">:</span> <span class="mi">8943</span><span class="p">,</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>A)</strong> Print out the following pieces of information from the dictionary above:</p>
+<ul class="simple">
+<li><p>the motto</p></li>
+<li><p>the population ages 25 to 50</p></li>
+</ul>
+<p><strong>B)</strong> Change the population ages 0 to 25 to 98988</p>
+<p><strong>C)</strong> Add a new age bracket to the population dictionary by adding an additional item: <code class="docutils literal notranslate"><span class="pre">ages_50_75</span></code> with the population 3333.  Change the item <code class="docutils literal notranslate"><span class="pre">ages_over_50</span></code> to be renamed <code class="docutils literal notranslate"><span class="pre">ages_50_75</span></code>.</p>
+</div>
+<div class="section" id="question-3">
+<h2>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">¶</a></h2>
+<p>Another common example of nested objects is a list of dictionaries.  Below we have the same nested dictionary as in question two, but we have a list of three states’ data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">census_by_state</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;state&#39;</span><span class="p">:</span> <span class="s1">&#39;AK&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;motto&#39;</span><span class="p">:</span> <span class="s1">&#39;north to the future&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;num_of_counties&#39;</span><span class="p">:</span> <span class="mi">29</span><span class="p">,</span>
+        <span class="s1">&#39;population&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;ages_0_25&#39;</span><span class="p">:</span> <span class="mi">28393</span><span class="p">,</span>
+            <span class="s1">&#39;ages_25_50&#39;</span><span class="p">:</span> <span class="mi">25920</span><span class="p">,</span>
+            <span class="s1">&#39;ages_over_50&#39;</span><span class="p">:</span> <span class="mi">8943</span><span class="p">,</span>
+            <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;state&#39;</span><span class="p">:</span> <span class="s1">&#39;FL&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;motto&#39;</span><span class="p">:</span> <span class="s1">&#39;in god we trust&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;num_of_counties&#39;</span><span class="p">:</span> <span class="mi">67</span><span class="p">,</span>
+        <span class="s1">&#39;population&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;ages_0_25&#39;</span><span class="p">:</span> <span class="mi">382933</span><span class="p">,</span>
+            <span class="s1">&#39;ages_25_50&#39;</span><span class="p">:</span> <span class="mi">483923</span><span class="p">,</span>
+            <span class="s1">&#39;ages_over_50&#39;</span><span class="p">:</span> <span class="mi">938923</span><span class="p">,</span>
+            <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;state&#39;</span><span class="p">:</span> <span class="s1">&#39;MN&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;motto&#39;</span><span class="p">:</span> <span class="s1">&#39;letoile du nord&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;num_of_counties&#39;</span><span class="p">:</span> <span class="mi">87</span><span class="p">,</span>
+        <span class="s1">&#39;population&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;ages_0_25&#39;</span><span class="p">:</span> <span class="mi">39323</span><span class="p">,</span>
+            <span class="s1">&#39;ages_25_50&#39;</span><span class="p">:</span> <span class="mi">109282</span><span class="p">,</span>
+            <span class="s1">&#39;ages_over_50&#39;</span><span class="p">:</span> <span class="mi">92837</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>A)</strong> Print the following population numbers:</p>
+<ul class="simple">
+<li><p>population ages 25-50 in Alaska</p></li>
+<li><p>number of counties in Florida</p></li>
+<li><p>population ages 0-25 in Minnesota</p></li>
+<li><p>motto of alaska</p></li>
+</ul>
+<p><strong>B)</strong> Change:</p>
+<ul class="simple">
+<li><p>the population over age 50 in florida to 8898</p></li>
+<li><p>the motto of minnesota to “go pack go!”</p></li>
+<li><p>the number of counties in alaska to 31</p></li>
+</ul>
+<p><strong>C)</strong> Add a new state to the list of dictionaries.  Pick whatever state and values you want.</p>
+</div>
+<div class="section" id="question-4">
+<h2>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h2>
+<p>Using the list of values below create new lists made up of the following chunks:</p>
+<ul class="simple">
+<li><p>The first 5 items in the list</p></li>
+<li><p>The middle third of the list items</p></li>
+<li><p>The first 3 items and the last 3 items together</p></li>
+</ul>
+<p><em><strong>Hint</strong> Googling suggestions: “python list indexing”, or “combining two python lists”.  Article suggestions <a class="reference external" href="https://railsware.com/blog/python-for-machine-learning-indexing-and-slicing-for-lists-tuples-strings-and-other-sequential-types/#Slice_Notation">here</a> or <a class="reference external" href="https://www.w3schools.com/python/gloss_python_join_lists.asp">here</a>.</em></p>
+</div>
+<div class="section" id="question-5">
+<h2>Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">¶</a></h2>
+<p>Write some code that starts with an index and returns the value from the list below at that index.  Print the value  Include in the print statement if the value is even or odd.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">starting_data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">index</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="c1"># Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons/lesson_2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="lesson_2.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Lesson 2</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The Jupyter Book Community<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
