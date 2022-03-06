@@ -1,0 +1,65 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: index
+parts:
+  - caption: Lessons
+    chapters:
+    - file: lessons/general_python/index.md
+      sections:
+        - file: lessons/general_python/1_variables_types_ifstatements
+        - file: lessons/general_python/2_lists_dictionaries
+        - file: lessons/general_python/datetimes
+        - file: lessons/general_python/spatial_data
+    - file: lessons/raster_data/index.md
+      sections:
+        - file: lessons/raster_data/1_arrays_numpy
+        - file: lessons/raster_data/2_raster_fundamentals
+        - file: lessons/raster_data/3_accessing_coordinates
+    - file: lessons/tabular_data/index.md
+      sections:
+        - file: lessons/tabular_data/1_pandas
+        - file: lessons/tabular_data/2_filtering_groupby
+        - file: lessons/tabular_data/3_geopandas
+
+  - caption: Additional Lectures
+    chapters:
+    - file: additional_lectures/debugging/debugging_lesson
+    - file: additional_lectures/time_series_statistics/oceans_stats_examples
+    - file: additional_lectures/hierarchical_data/hierarchical_data
+    - file: additional_lectures/visualization/index.md
+      sections:
+        - file: additional_lectures/visualization/1_static_viz_with_matplotlib
+        - file: additional_lectures/visualization/2_building_on_matplotlib
+        - file: additional_lectures/visualization/3_dynamic_visualization
+        - file: additional_lectures/visualization/viewing_images
+
+  - caption: Practice Sheets
+    chapters:
+    - file: lessons/index_practice.md
+      title: General Python Practice
+      sections:
+        - file: lessons/general_python/practice/1_variables_data_practice
+        - file: lessons/general_python/practice/2_lists_dicts_practice
+        - file: lessons/general_python/practice/datetimes_practice
+        - file: lessons/general_python/practice/spatial_data_practice
+        - file: lessons/general_python/practice/1_variables_data_answers
+        - file: lessons/general_python/practice/2_lists_dicts_answers
+        - file: lessons/general_python/practice/datetimes_answers
+        - file: lessons/general_python/practice/spatial_data_answers
+    - file: lessons/index_practice_raster.md
+      title: Raster Data Practice
+      sections:
+        - file: lessons/raster_data/practice/1_arrays_numpy_practice
+        - file: lessons/raster_data/practice/2_raster_fundamentals_practice
+        - file: lessons/raster_data/practice/3_accessing_coordinates_practice
+        - file: lessons/raster_data/practice/1_arrays_numpy_answers
+    - file: lessons/index_practice_tabular.md
+      title: Tabular Data Practice
+      sections:
+        - file: lessons/tabular_data/practice/1_pandas_practice
+        - file: lessons/tabular_data/practice/2_filtering_groupby_practice
+        - file: lessons/tabular_data/practice/3_geopandas_practice
+        - file: lessons/tabular_data/practice/1_pandas_answers
+        - file: lessons/tabular_data/practice/2_filtering_groupby_answers
