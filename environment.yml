@@ -1,0 +1,15 @@
+name: sarp
+channels:
+  - conda-forge
+# Using Python3.10
+dependencies:
+  - ipykernel
+  - geopandas
+  - xarray[complete]
+  - rasterio
+  - h5py
+  - netcdf4
+  - openpyxl
+  - seaborn
+  - bokeh
+  - cartopy
