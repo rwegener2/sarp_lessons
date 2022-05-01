@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Hierarchical Data Structure &#8212; SARP Programming Lessons</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
@@ -53,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Visualization" href="../Visualization/index.html" />
+    <link rel="next" title="Raster data lessons" href="../rasters/index.html" />
     <link rel="prev" title="Time Series Statistics" href="../time_series_statistics/oceans_stats_examples.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -116,7 +117,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../lessons/general_python/1_variables_types_ifstatements.html">
-     Variables, Data types, and if Statements
+     Variables, Data Types, and if Statements
     </a>
    </li>
    <li class="toctree-l2">
@@ -147,23 +148,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../lessons/raster_data/1_arrays_numpy.html">
-     Arrays and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       numpy
-      </span>
-     </code>
+    <a class="reference internal" href="../../lessons/raster_data/1_xarray.html">
+     Lesson 4, Raster data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../lessons/raster_data/2_raster_fundamentals.html">
-     Working with rasters
+    <a class="reference internal" href="../../lessons/raster_data/2_xarray_computation.html">
+     Lesson 5, Gridded Data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../lessons/raster_data/3_accessing_coordinates.html">
-     Accessing Data
+    <a class="reference internal" href="../../lessons/raster_data/3_xarray_groupby.html">
+     Lesson 6, Gridded Data
     </a>
    </li>
   </ul>
@@ -180,11 +176,13 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../lessons/tabular_data/1_pandas.html">
+     The
      <code class="docutils literal notranslate">
       <span class="pre">
        pandas
       </span>
      </code>
+     Library
     </a>
    </li>
    <li class="toctree-l2">
@@ -226,11 +224,43 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Visualization/index.html">
-   Visualization
+  <a class="reference internal" href="../rasters/index.html">
+   Raster data lessons
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rasters/1_arrays_numpy.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rasters/2_raster_fundamentals.html">
+     Working with rasters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rasters/3_accessing_coordinates.html">
+     Accessing Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Visualization/index.html">
+   Visualization
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -273,8 +303,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../lessons/index_practice.html">
    General Python Practice
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -325,42 +355,30 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../lessons/index_practice_raster.html">
    Raster Data Practice
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../lessons/raster_data/practice/1_arrays_numpy_practice.html">
-     Arrays and
+    <a class="reference internal" href="../../lessons/raster_data/practice/1_xarray_practice.html">
      <code class="docutils literal notranslate">
       <span class="pre">
-       numpy
+       xarray
       </span>
      </code>
      Practice
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../lessons/raster_data/practice/2_raster_fundamentals_practice.html">
-     Raster Fundamentals Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lessons/raster_data/practice/3_accessing_coordinates_practice.html">
-     Accessing Coordinates Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lessons/raster_data/practice/1_arrays_numpy_answers.html">
-     Arrays and
+    <a class="reference internal" href="../../lessons/raster_data/practice/2_xarray_practice.html">
      <code class="docutils literal notranslate">
       <span class="pre">
-       numpy
+       xarray
       </span>
      </code>
-     Answers
+     Computation Practice
     </a>
    </li>
   </ul>
@@ -369,8 +387,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../lessons/index_practice_tabular.html">
    Tabular Data Practice
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -413,6 +431,50 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../lessons/tabular_data/practice/2_filtering_groupby_answers.html">
      Filtering and Groupby Answers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../index_practice.html">
+   Raster Data Practice (Additional Lectures)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rasters/practice/1_arrays_numpy_practice.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+     Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rasters/practice/2_raster_fundamentals_practice.html">
+     Raster Fundamentals Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rasters/practice/3_accessing_coordinates_practice.html">
+     Accessing Coordinates Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../rasters/practice/1_arrays_numpy_answers.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+     Answers
     </a>
    </li>
   </ul>
@@ -594,6 +656,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#attempting-open-with-xarray">
+     Attempting open with xarray
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#opening-a-dataset">
      Opening a Dataset
     </a>
@@ -636,16 +703,36 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id6">
-     Opening a Dataset
+    <a class="reference internal nav-link" href="#opening-a-dataset-xarray">
+     Opening a Dataset -
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray
+      </span>
+     </code>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id7">
+    <a class="reference internal nav-link" href="#opening-a-dataset-netcdf4">
+     Opening a Dataset -
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       netCDF4
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
      Getting your data
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#raster-data-structure">
+   Raster Data Structure
+  </a>
  </li>
 </ul>
 
@@ -757,6 +844,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#attempting-open-with-xarray">
+     Attempting open with xarray
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#opening-a-dataset">
      Opening a Dataset
     </a>
@@ -799,16 +891,36 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id6">
-     Opening a Dataset
+    <a class="reference internal nav-link" href="#opening-a-dataset-xarray">
+     Opening a Dataset -
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray
+      </span>
+     </code>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id7">
+    <a class="reference internal nav-link" href="#opening-a-dataset-netcdf4">
+     Opening a Dataset -
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       netCDF4
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
      Getting your data
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#raster-data-structure">
+   Raster Data Structure
+  </a>
  </li>
 </ul>
 
@@ -819,7 +931,7 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="hierarchical-data-structure">
+  <section class="tex2jax_ignore mathjax_ignore" id="hierarchical-data-structure">
 <h1>Hierarchical Data Structure<a class="headerlink" href="#hierarchical-data-structure" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><p><a class="reference external" href="https://pro.arcgis.com/en/pro-app/latest/help/data/multidimensional/fundamentals-of-netcdf-data-storage.htm">How netCDF files are organized</a></p></li>
@@ -835,9 +947,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>netCDF example</p></li>
 </ul>
 </div>
-<div class="section" id="file-format-structure">
+<section id="file-format-structure">
 <h2>File Format Structure<a class="headerlink" href="#file-format-structure" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="concept-no-1-pros-and-cons-of-lenient-file-formats">
+<section id="concept-no-1-pros-and-cons-of-lenient-file-formats">
 <h3>Concept No. 1: pros and cons of lenient file formats<a class="headerlink" href="#concept-no-1-pros-and-cons-of-lenient-file-formats" title="Permalink to this headline">¶</a></h3>
 <p><img alt="File Format Spectrum" src="../../_images/strict_file_format_spectrum.jpg" /></p>
 <table class="colwidths-auto table">
@@ -858,8 +970,8 @@ const thebe_selector_output = ".output, .cell_output"
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="concept-no-2-organizing-variables-by-dimension">
+</section>
+<section id="concept-no-2-organizing-variables-by-dimension">
 <h3>Concept No. 2: organizing variables by dimension<a class="headerlink" href="#concept-no-2-organizing-variables-by-dimension" title="Permalink to this headline">¶</a></h3>
 <img src="https://pro.arcgis.com/en/pro-app/latest/help/data/multidimensional/GUID-D872A4C3-749E-4159-A6C0-FB6D3B47C5D8-web.gif">
 <center>A 3-dimensional dataset</center>
@@ -867,40 +979,40 @@ const thebe_selector_output = ".output, .cell_output"
 <center>A 4-dimensional dataset</center>
 <p>Images from <a class="reference external" href="https://pro.arcgis.com/en/pro-app/latest/help/data/multidimensional/fundamentals-of-netcdf-data-storage.htm">Fundamentals of NetCDF Storage</a> by ESRI</p>
 <p>When variables are defined in netCDF files they are also assigned dimensions.  <strong>Dimensions</strong> tell us the axis over which our data varies.  Common examples are latitute, longitude, or time.  The values of the dimensions are given in special variables called <strong>coordinate variables</strong>.  The coordinate variables and dimensions help us understand what the core data stored in each variable is describing.  <strong>Attributes</strong> store metadata about our variables.</p>
-</div>
-</div>
-<div class="section" id="concept-no-3-groups-and-datasets">
+</section>
+</section>
+<section id="concept-no-3-groups-and-datasets">
 <h2>Concept No. 3: groups and datasets<a class="headerlink" href="#concept-no-3-groups-and-datasets" title="Permalink to this headline">¶</a></h2>
 <p>In the previous raster lessons we have been using data where the organization is a single dataset per file.  HDF and netCDF are unique in that they allow multiple datasets to be in the same file.  To keep organized, datasets are allowed to be stored together in <strong>groups</strong>.  An analogy is to think of groups like folders in a folder structure and datasets as the individual files.  Groups can have more groups inside of them.</p>
-</div>
-<div class="section" id="hdf4">
+</section>
+<section id="hdf4">
 <h2>HDF4<a class="headerlink" href="#hdf4" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="install">
+<section id="install">
 <h3>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h3>
 <p>In Anaconda Powershell:</p>
 <p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">-n</span> <span class="pre">lessons</span> <span class="pre">pyhdf</span></code></p>
-</div>
-<div class="section" id="documentation">
+</section>
+<section id="documentation">
 <h3>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="http://fhs.github.io/pyhdf/modules/SD.html">http://fhs.github.io/pyhdf/modules/SD.html</a>  (My opinion: pretty terrible docs)</p>
-</div>
-<div class="section" id="example-dataset-calipso">
+</section>
+<section id="example-dataset-calipso">
 <h3>Example dataset: CALIPSO<a class="headerlink" href="#example-dataset-calipso" title="Permalink to this headline">¶</a></h3>
 <p>CALIPSO Level 2: <code class="docutils literal notranslate"><span class="pre">CAL_LID_L2_01kmCLay-Standard-V4-21.2020-07-01T07-32-43ZD.hdf</span></code></p>
 <p><a class="reference external" href="https://drive.google.com/file/d/1AMNZn8u4TGYefZjuo9UjmSXox1LcGdSE/view?usp=sharing">download link</a></p>
-</div>
-<div class="section" id="opening-the-dataset">
+</section>
+<section id="opening-the-dataset">
 <h3>Opening the Dataset<a class="headerlink" href="#opening-the-dataset" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># from pyhdf.SD import *</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyhdf.SD</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># filepath = &#39;./CAL_LID_L2_01kmCLay-Standard-V4-21.2020-07-01T07-32-43ZD.hdf&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filepath</span> <span class="o">=</span> <span class="s1">&#39;./CAL_LID_L2_01kmCLay-Standard-V4-21.2020-07-01T07-32-43ZD.hdf&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -908,24 +1020,62 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Opening the file</span>
-<span class="c1"># d = SD(filepath)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">SD</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">HDF4Error</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4365</span><span class="o">/</span><span class="mf">3652855537.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Opening the file</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">d</span> <span class="o">=</span> <span class="n">SD</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pyhdf/SD.py</span> in <span class="ni">__init__</span><span class="nt">(self, path, mode)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1422</span>                 <span class="n">mode</span> <span class="o">=</span> <span class="n">SDC</span><span class="o">.</span><span class="n">READ</span>
+<span class="g g-Whitespace">   </span><span class="mi">1423</span>             <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1424</span>                 <span class="k">raise</span> <span class="n">HDF4Error</span><span class="p">(</span><span class="s2">&quot;SD: no such file&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1425</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1426</span>             <span class="k">raise</span> <span class="n">HDF4Error</span><span class="p">(</span><span class="s2">&quot;SD: bad mode, READ or WRITE must be set&quot;</span><span class="p">)</span>
+
+<span class="ne">HDF4Error</span>: SD: no such file
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># d</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4365</span><span class="o">/</span><span class="mf">3161387801.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">d</span>
+
+<span class="ne">NameError</span>: name &#39;d&#39; is not defined
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="exploring-the-dataset">
+</section>
+<section id="exploring-the-dataset">
 <h3>Exploring the dataset<a class="headerlink" href="#exploring-the-dataset" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># d.datasets()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">datasets</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4365</span><span class="o">/</span><span class="mf">961441833.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">d</span><span class="o">.</span><span class="n">datasets</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;d&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -933,68 +1083,138 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Choose a key from the <code class="docutils literal notranslate"><span class="pre">.datasets()</span></code> dictionary and get the varaible info using <code class="docutils literal notranslate"><span class="pre">.select()</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># d.select(&#39;Integrated_Attenuated_Backscatter_532&#39;)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;Integrated_Attenuated_Backscatter_532&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4365</span><span class="o">/</span><span class="mf">3039621266.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">d</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;Integrated_Attenuated_Backscatter_532&#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;d&#39; is not defined
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="getting-your-data">
+</section>
+<section id="getting-your-data">
 <h3>Getting your data<a class="headerlink" href="#getting-your-data" title="Permalink to this headline">¶</a></h3>
 <p>The data can be accessed using <code class="docutils literal notranslate"><span class="pre">[:]</span></code> and is output as a numpy array.  Any of the methods we practiced with numpy arrays in lecture can be used on the dataset.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># d.select(&#39;Integrated_Attenuated_Backscatter_532&#39;)[:]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;Integrated_Attenuated_Backscatter_532&#39;</span><span class="p">)[:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4365</span><span class="o">/</span><span class="mf">2698950172.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">d</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;Integrated_Attenuated_Backscatter_532&#39;</span><span class="p">)[:]</span>
+
+<span class="ne">NameError</span>: name &#39;d&#39; is not defined
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># backscatter = d.select(&#39;Integrated_Attenuated_Backscatter_532&#39;)[:]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">backscatter</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;Integrated_Attenuated_Backscatter_532&#39;</span><span class="p">)[:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4365</span><span class="o">/</span><span class="mf">2395377793.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">backscatter</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;Integrated_Attenuated_Backscatter_532&#39;</span><span class="p">)[:]</span>
+
+<span class="ne">NameError</span>: name &#39;d&#39; is not defined
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># type(backscatter)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">backscatter</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4365</span><span class="o">/</span><span class="mf">776368771.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">type</span><span class="p">(</span><span class="n">backscatter</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;backscatter&#39; is not defined
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># backscatter.shape</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">backscatter</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4365</span><span class="o">/</span><span class="mf">3955312313.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">backscatter</span><span class="o">.</span><span class="n">shape</span>
+
+<span class="ne">NameError</span>: name &#39;backscatter&#39; is not defined
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># backscatter.max()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">backscatter</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4365</span><span class="o">/</span><span class="mf">103739540.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">backscatter</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;backscatter&#39; is not defined
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="attributes">
+</section>
+<section id="attributes">
 <h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
 <p>Get metadata with the <code class="docutils literal notranslate"><span class="pre">.attributes()</span></code> method.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># d.select(&#39;Integrated_Attenuated_Backscatter_532&#39;).attributes()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;Integrated_Attenuated_Backscatter_532&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">attributes</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4365</span><span class="o">/</span><span class="mf">808312227.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">d</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;Integrated_Attenuated_Backscatter_532&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">attributes</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;d&#39; is not defined
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="masking-a-no-data-value">
+</section>
+<section id="masking-a-no-data-value">
 <h3>Masking a no data value<a class="headerlink" href="#masking-a-no-data-value" title="Permalink to this headline">¶</a></h3>
 <p>While HDF5 data will automatically mask out nodata values, HDF4 datasets often don’t.  To mask them yourself you can look up the fill value and apply it to the array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import numpy.ma as ma</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy.ma</span> <span class="k">as</span> <span class="nn">ma</span>
 </pre></div>
 </div>
 </div>
@@ -1002,94 +1222,185 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mask the array</span>
-<span class="c1"># masked_backscatter = ma.masked_where(backscatter == -9999, backscatter)</span>
+<span class="n">masked_backscatter</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">masked_where</span><span class="p">(</span><span class="n">backscatter</span> <span class="o">==</span> <span class="o">-</span><span class="mi">9999</span><span class="p">,</span> <span class="n">backscatter</span><span class="p">)</span>
 <span class="c1"># Update the nodata value</span>
-<span class="c1"># ma.set_fill_value(backscatter, -9999)</span>
+<span class="n">ma</span><span class="o">.</span><span class="n">set_fill_value</span><span class="p">(</span><span class="n">backscatter</span><span class="p">,</span> <span class="o">-</span><span class="mi">9999</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4365</span><span class="o">/</span><span class="mf">4119183325.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Mask the array</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">masked_backscatter</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">masked_where</span><span class="p">(</span><span class="n">backscatter</span> <span class="o">==</span> <span class="o">-</span><span class="mi">9999</span><span class="p">,</span> <span class="n">backscatter</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Update the nodata value</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">ma</span><span class="o">.</span><span class="n">set_fill_value</span><span class="p">(</span><span class="n">backscatter</span><span class="p">,</span> <span class="o">-</span><span class="mi">9999</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;backscatter&#39; is not defined
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># masked_backscatter</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">masked_backscatter</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4365</span><span class="o">/</span><span class="mf">3795559956.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">masked_backscatter</span>
+
+<span class="ne">NameError</span>: name &#39;masked_backscatter&#39; is not defined
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="hdf5">
+</section>
+</section>
+<section id="hdf5">
 <h2>HDF5<a class="headerlink" href="#hdf5" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id1">
+<section id="id1">
 <h3>Install<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>In Anaconda Powershell:</p>
 <p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">-n</span> <span class="pre">lessons</span> <span class="pre">h5py</span></code></p>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h3>Documentation<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://docs.h5py.org/en/stable/quick.html">https://docs.h5py.org/en/stable/quick.html</a></p>
-</div>
-<div class="section" id="example-dataset-aster-emissivity">
+</section>
+<section id="example-dataset-aster-emissivity">
 <h3>Example Dataset: ASTER Emissivity<a class="headerlink" href="#example-dataset-aster-emissivity" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">AG100.v003.83.-013.0001.h5</span></code></p>
+</section>
+<section id="attempting-open-with-xarray">
+<h3>Attempting open with xarray<a class="headerlink" href="#attempting-open-with-xarray" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Returns empty</span>
+<span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="section" id="opening-a-dataset">
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4365</span><span class="o">/</span><span class="mf">921746163.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Returns empty</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;xr&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Specify group.  If dataset is nested you can do /Emissivity/group2</span>
+<span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="s1">&#39;Emissivity&#39;</span><span class="p">)</span>
+<span class="c1"># This also works for netCDF</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4365</span><span class="o">/</span><span class="mf">2617540795.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Specify group.  If dataset is nested you can do /Emissivity/group2</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="s1">&#39;Emissivity&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># This also works for netCDF</span>
+
+<span class="ne">NameError</span>: name &#39;xr&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="opening-a-dataset">
 <h3>Opening a Dataset<a class="headerlink" href="#opening-a-dataset" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import h5py</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">h5py</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># filepath = &#39;./AG100.v003.83.-013.0001.h5&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filepath</span> <span class="o">=</span> <span class="s1">&#39;./AG100.v003.83.-013.0001.h5&#39;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># f = h5py.File(filepath, &#39;r&#39;)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># f</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;HDF5 file &quot;AG100.v003.83.-013.0001.h5&quot; (mode r)&gt;
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="exploring-groups">
+</section>
+<section id="exploring-groups">
 <h3>Exploring Groups<a class="headerlink" href="#exploring-groups" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># f.keys()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;KeysViewHDF5 [&#39;ASTER GDEM&#39;, &#39;Emissivity&#39;, &#39;Geolocation&#39;, &#39;Land Water Map&#39;, &#39;NDVI&#39;, &#39;Observations&#39;, &#39;Temperature&#39;]&gt;
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># f[&#39;Emissivity&#39;]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">[</span><span class="s1">&#39;Emissivity&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;HDF5 group &quot;/Emissivity&quot; (2 members)&gt;
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># f[&#39;Emissivity&#39;].keys()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">[</span><span class="s1">&#39;Emissivity&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;KeysViewHDF5 [&#39;Mean&#39;, &#39;SDev&#39;]&gt;
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># f[&#39;Emissivity&#39;][&#39;Mean&#39;]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">[</span><span class="s1">&#39;Emissivity&#39;</span><span class="p">][</span><span class="s1">&#39;Mean&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;HDF5 dataset &quot;Mean&quot;: shape (5, 1000, 1000), type &quot;&lt;i2&quot;&gt;
 </pre></div>
 </div>
 </div>
@@ -1097,85 +1408,132 @@ const thebe_selector_output = ".output, .cell_output"
 <p>You can check where you are in the file hierarchy with the <code class="docutils literal notranslate"><span class="pre">.name</span></code> method</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># f.name</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/&#39;
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># f[&#39;Emissivity&#39;].name</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">[</span><span class="s1">&#39;Emissivity&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/Emissivity&#39;
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># f[&#39;Emissivity&#39;][&#39;Mean&#39;].name</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">[</span><span class="s1">&#39;Emissivity&#39;</span><span class="p">][</span><span class="s1">&#39;Mean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/Emissivity/Mean&#39;
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h3>Getting your data<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>The data inside the data group dictionaries are numpy arrays, so you can use any of the methods we learned about in other lectures with them.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># mean_emissivity = f[&#39;Emissivity&#39;][&#39;Mean&#39;][:]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_emissivity</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="s1">&#39;Emissivity&#39;</span><span class="p">][</span><span class="s1">&#39;Mean&#39;</span><span class="p">][:]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># type(mean_emissivity)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">mean_emissivity</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numpy.ndarray
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># mean_emissivity.shape</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_emissivity</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(5, 1000, 1000)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># mean_emissivity.max()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_emissivity</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>991
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># from matplotlib import pyplot</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pyplot.imshow(mean_emissivity[0])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pyplot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mean_emissivity</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x111faa1c0&gt;
+</pre></div>
+</div>
+<img alt="../../_images/hierarchical_data_54_1.png" src="../../_images/hierarchical_data_54_1.png" />
 </div>
 </div>
-<div class="section" id="id4">
+</section>
+<section id="id4">
 <h3>Attributes<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <p>Metadata in HDF files are called <strong>attributes</strong> and are accessed with <code class="docutils literal notranslate"><span class="pre">.attrs</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># f[&#39;Emissivity&#39;][&#39;Mean&#39;].attrs.keys()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">[</span><span class="s1">&#39;Emissivity&#39;</span><span class="p">][</span><span class="s1">&#39;Mean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;KeysViewHDF5 [&#39;Description&#39;]&gt;
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># f[&#39;Emissivity&#39;][&#39;Mean&#39;].attrs[&#39;Description&#39;]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">[</span><span class="s1">&#39;Emissivity&#39;</span><span class="p">][</span><span class="s1">&#39;Mean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;Description&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([b&#39;Mean Emissivity for each pixel on grid-box using all ASTER data from 2000-2010&#39;],
+      dtype=&#39;|S79&#39;)
 </pre></div>
 </div>
 </div>
@@ -1184,7 +1542,12 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># No attributes on the Emissivity group</span>
-<span class="c1"># f[&#39;Emissivity&#39;].attrs.keys()</span>
+<span class="n">f</span><span class="p">[</span><span class="s1">&#39;Emissivity&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;KeysViewHDF5 []&gt;
 </pre></div>
 </div>
 </div>
@@ -1192,47 +1555,499 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># No attributes on the root group</span>
-<span class="c1"># f.attrs.keys()</span>
+<span class="n">f</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;KeysViewHDF5 []&gt;
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="netcdf">
+</section>
+</section>
+<section id="netcdf">
 <h2>netCDF<a class="headerlink" href="#netcdf" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id5">
+<section id="id5">
 <h3>Install<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <p>In Anaconda Powershell:</p>
 <p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">-n</span> <span class="pre">lessons</span> <span class="pre">netcdf4</span></code></p>
-</div>
-<div class="section" id="documentation-link">
+</section>
+<section id="documentation-link">
 <h3>Documentation Link<a class="headerlink" href="#documentation-link" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://unidata.github.io/netcdf4-python/#creatingopeningclosing-a-netcdf-file">https://unidata.github.io/netcdf4-python/#creatingopeningclosing-a-netcdf-file</a></p>
-</div>
-<div class="section" id="example-dataset-modis-chlorophyll-a">
+</section>
+<section id="example-dataset-modis-chlorophyll-a">
 <h3>Example Dataset: MODIS Chlorophyll-a<a class="headerlink" href="#example-dataset-modis-chlorophyll-a" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">A2018006.L3m_DAY_CHL_chlor_a_4km.nc</span></code></p>
-</div>
-<div class="section" id="id6">
-<h3>Opening a Dataset<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="opening-a-dataset-xarray">
+<h3>Opening a Dataset - <code class="docutils literal notranslate"><span class="pre">xarray</span></code><a class="headerlink" href="#opening-a-dataset-xarray" title="Permalink to this headline">¶</a></h3>
+<p>notice comparing to panoply that “processing_control” is missing. Probs because its a group.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># from netCDF4 import Dataset</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># filepath = &#39;./A2018006.L3m_DAY_CHL_chlor_a_4km.nc&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d_xr</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+
+<span class="n">d_xr</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+Dimensions:  ()
+Data variables:
+    *empty*</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-00210e67-8b45-4e9d-be56-de00d3512b5f' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-00210e67-8b45-4e9d-be56-de00d3512b5f' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-1263f58c-f4ed-46f0-96ac-ae6f36e01c37' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-1263f58c-f4ed-46f0-96ac-ae6f36e01c37' class='xr-section-summary'  title='Expand/collapse section'>Coordinates: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-d6cac41d-8b8c-4e2e-8f0e-5904edd87d37' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-d6cac41d-8b8c-4e2e-8f0e-5904edd87d37' class='xr-section-summary'  title='Expand/collapse section'>Data variables: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-747e195d-0a1f-4377-8364-81e2e9480837' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-747e195d-0a1f-4377-8364-81e2e9480837' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="s1">&#39;processing_control/input_parameters&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/xarray/backends/netCDF4_.py</span> in <span class="ni">_nc4_require_group</span><span class="nt">(ds, group, mode, create_group)</span>
+<span class="g g-Whitespace">    </span><span class="mi">179</span>             <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">180</span>                 <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">groups</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">181</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+<span class="ne">KeyError</span>: &#39;processing_control&#39;
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">OSError</span><span class="g g-Whitespace">                                   </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4365</span><span class="o">/</span><span class="mf">1036401240.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="s1">&#39;processing_control/input_parameters&#39;</span><span class="p">)</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/xarray/backends/api.py</span> in <span class="ni">open_dataset</span><span class="nt">(filename_or_obj, engine, chunks, cache, decode_cf, mask_and_scale, decode_times, decode_timedelta, use_cftime, concat_characters, decode_coords, drop_variables, backend_kwargs, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">493</span> 
+<span class="g g-Whitespace">    </span><span class="mi">494</span>     <span class="n">overwrite_encoded_chunks</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;overwrite_encoded_chunks&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">495</span>     <span class="n">backend_ds</span> <span class="o">=</span> <span class="n">backend</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">496</span>         <span class="n">filename_or_obj</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">497</span>         <span class="n">drop_variables</span><span class="o">=</span><span class="n">drop_variables</span><span class="p">,</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/xarray/backends/netCDF4_.py</span> in <span class="ni">open_dataset</span><span class="nt">(self, filename_or_obj, mask_and_scale, decode_times, concat_characters, decode_coords, drop_variables, use_cftime, decode_timedelta, group, mode, format, clobber, diskless, persist, lock, autoclose)</span>
+<span class="g g-Whitespace">    </span><span class="mi">551</span> 
+<span class="g g-Whitespace">    </span><span class="mi">552</span>         <span class="n">filename_or_obj</span> <span class="o">=</span> <span class="n">_normalize_path</span><span class="p">(</span><span class="n">filename_or_obj</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">553</span>         <span class="n">store</span> <span class="o">=</span> <span class="n">NetCDF4DataStore</span><span class="o">.</span><span class="n">open</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">554</span>             <span class="n">filename_or_obj</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">555</span>             <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/xarray/backends/netCDF4_.py</span> in <span class="ni">open</span><span class="nt">(cls, filename, mode, format, group, clobber, diskless, persist, lock, lock_maker, autoclose)</span>
+<span class="g g-Whitespace">    </span><span class="mi">380</span>             <span class="n">netCDF4</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="n">kwargs</span>
+<span class="g g-Whitespace">    </span><span class="mi">381</span>         <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">382</span>         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">manager</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="n">group</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span> <span class="n">lock</span><span class="o">=</span><span class="n">lock</span><span class="p">,</span> <span class="n">autoclose</span><span class="o">=</span><span class="n">autoclose</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">383</span> 
+<span class="g g-Whitespace">    </span><span class="mi">384</span>     <span class="k">def</span> <span class="nf">_acquire</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">needs_lock</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/xarray/backends/netCDF4_.py</span> in <span class="ni">__init__</span><span class="nt">(self, manager, group, mode, lock, autoclose)</span>
+<span class="g g-Whitespace">    </span><span class="mi">328</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_group</span> <span class="o">=</span> <span class="n">group</span>
+<span class="g g-Whitespace">    </span><span class="mi">329</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span> <span class="o">=</span> <span class="n">mode</span>
+<span class="ne">--&gt; </span><span class="mi">330</span>         <span class="bp">self</span><span class="o">.</span><span class="n">format</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ds</span><span class="o">.</span><span class="n">data_model</span>
+<span class="g g-Whitespace">    </span><span class="mi">331</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ds</span><span class="o">.</span><span class="n">filepath</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">332</span>         <span class="bp">self</span><span class="o">.</span><span class="n">is_remote</span> <span class="o">=</span> <span class="n">is_remote_uri</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_filename</span><span class="p">)</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/xarray/backends/netCDF4_.py</span> in <span class="ni">ds</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">389</span>     <span class="nd">@property</span>
+<span class="g g-Whitespace">    </span><span class="mi">390</span>     <span class="k">def</span> <span class="nf">ds</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">391</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_acquire</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">392</span> 
+<span class="g g-Whitespace">    </span><span class="mi">393</span>     <span class="k">def</span> <span class="nf">open_store_variable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">var</span><span class="p">):</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/xarray/backends/netCDF4_.py</span> in <span class="ni">_acquire</span><span class="nt">(self, needs_lock)</span>
+<span class="g g-Whitespace">    </span><span class="mi">384</span>     <span class="k">def</span> <span class="nf">_acquire</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">needs_lock</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">385</span>         <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span><span class="o">.</span><span class="n">acquire_context</span><span class="p">(</span><span class="n">needs_lock</span><span class="p">)</span> <span class="k">as</span> <span class="n">root</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">386</span>             <span class="n">ds</span> <span class="o">=</span> <span class="n">_nc4_require_group</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_group</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">387</span>         <span class="k">return</span> <span class="n">ds</span>
+<span class="g g-Whitespace">    </span><span class="mi">388</span> 
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/xarray/backends/netCDF4_.py</span> in <span class="ni">_nc4_require_group</span><span class="nt">(ds, group, mode, create_group)</span>
+<span class="g g-Whitespace">    </span><span class="mi">184</span>                 <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">185</span>                     <span class="c1"># wrap error to provide slightly more helpful message</span>
+<span class="ne">--&gt; </span><span class="mi">186</span>                     <span class="k">raise</span> <span class="ne">OSError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;group not found: </span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">187</span>         <span class="k">return</span> <span class="n">ds</span>
+<span class="g g-Whitespace">    </span><span class="mi">188</span> 
+
+<span class="ne">OSError</span>: [Errno group not found: processing_control] &#39;processing_control&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="opening-a-dataset-netcdf4">
+<h3>Opening a Dataset - <code class="docutils literal notranslate"><span class="pre">netCDF4</span></code><a class="headerlink" href="#opening-a-dataset-netcdf4" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">netCDF4</span> <span class="kn">import</span> <span class="n">Dataset</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># d = Dataset(filepath, &#39;r&#39;)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filepath</span> <span class="o">=</span> <span class="s1">&#39;./A2018006.L3m_DAY_CHL_chlor_a_4km.nc&#39;</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="n">Dataset</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1240,7 +2055,80 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Looking at the <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> object gives us a decent overview of our dataset.  We can see metadata applies to the whole dataset. At the very bottom the <strong>dimensions</strong> and <strong>varaiables</strong> are shown, as well as any additional groups.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># d</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;netCDF4._netCDF4.Dataset&#39;&gt;
+root group (NETCDF4 data model, file format HDF5):
+    product_name: A2018006.L3m_DAY_CHL_chlor_a_4km.nc
+    instrument: MODIS
+    title: MODISA Level-3 Standard Mapped Image
+    project: Ocean Biology Processing Group (NASA/GSFC/OBPG)
+    platform: Aqua
+    temporal_range: day
+    processing_version: 2018.0
+    date_created: 2018-03-19T18:42:34.000Z
+    history: l3mapgen par=A2018006.L3m_DAY_CHL_chlor_a_4km.nc.param 
+    l2_flag_names: ATMFAIL,LAND,HILT,HISATZEN,STRAYLIGHT,CLDICE,COCCOLITH,LOWLW,CHLWARN,CHLFAIL,NAVWARN,MAXAERITER,ATMWARN,HISOLZEN,NAVFAIL,FILTER,HIGLINT
+    time_coverage_start: 2018-01-06T00:15:01.000Z
+    time_coverage_end: 2018-01-07T02:30:00.000Z
+    start_orbit_number: 83382
+    end_orbit_number: 83397
+    map_projection: Equidistant Cylindrical
+    latitude_units: degrees_north
+    longitude_units: degrees_east
+    northernmost_latitude: 90.0
+    southernmost_latitude: -90.0
+    westernmost_longitude: -180.0
+    easternmost_longitude: 180.0
+    geospatial_lat_max: 90.0
+    geospatial_lat_min: -90.0
+    geospatial_lon_max: 180.0
+    geospatial_lon_min: -180.0
+    grid_mapping_name: latitude_longitude
+    latitude_step: 0.041666668
+    longitude_step: 0.041666668
+    sw_point_latitude: -89.979164
+    sw_point_longitude: -179.97917
+    geospatial_lon_resolution: 4.6383123
+    geospatial_lat_resolution: 4.6383123
+    geospatial_lat_units: degrees_north
+    geospatial_lon_units: degrees_east
+    spatialResolution: 4.64 km
+    number_of_lines: 4320
+    number_of_columns: 8640
+    measure: Mean
+    suggested_image_scaling_minimum: 0.01
+    suggested_image_scaling_maximum: 20.0
+    suggested_image_scaling_type: LOG
+    suggested_image_scaling_applied: No
+    _lastModified: 2018-03-19T18:42:34.000Z
+    Conventions: CF-1.6 ACDD-1.3
+    institution: NASA Goddard Space Flight Center, Ocean Ecology Laboratory, Ocean Biology Processing Group
+    standard_name_vocabulary: CF Standard Name Table v36
+    naming_authority: gov.nasa.gsfc.sci.oceandata
+    id: A2018006.L3b_DAY_CHL.nc/L3/A2018006.L3b_DAY_CHL.nc
+    license: http://science.nasa.gov/earth-science/earth-science-data/data-information-policy/
+    creator_name: NASA/GSFC/OBPG
+    publisher_name: NASA/GSFC/OBPG
+    creator_email: data@oceancolor.gsfc.nasa.gov
+    publisher_email: data@oceancolor.gsfc.nasa.gov
+    creator_url: http://oceandata.sci.gsfc.nasa.gov
+    publisher_url: http://oceandata.sci.gsfc.nasa.gov
+    processing_level: L3 Mapped
+    cdm_data_type: grid
+    identifier_product_doi_authority: http://dx.doi.org
+    identifier_product_doi: 10.5067/AQUA/MODIS/L3M/CHL/2018
+    keywords: Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Pigments &gt; Chlorophyll; Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Chlorophyllr
+    keywords_vocabulary: NASA Global Change Master Directory (GCMD) Science Keywords
+    data_bins: 2440618
+    data_minimum: 0.0063775154
+    data_maximum: 98.49251
+    dimensions(sizes): lat(4320), lon(8640), rgb(3), eightbitcolor(256)
+    variables(dimensions): float32 chlor_a(lat, lon), float32 lat(lat), float32 lon(lon), uint8 palette(rgb, eightbitcolor)
+    groups: processing_control
 </pre></div>
 </div>
 </div>
@@ -1248,14 +2136,68 @@ const thebe_selector_output = ".output, .cell_output"
 <p>You can also directly access dimensions or varaiables.  The outputs act like dictionaries, so you can use <code class="docutils literal notranslate"><span class="pre">.keys()</span></code> or <code class="docutils literal notranslate"><span class="pre">[KEY]</span></code> syntax to access elements</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># d.dimensions</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">dimensions</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;lat&#39;: &lt;class &#39;netCDF4._netCDF4.Dimension&#39;&gt;: name = &#39;lat&#39;, size = 4320,
+ &#39;lon&#39;: &lt;class &#39;netCDF4._netCDF4.Dimension&#39;&gt;: name = &#39;lon&#39;, size = 8640,
+ &#39;rgb&#39;: &lt;class &#39;netCDF4._netCDF4.Dimension&#39;&gt;: name = &#39;rgb&#39;, size = 3,
+ &#39;eightbitcolor&#39;: &lt;class &#39;netCDF4._netCDF4.Dimension&#39;&gt;: name = &#39;eightbitcolor&#39;, size = 256}
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># d.variables</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">variables</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;chlor_a&#39;: &lt;class &#39;netCDF4._netCDF4.Variable&#39;&gt;
+ float32 chlor_a(lat, lon)
+     long_name: Chlorophyll Concentration, OCI Algorithm
+     units: mg m^-3
+     standard_name: mass_concentration_chlorophyll_concentration_in_sea_water
+     _FillValue: -32767.0
+     valid_min: 0.001
+     valid_max: 100.0
+     reference: Hu, C., Lee Z., and Franz, B.A. (2012). Chlorophyll-a algorithms for oligotrophic oceans: A novel approach based on three-band reflectance difference, J. Geophys. Res., 117, C01011, doi:10.1029/2011JC007395.
+     display_scale: log
+     display_min: 0.01
+     display_max: 20.0
+ unlimited dimensions: 
+ current shape = (4320, 8640)
+ filling on,
+ &#39;lat&#39;: &lt;class &#39;netCDF4._netCDF4.Variable&#39;&gt;
+ float32 lat(lat)
+     long_name: Latitude
+     units: degrees_north
+     standard_name: latitude
+     _FillValue: -999.0
+     valid_min: -90.0
+     valid_max: 90.0
+ unlimited dimensions: 
+ current shape = (4320,)
+ filling on,
+ &#39;lon&#39;: &lt;class &#39;netCDF4._netCDF4.Variable&#39;&gt;
+ float32 lon(lon)
+     long_name: Longitude
+     units: degrees_east
+     standard_name: longitude
+     _FillValue: -999.0
+     valid_min: -180.0
+     valid_max: 180.0
+ unlimited dimensions: 
+ current shape = (8640,)
+ filling on,
+ &#39;palette&#39;: &lt;class &#39;netCDF4._netCDF4.Variable&#39;&gt;
+ uint8 palette(rgb, eightbitcolor)
+ unlimited dimensions: 
+ current shape = (3, 256)
+ filling on, default _FillValue of 255 ignored}
 </pre></div>
 </div>
 </div>
@@ -1263,8 +2205,30 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Treating a variable like a dictionary</span>
-<span class="c1"># print(d.variables.keys())</span>
-<span class="c1"># d.variables[&#39;chlor_a&#39;]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">variables</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="n">d</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;chlor_a&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;chlor_a&#39;, &#39;lat&#39;, &#39;lon&#39;, &#39;palette&#39;])
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;netCDF4._netCDF4.Variable&#39;&gt;
+float32 chlor_a(lat, lon)
+    long_name: Chlorophyll Concentration, OCI Algorithm
+    units: mg m^-3
+    standard_name: mass_concentration_chlorophyll_concentration_in_sea_water
+    _FillValue: -32767.0
+    valid_min: 0.001
+    valid_max: 100.0
+    reference: Hu, C., Lee Z., and Franz, B.A. (2012). Chlorophyll-a algorithms for oligotrophic oceans: A novel approach based on three-band reflectance difference, J. Geophys. Res., 117, C01011, doi:10.1029/2011JC007395.
+    display_scale: log
+    display_min: 0.01
+    display_max: 20.0
+unlimited dimensions: 
+current shape = (4320, 8640)
+filling on
 </pre></div>
 </div>
 </div>
@@ -1272,7 +2236,12 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Access metadata with using a period .</span>
-<span class="c1"># d.variables[&#39;chlor_a&#39;].long_name</span>
+<span class="n">d</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;chlor_a&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">long_name</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Chlorophyll Concentration, OCI Algorithm&#39;
 </pre></div>
 </div>
 </div>
@@ -1280,60 +2249,97 @@ const thebe_selector_output = ".output, .cell_output"
 <p>If the data you need is in a group, it can be accessed with <code class="docutils literal notranslate"><span class="pre">.groups</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># d.groups[&#39;processing_control&#39;]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">groups</span><span class="p">[</span><span class="s1">&#39;processing_control&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;netCDF4._netCDF4.Group&#39;&gt;
+group /processing_control:
+    software_name: l3mapgen
+    software_version: 2.0.0-V2018.0.6
+    source: A2018006.L3b_DAY_CHL.nc
+    l2_flag_names: ATMFAIL,LAND,HILT,HISATZEN,STRAYLIGHT,CLDICE,COCCOLITH,LOWLW,CHLWARN,CHLFAIL,NAVWARN,MAXAERITER,ATMWARN,HISOLZEN,NAVFAIL,FILTER,HIGLINT
+    dimensions(sizes): 
+    variables(dimensions): 
+    groups: input_parameters
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id7">
-<h3>Getting your data<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id6">
+<h3>Getting your data<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <p>Once you traverse the file structure with the right keys and find a <code class="docutils literal notranslate"><span class="pre">netCDF4._netCDF4.Variable</span></code> object you can accesss pull out the numpy array and work with it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># chlor_a = d.variables[&#39;chlor_a&#39;][:]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chlor_a</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;chlor_a&#39;</span><span class="p">][:]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># type(chlor_a)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">chlor_a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numpy.ma.core.MaskedArray
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># chlor_a.shape</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chlor_a</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4320, 8640)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># chlor_a.max()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chlor_a</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>98.49251
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># from matplotlib import pyplot</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pyplot.imshow(chlor_a)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pyplot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">chlor_a</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x1611b86d0&gt;
+</pre></div>
+</div>
+<img alt="../../_images/hierarchical_data_85_1.png" src="../../_images/hierarchical_data_85_1.png" />
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
+<section id="raster-data-structure">
+<h2>Raster Data Structure<a class="headerlink" href="#raster-data-structure" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1367,10 +2373,10 @@ const thebe_selector_output = ".output, .cell_output"
             <p class="prev-next-title">Time Series Statistics</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../Visualization/index.html" title="next page">
+    <a class='right-next' id="next-link" href="../rasters/index.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Visualization</p>
+        <p class="prev-next-title">Raster data lessons</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

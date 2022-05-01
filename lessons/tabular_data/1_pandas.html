@@ -4,8 +4,9 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pandas &#8212; SARP Programming Lessons</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>The pandas Library &#8212; SARP Programming Lessons</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -116,7 +117,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../general_python/1_variables_types_ifstatements.html">
-     Variables, Data types, and if Statements
+     Variables, Data Types, and if Statements
     </a>
    </li>
    <li class="toctree-l2">
@@ -147,23 +148,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/1_arrays_numpy.html">
-     Arrays and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       numpy
-      </span>
-     </code>
+    <a class="reference internal" href="../raster_data/1_xarray.html">
+     Lesson 4, Raster data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/2_raster_fundamentals.html">
-     Working with rasters
+    <a class="reference internal" href="../raster_data/2_xarray_computation.html">
+     Lesson 5, Gridded Data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/3_accessing_coordinates.html">
-     Accessing Data
+    <a class="reference internal" href="../raster_data/3_xarray_groupby.html">
+     Lesson 6, Gridded Data
     </a>
    </li>
   </ul>
@@ -180,11 +176,13 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
+     The
      <code class="docutils literal notranslate">
       <span class="pre">
        pandas
       </span>
      </code>
+     Library
     </a>
    </li>
    <li class="toctree-l2">
@@ -226,11 +224,43 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../additional_lectures/Visualization/index.html">
-   Visualization
+  <a class="reference internal" href="../../additional_lectures/rasters/index.html">
+   Raster data lessons
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/1_arrays_numpy.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/2_raster_fundamentals.html">
+     Working with rasters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/3_accessing_coordinates.html">
+     Accessing Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../additional_lectures/Visualization/index.html">
+   Visualization
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -273,8 +303,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../index_practice.html">
    General Python Practice
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -325,42 +355,30 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../index_practice_raster.html">
    Raster Data Practice
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/practice/1_arrays_numpy_practice.html">
-     Arrays and
+    <a class="reference internal" href="../raster_data/practice/1_xarray_practice.html">
      <code class="docutils literal notranslate">
       <span class="pre">
-       numpy
+       xarray
       </span>
      </code>
      Practice
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/practice/2_raster_fundamentals_practice.html">
-     Raster Fundamentals Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/practice/3_accessing_coordinates_practice.html">
-     Accessing Coordinates Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/practice/1_arrays_numpy_answers.html">
-     Arrays and
+    <a class="reference internal" href="../raster_data/practice/2_xarray_practice.html">
      <code class="docutils literal notranslate">
       <span class="pre">
-       numpy
+       xarray
       </span>
      </code>
-     Answers
+     Computation Practice
     </a>
    </li>
   </ul>
@@ -369,8 +387,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../index_practice_tabular.html">
    Tabular Data Practice
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -413,6 +431,50 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="practice/2_filtering_groupby_answers.html">
      Filtering and Groupby Answers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../additional_lectures/index_practice.html">
+   Raster Data Practice (Additional Lectures)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/practice/1_arrays_numpy_practice.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+     Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/practice/2_raster_fundamentals_practice.html">
+     Raster Fundamentals Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/practice/3_accessing_coordinates_practice.html">
+     Accessing Coordinates Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/practice/1_arrays_numpy_answers.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+     Answers
     </a>
    </li>
   </ul>
@@ -628,7 +690,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>pandas</h1>
+                <h1>The pandas Library</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -761,8 +823,8 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="pandas">
-<h1><code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#pandas" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="the-pandas-library">
+<h1>The <code class="docutils literal notranslate"><span class="pre">pandas</span></code> Library<a class="headerlink" href="#the-pandas-library" title="Permalink to this headline">¶</a></h1>
 <div class="note dropdown admonition">
 <p class="admonition-title">Lesson Content</p>
 <ul class="simple">
@@ -773,13 +835,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>👨‍👦‍👦 Some Aggregations</p></li>
 </ul>
 </div>
-<div class="section" id="context">
+<section id="context">
 <h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
 <p>Today we are building up our arsenal of data structures with a really exciting one - the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">Dataframe</span></code>.  This is a data structure that models <strong>tabular data</strong>, or data with rows and columns. Learning this data structure will allow us to start manipulating large datasets of that format, and will allow us to do things that we couldn’t otherwise do in a program like excel.</p>
 <p>Today we will focus on opening and inspecting data, using USGS stream guage data as an applied example.</p>
 <p><img alt="Summary Slide" src="../../_images/summaryslide_3tabular.jpg" /></p>
-</div>
-<div class="section" id="libraries">
+</section>
+<section id="libraries">
 <h2>🗃️ Libraries<a class="headerlink" href="#libraries" title="Permalink to this headline">¶</a></h2>
 <p>Today we are going to dig into our first library in Python!  A <strong>library</strong> is a like an “extras” package for a programming language (think Settlers of Catan expansion pack).  It is a set of commands that doesn’t automatically come activated when you use Python, but that you can still use if you just tell Python that you plan to do so.  You let python know you are going to use a library with an <code class="docutils literal notranslate"><span class="pre">import</span></code> statment.  After you do that the additional commands become availble.</p>
 <div class="cell docutils container">
@@ -792,7 +854,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3146</span><span class="o">/</span><span class="mf">642619898.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4508</span><span class="o">/</span><span class="mf">642619898.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Attempting to use the `math` libray before importing</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 
@@ -828,14 +890,14 @@ const thebe_selector_output = ".output, .cell_output"
 <p>One large chunk of libraries are together referred to as the <strong>Python Standard Library</strong>. These libraries are not a part of the “core” language (everything we can do without import statments) but have still been offically accepted into the Python distribution package and are maintained in the same way as the rest of the core language.  You can read more <a class="reference external" href="https://docs.python.org/3/tutorial/stdlib.html">here</a>.</p>
 <p>There are also libraries which aren’t a part of this designation, and are still widely used and developed, but they are simply not included when you hit the “Download Python” button.  Non-standard libraries are maintained by groups of developers outside of the Python Software Foundation and anyone can make one.  That includes you!</p>
 </div>
-</div>
-<div class="section" id="tabular-data-and-pandas">
+</section>
+<section id="tabular-data-and-pandas">
 <h2>🐼 Tabular Data and <code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#tabular-data-and-pandas" title="Permalink to this headline">¶</a></h2>
 <p><strong>Tabular data</strong> is the type of data that you would see in an excel sheet.  Data is organized into rows (horizontal) and columns (vertical).  It is also common for tabular data to have an index which uniquely lables the rows.  A really common type of tabular data is a CSV file.</p>
 <p><img alt="L3_tabular_data.png" src="../../_images/tabular_data.png" /></p>
 <p>Where are the rows, columns, and indexes in this excel sheet?</p>
-</div>
-<div class="section" id="pandas-library">
+</section>
+<section id="pandas-library">
 <h2><code class="docutils literal notranslate"><span class="pre">pandas</span></code> library 🐼<a class="headerlink" href="#pandas-library" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">pandas</span></code> is a very common library that is used for working with tabular data.  It is cannonically imported like this:</p>
 <div class="cell docutils container">
@@ -854,8 +916,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="pandas-data-structures">
+</section>
+<section id="pandas-data-structures">
 <h2><code class="docutils literal notranslate"><span class="pre">pandas</span></code> Data structures<a class="headerlink" href="#pandas-data-structures" title="Permalink to this headline">¶</a></h2>
 <p>There are two primary <code class="docutils literal notranslate"><span class="pre">pandas</span></code> data structures:</p>
 <ol class="simple">
@@ -863,7 +925,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code></p></li>
 </ol>
 <p><code class="docutils literal notranslate"><span class="pre">Series</span></code> is the simplier of the two structures, but <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code> are more common so that is what you will likely mostly be working with.</p>
-<div class="section" id="pd-dataframe">
+<section id="pd-dataframe">
 <h3><code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code><a class="headerlink" href="#pd-dataframe" title="Permalink to this headline">¶</a></h3>
 <p>A <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <strong>dataframe</strong> is a data structure organized into rows and columns.  Other important parts of the anatomy of a data frame are the columns names and the index.</p>
 <p><img alt="Pandas Dataframe" src="../../_images/pandas_dataframe.png" /></p>
@@ -1020,8 +1082,8 @@ const thebe_selector_output = ".output, .cell_output"
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="pd-series">
+</section>
+<section id="pd-series">
 <h3><code class="docutils literal notranslate"><span class="pre">pd.Series</span></code><a class="headerlink" href="#pd-series" title="Permalink to this headline">¶</a></h3>
 <p>The other major <code class="docutils literal notranslate"><span class="pre">pandas</span></code> data strucutre is a <strong>Series</strong>, which represents just a single column of a dataframe.  It still has indexes, like a dataframe, but since a series is only ever a single column it doesn’t have a column name.</p>
 <img src="https://www.datasciencemadesimple.com/wp-content/uploads/2020/05/create-series-in-python-pandas-0.png" width=620>
@@ -1045,9 +1107,9 @@ Name: humidity, dtype: int64
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="accessing-values-in-pd-dataframe">
+</section>
+</section>
+<section id="accessing-values-in-pd-dataframe">
 <h2>Accessing values in <code class="docutils literal notranslate"><span class="pre">pd.DataFrame()</span></code><a class="headerlink" href="#accessing-values-in-pd-dataframe" title="Permalink to this headline">¶</a></h2>
 <p>Even though pandas dataframes are new data structures, some of the patterns for accessing data are very similar to what we saw in the list and dictionary data structures.  What’s exciting is that the concept – indexing – is conceptually similar and so in response the syntax is also similar.</p>
 <p>Two main ways you may want to access data in a dataframe might be:</p>
@@ -1055,7 +1117,7 @@ Name: humidity, dtype: int64
 <li><p>look at all the data in a single column</p></li>
 <li><p>look at all the data in a single row</p></li>
 </ol>
-<div class="section" id="view-data-in-a-single-column">
+<section id="view-data-in-a-single-column">
 <h3>View data in a single column<a class="headerlink" href="#view-data-in-a-single-column" title="Permalink to this headline">¶</a></h3>
 <p>The syntax for this is akin to looking up an item in a dictionary:</p>
 <div class="cell docutils container">
@@ -1074,8 +1136,8 @@ Name: humidity, dtype: int64
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="view-data-in-a-single-row-indexing">
+</section>
+<section id="view-data-in-a-single-row-indexing">
 <h3>View data in a single row (indexing)<a class="headerlink" href="#view-data-in-a-single-row-indexing" title="Permalink to this headline">¶</a></h3>
 <p>When looking up data for a row we use the indexes, and the same <code class="docutils literal notranslate"><span class="pre">[]</span></code> syntax that we have seen in lists.  <code class="docutils literal notranslate"><span class="pre">pandas</span></code> uses the <code class="docutils literal notranslate"><span class="pre">[]</span></code> and <code class="docutils literal notranslate"><span class="pre">:</span></code> notation in the exact same way.  The only new addition is the <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> syntax that goes before the square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code>.</p>
 <div class="cell docutils container">
@@ -1149,8 +1211,8 @@ Name: 2, dtype: int64
 <li><p>What is the datatype of <code class="docutils literal notranslate"><span class="pre">forecast['humidity']</span></code>?</p></li>
 </ol>
 </div>
-</div>
-<div class="section" id="a-note-about-assigning-dataframes-to-variables">
+</section>
+<section id="a-note-about-assigning-dataframes-to-variables">
 <h3>🌟 A note about assigning dataframes to variables<a class="headerlink" href="#a-note-about-assigning-dataframes-to-variables" title="Permalink to this headline">¶</a></h3>
 <p>It’s easy to feel like when you do something to find one part of a dataframe (Ex. <code class="docutils literal notranslate"><span class="pre">forecast.iloc[2:4]</span></code> or <code class="docutils literal notranslate"><span class="pre">forecast['humidity']</span></code>) you have changed the dataframe.  This is not the case, however, and the original dataframe stays the same.</p>
 <div class="cell docutils container">
@@ -1318,9 +1380,9 @@ Name: 2, dtype: int64
 </table>
 </div></div></div>
 </div>
-</div>
-</div>
-<div class="section" id="using-some-real-data">
+</section>
+</section>
+<section id="using-some-real-data">
 <h2>Using some real data❗️<a class="headerlink" href="#using-some-real-data" title="Permalink to this headline">¶</a></h2>
 <p>To work with the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> library we’ll use as an example some <a class="reference external" href="https://waterdata.usgs.gov/nwis">USGS stream guage data</a> (<a class="reference external" href="https://waterdata.usgs.gov/monitoring-location/06711565/#parameterCode=00060&amp;period=P30D">Source link</a>).</p>
 <p>First let’s open up the file.  We aren’t going to dive into this too much so right now just notice that the function I used is <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code> (<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html">docs</a>).</p>
@@ -1547,7 +1609,7 @@ Name: 2, dtype: int64
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;./data/englewood_3_12_21_usgs_water.tsv&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">31</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="section" id="filepaths">
+<section id="filepaths">
 <h3>Filepaths<a class="headerlink" href="#filepaths" title="Permalink to this headline">¶</a></h3>
 <p>The other part of that data loading statement to take note is the <code class="docutils literal notranslate"><span class="pre">'./data/englewood_3_12_21_usgs_water.tsv'</span></code> part.  This is called the <strong>filepath</strong> and it is a string that describes the location of the data that you want to open.  A few pieces of the anatomy of a filepath to notice:</p>
 <ul class="simple">
@@ -1567,8 +1629,8 @@ Name: 2, dtype: int64
 <li><p>choose the file named englewood_3_12_21_usgs_water.tsv: <code class="docutils literal notranslate"><span class="pre">'./data/englewood_3_12_21_usgs_water.tsv'</span></code></p></li>
 </ol>
 <p>🎉 And there we have our file</p>
-</div>
-<div class="section" id="back-to-our-data">
+</section>
+<section id="back-to-our-data">
 <h3>Back to our data<a class="headerlink" href="#back-to-our-data" title="Permalink to this headline">¶</a></h3>
 <p>This data isn’t super meaningful at first glance.  In the block of code below I do some formatting to improve that.  This step is often called <strong>data cleaning</strong> is unfortunately pretty common with real world data. You will likely spend a chunk of your time on this.  (This is sometimes refered to as the <a class="reference external" href="https://www.infoworld.com/article/3228245/the-80-20-data-science-dilemma.html">80/20 rule</a> for data science and there is a lot of chatter that goes into trying to reverse it).</p>
 <p>That isn’t the focus right now, though.  I want to get onto working with the data so I’ve smushed all these lines of code together.  I left comments so if you want to come back later to break this into seperate code blocks and see what I did you can.</p>
@@ -1712,8 +1774,8 @@ Name: 2, dtype: int64
 <p>146 rows × 5 columns</p>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="accessing-larger-data">
+</section>
+<section id="accessing-larger-data">
 <h3>Accessing larger data<a class="headerlink" href="#accessing-larger-data" title="Permalink to this headline">¶</a></h3>
 <p>Our example dataframes from the previous section were small enough that we could always see the whole thing just by printing it.  That won’t usually be the case with real data.</p>
 <p>When the data is long there are other ways besides reading through it all to help you get a sense of the data.  One way is to get some overview statistics with the <code class="docutils literal notranslate"><span class="pre">.info()</span></code> or the <code class="docutils literal notranslate"><span class="pre">.describe()</span></code> methods.</p>
@@ -1831,9 +1893,9 @@ memory usage: 6.8+ KB
 </pre></div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="aggregations">
+</section>
+</section>
+<section id="aggregations">
 <h2>Aggregations<a class="headerlink" href="#aggregations" title="Permalink to this headline">¶</a></h2>
 <p>Another way to get a sense of your data is to run a few aggregations on the data, such as taking the max or min of specific columns. You also might need to do this as a part of your research.
 Some common aggregations:</p>
@@ -1846,7 +1908,7 @@ Some common aggregations:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/f8/rh42xb3d1tnbw2bxsjwgym1c0000gn/T/ipykernel_3146/2541290807.py:1: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/f8/rh42xb3d1tnbw2bxsjwgym1c0000gn/T/ipykernel_4508/2541290807.py:1: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
   water_vars.max()
 </pre></div>
 </div>
@@ -1884,8 +1946,8 @@ dtype: object
 <li><p>print the standard deviation of all of the columns of the <code class="docutils literal notranslate"><span class="pre">water_vars</span></code> dataframe</p></li>
 </ol>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

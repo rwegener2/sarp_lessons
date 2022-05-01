@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Spatial Data &#8212; SARP Programming Lessons</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
@@ -116,7 +117,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="1_variables_types_ifstatements.html">
-     Variables, Data types, and if Statements
+     Variables, Data Types, and if Statements
     </a>
    </li>
    <li class="toctree-l2">
@@ -147,23 +148,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/1_arrays_numpy.html">
-     Arrays and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       numpy
-      </span>
-     </code>
+    <a class="reference internal" href="../raster_data/1_xarray.html">
+     Lesson 4, Raster data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/2_raster_fundamentals.html">
-     Working with rasters
+    <a class="reference internal" href="../raster_data/2_xarray_computation.html">
+     Lesson 5, Gridded Data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/3_accessing_coordinates.html">
-     Accessing Data
+    <a class="reference internal" href="../raster_data/3_xarray_groupby.html">
+     Lesson 6, Gridded Data
     </a>
    </li>
   </ul>
@@ -180,11 +176,13 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../tabular_data/1_pandas.html">
+     The
      <code class="docutils literal notranslate">
       <span class="pre">
        pandas
       </span>
      </code>
+     Library
     </a>
    </li>
    <li class="toctree-l2">
@@ -226,11 +224,43 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../additional_lectures/Visualization/index.html">
-   Visualization
+  <a class="reference internal" href="../../additional_lectures/rasters/index.html">
+   Raster data lessons
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/1_arrays_numpy.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/2_raster_fundamentals.html">
+     Working with rasters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/3_accessing_coordinates.html">
+     Accessing Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../additional_lectures/Visualization/index.html">
+   Visualization
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -273,8 +303,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../index_practice.html">
    General Python Practice
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -325,42 +355,30 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../index_practice_raster.html">
    Raster Data Practice
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/practice/1_arrays_numpy_practice.html">
-     Arrays and
+    <a class="reference internal" href="../raster_data/practice/1_xarray_practice.html">
      <code class="docutils literal notranslate">
       <span class="pre">
-       numpy
+       xarray
       </span>
      </code>
      Practice
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/practice/2_raster_fundamentals_practice.html">
-     Raster Fundamentals Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/practice/3_accessing_coordinates_practice.html">
-     Accessing Coordinates Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/practice/1_arrays_numpy_answers.html">
-     Arrays and
+    <a class="reference internal" href="../raster_data/practice/2_xarray_practice.html">
      <code class="docutils literal notranslate">
       <span class="pre">
-       numpy
+       xarray
       </span>
      </code>
-     Answers
+     Computation Practice
     </a>
    </li>
   </ul>
@@ -369,8 +387,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../index_practice_tabular.html">
    Tabular Data Practice
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -413,6 +431,50 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../tabular_data/practice/2_filtering_groupby_answers.html">
      Filtering and Groupby Answers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../additional_lectures/index_practice.html">
+   Raster Data Practice (Additional Lectures)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/practice/1_arrays_numpy_practice.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+     Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/practice/2_raster_fundamentals_practice.html">
+     Raster Fundamentals Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/practice/3_accessing_coordinates_practice.html">
+     Accessing Coordinates Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/practice/1_arrays_numpy_answers.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+     Answers
     </a>
    </li>
   </ul>
@@ -527,8 +589,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#geodesy">
-   Geodesy
+  <a class="reference internal nav-link" href="#geodesy-copied-to-additional-lecture-shorten">
+   Geodesy (copied to additional lecture – shorten)
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -698,8 +760,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#geodesy">
-   Geodesy
+  <a class="reference internal nav-link" href="#geodesy-copied-to-additional-lecture-shorten">
+   Geodesy (copied to additional lecture – shorten)
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -835,7 +897,7 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="spatial-data">
+  <section class="tex2jax_ignore mathjax_ignore" id="spatial-data">
 <h1>Spatial Data<a class="headerlink" href="#spatial-data" title="Permalink to this headline">¶</a></h1>
 <div class="note dropdown admonition">
 <p class="admonition-title">Lesson Content</p>
@@ -846,15 +908,15 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><code class="docutils literal notranslate"><span class="pre">shapely</span></code> vector object library</p></li>
 </ul>
 </div>
-<div class="section" id="context">
+<section id="context">
 <h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
 <p>Spatial data, as defined by software firm <a class="reference external" href="https://www.safe.com/what-is/spatial-data/">Safe</a> is:</p>
 <blockquote>
 <div><p>a term used to describe any data related to or containing information about a specific location on the Earth’s surface</p>
 </div></blockquote>
 <p>As earth scientists we are all about the earth’s surface! Our data is inherently spatial.  Very little (or nothing) that we do is disconnected from location.  Learning how to deal with location, then, is a key part of learning to code for earth science research.</p>
-</div>
-<div class="section" id="vector-data-vs-raster-data">
+</section>
+<section id="vector-data-vs-raster-data">
 <h2>Vector data vs. Raster data<a class="headerlink" href="#vector-data-vs-raster-data" title="Permalink to this headline">¶</a></h2>
 <p>Spatial data is most often divided between two types:</p>
 <ol class="simple">
@@ -874,8 +936,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>elevations across a state</p></li>
 </ol>
 </div>
-</div>
-<div class="section" id="all-the-world-s-a-coordinate-system">
+</section>
+<section id="all-the-world-s-a-coordinate-system">
 <h2>All the world’s a coordinate system<a class="headerlink" href="#all-the-world-s-a-coordinate-system" title="Permalink to this headline">¶</a></h2>
 <p>A map of the world:</p>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Mercator_projection_Square.JPG/350px-Mercator_projection_Square.JPG" width=450><p>We are familiar with a map like this. Latitudes run horizontally east/west and longitudes run vertically north and south.</p>
@@ -885,7 +947,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>112 W, 15 S = -112, -15</p>
 <p>While this all is generally approachable it can get easy to get turned around when you’re in the nitty gritty of coordinates with your data.  One visual I like to keep myself on track is that the coordinate system on our map is just that, a coordinate system just like they x and y planes in math class.</p>
 <p><img alt="Map with CRS" src="../../_images/crs_map.jpg" /></p>
-<div class="section" id="bounding-boxes">
+<section id="bounding-boxes">
 <h3>Bounding Boxes<a class="headerlink" href="#bounding-boxes" title="Permalink to this headline">¶</a></h3>
 <p>Bounding boxes represent the minimum and maxiumum coordinates of the dataset.  These are often latitude and longitude lines, but the bounding box is given the units of whatever dataset the raster is using.  AVIRIS, for example, uses a UTM grid (more detail later) so the units of the bounding box are meters.</p>
 <p><img alt="Bounding Boxs" src="../../_images/bounding_box.png" /></p>
@@ -902,10 +964,10 @@ const thebe_selector_output = ".output, .cell_output"
 <p class="admonition-title">📝 Check your understanding</p>
 <p>Pull up Google maps or your favorite mapping appliation and zoom into the state of Wyoming. Click the map to view latitude and longitude locations for the edges.  Write down an approximate bounding box (to ~the nearest half of a degree) for the state in the form <code class="docutils literal notranslate"><span class="pre">[minimum_x</span> <span class="pre">minimum_y</span> <span class="pre">maximum_x</span> <span class="pre">maximum_y]</span></code></p>
 </div>
-</div>
-</div>
-<div class="section" id="geodesy">
-<h2>Geodesy<a class="headerlink" href="#geodesy" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="geodesy-copied-to-additional-lecture-shorten">
+<h2>Geodesy (copied to additional lecture – shorten)<a class="headerlink" href="#geodesy-copied-to-additional-lecture-shorten" title="Permalink to this headline">¶</a></h2>
 <p><strong>geodesy</strong> is the science of understanding and measureing the earth’s shape.  There are people who spend their whole careers as geodesists.  Geodesy and mapping is an integral part of <strong>georeferencing</strong> your data - or placing your data in space.  Without georeferencing raster datasets are just pretty images that could have been taken anywhere in the world, or not on this world at all.</p>
 <p>The three major concept we will be distinguishing between today are:</p>
 <ol class="simple">
@@ -913,19 +975,19 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>map projections</p></li>
 <li><p>coordinate reference systems</p></li>
 </ol>
-<div class="section" id="ellipsoids-and-datums">
+<section id="ellipsoids-and-datums">
 <h3>Ellipsoids and Datums<a class="headerlink" href="#ellipsoids-and-datums" title="Permalink to this headline">¶</a></h3>
 <p>Geodesists have defined the shape of an ellipsoid which is believed to best align with the shape of the earth.  The mostly commonly used ellisoid is the WGS 84 ellipsoid which was defined in 1984. In addition to defining the size of the ellipsoid we also need to define where the center of the ellipsoid should sit so that it is acurrate for as many places on earth at once.  Defining where to put the ellipsoid is called the <strong>datum</strong>.</p>
 <p><img alt="Datums" src="../../_images/datums.png" /></p>
 <p>Together the ellipsoid and the datum become the mathematical definition of the earth’s surface.</p>
-</div>
-<div class="section" id="map-projections">
+</section>
+<section id="map-projections">
 <h3>Map Projections<a class="headerlink" href="#map-projections" title="Permalink to this headline">¶</a></h3>
 <p>The ellipsoid is a 3D shape.  Map projections are the result of taking a 3D shape and turning it into being 2D.</p>
 <img src="https://tomroth.com.au/projections/map-projections.png" width=500><p>There are <a class="reference external" href="https://xkcd.com/977/">an insane number of ways to do this</a> and they are grouped into different families.  The most important takeaway is just to know that when you convert a 3D object into a 2D you aren’t going to be able to be accurate in every aspect.  Something has to sacrifice.  It might be relative size or it might be straight lines but everything can’t be perfect on a given map projection.</p>
 <p><img alt="Projection Distortion" src="../../_images/projection_distortion.png" /></p>
-</div>
-<div class="section" id="coordinate-reference-systems-crs">
+</section>
+<section id="coordinate-reference-systems-crs">
 <h3>Coordinate Reference Systems (CRS)<a class="headerlink" href="#coordinate-reference-systems-crs" title="Permalink to this headline">¶</a></h3>
 <p>Once you lay out your 2d surface representing the earth you next need to label the map so you can refer to points on that surface.  The system you uses for labelling points on the map is a <strong>coordinate reference system (crs)</strong>.</p>
 <p>CRS fit into two main categories:</p>
@@ -943,16 +1005,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Coordinate Reference System</p></li>
 </ol>
 </div>
-</div>
-<div class="section" id="geodesy-in-code-epsg">
+</section>
+<section id="geodesy-in-code-epsg">
 <h3>Geodesy in Code: EPSG<a class="headerlink" href="#geodesy-in-code-epsg" title="Permalink to this headline">¶</a></h3>
 <p>One common way to notate coordinate reference systems and map projections is with EPSG codes.  These codes assign an integer number to many of the common map projection/crs combinations.</p>
 <p>Really common projections include:</p>
 <p>EPSG:4326 - what most people think of as “regular” lat/lon coordinates
 EPSG:3857 - Web mercator, the projection used by Google maps and most web maps.  The de facto standard of web mapping.</p>
-</div>
-</div>
-<div class="section" id="utm-grids">
+</section>
+</section>
+<section id="utm-grids">
 <h2>UTM Grids<a class="headerlink" href="#utm-grids" title="Permalink to this headline">¶</a></h2>
 <p>The Universal Transverse Mercator (UTM) projected coordinate system that covers the entire earth.  The system is broken up into 60 zones, each 6 degrees longitude wide, that span from the south to the north pole.</p>
 <div class="cell docutils container">
@@ -974,7 +1036,7 @@ EPSG:3857 - Web mercator, the projection used by Google maps and most web maps. 
 <div class="output text_html"><img src="https://gisgeography.com/wp-content/uploads/2016/05/UTM-Zones-Globe-2.png" width="330"/></div></div>
 </div>
 <p>Notice in the image how the area covered by each zone is widest at the equator and gets skinnier towards the poles.</p>
-<div class="section" id="easting-and-northing">
+<section id="easting-and-northing">
 <h3>Easting and Northing<a class="headerlink" href="#easting-and-northing" title="Permalink to this headline">¶</a></h3>
 <p>Instead of latitude and longitude the UTM grid system uses a northing and an easting, respectively.</p>
 <ul class="simple">
@@ -1000,8 +1062,8 @@ EPSG:3857 - Web mercator, the projection used by Google maps and most web maps. 
 <p class="admonition-title">📝 Check your understanding</p>
 <p>What is the set of coordinates corresponding to the exact center of a UTM grid?</p>
 </div>
-</div>
-<div class="section" id="epsg-codes-for-utm-grids">
+</section>
+<section id="epsg-codes-for-utm-grids">
 <h3>EPSG codes for UTM grids<a class="headerlink" href="#epsg-codes-for-utm-grids" title="Permalink to this headline">¶</a></h3>
 <p>Each grid has its own EPSG code, meaning there are 120 total EPSG codes total for UTM grids.  Luckily there is an order to how these codes are assigned.</p>
 <ul class="simple">
@@ -1024,18 +1086,18 @@ EPSG:3857 - Web mercator, the projection used by Google maps and most web maps. 
 <p class="admonition-title">📝 Check your understanding</p>
 <p>What is the EPSG code for the UTM zone covering most of Ireland?</p>
 </div>
-</div>
-</div>
-<div class="section" id="back-to-coding">
+</section>
+</section>
+<section id="back-to-coding">
 <h2>Back to Coding<a class="headerlink" href="#back-to-coding" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="shapely-objects">
+<section id="shapely-objects">
 <h3><code class="docutils literal notranslate"><span class="pre">shapely</span></code> objects<a class="headerlink" href="#shapely-objects" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">shapely</span></code> is a library for handling vector data.  It has objects for <code class="docutils literal notranslate"><span class="pre">Point</span></code>s, <code class="docutils literal notranslate"><span class="pre">LineString</span></code>s, <code class="docutils literal notranslate"><span class="pre">LineRing</span></code>s,and <code class="docutils literal notranslate"><span class="pre">Polygon</span></code>s. <code class="docutils literal notranslate"><span class="pre">Point</span></code>s and <code class="docutils literal notranslate"><span class="pre">Polygon</span></code>s are what we will primarily use.</p>
 <p>See also:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://towardsdatascience.com/geospatial-adventures-step-1-shapely-e911e4f86361">medium article</a></p></li>
 </ul>
-<div class="section" id="creating-a-point">
+<section id="creating-a-point">
 <h4>Creating a <code class="docutils literal notranslate"><span class="pre">Point()</span></code><a class="headerlink" href="#creating-a-point" title="Permalink to this headline">¶</a></h4>
 <p>You create a <code class="docutils literal notranslate"><span class="pre">shapely</span></code> object by giving it a set of coordinates, in the format (x, y).</p>
 <p><strong>Notice!</strong> x, y for degree coordinates is longitude, latitude</p>
@@ -1083,8 +1145,8 @@ EPSG:3857 - Web mercator, the projection used by Google maps and most web maps. 
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="creating-a-polygon">
+</section>
+<section id="creating-a-polygon">
 <h4>Creating a <code class="docutils literal notranslate"><span class="pre">Polygon()</span></code><a class="headerlink" href="#creating-a-polygon" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1117,8 +1179,8 @@ EPSG:3857 - Web mercator, the projection used by Google maps and most web maps. 
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="creating-a-bounding-box">
+</section>
+<section id="creating-a-bounding-box">
 <h4>Creating a Bounding Box<a class="headerlink" href="#creating-a-bounding-box" title="Permalink to this headline">¶</a></h4>
 <p>When we create a bounding box in code the order of inputs is:
 <code class="docutils literal notranslate"><span class="pre">minx</span></code>, <code class="docutils literal notranslate"><span class="pre">miny</span></code>, <code class="docutils literal notranslate"><span class="pre">maxx</span></code>, <code class="docutils literal notranslate"><span class="pre">maxy</span></code></p>
@@ -1138,8 +1200,8 @@ EPSG:3857 - Web mercator, the projection used by Google maps and most web maps. 
 <div class="cell_output docutils container">
 <img alt="../../_images/spatial_data_53_0.svg" src="../../_images/spatial_data_53_0.svg" /></div>
 </div>
-</div>
-<div class="section" id="example">
+</section>
+<section id="example">
 <h4>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
 <p>Creating a bounding box Python object for the bounding box of Italy in the image above</p>
 <div class="cell docutils container">
@@ -1161,9 +1223,9 @@ EPSG:3857 - Web mercator, the projection used by Google maps and most web maps. 
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="operations-with-spatial-objects">
+</section>
+</section>
+<section id="operations-with-spatial-objects">
 <h3>Operations with spatial objects<a class="headerlink" href="#operations-with-spatial-objects" title="Permalink to this headline">¶</a></h3>
 <p>Just like addition or multiplication are operations for numbers, we also have operations we can run on spatial data which are unique.  Here are a few common ones:</p>
 <img src="https://docs.qgis.org/2.8/en/_images/overlay_operations.png">
@@ -1201,7 +1263,7 @@ EPSG:3857 - Web mercator, the projection used by Google maps and most web maps. 
 <div class="cell_output docutils container">
 <img alt="../../_images/spatial_data_61_0.svg" src="../../_images/spatial_data_61_0.svg" /></div>
 </div>
-<div class="section" id="an-example-of-buffer-using-the-shape-of-california">
+<section id="an-example-of-buffer-using-the-shape-of-california">
 <h4>An example of buffer using the shape of California<a class="headerlink" href="#an-example-of-buffer-using-the-shape-of-california" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1244,14 +1306,14 @@ EPSG:3857 - Web mercator, the projection used by Google maps and most web maps. 
 <p>In the image below we have a shape <code class="docutils literal notranslate"><span class="pre">purple</span></code>, <code class="docutils literal notranslate"><span class="pre">tan</span></code> and <code class="docutils literal notranslate"><span class="pre">green</span></code>.  What is the operation that was used on <code class="docutils literal notranslate"><span class="pre">purple</span></code> and <code class="docutils literal notranslate"><span class="pre">tan</span></code> to get green shape?</p>
 <img src="https://gisgeography.com/wp-content/uploads/2020/10/Erase-Tool-3D-550x178.jpg">
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="different-ways-to-represent-spatial-objects">
+</section>
+</section>
+</section>
+<section id="different-ways-to-represent-spatial-objects">
 <h2>Different Ways to Represent Spatial Objects<a class="headerlink" href="#different-ways-to-represent-spatial-objects" title="Permalink to this headline">¶</a></h2>
 <p>While Python objects are nice, they aren’t great if you are trying to take your objects out of Python.  For example, maybe you drew out a custom shape in QGIS that you want to use or you defined an ROI in ENVI and you want to import those into your Python code.</p>
 <p>Shapefiles are a really common way to move shapes around.  Opening those is a little more involved so we won’t look at those right now, but I will briefly mention two other common representations that are text-based: GeoJSON and WKT.</p>
-<div class="section" id="geojson">
+<section id="geojson">
 <h3>geojson<a class="headerlink" href="#geojson" title="Permalink to this headline">¶</a></h3>
 <p>Geojson is a specific flavor of the very common JSON format.  JSON format is a way of sending data that looks just like a Python dictionary but it is used much more broadly than just Python.</p>
 <p>Links:</p>
@@ -1314,7 +1376,7 @@ EPSG:3857 - Web mercator, the projection used by Google maps and most web maps. 
 </div>
 </div>
 </div>
-<div class="section" id="loading-a-geojson-from-a-file">
+<section id="loading-a-geojson-from-a-file">
 <h4>Loading a geojson from a file<a class="headerlink" href="#loading-a-geojson-from-a-file" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1338,9 +1400,9 @@ EPSG:3857 - Web mercator, the projection used by Google maps and most web maps. 
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="wkt">
+</section>
+</section>
+<section id="wkt">
 <h3>WKT<a class="headerlink" href="#wkt" title="Permalink to this headline">¶</a></h3>
 <p>WKT stands for “Well Known Text”.  It is another way of saving vector geometries.</p>
 <div class="cell docutils container">
@@ -1355,9 +1417,9 @@ EPSG:3857 - Web mercator, the projection used by Google maps and most web maps. 
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

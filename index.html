@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Welcome to the SARP Programming Website &#8212; SARP Programming Lessons</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
@@ -115,7 +116,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="lessons/general_python/1_variables_types_ifstatements.html">
-     Variables, Data types, and if Statements
+     Variables, Data Types, and if Statements
     </a>
    </li>
    <li class="toctree-l2">
@@ -136,8 +137,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="lessons/raster_data/index.html">
-   Raster Data
+  <a class="reference internal" href="lessons/gridded_data/index.html">
+   Gridded Data
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -146,23 +147,29 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="lessons/raster_data/1_arrays_numpy.html">
-     Arrays and
+    <a class="reference internal" href="lessons/gridded_data/1_xarray.html">
+     The
      <code class="docutils literal notranslate">
       <span class="pre">
-       numpy
+       xarray
       </span>
      </code>
+     Library
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="lessons/raster_data/2_raster_fundamentals.html">
-     Working with rasters
+    <a class="reference internal" href="lessons/gridded_data/2_xarray_computation.html">
+     Starting Computations
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="lessons/raster_data/3_accessing_coordinates.html">
-     Accessing Data
+    <a class="reference internal" href="lessons/gridded_data/3_xarray_groupby.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray
+      </span>
+     </code>
+     Groupby
     </a>
    </li>
   </ul>
@@ -179,11 +186,13 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="lessons/tabular_data/1_pandas.html">
+     The
      <code class="docutils literal notranslate">
       <span class="pre">
        pandas
       </span>
      </code>
+     Library
     </a>
    </li>
    <li class="toctree-l2">
@@ -225,11 +234,43 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="additional_lectures/Visualization/index.html">
-   Visualization
+  <a class="reference internal" href="additional_lectures/rasters/index.html">
+   Raster data lessons
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="additional_lectures/rasters/1_arrays_numpy.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="additional_lectures/rasters/2_raster_fundamentals.html">
+     Working with rasters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="additional_lectures/rasters/3_accessing_coordinates.html">
+     Accessing Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="additional_lectures/Visualization/index.html">
+   Visualization
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -272,8 +313,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="lessons/index_practice.html">
    General Python Practice
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -322,44 +363,32 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="lessons/index_practice_raster.html">
-   Raster Data Practice
+   Gridded Data Practice
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="lessons/raster_data/practice/1_arrays_numpy_practice.html">
-     Arrays and
+    <a class="reference internal" href="lessons/gridded_data/practice/1_xarray_practice.html">
      <code class="docutils literal notranslate">
       <span class="pre">
-       numpy
+       xarray
       </span>
      </code>
      Practice
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="lessons/raster_data/practice/2_raster_fundamentals_practice.html">
-     Raster Fundamentals Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="lessons/raster_data/practice/3_accessing_coordinates_practice.html">
-     Accessing Coordinates Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="lessons/raster_data/practice/1_arrays_numpy_answers.html">
-     Arrays and
+    <a class="reference internal" href="lessons/gridded_data/practice/2_xarray_practice.html">
      <code class="docutils literal notranslate">
       <span class="pre">
-       numpy
+       xarray
       </span>
      </code>
-     Answers
+     Computation Practice
     </a>
    </li>
   </ul>
@@ -368,8 +397,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="lessons/index_practice_tabular.html">
    Tabular Data Practice
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -412,6 +441,50 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="lessons/tabular_data/practice/2_filtering_groupby_answers.html">
      Filtering and Groupby Answers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="additional_lectures/index_practice.html">
+   Raster Data Practice (Additional Lectures)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="additional_lectures/rasters/practice/1_arrays_numpy_practice.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+     Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="additional_lectures/rasters/practice/2_raster_fundamentals_practice.html">
+     Raster Fundamentals Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="additional_lectures/rasters/practice/3_accessing_coordinates_practice.html">
+     Accessing Coordinates Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="additional_lectures/rasters/practice/1_arrays_numpy_answers.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+     Answers
     </a>
    </li>
   </ul>
@@ -516,7 +589,7 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="welcome-to-the-sarp-programming-website">
+  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-the-sarp-programming-website">
 <h1>Welcome to the SARP Programming Website<a class="headerlink" href="#welcome-to-the-sarp-programming-website" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://www.nasa.gov/centers/ames/earthscience/programs/airbornescience/studentairborneresearchprogram">SARP</a> is a NASA-run reasearch intership for earth science undergraduates held in California, USA every summer. This website hosts content for the programming portion of the internship.</p>
 <p>The contents of this site include:</p>
@@ -527,27 +600,22 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p>Lessons are divided into two groups:</p>
 <ol class="simple">
-<li><p>raster data - data that fills regular grids. These are often satellite images</p></li>
+<li><p>gridded data - data that fills a mesh represting data in space. These are often satellite images</p></li>
 <li><p>tabular data - data with rows and columns; the type of data that would fit in an excel sheet</p></li>
 </ol>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lessons</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="lessons/general_python/index.html">General Python</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="lessons/general_python/1_variables_types_ifstatements.html">Variables, Data types, and if Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lessons/general_python/1_variables_types_ifstatements.html">Variables, Data Types, and if Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lessons/general_python/2_lists_dictionaries.html">Lists and Dictionaries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lessons/general_python/datetimes.html">Datetimes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lessons/general_python/spatial_data.html">Spatial Data</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="lessons/raster_data/index.html">Raster Data</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="lessons/raster_data/1_arrays_numpy.html">Arrays and <code class="docutils literal notranslate"><span class="pre">numpy</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="lessons/raster_data/2_raster_fundamentals.html">Working with rasters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lessons/raster_data/3_accessing_coordinates.html">Accessing Data</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="lessons/gridded_data/index.html">Gridded Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lessons/tabular_data/index.html">Tabular Data</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="lessons/tabular_data/1_pandas.html"><code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="lessons/tabular_data/1_pandas.html">The <code class="docutils literal notranslate"><span class="pre">pandas</span></code> Library</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lessons/tabular_data/2_filtering_groupby.html">Filtering and groupby</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lessons/tabular_data/3_geopandas.html"><code class="docutils literal notranslate"><span class="pre">geopandas</span></code></a></li>
 </ul>
@@ -560,6 +628,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="additional_lectures/Debugging/debugging_lesson.html">Debugging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="additional_lectures/time_series_statistics/oceans_stats_examples.html">Time Series Statistics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="additional_lectures/hierarchical_data/hierarchical_data.html">Hierarchical Data Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional_lectures/rasters/index.html">Raster data lessons</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="additional_lectures/rasters/1_arrays_numpy.html">Arrays and <code class="docutils literal notranslate"><span class="pre">numpy</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="additional_lectures/rasters/2_raster_fundamentals.html">Working with rasters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="additional_lectures/rasters/3_accessing_coordinates.html">Accessing Data</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="additional_lectures/Visualization/index.html">Visualization</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="additional_lectures/Visualization/1_static_viz_with_matplotlib.html">Static Data Visualization in Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="additional_lectures/Visualization/2_building_on_matplotlib.html">Building on top of <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
@@ -583,11 +657,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="lessons/general_python/practice/spatial_data_answers.html">Spatial Data Answers</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="lessons/index_practice_raster.html">Raster Data Practice</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="lessons/raster_data/practice/1_arrays_numpy_practice.html">Arrays and <code class="docutils literal notranslate"><span class="pre">numpy</span></code> Practice</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lessons/raster_data/practice/2_raster_fundamentals_practice.html">Raster Fundamentals Practice</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lessons/raster_data/practice/3_accessing_coordinates_practice.html">Accessing Coordinates Practice</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lessons/raster_data/practice/1_arrays_numpy_answers.html">Arrays and <code class="docutils literal notranslate"><span class="pre">numpy</span></code> Answers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lessons/index_practice_raster.html">Gridded Data Practice</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lessons/gridded_data/practice/1_xarray_practice.html"><code class="docutils literal notranslate"><span class="pre">xarray</span></code> Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lessons/gridded_data/practice/2_xarray_practice.html"><code class="docutils literal notranslate"><span class="pre">xarray</span></code> Computation Practice</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="lessons/index_practice_tabular.html">Tabular Data Practice</a><ul>
@@ -598,9 +670,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="lessons/tabular_data/practice/2_filtering_groupby_answers.html">Filtering and Groupby Answers</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="additional_lectures/index_practice.html">Raster Data Practice (Additional Lectures)</a></li>
 </ul>
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {

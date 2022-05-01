@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>geopandas &#8212; SARP Programming Lessons</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
@@ -116,7 +117,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../general_python/1_variables_types_ifstatements.html">
-     Variables, Data types, and if Statements
+     Variables, Data Types, and if Statements
     </a>
    </li>
    <li class="toctree-l2">
@@ -147,23 +148,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/1_arrays_numpy.html">
-     Arrays and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       numpy
-      </span>
-     </code>
+    <a class="reference internal" href="../raster_data/1_xarray.html">
+     Lesson 4, Raster data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/2_raster_fundamentals.html">
-     Working with rasters
+    <a class="reference internal" href="../raster_data/2_xarray_computation.html">
+     Lesson 5, Gridded Data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/3_accessing_coordinates.html">
-     Accessing Data
+    <a class="reference internal" href="../raster_data/3_xarray_groupby.html">
+     Lesson 6, Gridded Data
     </a>
    </li>
   </ul>
@@ -180,11 +176,13 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="1_pandas.html">
+     The
      <code class="docutils literal notranslate">
       <span class="pre">
        pandas
       </span>
      </code>
+     Library
     </a>
    </li>
    <li class="toctree-l2">
@@ -226,11 +224,43 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../additional_lectures/Visualization/index.html">
-   Visualization
+  <a class="reference internal" href="../../additional_lectures/rasters/index.html">
+   Raster data lessons
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/1_arrays_numpy.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/2_raster_fundamentals.html">
+     Working with rasters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/3_accessing_coordinates.html">
+     Accessing Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../additional_lectures/Visualization/index.html">
+   Visualization
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -273,8 +303,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../index_practice.html">
    General Python Practice
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -325,42 +355,30 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../index_practice_raster.html">
    Raster Data Practice
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/practice/1_arrays_numpy_practice.html">
-     Arrays and
+    <a class="reference internal" href="../raster_data/practice/1_xarray_practice.html">
      <code class="docutils literal notranslate">
       <span class="pre">
-       numpy
+       xarray
       </span>
      </code>
      Practice
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/practice/2_raster_fundamentals_practice.html">
-     Raster Fundamentals Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/practice/3_accessing_coordinates_practice.html">
-     Accessing Coordinates Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/practice/1_arrays_numpy_answers.html">
-     Arrays and
+    <a class="reference internal" href="../raster_data/practice/2_xarray_practice.html">
      <code class="docutils literal notranslate">
       <span class="pre">
-       numpy
+       xarray
       </span>
      </code>
-     Answers
+     Computation Practice
     </a>
    </li>
   </ul>
@@ -369,8 +387,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../index_practice_tabular.html">
    Tabular Data Practice
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -413,6 +431,50 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="practice/2_filtering_groupby_answers.html">
      Filtering and Groupby Answers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../additional_lectures/index_practice.html">
+   Raster Data Practice (Additional Lectures)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/practice/1_arrays_numpy_practice.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+     Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/practice/2_raster_fundamentals_practice.html">
+     Raster Fundamentals Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/practice/3_accessing_coordinates_practice.html">
+     Accessing Coordinates Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/practice/1_arrays_numpy_answers.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+     Answers
     </a>
    </li>
   </ul>
@@ -617,7 +679,7 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="geopandas">
+  <section class="tex2jax_ignore mathjax_ignore" id="geopandas">
 <h1><code class="docutils literal notranslate"><span class="pre">geopandas</span></code><a class="headerlink" href="#geopandas" title="Permalink to this headline">¶</a></h1>
 <div class="note dropdown admonition">
 <p class="admonition-title">Lesson Content</p>
@@ -628,13 +690,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>filtering a geodataframe by a vector</p></li>
 </ul>
 </div>
-<div class="section" id="context">
+<section id="context">
 <h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
 <p>🐼➕🌐 = 🚀🎉❤️</p>
 <p>We’ve used <code class="docutils literal notranslate"><span class="pre">pandas</span></code> to help us get the most out of our csv and excel data.  We talked yesterday about how spatial data is stored and organized.  Today we combine both worlds with <code class="docutils literal notranslate"><span class="pre">geopandas</span></code>, an extenions of <code class="docutils literal notranslate"><span class="pre">pandas</span></code> specific to spatial data.</p>
 <p>Just like how we saw that converting datetime strings to Python datetime objects, converting our latitudes and longitudes to points allows us to use a world more of spatial data analysis techniques.  It’s so exciting!</p>
-</div>
-<div class="section" id="id1">
+</section>
+<section id="id1">
 <h2><code class="docutils literal notranslate"><span class="pre">geopandas</span></code><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>GeoPandas is an extension of Pandas. GeoDataFrames have the same row, column structure with indexes that are accessed in the same way as Pandas. The difference is that they also have a <code class="docutils literal notranslate"><span class="pre">geometry</span></code> column.</p>
 <p><img alt="Geodataframe" src="../../_images/geodataframe.png" /></p>
@@ -785,8 +847,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div></div></div>
 </div>
 <p>What is the data type of the <code class="docutils literal notranslate"><span class="pre">geometry</span></code> column?</p>
-</div>
-<div class="section" id="converting-our-pandas-dataframe-to-a-geodataframe">
+</section>
+<section id="converting-our-pandas-dataframe-to-a-geodataframe">
 <h2>Converting our <code class="docutils literal notranslate"><span class="pre">pandas</span></code> dataframe to a GeoDataFrame<a class="headerlink" href="#converting-our-pandas-dataframe-to-a-geodataframe" title="Permalink to this headline">¶</a></h2>
 <p>geodataframe = pandas dataframe + geometry column of shapely objects</p>
 <div class="cell docutils container">
@@ -828,27 +890,27 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;GeometryArray&gt;
-[&lt;shapely.geometry.point.Point object at 0x15cf94e20&gt;,
- &lt;shapely.geometry.point.Point object at 0x1599891c0&gt;,
- &lt;shapely.geometry.point.Point object at 0x15cf55eb0&gt;,
- &lt;shapely.geometry.point.Point object at 0x107f4dee0&gt;,
- &lt;shapely.geometry.point.Point object at 0x107f4d1f0&gt;,
- &lt;shapely.geometry.point.Point object at 0x15d0531c0&gt;,
- &lt;shapely.geometry.point.Point object at 0x15d053220&gt;,
- &lt;shapely.geometry.point.Point object at 0x15d053190&gt;,
- &lt;shapely.geometry.point.Point object at 0x15dd1bfd0&gt;,
- &lt;shapely.geometry.point.Point object at 0x1599fbbb0&gt;,
+[&lt;shapely.geometry.point.Point object at 0x1645b0e20&gt;,
+ &lt;shapely.geometry.point.Point object at 0x16515b4c0&gt;,
+ &lt;shapely.geometry.point.Point object at 0x1652b2b50&gt;,
+ &lt;shapely.geometry.point.Point object at 0x16458dc40&gt;,
+ &lt;shapely.geometry.point.Point object at 0x16458df70&gt;,
+ &lt;shapely.geometry.point.Point object at 0x1645b0d90&gt;,
+ &lt;shapely.geometry.point.Point object at 0x1645df040&gt;,
+ &lt;shapely.geometry.point.Point object at 0x110043130&gt;,
+ &lt;shapely.geometry.point.Point object at 0x16515b4f0&gt;,
+ &lt;shapely.geometry.point.Point object at 0x1100434f0&gt;,
  ...
- &lt;shapely.geometry.point.Point object at 0x15d1c9340&gt;,
- &lt;shapely.geometry.point.Point object at 0x15d1c93a0&gt;,
- &lt;shapely.geometry.point.Point object at 0x15d1c9400&gt;,
- &lt;shapely.geometry.point.Point object at 0x15d1c9460&gt;,
- &lt;shapely.geometry.point.Point object at 0x15d1c94c0&gt;,
- &lt;shapely.geometry.point.Point object at 0x15d1c9520&gt;,
- &lt;shapely.geometry.point.Point object at 0x15d1c9580&gt;,
- &lt;shapely.geometry.point.Point object at 0x15d1c95e0&gt;,
- &lt;shapely.geometry.point.Point object at 0x15d1c9640&gt;,
- &lt;shapely.geometry.point.Point object at 0x15d1c96a0&gt;]
+ &lt;shapely.geometry.point.Point object at 0x1653df580&gt;,
+ &lt;shapely.geometry.point.Point object at 0x1653df5e0&gt;,
+ &lt;shapely.geometry.point.Point object at 0x1653df640&gt;,
+ &lt;shapely.geometry.point.Point object at 0x1653df6a0&gt;,
+ &lt;shapely.geometry.point.Point object at 0x1653df700&gt;,
+ &lt;shapely.geometry.point.Point object at 0x1653df760&gt;,
+ &lt;shapely.geometry.point.Point object at 0x1653df7c0&gt;,
+ &lt;shapely.geometry.point.Point object at 0x1653df820&gt;,
+ &lt;shapely.geometry.point.Point object at 0x1653df880&gt;,
+ &lt;shapely.geometry.point.Point object at 0x1653df8e0&gt;]
 Length: 4405, dtype: geometry
 </pre></div>
 </div>
@@ -1064,8 +1126,8 @@ Length: 4405, dtype: geometry
 <p class="admonition-title">📝 Check your understanding</p>
 <p>What type of data should be in the <code class="docutils literal notranslate"><span class="pre">geometry</span></code> column?</p>
 </div>
-</div>
-<div class="section" id="spatial-data-operations">
+</section>
+<section id="spatial-data-operations">
 <h2>Spatial data operations<a class="headerlink" href="#spatial-data-operations" title="Permalink to this headline">¶</a></h2>
 <p>By using <code class="docutils literal notranslate"><span class="pre">shapely</span></code> points we get the advantages of spatial operations built into our DataFrame.</p>
 <p>Example question: <em>How far are all of my data points from Mt. St. Helens?</em></p>
@@ -1106,7 +1168,7 @@ Length: 4405, dtype: float64
 </div>
 </div>
 </div>
-<div class="section" id="reprojecting-to-meters">
+<section id="reprojecting-to-meters">
 <h3>Reprojecting to meters<a class="headerlink" href="#reprojecting-to-meters" title="Permalink to this headline">¶</a></h3>
 <p>Reprojecting a GeoDataFrame is really smooth, it only takes one <code class="docutils literal notranslate"><span class="pre">.to_crs()</span></code> method.  The only thing to be careful of is to make sure first that you have a crs set for your dataframe.  If you don’t and your points are in lat/lon then EPSG:4326 is the CRS you should give it.</p>
 <div class="cell docutils container">
@@ -1188,9 +1250,9 @@ Name: geometry, Length: 4405, dtype: geometry
 <p><code class="docutils literal notranslate"><span class="pre">ValueError:</span> <span class="pre">Cannot</span> <span class="pre">transform</span> <span class="pre">naive</span> <span class="pre">geometries.</span>&#160; <span class="pre">Please</span> <span class="pre">set</span> <span class="pre">a</span> <span class="pre">crs</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">object</span> <span class="pre">first.</span></code></p>
 <p>What is likely my problem?</p>
 </div>
-</div>
-</div>
-<div class="section" id="filtering-a-geodataframe-by-a-vector">
+</section>
+</section>
+<section id="filtering-a-geodataframe-by-a-vector">
 <h2>Filtering a geodataframe by a vector<a class="headerlink" href="#filtering-a-geodataframe-by-a-vector" title="Permalink to this headline">¶</a></h2>
 <p>Let’s say we want to know how many measurements were taken within 150 km of mt. st. helens.  We start with our mt. st. helens point and then we buffer it.</p>
 <div class="cell docutils container">
@@ -1345,8 +1407,8 @@ Length: 4405, dtype: bool
 <p>I want to buffer the mt_st_helens point by 10000m.  What is the problem with the following code I’ve written below to do that?</p>
 <p><code class="docutils literal notranslate"><span class="pre">Point(-122.1956,</span> <span class="pre">46.1914).buffer(10000)</span></code></p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

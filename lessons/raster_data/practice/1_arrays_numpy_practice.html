@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Arrays and numpy Practice &#8212; SARP Programming Lessons</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
@@ -116,7 +117,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../general_python/1_variables_types_ifstatements.html">
-     Variables, Data types, and if Statements
+     Variables, Data Types, and if Statements
     </a>
    </li>
    <li class="toctree-l2">
@@ -180,11 +181,13 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tabular_data/1_pandas.html">
+     The
      <code class="docutils literal notranslate">
       <span class="pre">
        pandas
       </span>
      </code>
+     Library
     </a>
    </li>
    <li class="toctree-l2">
@@ -218,11 +221,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../../../additional_lectures/time_series_statistics/oceans_stats_examples.html">
    Time Series Statistics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../additional_lectures/hierarchical_data/hierarchical_data.html">
-   Hierarchical Data Structure
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -661,9 +659,9 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="arrays-and-numpy-practice">
+  <section class="tex2jax_ignore mathjax_ignore" id="arrays-and-numpy-practice">
 <h1>Arrays and <code class="docutils literal notranslate"><span class="pre">numpy</span></code> Practice<a class="headerlink" href="#arrays-and-numpy-practice" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="part-1">
+<section id="part-1">
 <h2>Part 1<a class="headerlink" href="#part-1" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -672,7 +670,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="creating-and-inspecting-arrays">
+<section id="creating-and-inspecting-arrays">
 <h3>Creating and Inspecting arrays<a class="headerlink" href="#creating-and-inspecting-arrays" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>Convert the following list into a numpy array</p></li>
@@ -697,8 +695,8 @@ const thebe_selector_output = ".output, .cell_output"
 <ol class="simple">
 <li><p>Use code to figure out how many items are in your array</p></li>
 </ol>
-</div>
-<div class="section" id="multiple-dimensions">
+</section>
+<section id="multiple-dimensions">
 <h3>Multiple dimensions<a class="headerlink" href="#multiple-dimensions" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>What is the shape of the following array?</p></li>
@@ -722,8 +720,8 @@ const thebe_selector_output = ".output, .cell_output"
 <ol class="simple">
 <li><p>Get a 4-number array that is a subset of number from the <code class="docutils literal notranslate"><span class="pre">population_sparrows</span></code> array using the slice operator <code class="docutils literal notranslate"><span class="pre">:</span></code></p></li>
 </ol>
-</div>
-<div class="section" id="math-and-aggregations">
+</section>
+<section id="math-and-aggregations">
 <h3>Math and aggregations<a class="headerlink" href="#math-and-aggregations" title="Permalink to this headline">¶</a></h3>
 <p>For the next few problems consider that the <code class="docutils literal notranslate"><span class="pre">population_sparrows</span></code> array represents the populations of sparrows at 12 different reserach locations.</p>
 <ol class="simple">
@@ -756,11 +754,11 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="part-2">
+</section>
+</section>
+<section id="part-2">
 <h2>Part 2<a class="headerlink" href="#part-2" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="question-1">
+<section id="question-1">
 <h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -771,12 +769,12 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <p><strong>A)</strong> Get a subset of at least 15 values from the middle of the <code class="docutils literal notranslate"><span class="pre">reflectances</span></code> array.</p>
 <p><strong>B)</strong> Write a chunk of code to get the value in the center of the array.  Make sure the code works for arrays of different sizes, so calculate the center index values using the properties of the array.</p>
-</div>
-<div class="section" id="question-2">
+</section>
+<section id="question-2">
 <h3>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h3>
 <p><strong>A)</strong> Add 10 to every value in the <code class="docutils literal notranslate"><span class="pre">reflectances</span></code> array which has an index of 2 in the axis=0 position.</p>
-</div>
-<div class="section" id="question-3">
+</section>
+<section id="question-3">
 <h3>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">¶</a></h3>
 <p><strong>A)</strong> What will be the shapes of the following arrays?  First take a guess, then run the code.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">array1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
@@ -799,8 +797,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="question-4">
+</section>
+<section id="question-4">
 <h3>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h3>
 <p><strong>A)</strong> Going back to our <code class="docutils literal notranslate"><span class="pre">reflectances</span></code> array, find the mean and standard deviation of all the values in the array.</p>
 <div class="cell docutils container">
@@ -811,8 +809,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p><strong>B)</strong> What is the maximum value of the 2D array at index 1 of axis 0?</p>
-</div>
-<div class="section" id="question-5">
+</section>
+<section id="question-5">
 <h3>Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">¶</a></h3>
 <p><strong>A)</strong> The <code class="docutils literal notranslate"><span class="pre">.astype()</span></code> method is a method that changes the datatype of the values in the array.  It takes one argument - the new data type (which you type in without quotations).</p>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">.astype()</span></code> method on the reflectances array to change the data type to float.</p>
@@ -833,8 +831,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p>The <code class="docutils literal notranslate"><span class="pre">keepdims</span></code> kwarg maintains the output value within the original axis they were calculated over.  So if you took the sum of an array over axis 1, you would recieve the output array with a vertically stacked output.  <code class="docutils literal notranslate"><span class="pre">keepdims</span></code> takes a boolean input - True if you would like to keep the dimensions and False if not.</p>
 <p>Take the max of the <code class="docutils literal notranslate"><span class="pre">reflectances</span></code> array, using the <code class="docutils literal notranslate"><span class="pre">axis</span></code> kwarg with value 1 and the <code class="docutils literal notranslate"><span class="pre">keepdims</span></code> kwarg set to True.  Try it again with the kwarg set to False.  Take the shape of both outputs and notice how they change.</p>
 <p><em>Note: The “keepdims” concept is a bit conceptually abstract and I couldn’t find a good visual illustration for it right now.  If you leave this problem feeling a little iffy on “keepdims” that is totally fine and normal.  The more important concept to be comfortable with is using multiple kwargs in a function/method.</em></p>
-</div>
-<div class="section" id="question-6">
+</section>
+<section id="question-6">
 <h3>Question 6<a class="headerlink" href="#question-6" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -847,8 +845,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p><em><strong>Google help:</strong> “numpy unique values in an array”, or <a class="reference external" href="https://stackoverflow.com/questions/16970982/find-unique-rows-in-numpy-array">this stackoverflow</a>.</em></p>
 <p><strong>B)</strong> Pick one of the values in the array and determine how many times that value occurs in the array.</p>
 <p><em><strong>Google help:</strong> “numpy number of occurances of a value” or <a class="reference external" href="https://stackoverflow.com/questions/28663856/how-to-count-the-occurrence-of-certain-item-in-an-ndarray">this stackoverflow</a>.</em></p>
-</div>
-<div class="section" id="question-7">
+</section>
+<section id="question-7">
 <h3>Question 7<a class="headerlink" href="#question-7" title="Permalink to this headline">¶</a></h3>
 <p>NaNs are an important data point when working with real data - rarely do you have a totally complete dataset.</p>
 <p>You can make individual nans with <code class="docutils literal notranslate"><span class="pre">np.NaN</span></code>:</p>
@@ -865,9 +863,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>Look at <a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.full.html">the docs</a> for the function <code class="docutils literal notranslate"><span class="pre">np.full()</span></code> and create a new array of shape (4, 5, 6) filled with nan values.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

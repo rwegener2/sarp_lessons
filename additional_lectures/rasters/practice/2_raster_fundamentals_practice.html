@@ -1,0 +1,986 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Raster Fundamentals Practice &#8212; SARP Programming Lessons</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Accessing Coordinates Practice" href="3_accessing_coordinates_practice.html" />
+    <link rel="prev" title="Arrays and numpy Practice" href="1_arrays_numpy_practice.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/sarp_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SARP Programming Lessons</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../index.html">
+   Welcome to the SARP Programming Website
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lessons
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../lessons/general_python/index.html">
+   General Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/general_python/1_variables_types_ifstatements.html">
+     Variables, Data Types, and if Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/general_python/2_lists_dictionaries.html">
+     Lists and Dictionaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/general_python/datetimes.html">
+     Datetimes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/general_python/spatial_data.html">
+     Spatial Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../lessons/raster_data/index.html">
+   Raster Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/raster_data/1_xarray.html">
+     Lesson 4, Raster data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/raster_data/2_xarray_computation.html">
+     Lesson 5, Gridded Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/raster_data/3_xarray_groupby.html">
+     Lesson 6, Gridded Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../lessons/tabular_data/index.html">
+   Tabular Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/tabular_data/1_pandas.html">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
+     Library
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/tabular_data/2_filtering_groupby.html">
+     Filtering and groupby
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/tabular_data/3_geopandas.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       geopandas
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Additional Lectures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Debugging/debugging_lesson.html">
+   Debugging
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../time_series_statistics/oceans_stats_examples.html">
+   Time Series Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../hierarchical_data/hierarchical_data.html">
+   Hierarchical Data Structure
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../index.html">
+   Raster data lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_arrays_numpy.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_raster_fundamentals.html">
+     Working with rasters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_accessing_coordinates.html">
+     Accessing Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../Visualization/index.html">
+   Visualization
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Visualization/1_static_viz_with_matplotlib.html">
+     Static Data Visualization in Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Visualization/2_building_on_matplotlib.html">
+     Building on top of
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Visualization/3_dynamic_visualization.html">
+     Dynamic Visualization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Visualization/viewing_images.html">
+     Viewing Images
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Practice Sheets
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../lessons/index_practice.html">
+   General Python Practice
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/general_python/practice/1_variables_data_practice.html">
+     Variables, Data Types and If statements Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/general_python/practice/2_lists_dicts_practice.html">
+     Lists and Dictionaries Answers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/general_python/practice/datetimes_practice.html">
+     Datetimes Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/general_python/practice/spatial_data_practice.html">
+     Spatial Data Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/general_python/practice/1_variables_data_answers.html">
+     Variables, Data Types and If statements Answers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/general_python/practice/2_lists_dicts_answers.html">
+     Lists and Dictionaries Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/general_python/practice/datetimes_answers.html">
+     Datetimes Answers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/general_python/practice/spatial_data_answers.html">
+     Spatial Data Answers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../lessons/index_practice_raster.html">
+   Raster Data Practice
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/raster_data/practice/1_xarray_practice.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray
+      </span>
+     </code>
+     Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/raster_data/practice/2_xarray_practice.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray
+      </span>
+     </code>
+     Computation Practice
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../lessons/index_practice_tabular.html">
+   Tabular Data Practice
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/tabular_data/practice/1_pandas_practice.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
+     Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/tabular_data/practice/2_filtering_groupby_practice.html">
+     Filtering and Groupby Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/tabular_data/practice/3_geopandas_practice.html">
+     Practice with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       geopandas
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/tabular_data/practice/1_pandas_answers.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
+     Answers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/tabular_data/practice/2_filtering_groupby_answers.html">
+     Filtering and Groupby Answers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../../index_practice.html">
+   Raster Data Practice (Additional Lectures)
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_arrays_numpy_practice.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+     Practice
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Raster Fundamentals Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_accessing_coordinates_practice.html">
+     Accessing Coordinates Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_arrays_numpy_answers.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+     Answers
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/additional_lectures/rasters/practice/2_raster_fundamentals_practice.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/rwegener2/sarp_lessons"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/rwegener2/sarp_lessons/issues/new?title=Issue%20on%20page%20%2Fadditional_lectures/rasters/practice/2_raster_fundamentals_practice.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-1">
+   Part 1
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#opening-a-file">
+     Opening a File
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inspecting-metadata">
+     Inspecting Metadata
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#working-with-data">
+     Working with data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#saving-a-file">
+     Saving a file
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-2">
+   Part 2
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-1">
+     Question 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-2">
+     Question 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-3">
+     Question 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-4">
+     Question 4
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Raster Fundamentals Practice</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-1">
+   Part 1
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#opening-a-file">
+     Opening a File
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inspecting-metadata">
+     Inspecting Metadata
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#working-with-data">
+     Working with data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#saving-a-file">
+     Saving a file
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-2">
+   Part 2
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-1">
+     Question 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-2">
+     Question 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-3">
+     Question 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-4">
+     Question 4
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="raster-fundamentals-practice">
+<h1>Raster Fundamentals Practice<a class="headerlink" href="#raster-fundamentals-practice" title="Permalink to this headline">¶</a></h1>
+<section id="part-1">
+<h2>Part 1<a class="headerlink" href="#part-1" title="Permalink to this headline">¶</a></h2>
+<p>For the files in this practice we will be using the raster <code class="docutils literal notranslate"><span class="pre">'subset_f180628t01p00r02_corr_v1k1_img'</span></code> in the data folder.</p>
+<section id="opening-a-file">
+<h3>Opening a File<a class="headerlink" href="#opening-a-file" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Write a statement to open up the data file <code class="docutils literal notranslate"><span class="pre">'subset_f180628t01p00r02_corr_v1k1_img'</span></code>, which is located in the <code class="docutils literal notranslate"><span class="pre">data</span></code> folder in the same folder as this file.  Print out the data in the first band of the raster.</p></li>
+</ol>
+<ol class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> to get a quick visual of band 100 of the data file.</p></li>
+</ol>
+</section>
+<section id="inspecting-metadata">
+<h3>Inspecting Metadata<a class="headerlink" href="#inspecting-metadata" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>What is the crs of the raster?  (It’s alright if you don’t know what it means yet)</p></li>
+</ol>
+<ol class="simple">
+<li><p>How many rows does this raster have?  How many columns?  How many bands?</p></li>
+</ol>
+<ol class="simple">
+<li><p>What is the file format?</p></li>
+</ol>
+</section>
+<section id="working-with-data">
+<h3>Working with data<a class="headerlink" href="#working-with-data" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Read in all of the bands of the raster and save the data to a variable called <code class="docutils literal notranslate"><span class="pre">reflectance</span></code>.  What is the data structure of the <code class="docutils literal notranslate"><span class="pre">reflectance</span></code> variable?</p></li>
+</ol>
+<ol class="simple">
+<li><p>Get the value of the data at band 110, row 200, column 27</p></li>
+</ol>
+<ol class="simple">
+<li><p>Get all the data for band 20</p></li>
+</ol>
+<ol class="simple">
+<li><p>One common need in remote sensing is to take a z transect.  This means that you are taking all from a single pixel location across all of the bands.  Pick any location on the raster and write out the index needed to get a z transect for that location. (Bonus question: what does the index look like for an x profile (across a column)?  What about a y profile (across a row)?)</p></li>
+</ol>
+<ol class="simple">
+<li><p>What is the mean value of band 23?</p></li>
+</ol>
+</section>
+<section id="saving-a-file">
+<h3>Saving a file<a class="headerlink" href="#saving-a-file" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Take one band of data and save it to its own file.  Be sure to update the metadata to set count equal to 1 when you save the file.</p></li>
+</ol>
+</section>
+</section>
+<section id="part-2">
+<h2>Part 2<a class="headerlink" href="#part-2" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="question-1">
+<h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h3>
+<p>The wild looking names of many files is usually a shorthand that includes some metadata about the raster.  Use the <a class="reference external" href="https://aviris.jpl.nasa.gov/alt_locator/fusion_table_help.php">AVIRIS documentation</a> to figure out the following pieces of metadata from the name of our raster, <code class="docutils literal notranslate"><span class="pre">f180628t01p00r02_corr_v1k1_img</span></code>.</p>
+<ul class="simple">
+<li><p>day, month and year of the flight</p></li>
+<li><p>flight run number</p></li>
+</ul>
+</section>
+<section id="question-2">
+<h3>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h3>
+<p>Open the raster file.  Read all the bands to a variable called <code class="docutils literal notranslate"><span class="pre">reflectance</span></code>.  Assign the <code class="docutils literal notranslate"><span class="pre">src.meta</span></code> object to a variable called <code class="docutils literal notranslate"><span class="pre">metadata</span></code>.  Use the the <code class="docutils literal notranslate"><span class="pre">metadata</span></code> dictionary and the shape of the <code class="docutils literal notranslate"><span class="pre">reflectance</span></code> numpy array to write 3 boolean statements confirming that the <code class="docutils literal notranslate"><span class="pre">count</span></code>, <code class="docutils literal notranslate"><span class="pre">width</span></code>, and <code class="docutils literal notranslate"><span class="pre">height</span></code> in the metadata accurately line up with the <code class="docutils literal notranslate"><span class="pre">.shape</span></code> of the <code class="docutils literal notranslate"><span class="pre">reflectance</span></code> array.</p>
+</section>
+<section id="question-3">
+<h3>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">np.where()</span></code> is a really useful function, but the use patterns aren’t always intuitive.  In this problem we are going to walk through using <code class="docutils literal notranslate"><span class="pre">np.where()</span></code>.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.where.html">doc page</a></p></li>
+<li><p><a class="reference external" href="https://stackoverflow.com/questions/34667282/numpy-where-detailed-step-by-step-explanation-examples">a nice stackoverflow post</a></p></li>
+<li><p><a class="reference external" href="https://thispointer.com/find-the-index-of-a-value-in-numpy-array/">article</a></p></li>
+</ul>
+<p>In this question we will use the following example array:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">example_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">20</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">example_array</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[20 18 16 14 12 10  8  6  4  2  0]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>A)</strong>  One way to use <code class="docutils literal notranslate"><span class="pre">np.where</span></code> is to give it a condition.  In the following example we are looking for where in our <code class="docutils literal notranslate"><span class="pre">example_array</span></code> there are values less than 8.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">example_array</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([ 7,  8,  9, 10]),)
+</pre></div>
+</div>
+</div>
+</div>
+<p>The result of the array is not the actual values which are less than 8, but the <em>indexes</em> of the values less than 8.  So we can check and see that each of the values at those indexes is indeed less than 8:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">example_array</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>  <span class="c1"># Change 7 to 8, 9, or 10 to see the other values less than 8</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question A)</strong> Write a condidtional in a <code class="docutils literal notranslate"><span class="pre">np.where</span></code> to find the values that are greater than 11</p>
+<p><strong>B)</strong> Since we get as a result all the indexes of the array, if we want the values out of the original array we can index the original array with our <code class="docutils literal notranslate"><span class="pre">np.where()</span></code> statement, like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">less_than_8_indexes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">example_array</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">)</span>
+<span class="n">example_array</span><span class="p">[</span><span class="n">less_than_8_indexes</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([6, 4, 2, 0])
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question B)</strong> Write a statement which returns the values of <code class="docutils literal notranslate"><span class="pre">example_array</span></code> that are less than or equal to 13.</p>
+<p><strong>C)</strong>  In multi-dimensional arrays the concept stays the same, but we get two sets of indices back from the <code class="docutils literal notranslate"><span class="pre">np.where()</span></code> statement, because we now have two axes in our array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">example_array_2d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span> <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">],</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">24</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">example_array_2d</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 2  4  6]
+ [ 8 10 12]
+ [14 16 18]
+ [20 22 24]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">example_array_2d</span> <span class="o">&lt;</span> <span class="mi">16</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([0, 0, 0, 1, 1, 1, 2]), array([0, 1, 2, 0, 1, 2, 0]))
+</pre></div>
+</div>
+</div>
+</div>
+<p>The first array has the indexes of the rows and the second array has the indexes of the columns.  Together they make the indexes.</p>
+<p>Indexes of numbers below 16, read in order from the output of the <code class="docutils literal notranslate"><span class="pre">np.where()</span></code> statement:</p>
+<ul class="simple">
+<li><p>[0,0] (value of 2)</p></li>
+<li><p>[0,1] (value of 4)</p></li>
+<li><p>[0,2] (value of 6)</p></li>
+<li><p>[1,0] (value of 8)</p></li>
+<li><p>[1,1] (value of 10)</p></li>
+<li><p>[1,2] (value of 12)</p></li>
+<li><p>[2,0] (value of 14)</p></li>
+</ul>
+<p>If you’re a kinestetic learner like I am, try these indexes out in the cell below to confirm.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Change the index value to each of the index combinations from the `np.where` statement</span>
+<span class="n">example_array_2d</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question C)</strong> Use <code class="docutils literal notranslate"><span class="pre">np.where</span></code> to find the 4 index locations of values in <code class="docutils literal notranslate"><span class="pre">example_array_2d</span></code> that have values greater than 17.  Go back and look at <code class="docutils literal notranslate"><span class="pre">example_array_2d</span></code> to make sure those locations make sense.</p>
+</section>
+<section id="question-4">
+<h3>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h3>
+<p>One calculation often done in remote sensing is NDVI - the <a class="reference external" href="https://eos.com/make-an-analysis/ndvi/#:~:text=Put%20simply%2C%20NDVI%20is%20a,strongly%20reflect%20near%2Dinfrared%20light.">Normalized Difference Vegetation Index</a>.  The formula for that is:</p>
+<blockquote>
+<div><p>NDVI = (r857 - r645) / (r857 + r645)</p>
+</div></blockquote>
+<p>Where <code class="docutils literal notranslate"><span class="pre">r857</span></code> refers to the band with wavelength 857 (call it NIR, or near infrared) and <code class="docutils literal notranslate"><span class="pre">r645</span></code> refers to the band of wavelength 645 (red band).</p>
+<p><strong>A)</strong> The following cell contains an numpy array that I copied from the header file that specifies the wavelengths of each of the bands of the AVIRIS file.  The closest bands to the wavelengths we need are <code class="docutils literal notranslate"><span class="pre">859.64709</span></code> and <code class="docutils literal notranslate"><span class="pre">647.97357</span></code>.  Use <code class="docutils literal notranslate"><span class="pre">np.where()</span></code> to the index number of each of those wavelengths in the wavelengths array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wavelengths</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">365.92981</span><span class="p">,</span> <span class="mf">375.59399</span><span class="p">,</span> <span class="mf">385.26254</span><span class="p">,</span> <span class="mf">394.93552</span><span class="p">,</span> <span class="mf">404.61288</span><span class="p">,</span> <span class="mf">414.29462</span><span class="p">,</span> 
+                        <span class="mf">423.98077</span><span class="p">,</span> <span class="mf">433.6713</span><span class="p">,</span> <span class="mf">443.36621</span><span class="p">,</span> <span class="mf">453.06552</span><span class="p">,</span> <span class="mf">462.7692</span><span class="p">,</span> <span class="mf">472.47729</span><span class="p">,</span> 
+                        <span class="mf">482.18976</span><span class="p">,</span> <span class="mf">491.90665</span><span class="p">,</span> <span class="mf">501.6279</span><span class="p">,</span> <span class="mf">511.35355</span><span class="p">,</span> <span class="mf">521.08356</span><span class="p">,</span> <span class="mf">530.81799</span><span class="p">,</span> 
+                        <span class="mf">540.55682</span><span class="p">,</span> <span class="mf">550.30005</span><span class="p">,</span> <span class="mf">560.04767</span><span class="p">,</span> <span class="mf">569.79962</span><span class="p">,</span> <span class="mf">579.55603</span><span class="p">,</span> <span class="mf">589.31677</span><span class="p">,</span> 
+                        <span class="mf">599.08191</span><span class="p">,</span> <span class="mf">608.8515</span><span class="p">,</span> <span class="mf">618.62543</span><span class="p">,</span> <span class="mf">628.40375</span><span class="p">,</span> <span class="mf">638.18646</span><span class="p">,</span> <span class="mf">647.97357</span><span class="p">,</span> <span class="mf">657.76508</span><span class="p">,</span> 
+                        <span class="mf">667.56097</span><span class="p">,</span> <span class="mf">654.7923</span><span class="p">,</span> <span class="mf">664.59937</span><span class="p">,</span> <span class="mf">674.40125</span><span class="p">,</span> <span class="mf">684.19794</span><span class="p">,</span> <span class="mf">693.98938</span><span class="p">,</span> <span class="mf">703.77563</span><span class="p">,</span> 
+                        <span class="mf">713.55664</span> <span class="p">,</span> <span class="mf">723.33252</span> <span class="p">,</span> <span class="mf">733.10309</span> <span class="p">,</span> <span class="mf">742.86853</span> <span class="p">,</span> <span class="mf">752.62872</span> <span class="p">,</span> <span class="mf">762.38373</span> <span class="p">,</span> <span class="mf">772.13348</span> <span class="p">,</span> <span class="mf">781.87805</span> <span class="p">,</span> <span class="mf">791.61743</span> <span class="p">,</span> <span class="mf">801.35156</span> <span class="p">,</span> <span class="mf">811.08051</span> <span class="p">,</span> <span class="mf">820.80426</span> <span class="p">,</span> <span class="mf">830.52277</span> <span class="p">,</span> <span class="mf">840.23608</span> <span class="p">,</span> <span class="mf">849.94415</span> <span class="p">,</span> <span class="mf">859.64709</span> <span class="p">,</span> <span class="mf">869.34479</span> <span class="p">,</span> <span class="mf">879.03723</span> <span class="p">,</span> <span class="mf">888.72449</span> <span class="p">,</span> <span class="mf">898.40656</span> <span class="p">,</span> <span class="mf">908.08337</span> <span class="p">,</span> <span class="mf">917.75507</span> <span class="p">,</span> <span class="mf">927.42145</span> <span class="p">,</span> <span class="mf">937.0827</span> <span class="p">,</span> <span class="mf">946.73871</span> <span class="p">,</span> <span class="mf">956.38947</span> <span class="p">,</span> <span class="mf">966.0351</span> <span class="p">,</span> <span class="mf">975.67548</span> <span class="p">,</span> <span class="mf">985.31061</span> <span class="p">,</span> <span class="mf">994.94055</span> <span class="p">,</span> <span class="mf">1004.5653</span> <span class="p">,</span> <span class="mf">1014.18488</span> <span class="p">,</span> <span class="mf">1023.79919</span> <span class="p">,</span> <span class="mf">1033.40833</span> <span class="p">,</span> <span class="mf">1043.01221</span> <span class="p">,</span> <span class="mf">1052.61096</span> <span class="p">,</span> <span class="mf">1062.20447</span> <span class="p">,</span> <span class="mf">1071.79272</span> <span class="p">,</span> <span class="mf">1081.37573</span> <span class="p">,</span> <span class="mf">1090.95361</span> <span class="p">,</span> <span class="mf">1100.52625</span> <span class="p">,</span> <span class="mf">1110.09375</span> <span class="p">,</span> <span class="mf">1119.65601</span> <span class="p">,</span> <span class="mf">1129.21301</span> <span class="p">,</span> <span class="mf">1138.76477</span> <span class="p">,</span> <span class="mf">1148.3114</span> <span class="p">,</span> <span class="mf">1157.85278</span> <span class="p">,</span> <span class="mf">1167.38904</span> <span class="p">,</span> <span class="mf">1176.91992</span> <span class="p">,</span> <span class="mf">1186.4458</span> <span class="p">,</span> <span class="mf">1195.96631</span> <span class="p">,</span> <span class="mf">1205.48169</span> <span class="p">,</span> <span class="mf">1214.99182</span> <span class="p">,</span> <span class="mf">1224.4967</span> <span class="p">,</span> <span class="mf">1233.99646</span> <span class="p">,</span> <span class="mf">1243.49097</span> <span class="p">,</span> <span class="mf">1252.98022</span> <span class="p">,</span> <span class="mf">1262.46436</span> <span class="p">,</span> <span class="mf">1252.77295</span> <span class="p">,</span> <span class="mf">1262.74573</span> <span class="p">,</span> <span class="mf">1272.71826</span> <span class="p">,</span> <span class="mf">1282.69055</span> <span class="p">,</span> <span class="mf">1292.66248</span> <span class="p">,</span> <span class="mf">1302.63428</span> <span class="p">,</span> <span class="mf">1312.60583</span> <span class="p">,</span> <span class="mf">1322.57715</span> <span class="p">,</span> <span class="mf">1332.5481</span> <span class="p">,</span> <span class="mf">1342.51892</span> <span class="p">,</span> <span class="mf">1352.4895</span> <span class="p">,</span> <span class="mf">1362.45984</span> <span class="p">,</span> <span class="mf">1372.42993</span> <span class="p">,</span> <span class="mf">1382.39978</span> <span class="p">,</span> <span class="mf">1392.36938</span> <span class="p">,</span> <span class="mf">1402.33875</span> <span class="p">,</span> <span class="mf">1412.30786</span> <span class="p">,</span> <span class="mf">1422.27673</span> <span class="p">,</span> <span class="mf">1432.24536</span> <span class="p">,</span> <span class="mf">1442.21375</span> <span class="p">,</span> <span class="mf">1452.18188</span> <span class="p">,</span> <span class="mf">1462.1499</span> <span class="p">,</span> <span class="mf">1472.11755</span> <span class="p">,</span> <span class="mf">1482.08496</span> <span class="p">,</span> <span class="mf">1492.05212</span> <span class="p">,</span> <span class="mf">1502.01904</span> <span class="p">,</span> <span class="mf">1511.98584</span> <span class="p">,</span> <span class="mf">1521.95227</span> <span class="p">,</span> <span class="mf">1531.91846</span> <span class="p">,</span> <span class="mf">1541.88452</span> <span class="p">,</span> <span class="mf">1551.85022</span> <span class="p">,</span> <span class="mf">1561.81567</span> <span class="p">,</span> <span class="mf">1571.78101</span> <span class="p">,</span> <span class="mf">1581.74597</span> <span class="p">,</span> <span class="mf">1591.71082</span> <span class="p">,</span> <span class="mf">1601.67529</span> <span class="p">,</span> <span class="mf">1611.63965</span> <span class="p">,</span> <span class="mf">1621.60364</span> <span class="p">,</span> <span class="mf">1631.5675</span> <span class="p">,</span> <span class="mf">1641.53101</span> <span class="p">,</span> <span class="mf">1651.49438</span> <span class="p">,</span> <span class="mf">1661.45752</span> <span class="p">,</span> <span class="mf">1671.42029</span> <span class="p">,</span> <span class="mf">1681.38293</span> <span class="p">,</span> <span class="mf">1691.34534</span> <span class="p">,</span> <span class="mf">1701.30737</span> <span class="p">,</span> <span class="mf">1711.26929</span> <span class="p">,</span> <span class="mf">1721.23096</span> <span class="p">,</span> <span class="mf">1731.19238</span> <span class="p">,</span> <span class="mf">1741.15344</span> <span class="p">,</span> <span class="mf">1751.11438</span> <span class="p">,</span> <span class="mf">1761.07507</span> <span class="p">,</span> <span class="mf">1771.03552</span> <span class="p">,</span> <span class="mf">1780.99573</span> <span class="p">,</span> <span class="mf">1790.95569</span> <span class="p">,</span> <span class="mf">1800.91541</span> <span class="p">,</span> <span class="mf">1810.87488</span> <span class="p">,</span> <span class="mf">1820.83411</span> <span class="p">,</span> <span class="mf">1830.79309</span> <span class="p">,</span> <span class="mf">1840.75183</span> <span class="p">,</span> <span class="mf">1850.71033</span> <span class="p">,</span> <span class="mf">1860.66858</span> <span class="p">,</span> <span class="mf">1870.62659</span> <span class="p">,</span> <span class="mf">1871.7843</span> <span class="p">,</span> <span class="mf">1865.96375</span> <span class="p">,</span> <span class="mf">1876.02527</span> <span class="p">,</span> <span class="mf">1886.08459</span> <span class="p">,</span> <span class="mf">1896.14148</span> <span class="p">,</span> <span class="mf">1906.19604</span> <span class="p">,</span> <span class="mf">1916.24841</span> <span class="p">,</span> <span class="mf">1926.29846</span> <span class="p">,</span> <span class="mf">1936.34607</span> <span class="p">,</span> <span class="mf">1946.39148</span> <span class="p">,</span> <span class="mf">1956.43457</span> <span class="p">,</span> <span class="mf">1966.47534</span> <span class="p">,</span> <span class="mf">1976.51379</span> <span class="p">,</span> <span class="mf">1986.55005</span> <span class="p">,</span> <span class="mf">1996.58386</span> <span class="p">,</span> <span class="mf">2006.61536</span> <span class="p">,</span> <span class="mf">2016.64465</span> <span class="p">,</span> <span class="mf">2026.67163</span> <span class="p">,</span> <span class="mf">2036.69617</span> <span class="p">,</span> <span class="mf">2046.71863</span> <span class="p">,</span> <span class="mf">2056.73877</span> <span class="p">,</span> <span class="mf">2066.75635</span> <span class="p">,</span> <span class="mf">2076.77173</span> <span class="p">,</span> <span class="mf">2086.78491</span> <span class="p">,</span> <span class="mf">2096.79565</span> <span class="p">,</span> <span class="mf">2106.8042</span> <span class="p">,</span> <span class="mf">2116.8103</span> <span class="p">,</span> <span class="mf">2126.81421</span> <span class="p">,</span> <span class="mf">2136.81567</span> <span class="p">,</span> <span class="mf">2146.81494</span> <span class="p">,</span> <span class="mf">2156.81201</span> <span class="p">,</span> <span class="mf">2166.80664</span> <span class="p">,</span> <span class="mf">2176.79907</span> <span class="p">,</span> <span class="mf">2186.78906</span> <span class="p">,</span> <span class="mf">2196.77661</span> <span class="p">,</span> <span class="mf">2206.76221</span> <span class="p">,</span> <span class="mf">2216.74536</span> <span class="p">,</span> <span class="mf">2226.72607</span> <span class="p">,</span> <span class="mf">2236.70459</span> <span class="p">,</span> <span class="mf">2246.68066</span> <span class="p">,</span> <span class="mf">2256.65454</span> <span class="p">,</span> <span class="mf">2266.62622</span> <span class="p">,</span> <span class="mf">2276.59546</span> <span class="p">,</span> <span class="mf">2286.5625</span> <span class="p">,</span> <span class="mf">2296.5271</span> <span class="p">,</span> <span class="mf">2306.4895</span> <span class="p">,</span> <span class="mf">2316.44946</span> <span class="p">,</span> <span class="mf">2326.40723</span> <span class="p">,</span> <span class="mf">2336.36255</span> <span class="p">,</span> <span class="mf">2346.31567</span> <span class="p">,</span> <span class="mf">2356.2666</span> <span class="p">,</span> <span class="mf">2366.21509</span> <span class="p">,</span> <span class="mf">2376.16113</span> <span class="p">,</span> <span class="mf">2386.10522</span> <span class="p">,</span> <span class="mf">2396.04663</span> <span class="p">,</span> <span class="mf">2405.98608</span> <span class="p">,</span> <span class="mf">2415.9231</span> <span class="p">,</span> <span class="mf">2425.85767</span> <span class="p">,</span> <span class="mf">2435.79004</span> <span class="p">,</span> <span class="mf">2445.71997</span> <span class="p">,</span> <span class="mf">2455.64771</span> <span class="p">,</span> <span class="mf">2465.57324</span> <span class="p">,</span> <span class="mf">2475.49634</span> <span class="p">,</span> <span class="mf">2485.41724</span> <span class="p">,</span> <span class="mf">2495.33569</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>B)</strong> Using the indexes you found in part A, get those two bands from the <code class="docutils literal notranslate"><span class="pre">reflectance</span></code> file and assign them each to a variable (you can either read them from the file again with <code class="docutils literal notranslate"><span class="pre">rasterio</span></code> or you can get them using an index from the <code class="docutils literal notranslate"><span class="pre">reflectance</span></code> array). The ~857 band can be called <code class="docutils literal notranslate"><span class="pre">nir</span></code> and the ~645 band can be called <code class="docutils literal notranslate"><span class="pre">red</span></code>.</p>
+<p><strong>C)</strong> Use the formula from the question introduction to calculate NDVI</p>
+<p><strong>D)</strong> Save your new NDVI band to a file.  Be sure to update the metadata to specify that there is now only 1 band in the file.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./additional_lectures/rasters/practice"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="1_arrays_numpy_practice.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Arrays and <code class="docutils literal notranslate"><span class="pre">numpy</span></code> Practice</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="3_accessing_coordinates_practice.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Accessing Coordinates Practice</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Rachel Wegener<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

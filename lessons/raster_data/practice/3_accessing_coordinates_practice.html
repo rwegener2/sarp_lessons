@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Accessing Coordinates Practice &#8212; SARP Programming Lessons</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
@@ -116,7 +117,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../general_python/1_variables_types_ifstatements.html">
-     Variables, Data types, and if Statements
+     Variables, Data Types, and if Statements
     </a>
    </li>
    <li class="toctree-l2">
@@ -180,11 +181,13 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tabular_data/1_pandas.html">
+     The
      <code class="docutils literal notranslate">
       <span class="pre">
        pandas
       </span>
      </code>
+     Library
     </a>
    </li>
    <li class="toctree-l2">
@@ -218,11 +221,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../../../additional_lectures/time_series_statistics/oceans_stats_examples.html">
    Time Series Statistics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../additional_lectures/hierarchical_data/hierarchical_data.html">
-   Hierarchical Data Structure
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -563,9 +561,9 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="accessing-coordinates-practice">
+  <section class="tex2jax_ignore mathjax_ignore" id="accessing-coordinates-practice">
 <h1>Accessing Coordinates Practice<a class="headerlink" href="#accessing-coordinates-practice" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="accessing-raster-coordinates">
+<section id="accessing-raster-coordinates">
 <h2>Accessing Raster Coordinates<a class="headerlink" href="#accessing-raster-coordinates" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>Below is the filepath for a new AVIRIS image.  What is the crs of the raster?  What are the bounds and the unit of the bounds?</p></li>
@@ -592,8 +590,8 @@ const thebe_selector_output = ".output, .cell_output"
 <ol class="simple">
 <li><p>Convert the polygon bbox to epsg:4326 coordinates</p></li>
 </ol>
-</div>
-<div class="section" id="affine-transformation">
+</section>
+<section id="affine-transformation">
 <h2>Affine Transformation<a class="headerlink" href="#affine-transformation" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>Pick a row and a column out of the middle of the dataset.  Use an affine tranformation to get the easting and northing of that data point.</p></li>
@@ -604,8 +602,8 @@ const thebe_selector_output = ".output, .cell_output"
 <ol class="simple">
 <li><p>Find the pixel number for the utm coordinates 575666, 4170999.  What is the sign of the pixels?  What does that tell you about the coordinates?</p></li>
 </ol>
-</div>
-<div class="section" id="subsetting-data">
+</section>
+<section id="subsetting-data">
 <h2>Subsetting Data<a class="headerlink" href="#subsetting-data" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>Read in your whole raster of data.  Use the numpy array to get just a ~100 pixel cube of data out of your raster.</p></li>
@@ -624,8 +622,8 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 <p>When you do a windowed read to get a subset of data, which 4 pieces of metadata will likely change?</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

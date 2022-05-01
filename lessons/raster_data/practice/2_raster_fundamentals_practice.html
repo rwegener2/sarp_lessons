@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Raster Fundamentals Practice &#8212; SARP Programming Lessons</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
@@ -116,7 +117,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../general_python/1_variables_types_ifstatements.html">
-     Variables, Data types, and if Statements
+     Variables, Data Types, and if Statements
     </a>
    </li>
    <li class="toctree-l2">
@@ -180,11 +181,13 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tabular_data/1_pandas.html">
+     The
      <code class="docutils literal notranslate">
       <span class="pre">
        pandas
       </span>
      </code>
+     Library
     </a>
    </li>
    <li class="toctree-l2">
@@ -218,11 +221,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../../../additional_lectures/time_series_statistics/oceans_stats_examples.html">
    Time Series Statistics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../additional_lectures/hierarchical_data/hierarchical_data.html">
-   Hierarchical Data Structure
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -641,12 +639,12 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="raster-fundamentals-practice">
+  <section class="tex2jax_ignore mathjax_ignore" id="raster-fundamentals-practice">
 <h1>Raster Fundamentals Practice<a class="headerlink" href="#raster-fundamentals-practice" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="part-1">
+<section id="part-1">
 <h2>Part 1<a class="headerlink" href="#part-1" title="Permalink to this headline">¶</a></h2>
 <p>For the files in this practice we will be using the raster <code class="docutils literal notranslate"><span class="pre">'subset_f180628t01p00r02_corr_v1k1_img'</span></code> in the data folder.</p>
-<div class="section" id="opening-a-file">
+<section id="opening-a-file">
 <h3>Opening a File<a class="headerlink" href="#opening-a-file" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>Write a statement to open up the data file <code class="docutils literal notranslate"><span class="pre">'subset_f180628t01p00r02_corr_v1k1_img'</span></code>, which is located in the <code class="docutils literal notranslate"><span class="pre">data</span></code> folder in the same folder as this file.  Print out the data in the first band of the raster.</p></li>
@@ -654,8 +652,8 @@ const thebe_selector_output = ".output, .cell_output"
 <ol class="simple">
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> to get a quick visual of band 100 of the data file.</p></li>
 </ol>
-</div>
-<div class="section" id="inspecting-metadata">
+</section>
+<section id="inspecting-metadata">
 <h3>Inspecting Metadata<a class="headerlink" href="#inspecting-metadata" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>What is the crs of the raster?  (It’s alright if you don’t know what it means yet)</p></li>
@@ -666,8 +664,8 @@ const thebe_selector_output = ".output, .cell_output"
 <ol class="simple">
 <li><p>What is the file format?</p></li>
 </ol>
-</div>
-<div class="section" id="working-with-data">
+</section>
+<section id="working-with-data">
 <h3>Working with data<a class="headerlink" href="#working-with-data" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>Read in all of the bands of the raster and save the data to a variable called <code class="docutils literal notranslate"><span class="pre">reflectance</span></code>.  What is the data structure of the <code class="docutils literal notranslate"><span class="pre">reflectance</span></code> variable?</p></li>
@@ -684,15 +682,15 @@ const thebe_selector_output = ".output, .cell_output"
 <ol class="simple">
 <li><p>What is the mean value of band 23?</p></li>
 </ol>
-</div>
-<div class="section" id="saving-a-file">
+</section>
+<section id="saving-a-file">
 <h3>Saving a file<a class="headerlink" href="#saving-a-file" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>Take one band of data and save it to its own file.  Be sure to update the metadata to set count equal to 1 when you save the file.</p></li>
 </ol>
-</div>
-</div>
-<div class="section" id="part-2">
+</section>
+</section>
+<section id="part-2">
 <h2>Part 2<a class="headerlink" href="#part-2" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -701,19 +699,19 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="question-1">
+<section id="question-1">
 <h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h3>
 <p>The wild looking names of many files is usually a shorthand that includes some metadata about the raster.  Use the <a class="reference external" href="https://aviris.jpl.nasa.gov/alt_locator/fusion_table_help.php">AVIRIS documentation</a> to figure out the following pieces of metadata from the name of our raster, <code class="docutils literal notranslate"><span class="pre">f180628t01p00r02_corr_v1k1_img</span></code>.</p>
 <ul class="simple">
 <li><p>day, month and year of the flight</p></li>
 <li><p>flight run number</p></li>
 </ul>
-</div>
-<div class="section" id="question-2">
+</section>
+<section id="question-2">
 <h3>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h3>
 <p>Open the raster file.  Read all the bands to a variable called <code class="docutils literal notranslate"><span class="pre">reflectance</span></code>.  Assign the <code class="docutils literal notranslate"><span class="pre">src.meta</span></code> object to a variable called <code class="docutils literal notranslate"><span class="pre">metadata</span></code>.  Use the the <code class="docutils literal notranslate"><span class="pre">metadata</span></code> dictionary and the shape of the <code class="docutils literal notranslate"><span class="pre">reflectance</span></code> numpy array to write 3 boolean statements confirming that the <code class="docutils literal notranslate"><span class="pre">count</span></code>, <code class="docutils literal notranslate"><span class="pre">width</span></code>, and <code class="docutils literal notranslate"><span class="pre">height</span></code> in the metadata accurately line up with the <code class="docutils literal notranslate"><span class="pre">.shape</span></code> of the <code class="docutils literal notranslate"><span class="pre">reflectance</span></code> array.</p>
-</div>
-<div class="section" id="question-3">
+</section>
+<section id="question-3">
 <h3>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">np.where()</span></code> is a really useful function, but the use patterns aren’t always intuitive.  In this problem we are going to walk through using <code class="docutils literal notranslate"><span class="pre">np.where()</span></code>.</p>
 <ul class="simple">
@@ -832,8 +830,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p><strong>Question C)</strong> Use <code class="docutils literal notranslate"><span class="pre">np.where</span></code> to find the 4 index locations of values in <code class="docutils literal notranslate"><span class="pre">example_array_2d</span></code> that have values greater than 17.  Go back and look at <code class="docutils literal notranslate"><span class="pre">example_array_2d</span></code> to make sure those locations make sense.</p>
-</div>
-<div class="section" id="question-4">
+</section>
+<section id="question-4">
 <h3>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h3>
 <p>One calculation often done in remote sensing is NDVI - the <a class="reference external" href="https://eos.com/make-an-analysis/ndvi/#:~:text=Put%20simply%2C%20NDVI%20is%20a,strongly%20reflect%20near%2Dinfrared%20light.">Normalized Difference Vegetation Index</a>.  The formula for that is:</p>
 <blockquote>
@@ -857,9 +855,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>B)</strong> Using the indexes you found in part A, get those two bands from the <code class="docutils literal notranslate"><span class="pre">reflectance</span></code> file and assign them each to a variable (you can either read them from the file again with <code class="docutils literal notranslate"><span class="pre">rasterio</span></code> or you can get them using an index from the <code class="docutils literal notranslate"><span class="pre">reflectance</span></code> array). The ~857 band can be called <code class="docutils literal notranslate"><span class="pre">nir</span></code> and the ~645 band can be called <code class="docutils literal notranslate"><span class="pre">red</span></code>.</p>
 <p><strong>C)</strong> Use the formula from the question introduction to calculate NDVI</p>
 <p><strong>D)</strong> Save your new NDVI band to a file.  Be sure to update the metadata to specify that there is now only 1 band in the file.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

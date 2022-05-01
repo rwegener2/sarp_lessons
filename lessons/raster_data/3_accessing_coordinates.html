@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Accessing Data &#8212; SARP Programming Lessons</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
@@ -116,7 +117,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../general_python/1_variables_types_ifstatements.html">
-     Variables, Data types, and if Statements
+     Variables, Data Types, and if Statements
     </a>
    </li>
    <li class="toctree-l2">
@@ -180,11 +181,13 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../tabular_data/1_pandas.html">
+     The
      <code class="docutils literal notranslate">
       <span class="pre">
        pandas
       </span>
      </code>
+     Library
     </a>
    </li>
    <li class="toctree-l2">
@@ -218,11 +221,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../../additional_lectures/time_series_statistics/oceans_stats_examples.html">
    Time Series Statistics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../additional_lectures/hierarchical_data/hierarchical_data.html">
-   Hierarchical Data Structure
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -795,7 +793,7 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="accessing-data">
+  <section class="tex2jax_ignore mathjax_ignore" id="accessing-data">
 <h1>Accessing Data<a class="headerlink" href="#accessing-data" title="Permalink to this headline">¶</a></h1>
 <div class="note dropdown admonition">
 <p class="admonition-title">Lesson Content</p>
@@ -805,18 +803,18 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Subsetting data with <code class="docutils literal notranslate"><span class="pre">Window</span></code></p></li>
 </ul>
 </div>
-<div class="section" id="context">
+<section id="context">
 <h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
 <p>Today we are going to revisit our AVIRIS dataset and look again at the metadata.  This time instead of focusing on properties like height and width we are going to focus on the spatial metadata, like <code class="docutils literal notranslate"><span class="pre">crs</span></code> <code class="docutils literal notranslate"><span class="pre">bounds</span></code> and <code class="docutils literal notranslate"><span class="pre">transform</span></code>.  We will also created some numpy masked arrays to start considering nodata values or ROIs.</p>
-</div>
-<div class="section" id="accessing-raster-coordinates">
+</section>
+<section id="accessing-raster-coordinates">
 <h2>Accessing Raster Coordinates<a class="headerlink" href="#accessing-raster-coordinates" title="Permalink to this headline">¶</a></h2>
 <p>So to figure out where a particular point is on the earth we need two things:</p>
 <ol class="simple">
 <li><p>the EPSG code to tell us which grid we are looking at</p></li>
 <li><p>our coordinates</p></li>
 </ol>
-<div class="section" id="example-with-aviris">
+<section id="example-with-aviris">
 <h3>Example with AVIRIS<a class="headerlink" href="#example-with-aviris" title="Permalink to this headline">¶</a></h3>
 <p>Since our AVIRIS data uses UTM grids our coordinates will be an easting and a northing.</p>
 <div class="cell docutils container">
@@ -852,8 +850,8 @@ bbox is  BoundingBox(left=769855.79, bottom=3751257.6, right=774030.79, top=3757
 </div>
 </div>
 <p>Looking at the output of the above cell we see that the EPSG code is <code class="docutils literal notranslate"><span class="pre">32610</span></code>.  The 6 in this code tells us that we are looking at the northern hemisphere, and the <code class="docutils literal notranslate"><span class="pre">10</span></code> tells us that we are looking at UTM zone 10.</p>
-</div>
-<div class="section" id="reprojecting-a-vector-to-epsg-4326">
+</section>
+<section id="reprojecting-a-vector-to-epsg-4326">
 <h3>Reprojecting a vector to epsg:4326<a class="headerlink" href="#reprojecting-a-vector-to-epsg-4326" title="Permalink to this headline">¶</a></h3>
 <p>Depending on why you want these coordinates the easting/northing still might not be very useful unless we can get them to latitude and longitude.  Reprojecting a whole raster is a multistep process, but in the second part of the practice yesterday we saw how to reproject a vector object, like a point or a polygon.</p>
 <div class="cell docutils container">
@@ -869,21 +867,21 @@ bbox is  BoundingBox(left=769855.79, bottom=3751257.6, right=774030.79, top=3757
 <span class="n">transform</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">SHAPELY_POINT</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="section" id="example-1">
+<section id="example-1">
 <h4>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h4>
 <p>Reproject a point</p>
-</div>
-<div class="section" id="example-2">
+</section>
+<section id="example-2">
 <h4>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h4>
 <p>Reproject the bounding box</p>
 <div class="tip admonition">
 <p class="admonition-title">📝 Check your understanding</p>
 <p>How can we figure out where our raster is located in space?</p>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="affine-transformations">
+</section>
+</section>
+</section>
+<section id="affine-transformations">
 <h2>Affine Transformations<a class="headerlink" href="#affine-transformations" title="Permalink to this headline">¶</a></h2>
 <p>We can get the coordinates of the corners of our bounding box from the metadata, but what if we want the coordinates of some other location on our raster?  We know how to find a pixel value using rows and columns, but what about using coordinates?</p>
 <p>Affine transformations are the way that we move from row, column notation (pixel space) to the notation of a coordinate reference system (usually either latitude &amp; longitude or easting &amp; northing)</p>
@@ -937,7 +935,7 @@ bbox is  BoundingBox(left=769855.79, bottom=3751257.6, right=774030.79, top=3757
 </ul>
 <p>The three numbers in the bottom row are always 0, 0, 1 (since we are working on a 2 dimensional plane).</p>
 <p>So looking again at our affine transform from above we see that the size of an single pixel is 17.10 meters square and that the upper left corner of the image is located at 475,785.77, 3,350,578.50.</p>
-<div class="section" id="using-the-affine-to-get-the-coordinates-of-a-particular-grid-cell">
+<section id="using-the-affine-to-get-the-coordinates-of-a-particular-grid-cell">
 <h3>Using the affine to get the coordinates of a particular grid cell<a class="headerlink" href="#using-the-affine-to-get-the-coordinates-of-a-particular-grid-cell" title="Permalink to this headline">¶</a></h3>
 <p>The affine transform gives us some information just by looking at it, but it can also be used to convert a row, column coordiante to a grid coordinate.</p>
 <div class="cell docutils container">
@@ -961,8 +959,8 @@ bbox is  BoundingBox(left=769855.79, bottom=3751257.6, right=774030.79, top=3757
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="using-the-inverse-affine-to-get-the-pixel-of-a-coordinate">
+</section>
+<section id="using-the-inverse-affine-to-get-the-pixel-of-a-coordinate">
 <h3>Using the inverse affine to get the pixel of a coordinate<a class="headerlink" href="#using-the-inverse-affine-to-get-the-pixel-of-a-coordinate" title="Permalink to this headline">¶</a></h3>
 <p>If you have a grid coordinate and want to find out what the row, column location is you need the inverse affine transform.  The inverse transform is calculated with the <code class="docutils literal notranslate"><span class="pre">~</span></code> operator.</p>
 <div class="cell docutils container">
@@ -1005,9 +1003,9 @@ bbox is  BoundingBox(left=769855.79, bottom=3751257.6, right=774030.79, top=3757
 <p class="admonition-title">📝 Check your understanding</p>
 <p>What is the purpose of an affine transform?</p>
 </div>
-</div>
-</div>
-<div class="section" id="subsetting-data">
+</section>
+</section>
+<section id="subsetting-data">
 <h2>Subsetting Data<a class="headerlink" href="#subsetting-data" title="Permalink to this headline">¶</a></h2>
 <p>Subsetting your data refers to selecting some amount of data to work with that is less than the whole image.  In Python I see two main ways to do this:</p>
 <ol class="simple">
@@ -1020,7 +1018,7 @@ bbox is  BoundingBox(left=769855.79, bottom=3751257.6, right=774030.79, top=3757
 <li><p>you still have to read the whole dataset into memory</p></li>
 </ul>
 <p>The rasterio option doesn’t have these limitations, but is a bit more complicated.</p>
-<div class="section" id="memory-vs-storage">
+<section id="memory-vs-storage">
 <h3>Memory vs. Storage<a class="headerlink" href="#memory-vs-storage" title="Permalink to this headline">¶</a></h3>
 <table class="colwidths-auto table">
 <thead>
@@ -1044,8 +1042,8 @@ bbox is  BoundingBox(left=769855.79, bottom=3751257.6, right=774030.79, top=3757
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="using-indexes-to-subset-data">
+</section>
+<section id="using-indexes-to-subset-data">
 <h3>Using Indexes to subset data<a class="headerlink" href="#using-indexes-to-subset-data" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1056,9 +1054,9 @@ bbox is  BoundingBox(left=769855.79, bottom=3751257.6, right=774030.79, top=3757
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="using-window-to-subset-data">
+</section>
+</section>
+<section id="using-window-to-subset-data">
 <h2>Using <code class="docutils literal notranslate"><span class="pre">Window</span></code> to subset data<a class="headerlink" href="#using-window-to-subset-data" title="Permalink to this headline">¶</a></h2>
 <p><em>A lot of the code from this section comes from the <a class="reference external" href="https://rasterio.readthedocs.io/en/latest/topics/windowed-rw.html">rasterio docs</a>.</em></p>
 <p>Windowed reading requires a bit more work up front, but it allows you to keep your transform geospatially updated in the event you want to save out your data.  This method involves using a rasterio object called <code class="docutils literal notranslate"><span class="pre">Window</span></code> to access your subset instead of indexing it directly.</p>
@@ -1067,9 +1065,9 @@ bbox is  BoundingBox(left=769855.79, bottom=3751257.6, right=774030.79, top=3757
 <li><p>create the window object</p></li>
 <li><p>read the data from <code class="docutils literal notranslate"><span class="pre">src</span></code> using the window</p></li>
 </ol>
-<div class="section" id="creating-the-window-object">
+<section id="creating-the-window-object">
 <h3>Creating the <code class="docutils literal notranslate"><span class="pre">Window</span></code> object<a class="headerlink" href="#creating-the-window-object" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="sytnax-1">
+<section id="sytnax-1">
 <h4>Sytnax #1<a class="headerlink" href="#sytnax-1" title="Permalink to this headline">¶</a></h4>
 <p>The syntax for a the subset chunk in rasterio is <code class="docutils literal notranslate"><span class="pre">Window</span></code> and the sytnax to use the <code class="docutils literal notranslate"><span class="pre">Window</span></code> object looks like this:</p>
 <blockquote>
@@ -1096,8 +1094,8 @@ bbox is  BoundingBox(left=769855.79, bottom=3751257.6, right=774030.79, top=3757
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="syntax-2">
+</section>
+<section id="syntax-2">
 <h4>Syntax #2<a class="headerlink" href="#syntax-2" title="Permalink to this headline">¶</a></h4>
 <p>Another way to create the window is to use the <code class="docutils literal notranslate"><span class="pre">.from_slices()</span></code> method.</p>
 <blockquote>
@@ -1116,9 +1114,9 @@ bbox is  BoundingBox(left=769855.79, bottom=3751257.6, right=774030.79, top=3757
 </div>
 </div>
 <p>These two are equivalent ways to do the same thing, so we can can see in the output that this gives us the same window as above.</p>
-</div>
-</div>
-<div class="section" id="reading-the-data-with-the-window">
+</section>
+</section>
+<section id="reading-the-data-with-the-window">
 <h3>Reading the data with the <code class="docutils literal notranslate"><span class="pre">Window</span></code><a class="headerlink" href="#reading-the-data-with-the-window" title="Permalink to this headline">¶</a></h3>
 <p>To read the data out we use our regular <code class="docutils literal notranslate"><span class="pre">src.read()</span></code> method but this time we specify <code class="docutils literal notranslate"><span class="pre">window</span></code>.</p>
 <div class="cell docutils container">
@@ -1157,9 +1155,9 @@ bbox is  BoundingBox(left=769855.79, bottom=3751257.6, right=774030.79, top=3757
 </div></blockquote>
 <p>how many pixels would the code <code class="docutils literal notranslate"><span class="pre">Window(15,</span> <span class="pre">30,</span> <span class="pre">10,</span> <span class="pre">10)</span></code> return?</p>
 </div>
-</div>
-</div>
-<div class="section" id="language-agnostic-what-s-my-workflow">
+</section>
+</section>
+<section id="language-agnostic-what-s-my-workflow">
 <h2>Language Agnostic: What’s my workflow?<a class="headerlink" href="#language-agnostic-what-s-my-workflow" title="Permalink to this headline">¶</a></h2>
 <p>At this point you’ve seen how to do many tasks in ENVI and in Python.  For example:</p>
 <ul class="simple">
@@ -1170,7 +1168,7 @@ bbox is  BoundingBox(left=769855.79, bottom=3751257.6, right=774030.79, top=3757
 <li><p>defining an ROI</p></li>
 </ul>
 <p>When it comes time for you to do this in your reseach, how might you choose which tool to use?</p>
-<div class="section" id="questions-to-consider">
+<section id="questions-to-consider">
 <h3>Questions to consider<a class="headerlink" href="#questions-to-consider" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>What would the steps look like in the different options?</p></li>
@@ -1179,8 +1177,8 @@ bbox is  BoundingBox(left=769855.79, bottom=3751257.6, right=774030.79, top=3757
 <li><p>Is there a skill I am interested in gaining that makes it worth extra time?</p></li>
 <li><p>Who are the resources I have to support me if I get stuck?</p></li>
 </ul>
-</div>
-<div class="section" id="coding-in-python-in-notebooks">
+</section>
+<section id="coding-in-python-in-notebooks">
 <h3>Coding in Python in notebooks<a class="headerlink" href="#coding-in-python-in-notebooks" title="Permalink to this headline">¶</a></h3>
 <p><em>Pros</em></p>
 <ul class="simple">
@@ -1192,9 +1190,9 @@ bbox is  BoundingBox(left=769855.79, bottom=3751257.6, right=774030.79, top=3757
 <li><p>slower</p></li>
 <li><p>visualizations are not interactive</p></li>
 </ul>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

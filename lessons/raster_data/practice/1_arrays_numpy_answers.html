@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Arrays and numpy Answers &#8212; SARP Programming Lessons</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
@@ -116,7 +117,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../general_python/1_variables_types_ifstatements.html">
-     Variables, Data types, and if Statements
+     Variables, Data Types, and if Statements
     </a>
    </li>
    <li class="toctree-l2">
@@ -180,11 +181,13 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tabular_data/1_pandas.html">
+     The
      <code class="docutils literal notranslate">
       <span class="pre">
        pandas
       </span>
      </code>
+     Library
     </a>
    </li>
    <li class="toctree-l2">
@@ -218,11 +221,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../../../additional_lectures/time_series_statistics/oceans_stats_examples.html">
    Time Series Statistics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../additional_lectures/hierarchical_data/hierarchical_data.html">
-   Hierarchical Data Structure
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -661,9 +659,9 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="arrays-and-numpy-answers">
+  <section class="tex2jax_ignore mathjax_ignore" id="arrays-and-numpy-answers">
 <h1>Arrays and <code class="docutils literal notranslate"><span class="pre">numpy</span></code> Answers<a class="headerlink" href="#arrays-and-numpy-answers" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="part-1">
+<section id="part-1">
 <h2>Part 1<a class="headerlink" href="#part-1" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -672,7 +670,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="creating-and-inspecting-arrays">
+<section id="creating-and-inspecting-arrays">
 <h3>Creating and Inspecting arrays<a class="headerlink" href="#creating-and-inspecting-arrays" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>Convert the following list into a numpy array</p></li>
@@ -755,8 +753,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="multiple-dimensions">
+</section>
+<section id="multiple-dimensions">
 <h3>Multiple dimensions<a class="headerlink" href="#multiple-dimensions" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>What is the shape of the following array?  Use the shape to determine how many elements are in the array</p></li>
@@ -854,8 +852,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="math-and-aggregations">
+</section>
+<section id="math-and-aggregations">
 <h3>Math and aggregations<a class="headerlink" href="#math-and-aggregations" title="Permalink to this headline">¶</a></h3>
 <p>For the next few problems consider that the <code class="docutils literal notranslate"><span class="pre">population_sparrows</span></code> array represents the populations of sparrows at 12 different reserach locations.</p>
 <ol class="simple">
@@ -933,12 +931,12 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="part-2">
+</section>
+</section>
+<section id="part-2">
 <h2>Part 2<a class="headerlink" href="#part-2" title="Permalink to this headline">¶</a></h2>
 <p><strong>Note that the exact answers to the practice problems may not be the same on my sheet as on yours, because the random function used to generate the values won’t create the same array on your computer as on mine. Check that the code does the same thing, or run my code in your notebook to check the answer</strong></p>
-<div class="section" id="question-1">
+<section id="question-1">
 <h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -955,9 +953,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[91, 54, 92,  6, 79, 68, 21, 23, 21, 96],
-       [10, 14, 44, 90, 97, 48, 31, 61, 32, 70],
-       [29, 80, 85, 28,  3, 73,  6, 57,  3, 38]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[42, 21, 93, 68, 36, 12, 73, 79, 51, 28],
+       [ 0, 27, 82, 41,  6, 44, 11, 97, 46,  4],
+       [48, 25, 19, 36, 84, 22, 22, 99, 28, 28]])
 </pre></div>
 </div>
 </div>
@@ -975,13 +973,13 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>68
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="question-2">
+</section>
+<section id="question-2">
 <h3>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h3>
 <p><strong>A)</strong> Add 10 to every value in the <code class="docutils literal notranslate"><span class="pre">reflectances</span></code> array which has an index of 2 in the axis=0 position.</p>
 <div class="cell docutils container">
@@ -991,19 +989,19 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 51,  60,  15, ...,  34,  79,  99],
-       [ 18,  75,  96, ..., 106,  49,  83],
-       [ 53,  54,  86, ...,  41,  51,  52],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 85,  95,  51, ...,  94,  96,  98],
+       [ 58, 107,  11, ...,  39,  35,  67],
+       [ 19,  38,  68, ..., 106,  59, 100],
        ...,
-       [ 70,  64,  15, ...,  18,  65,  82],
-       [ 27,  82,  85, ...,  47,  48,  89],
-       [ 49,  85,  26, ...,  53,  87,  95]])
+       [ 66,  95,  18, ...,  15,  57,  91],
+       [ 94,  55,  76, ..., 106,  71,  54],
+       [108,  15,  70, ...,  78, 101,  98]])
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="question-3">
+</section>
+<section id="question-3">
 <h3>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">¶</a></h3>
 <p><strong>A)</strong> What will be the shapes of the following arrays?  First take a guess, then run the code.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">array1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
@@ -1064,8 +1062,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="question-4">
+</section>
+<section id="question-4">
 <h3>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h3>
 <p><strong>A)</strong> Going back to our <code class="docutils literal notranslate"><span class="pre">reflectances</span></code> array, find the mean and standard deviation of all the values in the array.</p>
 <div class="cell docutils container">
@@ -1082,7 +1080,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50.3775
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>48.79566666666667
 </pre></div>
 </div>
 </div>
@@ -1094,7 +1092,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.868460190145232
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.640668891552718
 </pre></div>
 </div>
 </div>
@@ -1119,8 +1117,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="question-5">
+</section>
+<section id="question-5">
 <h3>Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">¶</a></h3>
 <p><strong>A)</strong> The <code class="docutils literal notranslate"><span class="pre">.astype()</span></code> method is a method that changes the datatype of the values in the array.  It takes one argument - the new data type (which you type in without quotations).</p>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">.astype()</span></code> method on the reflectances array to change the data type to float.</p>
@@ -1144,45 +1142,45 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[91., 73., 23., ...,  2., 81.,  5.],
-        [90., 99., 88., ..., 85., 63., 18.],
-        [35., 47., 20., ..., 18., 63., 93.],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[14., 11., 38., ..., 76., 10., 17.],
+        [71., 14., 64., ..., 32., 22.,  6.],
+        [75., 65., 26., ..., 96.,  9., 47.],
         ...,
-        [ 3., 53., 18., ..., 59., 47., 91.],
-        [88., 84., 10., ..., 72., 81., 62.],
-        [23., 54.,  3., ..., 55., 42., 77.]],
+        [13., 92., 78., ..., 85., 23., 25.],
+        [23., 83., 55., ..., 57.,  1., 84.],
+        [10.,  4., 38., ..., 68.,  0., 78.]],
 
-       [[62., 17., 14., ..., 67., 27., 69.],
-        [34., 24., 87., ..., 81., 49., 97.],
-        [20., 25., 49., ..., 76., 76., 99.],
+       [[24., 43., 23., ..., 77., 12., 89.],
+        [40., 49., 82., ..., 45.,  2., 50.],
+        [ 6., 89., 23., ..., 26., 44., 15.],
         ...,
-        [39., 51., 87., ..., 40., 87., 31.],
-        [ 9., 24., 70., ..., 59.,  4., 81.],
-        [59., 79., 67., ...,  1., 13.,  8.]],
+        [ 9., 65., 38., ..., 76., 26., 79.],
+        [86., 56., 98., ..., 93., 15., 71.],
+        [ 0., 53., 84., ...,  1., 62., 99.]],
 
-       [[58., 13., 35., ..., 78., 83.,  9.],
-        [41., 71., 73., ..., 83., 14., 86.],
-        [76., 62., 94., ..., 34., 43., 49.],
+       [[ 1., 45., 25., ..., 10., 18., 97.],
+        [14., 88., 39., ..., 59.,  2., 37.],
+        [78.,  0., 10., ..., 64., 37., 17.],
         ...,
-        [65., 14., 14., ...,  7., 34., 56.],
-        [80., 47., 98., ..., 88., 72., 78.],
-        [11., 98., 15., ..., 16., 87., 99.]],
+        [44., 48., 14., ..., 21., 27.,  8.],
+        [39., 50., 39., ..., 81., 85.,  7.],
+        [47., 41., 60., ..., 33.,  6., 86.]],
 
-       [[15., 47., 30., ..., 76., 28., 85.],
-        [54., 81., 35., ...,  7., 70.,  4.],
-        [75., 32., 63., ...,  4., 27., 43.],
+       [[ 7., 46., 16., ..., 69., 73., 48.],
+        [25., 61.,  2., ..., 51., 11., 19.],
+        [18.,  1., 19., ..., 97., 60., 22.],
         ...,
-        [12., 80., 11., ..., 90., 96., 22.],
-        [48., 23., 59., ..., 66., 78., 12.],
-        [39., 84., 11., ..., 21., 27., 58.]],
+        [23., 84., 77., ..., 10., 55., 99.],
+        [76., 33., 45., ..., 46., 41.,  8.],
+        [52., 58., 58., ..., 20., 87., 70.]],
 
-       [[45., 99., 42., ..., 27., 12., 74.],
-        [67., 94., 27., ..., 28., 37., 64.],
-        [10., 14., 34., ..., 14., 13., 78.],
+       [[76., 40., 55., ..., 36., 25., 82.],
+        [63., 19., 74., ..., 59., 51., 85.],
+        [36., 47., 64., ..., 38., 15., 22.],
         ...,
-        [ 7., 55., 89., ..., 78., 91.,  1.],
-        [39., 32., 74., ..., 87., 15., 92.],
-        [18.,  9., 67., ..., 16., 63., 84.]]])
+        [ 4., 58., 41., ..., 60.,  0., 81.],
+        [71.,  8., 18., ..., 31., 86., 93.],
+        [49., 64.,  4., ..., 71.,  0., 91.]]])
 </pre></div>
 </div>
 </div>
@@ -1197,25 +1195,25 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[98, 99, 96, 99, 90, 99, 98, 98, 99, 95, 99, 95, 96, 98, 95, 91,
-         97, 95, 94, 98, 99, 96, 97, 98, 99, 98, 94, 92, 96, 99, 96, 94,
-         98, 99, 97, 98, 98, 91, 99, 99]],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[97, 92, 99, 98, 96, 99, 96, 99, 98, 93, 99, 97, 98, 98, 93, 85,
+         96, 99, 90, 99, 99, 96, 99, 90, 97, 94, 95, 99, 99, 98, 89, 94,
+         99, 96, 96, 98, 99, 97, 99, 96]],
 
-       [[91, 99, 97, 94, 98, 93, 98, 93, 90, 99, 99, 96, 99, 99, 94, 98,
-         99, 99, 97, 95, 98, 98, 97, 91, 97, 94, 99, 98, 99, 95, 87, 99,
-         95, 97, 99, 98, 99, 98, 90, 99]],
+       [[97, 90, 98, 99, 99, 95, 97, 96, 97, 98, 88, 98, 98, 99, 99, 98,
+         94, 94, 92, 99, 97, 97, 98, 99, 96, 97, 99, 99, 93, 89, 99, 98,
+         88, 84, 99, 92, 96, 96, 96, 99]],
 
-       [[95, 98, 98, 97, 97, 99, 95, 96, 99, 98, 99, 98, 99, 99, 99, 99,
-         94, 99, 96, 96, 92, 96, 95, 93, 99, 98, 98, 96, 98, 97, 84, 98,
-         99, 99, 99, 98, 97, 96, 92, 99]],
+       [[96, 96, 76, 96, 92, 99, 99, 98, 99, 98, 98, 97, 92, 96, 96, 98,
+         92, 97, 94, 98, 96, 98, 95, 99, 96, 98, 97, 97, 96, 98, 99, 95,
+         99, 99, 94, 97, 98, 97, 96, 97]],
 
-       [[85, 92, 98, 91, 97, 88, 97, 97, 97, 99, 98, 97, 97, 99, 96, 98,
-         95, 99, 92, 99, 98, 99, 99, 99, 92, 98, 99, 99, 94, 95, 98, 95,
-         97, 92, 99, 99, 99, 96, 97, 99]],
+       [[98, 94, 99, 99, 99, 97, 90, 99, 98, 93, 94, 95, 97, 98, 98, 95,
+         93, 90, 99, 99, 98, 98, 96, 97, 97, 89, 96, 99, 99, 95, 96, 95,
+         95, 97, 99, 98, 97, 97, 95, 99]],
 
-       [[91, 99, 99, 87, 99, 97, 97, 98, 95, 90, 97, 96, 98, 96, 98, 96,
-         97, 90, 99, 98, 95, 98, 97, 98, 96, 98, 98, 96, 99, 91, 97, 99,
-         98, 98, 99, 98, 96, 92, 93, 96]]])
+       [[92, 99, 96, 96, 99, 99, 99, 96, 96, 97, 86, 99, 91, 99, 87, 93,
+         98, 99, 99, 97, 99, 99, 97, 97, 99, 99, 98, 98, 96, 98, 99, 93,
+         97, 94, 94, 95, 99, 97, 99, 99]]])
 </pre></div>
 </div>
 </div>
@@ -1245,8 +1243,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p><em>Note: The “keepdims” concept is a bit conceptually abstract and I couldn’t find a good visual illustration for it right now.  If you leave this problem feeling a little iffy on “keepdims” that is totally fine and normal.  The more important concept to be comfortable with is using multiple kwargs in a function/method.</em></p>
-</div>
-<div class="section" id="question-6">
+</section>
+<section id="question-6">
 <h3>Question 6<a class="headerlink" href="#question-6" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1303,8 +1301,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p><em><strong>Google help:</strong> “numpy number of occurances of a value” or <a class="reference external" href="https://stackoverflow.com/questions/28663856/how-to-count-the-occurrence-of-certain-item-in-an-ndarray">this stackoverflow</a>.</em></p>
-</div>
-<div class="section" id="question-7">
+</section>
+<section id="question-7">
 <h3>Question 7<a class="headerlink" href="#question-7" title="Permalink to this headline">¶</a></h3>
 <p>NaNs are an important data point when working with real data - rarely do you have a totally complete dataset.</p>
 <p>You can make individual nans with <code class="docutils literal notranslate"><span class="pre">np.NaN</span></code>:</p>
@@ -1355,9 +1353,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

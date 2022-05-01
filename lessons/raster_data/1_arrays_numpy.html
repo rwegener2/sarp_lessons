@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Arrays and numpy &#8212; SARP Programming Lessons</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
@@ -116,7 +117,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../general_python/1_variables_types_ifstatements.html">
-     Variables, Data types, and if Statements
+     Variables, Data Types, and if Statements
     </a>
    </li>
    <li class="toctree-l2">
@@ -180,11 +181,13 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../tabular_data/1_pandas.html">
+     The
      <code class="docutils literal notranslate">
       <span class="pre">
        pandas
       </span>
      </code>
+     Library
     </a>
    </li>
    <li class="toctree-l2">
@@ -218,11 +221,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../../additional_lectures/time_series_statistics/oceans_stats_examples.html">
    Time Series Statistics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../additional_lectures/hierarchical_data/hierarchical_data.html">
-   Hierarchical Data Structure
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -677,7 +675,7 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="arrays-and-numpy">
+  <section class="tex2jax_ignore mathjax_ignore" id="arrays-and-numpy">
 <h1>Arrays and <code class="docutils literal notranslate"><span class="pre">numpy</span></code><a class="headerlink" href="#arrays-and-numpy" title="Permalink to this headline">¶</a></h1>
 <div class="note dropdown admonition">
 <p class="admonition-title">Lesson Content</p>
@@ -689,12 +687,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>➕ Math and Aggregations</p></li>
 </ul>
 </div>
-<div class="section" id="context">
+<section id="context">
 <h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
 <p>Today we are building up our arsenal of data structures with a really exiting one - the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array.  Numpy arrays can be used on their own but they also underlie many really useful libraries.  <code class="docutils literal notranslate"><span class="pre">xarray</span></code>, the primary library we will use to manipulate rasters, uses <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays to store the data.  <code class="docutils literal notranslate"><span class="pre">numpy</span></code> is also highly optimized for large computations, which is the benefit we gain from stepping from the generic <code class="docutils literal notranslate"><span class="pre">list</span></code> Python structure to the more specialized <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array.</p>
 <p><img alt="Summary Slide" src="../../_images/summaryslide_3raster.jpg" /></p>
-</div>
-<div class="section" id="libraries">
+</section>
+<section id="libraries">
 <h2>🗃️ Libraries<a class="headerlink" href="#libraries" title="Permalink to this headline">¶</a></h2>
 <p>Today we are going to dig into our first library in Python!  A <strong>library</strong> is a like an “extras” package for a programming language (think Settlers of Catan expansion pack).  It is a set of commands that doesn’t automatically come activated when you use Python, but that you can still use if you just tell Python that you plan to do so.  You let python know you are going to use a library with an <code class="docutils literal notranslate"><span class="pre">import</span></code> statment.  After you do that the additional commands become availble.</p>
 <div class="cell docutils container">
@@ -707,7 +705,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3107</span><span class="o">/</span><span class="mf">642619898.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_1116</span><span class="o">/</span><span class="mf">642619898.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Attempting to use the `math` libray before importing</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 
@@ -743,8 +741,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p>One large chunk of libraries are together referred to as the <strong>Python Standard Library</strong>. These libraries are not a part of the “core” language (everything we can do without import statments) but have still been offically accepted into the Python distribution package and are maintained in the same way as the rest of the core language.  You can read more <a class="reference external" href="https://docs.python.org/3/tutorial/stdlib.html">here</a>.</p>
 <p>There are also libraries which aren’t a part of this designation, and are still widely used and developed, but they are simply not included when you hit the “Download Python” button.  Non-standard libraries are maintained by groups of developers outside of the Python Software Foundation and anyone can make one.  That includes you!</p>
 </div>
-</div>
-<div class="section" id="data-structure-arrays">
+</section>
+<section id="data-structure-arrays">
 <h2>🧊 Data structure: Arrays<a class="headerlink" href="#data-structure-arrays" title="Permalink to this headline">¶</a></h2>
 <p>Arrays are the new data structure of this lesson.  They are similar to lists in that they represent a group of values.  Arrays are also simliar to list because you reference specific values using an index.  The main difference between lists and arrays is that arrays can have multiple dimensions.</p>
 <p>Still, if you array only has 1 dimension (like a list), why not just use a list?  Because:</p>
@@ -756,7 +754,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p><img alt="Numpy Arrays" src="../../_images/numpy_arrays.png" /></p>
 <p><em>Image ammended from
 <a class="reference external" href="https://indianaiproduction.com/python-numpy-tutorial/">Indian AI Production</a>.</em></p>
-<div class="section" id="numpy-library">
+<section id="numpy-library">
 <h3><code class="docutils literal notranslate"><span class="pre">numpy</span></code> library<a class="headerlink" href="#numpy-library" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> is the standard Python library for dealing with arrays and matricies.  A lot of time and energy has gone into making <code class="docutils literal notranslate"><span class="pre">numpy</span></code> fast.</p>
 <div class="cell docutils container">
@@ -776,8 +774,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p>These are both problems that are being actively worked on by members of the community and will, I think, be resolved in the near future.  Until then, though, and for the sake of stability, this summer we are focused on <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.  If you are interested in trying <code class="docutils literal notranslate"><span class="pre">xarray</span></code>, certainly go for it or talk to me.</p>
 </div>
-</div>
-<div class="section" id="creating-and-inspecting-numpy-arrays">
+</section>
+<section id="creating-and-inspecting-numpy-arrays">
 <h3>Creating and Inspecting <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays<a class="headerlink" href="#creating-and-inspecting-numpy-arrays" title="Permalink to this headline">¶</a></h3>
 <p>Because arrays are so similar to lists one common way to make an array is by starting with a list.</p>
 <p>We use <code class="docutils literal notranslate"><span class="pre">np.array()</span></code> to convert a list to an array.  In that line <code class="docutils literal notranslate"><span class="pre">np.</span></code> reminds Python which library we are referecing.  Here <code class="docutils literal notranslate"><span class="pre">np.</span></code> means <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, which is what we told Python to call <code class="docutils literal notranslate"><span class="pre">numpy</span></code> when we imported it with <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">np</span></code>.</p>
@@ -866,8 +864,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><code class="docutils literal notranslate"><span class="pre">list_ex.append('o3')</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">array_ex.full(3)</span></code></p></li>
 </ul>
-</div>
-<div class="section" id="array-indexes">
+</section>
+<section id="array-indexes">
 <h3>Array Indexes<a class="headerlink" href="#array-indexes" title="Permalink to this headline">¶</a></h3>
 <p>You can access elements of the array by index, just like with lists.</p>
 <div class="cell docutils container">
@@ -904,9 +902,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Get the value of the 3rd item in the array</p></li>
 </ol>
 </div>
-</div>
-</div>
-<div class="section" id="more-than-one-dimension">
+</section>
+</section>
+<section id="more-than-one-dimension">
 <h2>More than one dimension<a class="headerlink" href="#more-than-one-dimension" title="Permalink to this headline">¶</a></h2>
 <p>The array we made so far is a one-dimensional array.  Very often when working with arrays you will have two or more dimensions.  You can create arrays like this by putting lists inside of lists, or <strong>nesting</strong> them.</p>
 <div class="cell docutils container">
@@ -979,7 +977,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="indexing-multi-dimensional-arrays">
+<section id="indexing-multi-dimensional-arrays">
 <h3>Indexing multi-dimensional arrays<a class="headerlink" href="#indexing-multi-dimensional-arrays" title="Permalink to this headline">¶</a></h3>
 <p>When indexing multi-dimensional arrays we use the same square bracket <code class="docutils literal notranslate"><span class="pre">[]</span></code> syntax.  To get a single number we need to specify the index for each of the axes that we have in the array.  So if we have a 3 dimensional array we need 3 indexes to specify exactly which value we want.</p>
 <div class="cell docutils container">
@@ -1095,9 +1093,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Give the index to return the value 15.</p></li>
 </ol>
 </div>
-</div>
-</div>
-<div class="section" id="array-math-and-aggregations">
+</section>
+</section>
+<section id="array-math-and-aggregations">
 <h2>Array Math and Aggregations<a class="headerlink" href="#array-math-and-aggregations" title="Permalink to this headline">¶</a></h2>
 <p>Once we start getting into manipulating the values of matrices we are approaching some of the principles of linear algebra.  If you have taken linear algebra before then you’ll be right at home.  If not, don’t worry too much.  The operations that you are most likely to use don’t get too deep.</p>
 <p>Because we are working with matricies instead of single numbers, if you want to do addition on a matrix, you have two options:</p>
@@ -1156,7 +1154,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3107</span><span class="o">/</span><span class="mf">1917030642.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_1116</span><span class="o">/</span><span class="mf">1917030642.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">reflectance_array</span> <span class="o">+</span> <span class="n">second_array</span>
 
 <span class="ne">ValueError</span>: operands could not be broadcast together with shapes (2,3) (4,2) 
@@ -1180,12 +1178,12 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>If this concept is confusing there are some really great visuals of adding arrays <a class="reference external" href="https://numpy.org/doc/stable/user/absolute_beginners.html#basic-array-operations">in the numpy docs</a>.</p>
-<div class="section" id="more-math">
+<section id="more-math">
 <h3>More math<a class="headerlink" href="#more-math" title="Permalink to this headline">¶</a></h3>
 <p>Since numpy in a library intended for computational mathematics it has most any function built ito it that you could ever want.  In general, googling “numpy”, then the function you want (Ex. “numpy dot product”) will get you want you need.  There is also a list of functions <a class="reference external" href="https://numpy.org/doc/stable/user/quickstart.html#universal-functions">in the docs</a>.</p>
-</div>
-</div>
-<div class="section" id="aggregations">
+</section>
+</section>
+<section id="aggregations">
 <h2>Aggregations<a class="headerlink" href="#aggregations" title="Permalink to this headline">¶</a></h2>
 <p>Another really common operation, both during processing and while inspecting a dataset, is to run some kind of aggregation.  There are lots of them build into <code class="docutils literal notranslate"><span class="pre">numpy</span></code>:</p>
 <table class="colwidths-auto table">
@@ -1301,8 +1299,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Over which axis (0 or 1) was the <code class="docutils literal notranslate"><span class="pre">sum()</span></code> method run to get a result of <code class="docutils literal notranslate"><span class="pre">[10,</span> <span class="pre">14,</span> <span class="pre">18]</span></code>?</p></li>
 </ol>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

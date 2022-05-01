@@ -9,7 +9,7 @@ The contents of this site include:
 * practice sheets - notebooks with practice problems to accompany some of the lessons
 
 Lessons are divided into two groups:
-1. raster data - data that fills regular grids. These are often satellite images
+1. gridded data - data that fills a mesh represting data in space. These are often satellite images
 2. tabular data - data with rows and columns; the type of data that would fit in an excel sheet
 
 ```{tableofcontents}

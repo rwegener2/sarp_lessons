@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Datetimes &#8212; SARP Programming Lessons</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
@@ -116,7 +117,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="1_variables_types_ifstatements.html">
-     Variables, Data types, and if Statements
+     Variables, Data Types, and if Statements
     </a>
    </li>
    <li class="toctree-l2">
@@ -147,23 +148,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/1_arrays_numpy.html">
-     Arrays and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       numpy
-      </span>
-     </code>
+    <a class="reference internal" href="../raster_data/1_xarray.html">
+     Lesson 4, Raster data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/2_raster_fundamentals.html">
-     Working with rasters
+    <a class="reference internal" href="../raster_data/2_xarray_computation.html">
+     Lesson 5, Gridded Data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/3_accessing_coordinates.html">
-     Accessing Data
+    <a class="reference internal" href="../raster_data/3_xarray_groupby.html">
+     Lesson 6, Gridded Data
     </a>
    </li>
   </ul>
@@ -180,11 +176,13 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../tabular_data/1_pandas.html">
+     The
      <code class="docutils literal notranslate">
       <span class="pre">
        pandas
       </span>
      </code>
+     Library
     </a>
    </li>
    <li class="toctree-l2">
@@ -226,11 +224,43 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../additional_lectures/Visualization/index.html">
-   Visualization
+  <a class="reference internal" href="../../additional_lectures/rasters/index.html">
+   Raster data lessons
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/1_arrays_numpy.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/2_raster_fundamentals.html">
+     Working with rasters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/3_accessing_coordinates.html">
+     Accessing Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../additional_lectures/Visualization/index.html">
+   Visualization
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -273,8 +303,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../index_practice.html">
    General Python Practice
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -325,42 +355,30 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../index_practice_raster.html">
    Raster Data Practice
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/practice/1_arrays_numpy_practice.html">
-     Arrays and
+    <a class="reference internal" href="../raster_data/practice/1_xarray_practice.html">
      <code class="docutils literal notranslate">
       <span class="pre">
-       numpy
+       xarray
       </span>
      </code>
      Practice
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/practice/2_raster_fundamentals_practice.html">
-     Raster Fundamentals Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/practice/3_accessing_coordinates_practice.html">
-     Accessing Coordinates Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/practice/1_arrays_numpy_answers.html">
-     Arrays and
+    <a class="reference internal" href="../raster_data/practice/2_xarray_practice.html">
      <code class="docutils literal notranslate">
       <span class="pre">
-       numpy
+       xarray
       </span>
      </code>
-     Answers
+     Computation Practice
     </a>
    </li>
   </ul>
@@ -369,8 +387,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../index_practice_tabular.html">
    Tabular Data Practice
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -413,6 +431,50 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../tabular_data/practice/2_filtering_groupby_answers.html">
      Filtering and Groupby Answers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../additional_lectures/index_practice.html">
+   Raster Data Practice (Additional Lectures)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/practice/1_arrays_numpy_practice.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+     Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/practice/2_raster_fundamentals_practice.html">
+     Raster Fundamentals Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/practice/3_accessing_coordinates_practice.html">
+     Accessing Coordinates Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/practice/1_arrays_numpy_answers.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+     Answers
     </a>
    </li>
   </ul>
@@ -801,7 +863,7 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="datetimes">
+  <section class="tex2jax_ignore mathjax_ignore" id="datetimes">
 <h1>Datetimes<a class="headerlink" href="#datetimes" title="Permalink to this headline">¶</a></h1>
 <div class="note dropdown admonition">
 <p class="admonition-title">Lesson Content</p>
@@ -811,11 +873,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Timedeltas</p></li>
 </ul>
 </div>
-<div class="section" id="context">
+<section id="context">
 <h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
 <p>Dates and times are a common part of working with scientific data.  They are very common fields.  While dates and times are commonly represented as strings, you can also represent them using Python-specific objects that come with added functionality specific to dates and times.</p>
-</div>
-<div class="section" id="python-library-datetime">
+</section>
+<section id="python-library-datetime">
 <h2>Python library <code class="docutils literal notranslate"><span class="pre">datetime</span></code><a class="headerlink" href="#python-library-datetime" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">datetime</span></code> library has three major components:</p>
 <ol class="simple">
@@ -823,8 +885,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><code class="docutils literal notranslate"><span class="pre">datetime()</span></code> - for handling a specific time of a particular date (Ex. 2021-06-28 at 12:31pm)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timedelta()</span></code> - for handling a length of time (Ex. 1 hour, 2 weeks, 3.5 years)</p></li>
 </ol>
-</div>
-<div class="section" id="dates">
+</section>
+<section id="dates">
 <h2>Dates<a class="headerlink" href="#dates" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -853,10 +915,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="why-bother">
+<section id="why-bother">
 <h3>Why bother?<a class="headerlink" href="#why-bother" title="Permalink to this headline">¶</a></h3>
 <p>The dates are nice, but why put in the effort?  Your data by default probably uses a string, for example <code class="docutils literal notranslate"><span class="pre">2016-06-30</span></code>, so why not stick with that?</p>
-<div class="section" id="reason-1">
+<section id="reason-1">
 <h4>Reason 1<a class="headerlink" href="#reason-1" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>If Python knows it’s a date it can help you find errors.</p>
@@ -870,7 +932,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3055</span><span class="o">/</span><span class="mf">2701832166.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4433</span><span class="o">/</span><span class="mf">2701832166.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">date</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
 
 <span class="ne">ValueError</span>: day is out of range for month
@@ -899,7 +961,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3055</span><span class="o">/</span><span class="mf">386491697.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4433</span><span class="o">/</span><span class="mf">386491697.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">date</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">29</span><span class="p">)</span>
 
 <span class="ne">ValueError</span>: day is out of range for month
@@ -907,16 +969,16 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="reason-2">
+</section>
+<section id="reason-2">
 <h4>Reason 2<a class="headerlink" href="#reason-2" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>Added organization through quick accessing of elements.</p>
 </div></blockquote>
 <p>We’ll talk about this more below.</p>
-</div>
-</div>
-<div class="section" id="accessing-parts-of-a-date">
+</section>
+</section>
+<section id="accessing-parts-of-a-date">
 <h3>Accessing parts of a date<a class="headerlink" href="#accessing-parts-of-a-date" title="Permalink to this headline">¶</a></h3>
 <p>Once you have a date created you can easily pull out the piece you want.</p>
 <div class="cell docutils container">
@@ -951,8 +1013,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="using-dates-with-other-objects">
+</section>
+<section id="using-dates-with-other-objects">
 <h3>Using <code class="docutils literal notranslate"><span class="pre">dates()</span></code> with other objects<a class="headerlink" href="#using-dates-with-other-objects" title="Permalink to this headline">¶</a></h3>
 <p>You can do what you want with these objects, such as putting them in lists or dictionaries.</p>
 <div class="cell docutils container">
@@ -979,8 +1041,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="a-comment-on-calendars">
+</section>
+<section id="a-comment-on-calendars">
 <h3>A comment on calendars<a class="headerlink" href="#a-comment-on-calendars" title="Permalink to this headline">¶</a></h3>
 <p>Turns out there are actually lots of different calendars that can be used to track time.  The one you are most likely familiar with is the Gregorian calendar (using years, months, and days).  Another common one that you will use is a Julian calendar, which starts on January 1st and counts the days one by one.</p>
 <p>If you use model data you will also find more types of calendars, such as <code class="docutils literal notranslate"><span class="pre">365_day</span></code> (just ignores leap days) or <code class="docutils literal notranslate"><span class="pre">360_day</span></code> (every month has 30 days).</p>
@@ -996,11 +1058,11 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <p>What is the output of <code class="docutils literal notranslate"><span class="pre">holidays_dict['MLK</span> <span class="pre">Day'].day</span></code>?</p>
 </div>
-</div>
-</div>
-<div class="section" id="id1">
+</section>
+</section>
+<section id="id1">
 <h2>Datetimes<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="creating-datetime-objects-manually">
+<section id="creating-datetime-objects-manually">
 <h3>Creating <code class="docutils literal notranslate"><span class="pre">datetime()</span></code> objects manually<a class="headerlink" href="#creating-datetime-objects-manually" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1037,13 +1099,13 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="a-comment-on-timezones">
+</section>
+<section id="a-comment-on-timezones">
 <h3>A comment on timezones<a class="headerlink" href="#a-comment-on-timezones" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">datetime</span></code> library also has the ability to keep track and convert timezones.  Timezones can cause a lot of chaos in the data world.  We aren’t going to talk about them in depth but know that if you need to track timezones for whatever reason <code class="docutils literal notranslate"><span class="pre">datetime</span></code> can handle that.</p>
-</div>
-</div>
-<div class="section" id="creating-date-s-and-datetime-s-from-strings">
+</section>
+</section>
+<section id="creating-date-s-and-datetime-s-from-strings">
 <h2>Creating <code class="docutils literal notranslate"><span class="pre">date()</span></code>s and <code class="docutils literal notranslate"><span class="pre">datetime()</span></code>s from strings<a class="headerlink" href="#creating-date-s-and-datetime-s-from-strings" title="Permalink to this headline">¶</a></h2>
 <p>Thus far we have created our time objects by inputing the integer number of the year, month, etc.  Much more commonly, though, you aren’t creating them from scratch, you are creating them from a string.  For that we have <code class="docutils literal notranslate"><span class="pre">strptime</span></code> and <code class="docutils literal notranslate"><span class="pre">strftime</span></code>.</p>
 <table class="colwidths-auto table">
@@ -1071,9 +1133,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>And so many other combinations</p></li>
 </ul>
 <p>The key part of converting from string to datetime and vice versa is that we need to tell the computer what is supposed to be looking for in the string.  For that we have labels, or directives, such as <code class="docutils literal notranslate"><span class="pre">%Y</span></code> or <code class="docutils literal notranslate"><span class="pre">%d</span></code>.  The place to consult for format strings is <a class="reference external" href="https://strftime.org/">strftime.org</a>.</p>
-<div class="section" id="some-examples">
+<section id="some-examples">
 <h3>Some Examples<a class="headerlink" href="#some-examples" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="example-1">
+<section id="example-1">
 <h4>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1082,8 +1144,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="example-2">
+</section>
+<section id="example-2">
 <h4>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1092,8 +1154,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="example-3">
+</section>
+<section id="example-3">
 <h4>Example 3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h4>
 <p><em>Switching date formats</em></p>
 <div class="cell docutils container">
@@ -1115,10 +1177,10 @@ const thebe_selector_output = ".output, .cell_output"
 <p>What is the format string corresponding to the following datetime string?</p>
 <p><code class="docutils literal notranslate"><span class="pre">'8/30/2019</span> <span class="pre">22:13:00'</span></code>, which shows the date August 30th 2019 at 10:13PM (military time).</p>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="timedelta-objects">
+</section>
+</section>
+</section>
+<section id="timedelta-objects">
 <h2><code class="docutils literal notranslate"><span class="pre">timedelta()</span></code> objects<a class="headerlink" href="#timedelta-objects" title="Permalink to this headline">¶</a></h2>
 <p>While <code class="docutils literal notranslate"><span class="pre">date()</span></code>sand <code class="docutils literal notranslate"><span class="pre">datetime()</span></code>s represent a specific moment in time, <code class="docutils literal notranslate"><span class="pre">timedelta()</span></code>s represent a length of time, for example, one week, two hours, or 15 seconds.  They aren’t connected to any particular moment, they just represent a set length of time.</p>
 <div class="cell docutils container">
@@ -1148,7 +1210,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.date(2022, 3, 22)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.date(2022, 5, 4)
 </pre></div>
 </div>
 </div>
@@ -1161,7 +1223,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.date(2022, 3, 16)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.date(2022, 4, 28)
 </pre></div>
 </div>
 </div>
@@ -1175,7 +1237,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.datetime(2022, 3, 22, 10, 31, 20, 157283)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.datetime(2022, 5, 4, 9, 37, 3, 78470)
 </pre></div>
 </div>
 </div>
@@ -1188,7 +1250,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.timedelta(days=114)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.timedelta(days=157)
 </pre></div>
 </div>
 </div>
@@ -1197,8 +1259,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p class="admonition-title">📝 Check your understanding</p>
 <p>How many days are there between today and Thanksgiving of this year (November 25th 2021)?</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
