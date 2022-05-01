@@ -9,6 +9,10 @@ The content is organized into a few folders:
 3. `snippets` - useful pieces of code that were written to support student project, but aren't always organized well or consistently commented
 4. `language_agnostic_content` - PDFs that were used to teach coding concepts broader than just sytnax
 
+## Environments
+
+The `environment.yml` file in the root directory builds an enviroment that can be used to execute the notebooks. There is not currently an environment.yml for building the docs, but one could be make by starting with the student environment.yml environment and then adding `conda install -c conda-forge jupyter-book`.  You may also need to install some sphinx extensions. 
+
 ## Getting Setup (Student)
 
 _Instructions and environment for building the docs are in the `docs/` folder_
@@ -49,3 +53,12 @@ jupyter-lab
 A new Jupyter Lab session should open! When prompted to choose an enviroment, or anytime you create a new notebook,  select `Python [conda env:sarp]` as the kernel.
 
 Happy coding!
+
+# Developer Notes
+## Running the book
+`conda activate sarp_docs`
+`jupyter-book build .` from root
+`python -m http.server --directory _build/html/`
+
+## Deploy
+[link](https://jupyterbook.org/start/publish.html#publish-your-book-online-with-github-pages)
