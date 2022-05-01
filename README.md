@@ -56,9 +56,13 @@ Happy coding!
 
 # Developer Notes
 ## Running the book
-`conda activate sarp_docs`
-`jupyter-book build .` from root
-`python -m http.server --directory _build/html/`
+* `conda activate sarp_docs`
+* `jupyter-book build .` from root
+* `python -m http.server --directory _build/html/`
 
 ## Deploy
 [link](https://jupyterbook.org/start/publish.html#publish-your-book-online-with-github-pages)
+1. Build book
+`jupyter-book build .`
+2. trigger the ghp-import utility to do its magic
+`ghp-import -n -p -f _build/html`
