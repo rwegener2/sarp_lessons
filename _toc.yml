@@ -12,11 +12,11 @@ parts:
         - file: lessons/general_python/2_lists_dictionaries
         - file: lessons/general_python/datetimes
         - file: lessons/general_python/spatial_data
-    - file: lessons/raster_data/index.md
+    - file: lessons/gridded_data/index.md
       sections:
-        - file: lessons/raster_data/1_arrays_numpy
-        - file: lessons/raster_data/2_raster_fundamentals
-        - file: lessons/raster_data/3_accessing_coordinates
+        - file: lessons/gridded_data/1_xarray
+        - file: lessons/gridded_data/2_xarray_computation
+        - file: lessons/gridded_data/3_xarray_groupby
     - file: lessons/tabular_data/index.md
       sections:
         - file: lessons/tabular_data/1_pandas
@@ -28,6 +28,11 @@ parts:
     - file: additional_lectures/Debugging/debugging_lesson
     - file: additional_lectures/time_series_statistics/oceans_stats_examples
     - file: additional_lectures/hierarchical_data/hierarchical_data
+    - file: additional_lectures/rasters/index.md
+      sections:
+        - file: additional_lectures/rasters/1_arrays_numpy
+        - file: additional_lectures/rasters/2_raster_fundamentals
+        - file: additional_lectures/rasters/3_accessing_coordinates
     - file: additional_lectures/Visualization/index.md
       sections:
         - file: additional_lectures/Visualization/1_static_viz_with_matplotlib
@@ -49,12 +54,10 @@ parts:
         - file: lessons/general_python/practice/datetimes_answers
         - file: lessons/general_python/practice/spatial_data_answers
     - file: lessons/index_practice_raster.md
-      title: Raster Data Practice
+      title: Gridded Data Practice
       sections:
-        - file: lessons/raster_data/practice/1_arrays_numpy_practice
-        - file: lessons/raster_data/practice/2_raster_fundamentals_practice
-        - file: lessons/raster_data/practice/3_accessing_coordinates_practice
-        - file: lessons/raster_data/practice/1_arrays_numpy_answers
+        - file: lessons/gridded_data/practice/1_xarray_practice
+        - file: lessons/gridded_data/practice/2_xarray_practice
     - file: lessons/index_practice_tabular.md
       title: Tabular Data Practice
       sections:
@@ -63,3 +66,10 @@ parts:
         - file: lessons/tabular_data/practice/3_geopandas_practice
         - file: lessons/tabular_data/practice/1_pandas_answers
         - file: lessons/tabular_data/practice/2_filtering_groupby_answers
+    - file: additional_lectures/index_practice.md
+      title: Raster Data Practice (Additional Lectures)
+      sections:
+        - file: additional_lectures/rasters/practice/1_arrays_numpy_practice
+        - file: additional_lectures/rasters/practice/2_raster_fundamentals_practice
+        - file: additional_lectures/rasters/practice/3_accessing_coordinates_practice
+        - file: additional_lectures/rasters/practice/1_arrays_numpy_answers

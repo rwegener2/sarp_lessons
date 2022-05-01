@@ -9,6 +9,10 @@ The content is organized into a few folders:
 3. `snippets` - useful pieces of code that were written to support student project, but aren't always organized well or consistently commented
 4. `language_agnostic_content` - PDFs that were used to teach coding concepts broader than just sytnax
 
+## Environments
+
+The `environment.yml` file in the root directory builds an enviroment that can be used to execute the notebooks. There is not currently an environment.yml for building the docs, but one could be make by starting with the student environment.yml environment and then adding `conda install -c conda-forge jupyter-book`.  You may also need to install some sphinx extensions. 
+
 # Developer Notes
 ## Running the book
 `conda activate sarp_docs`
