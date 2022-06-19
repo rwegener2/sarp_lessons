@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Dynamic Visualization" href="3_dynamic_visualization.html" />
-    <link rel="prev" title="Static Data Visualization in Python" href="1_static_viz_with_matplotlib.html" />
+    <link rel="prev" title="Visualization" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -138,8 +138,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../lessons/raster_data/index.html">
-   Raster Data
+  <a class="reference internal" href="../../lessons/gridded_data/index.html">
+   Gridded Data
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -148,18 +148,29 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../lessons/raster_data/1_xarray.html">
-     Lesson 4, Raster data
+    <a class="reference internal" href="../../lessons/gridded_data/1_xarray.html">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray
+      </span>
+     </code>
+     Library
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../lessons/raster_data/2_xarray_computation.html">
-     Lesson 5, Gridded Data
+    <a class="reference internal" href="../../lessons/gridded_data/2_xarray_computation.html">
+     Starting Computations
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../lessons/raster_data/3_xarray_groupby.html">
-     Lesson 6, Gridded Data
+    <a class="reference internal" href="../../lessons/gridded_data/3_xarray_groupby.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray
+      </span>
+     </code>
+     Groupby
     </a>
    </li>
   </ul>
@@ -195,6 +206,16 @@ const thebe_selector_output = ".output, .cell_output"
      <code class="docutils literal notranslate">
       <span class="pre">
        geopandas
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/tabular_data/static_visualization_matplotlib.html">
+     Static Visualization with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib
       </span>
      </code>
     </a>
@@ -265,11 +286,6 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="1_static_viz_with_matplotlib.html">
-     Static Data Visualization in Python
-    </a>
-   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Building on top of
@@ -353,7 +369,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../lessons/index_practice_raster.html">
-   Raster Data Practice
+   Gridded Data Practice
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
@@ -362,7 +378,7 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../lessons/raster_data/practice/1_xarray_practice.html">
+    <a class="reference internal" href="../../lessons/gridded_data/practice/1_xarray_practice.html">
      <code class="docutils literal notranslate">
       <span class="pre">
        xarray
@@ -372,7 +388,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../lessons/raster_data/practice/2_xarray_practice.html">
+    <a class="reference internal" href="../../lessons/gridded_data/practice/2_xarray_practice.html">
      <code class="docutils literal notranslate">
       <span class="pre">
        xarray
@@ -922,7 +938,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1076d0f10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x15ebfad90&gt;
 </pre></div>
 </div>
 <img alt="../../_images/2_building_on_matplotlib_24_1.png" src="../../_images/2_building_on_matplotlib_24_1.png" />
@@ -936,7 +952,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x15f674f40&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x15eb907c0&gt;
 </pre></div>
 </div>
 <img alt="../../_images/2_building_on_matplotlib_25_1.png" src="../../_images/2_building_on_matplotlib_25_1.png" />
@@ -951,7 +967,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x15f7087c0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1608700a0&gt;
 </pre></div>
 </div>
 <img alt="../../_images/2_building_on_matplotlib_26_1.png" src="../../_images/2_building_on_matplotlib_26_1.png" />
@@ -979,7 +995,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x16265baf0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x163a83e50&gt;
 </pre></div>
 </div>
 <img alt="../../_images/2_building_on_matplotlib_29_1.png" src="../../_images/2_building_on_matplotlib_29_1.png" />
@@ -1034,11 +1050,11 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="1_static_viz_with_matplotlib.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Static Data Visualization in Python</p>
+            <p class="prev-next-title">Visualization</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="3_dynamic_visualization.html" title="next page">

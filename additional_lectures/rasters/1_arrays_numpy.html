@@ -138,8 +138,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../lessons/raster_data/index.html">
-   Raster Data
+  <a class="reference internal" href="../../lessons/gridded_data/index.html">
+   Gridded Data
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -148,18 +148,29 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../lessons/raster_data/1_xarray.html">
-     Lesson 4, Raster data
+    <a class="reference internal" href="../../lessons/gridded_data/1_xarray.html">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray
+      </span>
+     </code>
+     Library
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../lessons/raster_data/2_xarray_computation.html">
-     Lesson 5, Gridded Data
+    <a class="reference internal" href="../../lessons/gridded_data/2_xarray_computation.html">
+     Starting Computations
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../lessons/raster_data/3_xarray_groupby.html">
-     Lesson 6, Gridded Data
+    <a class="reference internal" href="../../lessons/gridded_data/3_xarray_groupby.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray
+      </span>
+     </code>
+     Groupby
     </a>
    </li>
   </ul>
@@ -195,6 +206,16 @@ const thebe_selector_output = ".output, .cell_output"
      <code class="docutils literal notranslate">
       <span class="pre">
        geopandas
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/tabular_data/static_visualization_matplotlib.html">
+     Static Visualization with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib
       </span>
      </code>
     </a>
@@ -265,11 +286,6 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Visualization/1_static_viz_with_matplotlib.html">
-     Static Data Visualization in Python
-    </a>
-   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Visualization/2_building_on_matplotlib.html">
      Building on top of
@@ -353,7 +369,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../lessons/index_practice_raster.html">
-   Raster Data Practice
+   Gridded Data Practice
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
@@ -362,7 +378,7 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../lessons/raster_data/practice/1_xarray_practice.html">
+    <a class="reference internal" href="../../lessons/gridded_data/practice/1_xarray_practice.html">
      <code class="docutils literal notranslate">
       <span class="pre">
        xarray
@@ -372,7 +388,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../lessons/raster_data/practice/2_xarray_practice.html">
+    <a class="reference internal" href="../../lessons/gridded_data/practice/2_xarray_practice.html">
      <code class="docutils literal notranslate">
       <span class="pre">
        xarray
@@ -769,7 +785,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4381</span><span class="o">/</span><span class="mf">642619898.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_11243</span><span class="o">/</span><span class="mf">642619898.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Attempting to use the `math` libray before importing</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 
@@ -1218,7 +1234,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4381</span><span class="o">/</span><span class="mf">1917030642.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_11243</span><span class="o">/</span><span class="mf">1917030642.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">reflectance_array</span> <span class="o">+</span> <span class="n">second_array</span>
 
 <span class="ne">ValueError</span>: operands could not be broadcast together with shapes (2,3) (4,2) 

@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Debugging" href="../../additional_lectures/Debugging/debugging_lesson.html" />
+    <link rel="next" title="Static Visualization with matplotlib" href="static_visualization_matplotlib.html" />
     <link rel="prev" title="Filtering and groupby" href="2_filtering_groupby.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -138,8 +138,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../raster_data/index.html">
-   Raster Data
+  <a class="reference internal" href="../gridded_data/index.html">
+   Gridded Data
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -148,18 +148,29 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/1_xarray.html">
-     Lesson 4, Raster data
+    <a class="reference internal" href="../gridded_data/1_xarray.html">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray
+      </span>
+     </code>
+     Library
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/2_xarray_computation.html">
-     Lesson 5, Gridded Data
+    <a class="reference internal" href="../gridded_data/2_xarray_computation.html">
+     Starting Computations
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/3_xarray_groupby.html">
-     Lesson 6, Gridded Data
+    <a class="reference internal" href="../gridded_data/3_xarray_groupby.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray
+      </span>
+     </code>
+     Groupby
     </a>
    </li>
   </ul>
@@ -195,6 +206,16 @@ const thebe_selector_output = ".output, .cell_output"
      <code class="docutils literal notranslate">
       <span class="pre">
        geopandas
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="static_visualization_matplotlib.html">
+     Static Visualization with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib
       </span>
      </code>
     </a>
@@ -265,11 +286,6 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../additional_lectures/Visualization/1_static_viz_with_matplotlib.html">
-     Static Data Visualization in Python
-    </a>
-   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../additional_lectures/Visualization/2_building_on_matplotlib.html">
      Building on top of
@@ -353,7 +369,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../index_practice_raster.html">
-   Raster Data Practice
+   Gridded Data Practice
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
@@ -362,7 +378,7 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/practice/1_xarray_practice.html">
+    <a class="reference internal" href="../gridded_data/practice/1_xarray_practice.html">
      <code class="docutils literal notranslate">
       <span class="pre">
        xarray
@@ -372,7 +388,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../raster_data/practice/2_xarray_practice.html">
+    <a class="reference internal" href="../gridded_data/practice/2_xarray_practice.html">
      <code class="docutils literal notranslate">
       <span class="pre">
        xarray
@@ -890,27 +906,27 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;GeometryArray&gt;
-[&lt;shapely.geometry.point.Point object at 0x1645b0e20&gt;,
- &lt;shapely.geometry.point.Point object at 0x16515b4c0&gt;,
- &lt;shapely.geometry.point.Point object at 0x1652b2b50&gt;,
- &lt;shapely.geometry.point.Point object at 0x16458dc40&gt;,
- &lt;shapely.geometry.point.Point object at 0x16458df70&gt;,
- &lt;shapely.geometry.point.Point object at 0x1645b0d90&gt;,
- &lt;shapely.geometry.point.Point object at 0x1645df040&gt;,
- &lt;shapely.geometry.point.Point object at 0x110043130&gt;,
- &lt;shapely.geometry.point.Point object at 0x16515b4f0&gt;,
- &lt;shapely.geometry.point.Point object at 0x1100434f0&gt;,
+[&lt;shapely.geometry.point.Point object at 0x160191d00&gt;,
+ &lt;shapely.geometry.point.Point object at 0x11806f3a0&gt;,
+ &lt;shapely.geometry.point.Point object at 0x160191130&gt;,
+ &lt;shapely.geometry.point.Point object at 0x10afe1c10&gt;,
+ &lt;shapely.geometry.point.Point object at 0x114a2cbe0&gt;,
+ &lt;shapely.geometry.point.Point object at 0x114a2c9a0&gt;,
+ &lt;shapely.geometry.point.Point object at 0x114a2cd60&gt;,
+ &lt;shapely.geometry.point.Point object at 0x114a2ceb0&gt;,
+ &lt;shapely.geometry.point.Point object at 0x160191160&gt;,
+ &lt;shapely.geometry.point.Point object at 0x160191430&gt;,
  ...
- &lt;shapely.geometry.point.Point object at 0x1653df580&gt;,
- &lt;shapely.geometry.point.Point object at 0x1653df5e0&gt;,
- &lt;shapely.geometry.point.Point object at 0x1653df640&gt;,
- &lt;shapely.geometry.point.Point object at 0x1653df6a0&gt;,
- &lt;shapely.geometry.point.Point object at 0x1653df700&gt;,
- &lt;shapely.geometry.point.Point object at 0x1653df760&gt;,
- &lt;shapely.geometry.point.Point object at 0x1653df7c0&gt;,
- &lt;shapely.geometry.point.Point object at 0x1653df820&gt;,
- &lt;shapely.geometry.point.Point object at 0x1653df880&gt;,
- &lt;shapely.geometry.point.Point object at 0x1653df8e0&gt;]
+ &lt;shapely.geometry.point.Point object at 0x160304610&gt;,
+ &lt;shapely.geometry.point.Point object at 0x160304670&gt;,
+ &lt;shapely.geometry.point.Point object at 0x1603046d0&gt;,
+ &lt;shapely.geometry.point.Point object at 0x160304730&gt;,
+ &lt;shapely.geometry.point.Point object at 0x160304790&gt;,
+ &lt;shapely.geometry.point.Point object at 0x1603047f0&gt;,
+ &lt;shapely.geometry.point.Point object at 0x160304850&gt;,
+ &lt;shapely.geometry.point.Point object at 0x1603048b0&gt;,
+ &lt;shapely.geometry.point.Point object at 0x160304910&gt;,
+ &lt;shapely.geometry.point.Point object at 0x160304970&gt;]
 Length: 4405, dtype: geometry
 </pre></div>
 </div>
@@ -1442,10 +1458,10 @@ Length: 4405, dtype: bool
             <p class="prev-next-title">Filtering and groupby</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../../additional_lectures/Debugging/debugging_lesson.html" title="next page">
+    <a class='right-next' id="next-link" href="static_visualization_matplotlib.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Debugging</p>
+        <p class="prev-next-title">Static Visualization with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

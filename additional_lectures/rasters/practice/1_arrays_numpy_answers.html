@@ -137,8 +137,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../lessons/raster_data/index.html">
-   Raster Data
+  <a class="reference internal" href="../../../lessons/gridded_data/index.html">
+   Gridded Data
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -147,18 +147,29 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../lessons/raster_data/1_xarray.html">
-     Lesson 4, Raster data
+    <a class="reference internal" href="../../../lessons/gridded_data/1_xarray.html">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray
+      </span>
+     </code>
+     Library
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../lessons/raster_data/2_xarray_computation.html">
-     Lesson 5, Gridded Data
+    <a class="reference internal" href="../../../lessons/gridded_data/2_xarray_computation.html">
+     Starting Computations
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../lessons/raster_data/3_xarray_groupby.html">
-     Lesson 6, Gridded Data
+    <a class="reference internal" href="../../../lessons/gridded_data/3_xarray_groupby.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray
+      </span>
+     </code>
+     Groupby
     </a>
    </li>
   </ul>
@@ -194,6 +205,16 @@ const thebe_selector_output = ".output, .cell_output"
      <code class="docutils literal notranslate">
       <span class="pre">
        geopandas
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../lessons/tabular_data/static_visualization_matplotlib.html">
+     Static Visualization with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib
       </span>
      </code>
     </a>
@@ -264,11 +285,6 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Visualization/1_static_viz_with_matplotlib.html">
-     Static Data Visualization in Python
-    </a>
-   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Visualization/2_building_on_matplotlib.html">
      Building on top of
@@ -352,7 +368,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../lessons/index_practice_raster.html">
-   Raster Data Practice
+   Gridded Data Practice
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
@@ -361,7 +377,7 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../lessons/raster_data/practice/1_xarray_practice.html">
+    <a class="reference internal" href="../../../lessons/gridded_data/practice/1_xarray_practice.html">
      <code class="docutils literal notranslate">
       <span class="pre">
        xarray
@@ -371,7 +387,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../lessons/raster_data/practice/2_xarray_practice.html">
+    <a class="reference internal" href="../../../lessons/gridded_data/practice/2_xarray_practice.html">
      <code class="docutils literal notranslate">
       <span class="pre">
        xarray
@@ -1016,9 +1032,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[96, 84, 47, 96,  5, 79, 73, 25,  6, 48],
-       [57, 67,  1, 17, 91, 75, 52, 39, 56,  4],
-       [27, 20, 93, 70, 11, 94, 27, 11,  9,  5]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[69, 84, 79, 96, 89, 29, 39, 68, 85, 18],
+       [ 4, 40, 33, 31, 62, 70, 49, 84, 37, 66],
+       [82, 41, 25,  8,  0, 27, 83, 48, 87, 63]])
 </pre></div>
 </div>
 </div>
@@ -1036,7 +1052,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>79
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>29
 </pre></div>
 </div>
 </div>
@@ -1052,13 +1068,13 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 92,  21,  54, ...,  53,  63,  36],
-       [ 14,  88,  18, ...,  28,  46,  16],
-       [ 59,  85, 102, ..., 104,  47,  36],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 82,  62,  89, ...,  76,  16,  34],
+       [ 38,  41,  84, ...,  92,  86,  97],
+       [ 76,  39,  11, ...,  98,  97,  76],
        ...,
-       [ 51,  60,  46, ...,  36,  80, 104],
-       [104,  87,  73, ...,  21,  95,  67],
-       [100,  96,  67, ...,  78,  44,  88]])
+       [ 15,  75,  65, ...,  27,  70,  56],
+       [ 90,  30,  55, ...,  66,  28,  60],
+       [104,  44,  67, ...,  68,  60,  96]])
 </pre></div>
 </div>
 </div>
@@ -1143,7 +1159,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50.098
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>48.85483333333333
 </pre></div>
 </div>
 </div>
@@ -1155,7 +1171,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>29.03943403948041
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.768798375535642
 </pre></div>
 </div>
 </div>
@@ -1205,45 +1221,45 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[46., 44., 20., ..., 77., 32.,  1.],
-        [69., 38., 55., ..., 20., 40., 97.],
-        [70., 89., 76., ..., 46., 20., 51.],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[42., 76., 35., ...,  9., 88., 83.],
+        [40.,  6., 38., ..., 63., 29., 77.],
+        [14.,  3., 96., ..., 23., 50.,  1.],
         ...,
-        [ 8., 32., 56., ..., 31., 37., 39.],
-        [95., 16., 16., ..., 53., 10., 89.],
-        [82., 40., 57., ..., 16., 33., 84.]],
+        [53.,  7., 27., ..., 89., 29., 36.],
+        [35., 97., 71., ..., 87., 91., 11.],
+        [30., 82., 69., ..., 55., 36., 70.]],
 
-       [[49., 29., 40., ..., 86., 42., 13.],
-        [19., 82., 62., ...,  3., 73., 10.],
-        [31., 79., 17., ..., 97.,  6., 87.],
+       [[ 8., 29., 30., ..., 47., 36., 25.],
+        [55., 62., 32., ..., 19., 19., 86.],
+        [16., 29.,  8., ..., 88., 84., 12.],
         ...,
-        [53., 13., 84., ..., 36., 93., 43.],
-        [21.,  8., 31., ..., 73., 99., 40.],
-        [ 9., 71., 34., ..., 25., 13., 81.]],
+        [34., 60., 55., ..., 31., 51., 88.],
+        [97., 32., 90., ..., 83., 77., 49.],
+        [81., 15., 27., ..., 85., 11., 97.]],
 
-       [[97., 87.,  3., ..., 66., 48., 58.],
-        [87., 56., 95., ..., 90., 82., 96.],
-        [54., 64., 68., ..., 49., 58., 96.],
+       [[69., 84., 53., ..., 86., 45., 90.],
+        [92., 68., 42., ..., 29., 34., 95.],
+        [29., 90., 70., ..., 49., 71.,  0.],
         ...,
-        [39.,  9., 21., ...,  3., 53., 85.],
-        [63., 15., 46., ..., 27., 14., 97.],
-        [ 3., 15., 93., ..., 67.,  2., 57.]],
+        [ 0., 13., 97., ..., 49., 98., 72.],
+        [ 0.,  4., 50., ..., 26., 58., 53.],
+        [33., 91., 65., ..., 33., 71., 40.]],
 
-       [[84., 37., 40., ..., 62., 40., 19.],
-        [36., 56., 72., ..., 57., 76., 52.],
-        [33., 32., 99., ..., 66., 48., 68.],
+       [[78., 96., 93., ..., 86., 75., 27.],
+        [85., 81.,  4., ..., 22., 35., 49.],
+        [30., 59., 40., ..., 50., 97., 60.],
         ...,
-        [24., 89., 75., ..., 98., 68., 96.],
-        [ 7., 49., 17., ...,  8., 93., 30.],
-        [69., 55., 87., ..., 74.,  1.,  8.]],
+        [63., 47., 53., ..., 89., 37., 45.],
+        [11., 57., 77., ..., 49., 26., 78.],
+        [91., 46., 49., ..., 13., 76., 54.]],
 
-       [[38., 11., 85., ..., 66., 61., 57.],
-        [23., 43., 64., ..., 91., 95., 91.],
-        [13., 61., 37., ..., 79., 77., 87.],
+       [[37., 15., 16., ..., 26., 30., 26.],
+        [93., 30., 63., ...,  4., 54., 18.],
+        [35., 89., 24., ..., 38., 68.,  0.],
         ...,
-        [56., 30., 10., ..., 82., 96., 16.],
-        [25., 15., 36., ..., 60., 12., 24.],
-        [76., 45., 98., ..., 74., 68., 28.]]])
+        [17., 11., 61., ..., 40., 97., 38.],
+        [63., 31., 90., ..., 39., 59., 31.],
+        [72., 21., 83., ..., 28., 70.,  6.]]])
 </pre></div>
 </div>
 </div>
@@ -1258,25 +1274,25 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[98, 99, 99, 93, 99, 97, 95, 99, 99, 99, 98, 99, 95, 99, 94, 97,
-         93, 99, 97, 97, 97, 97, 98, 98, 98, 96, 94, 99, 97, 98, 99, 99,
-         98, 98, 99, 98, 98, 94, 86, 99]],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[96, 99, 96, 99, 97, 98, 96, 97, 99, 94, 96, 93, 99, 99, 97, 99,
+         99, 87, 97, 98, 98, 89, 92, 99, 99, 99, 97, 96, 98, 95, 92, 97,
+         95, 92, 92, 99, 95, 90, 99, 99]],
 
-       [[99, 97, 92, 93, 81, 98, 99, 98, 99, 94, 99, 99, 97, 98, 97, 99,
-         98, 99, 98, 97, 99, 99, 98, 92, 96, 95, 99, 95, 86, 97, 97, 96,
-         99, 99, 99, 98, 96, 97, 99, 93]],
+       [[99, 90, 99, 96, 88, 95, 95, 94, 97, 97, 94, 94, 95, 95, 92, 99,
+         96, 98, 92, 98, 98, 95, 98, 98, 97, 96, 97, 98, 97, 93, 96, 95,
+         94, 99, 90, 99, 92, 94, 91, 99]],
 
-       [[97, 95, 95, 92, 99, 99, 92, 94, 93, 97, 97, 99, 99, 95, 95, 97,
-         98, 99, 97, 98, 95, 99, 97, 95, 99, 96, 99, 93, 98, 95, 97, 98,
-         99, 95, 99, 99, 99, 97, 99, 97]],
+       [[97, 99, 97, 96, 90, 99, 96, 97, 92, 97, 94, 98, 97, 98, 99, 94,
+         99, 92, 96, 98, 99, 97, 92, 96, 94, 97, 95, 98, 98, 91, 99, 99,
+         96, 98, 95, 85, 98, 92, 98, 95]],
 
-       [[86, 99, 99, 99, 99, 93, 97, 96, 98, 98, 99, 99, 99, 99, 92, 99,
-         95, 95, 99, 97, 94, 97, 96, 99, 95, 82, 98, 99, 95, 99, 91, 94,
-         97, 96, 94, 94, 93, 99, 93, 97]],
+       [[99, 97, 93, 96, 96, 95, 98, 98, 96, 97, 95, 99, 94, 97, 93, 83,
+         98, 98, 98, 93, 90, 98, 99, 96, 98, 92, 98, 96, 97, 91, 98, 96,
+         98, 99, 92, 98, 91, 89, 97, 93]],
 
-       [[98, 99, 98, 98, 87, 95, 99, 92, 99, 99, 98, 99, 98, 91, 97, 97,
-         98, 98, 84, 97, 92, 96, 96, 98, 97, 96, 97, 84, 99, 92, 99, 98,
-         95, 98, 99, 99, 99, 97, 97, 95]]])
+       [[98, 89, 99, 98, 98, 99, 99, 94, 99, 92, 92, 96, 98, 99, 96, 98,
+         99, 99, 97, 98, 99, 98, 97, 99, 87, 99, 96, 96, 98, 99, 97, 98,
+         98, 96, 98, 99, 99, 97, 99, 99]]])
 </pre></div>
 </div>
 </div>

@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Static Data Visualization in Python" href="1_static_viz_with_matplotlib.html" />
+    <link rel="next" title="Building on top of matplotlib" href="2_building_on_matplotlib.html" />
     <link rel="prev" title="Accessing Data" href="../rasters/3_accessing_coordinates.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -138,8 +138,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../lessons/raster_data/index.html">
-   Raster Data
+  <a class="reference internal" href="../../lessons/gridded_data/index.html">
+   Gridded Data
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -148,18 +148,29 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../lessons/raster_data/1_xarray.html">
-     Lesson 4, Raster data
+    <a class="reference internal" href="../../lessons/gridded_data/1_xarray.html">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray
+      </span>
+     </code>
+     Library
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../lessons/raster_data/2_xarray_computation.html">
-     Lesson 5, Gridded Data
+    <a class="reference internal" href="../../lessons/gridded_data/2_xarray_computation.html">
+     Starting Computations
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../lessons/raster_data/3_xarray_groupby.html">
-     Lesson 6, Gridded Data
+    <a class="reference internal" href="../../lessons/gridded_data/3_xarray_groupby.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray
+      </span>
+     </code>
+     Groupby
     </a>
    </li>
   </ul>
@@ -195,6 +206,16 @@ const thebe_selector_output = ".output, .cell_output"
      <code class="docutils literal notranslate">
       <span class="pre">
        geopandas
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lessons/tabular_data/static_visualization_matplotlib.html">
+     Static Visualization with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib
       </span>
      </code>
     </a>
@@ -265,11 +286,6 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1_static_viz_with_matplotlib.html">
-     Static Data Visualization in Python
-    </a>
-   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2_building_on_matplotlib.html">
      Building on top of
@@ -353,7 +369,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../lessons/index_practice_raster.html">
-   Raster Data Practice
+   Gridded Data Practice
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
@@ -362,7 +378,7 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../lessons/raster_data/practice/1_xarray_practice.html">
+    <a class="reference internal" href="../../lessons/gridded_data/practice/1_xarray_practice.html">
      <code class="docutils literal notranslate">
       <span class="pre">
        xarray
@@ -372,7 +388,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../lessons/raster_data/practice/2_xarray_practice.html">
+    <a class="reference internal" href="../../lessons/gridded_data/practice/2_xarray_practice.html">
      <code class="docutils literal notranslate">
       <span class="pre">
        xarray
@@ -583,7 +599,6 @@ const thebe_selector_output = ".output, .cell_output"
 <h1>Visualization<a class="headerlink" href="#visualization" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="1_static_viz_with_matplotlib.html">Static Data Visualization in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2_building_on_matplotlib.html">Building on top of <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="3_dynamic_visualization.html">Dynamic Visualization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="viewing_images.html">Viewing Images</a></li>
@@ -623,10 +638,10 @@ const thebe_selector_output = ".output, .cell_output"
             <p class="prev-next-title">Accessing Data</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="1_static_viz_with_matplotlib.html" title="next page">
+    <a class='right-next' id="next-link" href="2_building_on_matplotlib.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Static Data Visualization in Python</p>
+        <p class="prev-next-title">Building on top of <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
