@@ -22,6 +22,7 @@ parts:
         - file: lessons/tabular_data/1_pandas
         - file: lessons/tabular_data/2_filtering_groupby
         - file: lessons/tabular_data/3_geopandas
+        - file: lessons/tabular_data/static_visualization_matplotlib
 
   - caption: Additional Lectures
     chapters:
@@ -35,7 +36,6 @@ parts:
         - file: additional_lectures/rasters/3_accessing_coordinates
     - file: additional_lectures/Visualization/index.md
       sections:
-        - file: additional_lectures/Visualization/1_static_viz_with_matplotlib
         - file: additional_lectures/Visualization/2_building_on_matplotlib
         - file: additional_lectures/Visualization/3_dynamic_visualization
         - file: additional_lectures/Visualization/viewing_images
