@@ -24,10 +24,9 @@ Go to the [Anaconda website](https://docs.anaconda.com/anaconda/install/index.ht
 
 2. Configure your base environment
 **Part A**
-Add conda-forge as an anaconda channel and set it as the default
+Add conda-forge as an anaconda channel.
 ```
 conda config --add channels conda-forge
-conda config --set channel_priority strict
 ```
 
 **Part B**
@@ -37,13 +36,18 @@ install -n base nb_conda_kernels
 install -n base -c conda-forge jupyterlab
 ```
 
+After installing the two packages above, you can set `conda-forge` to be your default channel.
+```
+conda config --set channel_priority strict
+```
+_Note: You could do this step right after adding `conda-forge` as a channel, but some issues have been reported due to `nb_conda_kernels` using the Conda Forge installation in this case. The safest route is to set the channel priority after installing `nb_conda_kernels` and `jupyterlab`._
+
 3. Create a work environment
 From the root of this repository, run the command:
 ```
 conda env create -f environment.yml
 ```
 This will create a new enviornment called `sarp` with all the packages that are used in this repository in it. It may take several minutes for the dependencies to solve.
-
 
 ## Opening your work environment
 From a new command line window (or your **base** conda environment) run:
