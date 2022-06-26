@@ -1,6 +1,6 @@
 # SARP Lessons
 
-This repository holds the Jupyter notebooks that were used for instruction during the [NASA SARP summer internship](https://www.nasa.gov/centers/ames/earthscience/programs/airbornescience/studentairborneresearchprogram).
+This repository holds the less content that is used for instruction during the [NASA Student Airborne Research Program (SARP)](https://www.nasa.gov/centers/ames/earthscience/programs/airbornescience/studentairborneresearchprogram)  summer internship.
 
 ## Organization
 The content is organized into a few folders:

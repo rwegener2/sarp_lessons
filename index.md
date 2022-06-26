@@ -1,16 +1,23 @@
-# Welcome to the SARP Programming Website
+# Welcome to SARP Programming
 
-[SARP](https://www.nasa.gov/centers/ames/earthscience/programs/airbornescience/studentairborneresearchprogram) is a NASA-run reasearch intership for earth science undergraduates held in California, USA every summer. This website hosts content for the programming portion of the internship.
+The [NASA Student Airborne Research Program (SARP)](https://www.nasa.gov/centers/ames/earthscience/programs/airbornescience/studentairborneresearchprogram) is a reasearch internship for earth science undergraduates held in California, USA every summer. The program is an 8-week long program for students to get hands on experience with NASA research and data. This website hosts the online content for the programming instruction for the internship.
 
-The contents of this site include:
+## Website Organization
+The contents of this website is split into three sections:
 
-* lessons - notebooks used in a lesson during the first two weeks, coding-intenstive part of the internship. Many lessons include practie problems and answers in that section below
-* additional lectures - less formal notebooks accompanying more sporadic as-needed instruction throughout the summer
-* practice sheets - notebooks with practice problems to accompany some of the lessons
+* **Lessons** - Notebooks used for a lesson during the two code-intensive weeks. Many lessons include practice problems and answers in the Practice Sheets section
+* **Additional Lectures** - Less formal notebooks accompanying more sporadic as-needed instruction throughout the summer
+* **Practice Sheets** - Notebooks with practice problems to accompany some of the lessons
 
-Lessons are divided into two groups:
-1. gridded data - data that fills a mesh represting data in space. These are often satellite images
-2. tabular data - data with rows and columns; the type of data that would fit in an excel sheet
+### Data Format Tracks
+The Lessons section is divided into subsections based on data format. The two data format groups for SARP are:
+1. gridded data - data in an array format that representing information in space. This format is often used for satellite images or model output.
+2. tabular data - data with rows and columns. This is data that would fit well in an excel sheet
+
+There is also a General Python section, which contains material relevant for anyone learning Python. In SARP everyone will work on the General Python section together, then we will split into two groups based on the two data formats described above.
+
+
+## Table of Contents
 
 ```{tableofcontents}
 ```

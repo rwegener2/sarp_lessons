@@ -1,11 +1,10 @@
 # Gridded Data
 
-Lessons on working with data on a grid.
+Lessons on working with multidimensional array data. A description of the two data tracks used on this website can be found on the [homepage](../../index.md).
 
-We are going to call data in this section "gridded". Very raw low-level remote sensing data may not be truly gridded, because sensor points may overlap. However, we are still going to use this word to broadely emcompass, "data that is representing an x and y plane in space".
+## Semantics: Gridded vs. Raster Data
+We are going to call data in this section "gridded". This means that the data can be stored in a multidimenaional array, but it makes no assumption about how the array cells are organized in space. Raw low-level remote sensing data may not be truly gridded, because sensor points may overlap. However, we are still going to use this word to broadely emcompass, "data that is representing an x and y plane in space".
 
-We may also call this group "raster data". Raster data is usually considered to be equidistant grids, so that you don't have to store information about every single latitude and longitude. The data in this module is not going to assume that the points on the grid are equidistant. More rastser-specific resources can be found in the Additional Lectures section.
+In the past I have called this group "raster data", which is often used to refer to higher level satellite data. I think the term "raster" differs from the term "gridded" in that raster data is usually considered to be equidistant grids. This means that you don't have to store information about every single latitude and longitude, but it excludes data in certain projections. 
 
-I have used the definintion that rasters have equally spaced grid points, so the spatial locations of each value don't need to be stored.
-
-I installed dask to use the `open_mfdataset()` function -- add it to the `environment.yml`.
+In the end I don't think there is a clear de facto standard for how to delineate between these overlapping data formats. In this website, general multi-dimensional data processing with `xarray` will be in this section, called Gridded Data. Raster-specific resources can be found in the Additional Lectures section, which uses `rasterio`.
