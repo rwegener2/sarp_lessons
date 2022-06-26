@@ -1,4 +1,4 @@
-# Raster data lessons
+# Raster Data Lessons
 
 ```{tableofcontents}
 ```

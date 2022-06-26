@@ -95,7 +95,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../index.html">
-   Welcome to the SARP Programming Website
+   Welcome to SARP Programming
   </a>
  </li>
 </ul>
@@ -246,7 +246,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../additional_lectures/rasters/index.html">
-   Raster data lessons
+   Raster Data Lessons
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -577,6 +577,19 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#semantics-gridded-vs-raster-data">
+   Semantics: Gridded vs. Raster Data
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -589,6 +602,19 @@ const thebe_selector_output = ".output, .cell_output"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#semantics-gridded-vs-raster-data">
+   Semantics: Gridded vs. Raster Data
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -597,11 +623,13 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="gridded-data">
 <h1>Gridded Data<a class="headerlink" href="#gridded-data" title="Permalink to this headline">¶</a></h1>
-<p>Lessons on working with data on a grid.</p>
-<p>We are going to call data in this section “gridded”. Very raw low-level remote sensing data may not be truly gridded, because sensor points may overlap. However, we are still going to use this word to broadely emcompass, “data that is representing an x and y plane in space”.</p>
-<p>We may also call this group “raster data”. Raster data is usually considered to be equidistant grids, so that you don’t have to store information about every single latitude and longitude. The data in this module is not going to assume that the points on the grid are equidistant. More rastser-specific resources can be found in the Additional Lectures section.</p>
-<p>I have used the definintion that rasters have equally spaced grid points, so the spatial locations of each value don’t need to be stored.</p>
-<p>I installed dask to use the <code class="docutils literal notranslate"><span class="pre">open_mfdataset()</span></code> function – add it to the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code>.</p>
+<p>Lessons on working with multidimensional array data. A description of the two data tracks used on this website can be found on the <a class="reference internal" href="../../index.html"><span class="doc std std-doc">homepage</span></a>.</p>
+<section id="semantics-gridded-vs-raster-data">
+<h2>Semantics: Gridded vs. Raster Data<a class="headerlink" href="#semantics-gridded-vs-raster-data" title="Permalink to this headline">¶</a></h2>
+<p>We are going to call data in this section “gridded”. This means that the data can be stored in a multidimenaional array, but it makes no assumption about how the array cells are organized in space. Raw low-level remote sensing data may not be truly gridded, because sensor points may overlap. However, we are still going to use this word to broadely emcompass, “data that is representing an x and y plane in space”.</p>
+<p>In the past I have called this group “raster data”, which is often used to refer to higher level satellite data. I think the term “raster” differs from the term “gridded” in that raster data is usually considered to be equidistant grids. This means that you don’t have to store information about every single latitude and longitude, but it excludes data in certain projections.</p>
+<p>In the end I don’t think there is a clear de facto standard for how to delineate between these overlapping data formats. In this website, general multi-dimensional data processing with <code class="docutils literal notranslate"><span class="pre">xarray</span></code> will be in this section, called Gridded Data. Raster-specific resources can be found in the Additional Lectures section, which uses <code class="docutils literal notranslate"><span class="pre">rasterio</span></code>.</p>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
