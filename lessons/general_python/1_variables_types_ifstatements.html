@@ -246,7 +246,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../additional_lectures/rasters/index.html">
-   Raster data lessons
+   Raster Data Lessons
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -945,7 +945,7 @@ this will print second
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;this will print first&#39;</span><span class="p">)</span>
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># Wait 3 seconds</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;this will print second&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1019,16 +1019,21 @@ print #3 Arbor Day
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">7</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">9</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;y is &#39;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is &#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;y is &#39;</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39; and x is &#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>a) y is 9 and x is 7</p>
+<p>b) y is 11 and x is 9</p>
+<p>c) y is 9 and x is 9</p>
+<p>d) y is 11 and x is 7</p>
+<p>e) y is 7 and x is 9</p>
 </div>
 </section>
 </section>
 <section id="data-types">
 <h2>🧩 Data Types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h2>
-<p>So far in our code we have used text and numbers as our values.  When we talk about our values we often refer to their <strong>data type</strong>.  “text” and “number” aren’t actually data types in Python, but they do have corresponding data types:</p>
+<p>So far in our code we have used text and numbers as our values.  When we talk about our values we often refer to their <strong>data type</strong>.  A data type is a way of classifying a value in Python that allows the computer to understand what it can do with the value.</p>
+<p>“text” and “number” aren’t actually data types in Python, but they do have corresponding data types:</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Python Data Type</p></th>
@@ -1091,7 +1096,7 @@ print #3 Arbor Day
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_7534</span><span class="o">/</span><span class="mf">98516794.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_10392</span><span class="o">/</span><span class="mf">98516794.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Capitalization matters</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">x</span> <span class="o">=</span> <span class="n">true</span>
 
@@ -1123,9 +1128,23 @@ print #3 Arbor Day
 <span class="n">z</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="n">i</span> <span class="o">=</span> <span class="mf">3.0</span>
 <span class="n">j</span> <span class="o">=</span> <span class="s1">&#39;2&#39;</span>
+<span class="n">k</span> <span class="o">=</span> <span class="s2">&quot;true&quot;</span>
 </pre></div>
 </div>
 </div>
+<p>Why do we care about data types? The data type helps the computer understand what types of operations it can do on a value. Consider the + operation. Let’s say we have the following variables:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;cat&#39;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;fish&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>What is the difference between <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+</span> <span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span></code>? Does <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span></code> even make sense? Try them out on your own.</p>
+<p>Try it again and this time use a <code class="docutils literal notranslate"><span class="pre">\</span></code> sign. What error do you get when you do <code class="docutils literal notranslate"><span class="pre">a/b</span></code>?</p>
 <div class="note admonition">
 <p class="admonition-title">💡 Key Ideas</p>
 <p>We categorize our variables using data types.  This helps us understand what the expected values are.</p>
@@ -1221,6 +1240,11 @@ print #3 Arbor Day
 <li><p><code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">==</span> <span class="pre">8</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">6</span> <span class="pre">!=</span> <span class="pre">3+3</span></code></p></li>
 </ol>
+<p>a) True, True, False</p>
+<p>b) True, False, True</p>
+<p>c) False, True, False</p>
+<p>d) False, True, True</p>
+<p>e) True, True, True</p>
 </div>
 <div class="note admonition">
 <p class="admonition-title">💡 Key Ideas</p>
@@ -1341,13 +1365,12 @@ print #3 Arbor Day
 <ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">&lt;=</span> <span class="pre">6</span> <span class="pre">and</span> <span class="pre">5</span> <span class="pre">!=</span> <span class="pre">5</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">4</span> <span class="pre">&gt;</span> <span class="pre">5</span> <span class="pre">or</span> <span class="pre">5</span> <span class="pre">&lt;</span> <span class="pre">6</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">&gt;</span> <span class="pre">5</span> <span class="pre">or</span> <span class="pre">5</span> <span class="pre">&gt;</span> <span class="pre">6</span></code></p></li>
 </ol>
 </div>
 <div class="note admonition">
 <p class="admonition-title">💡 Key Ideas</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">and</span></code> and <code class="docutils literal notranslate"><span class="pre">or</span></code> are ways to compare groups of things at the same time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">and</span></code> and <code class="docutils literal notranslate"><span class="pre">or</span></code> are ways to compare multiple conditions at the same time.</p></li>
 <li><p>When using <code class="docutils literal notranslate"><span class="pre">and</span></code> you are asking if <strong>all</strong> of the items are true.  When using <code class="docutils literal notranslate"><span class="pre">or</span></code> you are asking if any <strong>one</strong> of the items is true.</p></li>
 </ul>
 </div>
@@ -1434,11 +1457,16 @@ print #3 Arbor Day
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;basic&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>a) acidic</p>
+<p>b) neutral</p>
+<p>c) basic</p>
+<p>d) acidicneutralbasic</p>
+<p>e) acidicbasic</p>
 </div>
 <div class="note admonition">
 <p class="admonition-title">💡 Key Ideas</p>
 <ul class="simple">
-<li><p>If statements allow us to do something with a comparison.</p></li>
+<li><p>If statements allow us to change how our code is executing based on a condition.</p></li>
 <li><p>If statements use indenting as syntax and can also include <code class="docutils literal notranslate"><span class="pre">elif</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code>. Code exits the if statement as soon as it finds the first True statement.</p></li>
 </ul>
 </div>

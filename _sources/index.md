@@ -1,6 +1,6 @@
 # Welcome to SARP Programming
 
-The [NASA Student Airborne Research Program (SARP)](https://www.nasa.gov/centers/ames/earthscience/programs/airbornescience/studentairborneresearchprogram) is a reasearch internship for earth science undergraduates held in California, USA every summer. The program is an 8-week long program for students to get hands on experience with NASA research and data. This website hosts the online content for the programming instruction for the internship.
+The [NASA Student Airborne Research Program (SARP)](https://www.nasa.gov/centers/ames/earthscience/programs/airbornescience/studentairborneresearchprogram) is a reasearch internship for earth science undergraduates held in California, USA every summer. It is an 8-week long program for students to get hands on experience with NASA research and data. This website hosts the online content for the programming instruction for the internship.
 
 ## Website Organization
 The contents of this website is split into three sections:
