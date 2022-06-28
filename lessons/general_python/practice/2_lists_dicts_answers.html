@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Lists and Dictionaries Practice &#8212; SARP Programming Lessons</title>
+    <title>Lists and Dictionaries Answers &#8212; SARP Programming Lessons</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -246,7 +246,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../additional_lectures/rasters/index.html">
-   Raster data lessons
+   Raster Data Lessons
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -332,7 +332,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2_lists_dicts_practice.html">
-     Lists and Dictionaries Answers
+     Lists and Dictionaries Practice
     </a>
    </li>
    <li class="toctree-l2">
@@ -352,7 +352,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Lists and Dictionaries Practice
+     Lists and Dictionaries Answers
     </a>
    </li>
    <li class="toctree-l2">
@@ -665,7 +665,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Lists and Dictionaries Practice</h1>
+                <h1>Lists and Dictionaries Answers</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -762,8 +762,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><strong>Part 1</strong> - most approachable place to start.  Practices syntax and concepts</p></li>
 <li><p><strong>Part 2</strong> - a step up from part 1.  Integrates concepts from accross the lesson in more applied scenarios</p></li>
 </ul>
-<section class="tex2jax_ignore mathjax_ignore" id="lists-and-dictionaries-practice">
-<h1>Lists and Dictionaries Practice<a class="headerlink" href="#lists-and-dictionaries-practice" title="Permalink to this headline">¶</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="lists-and-dictionaries-answers">
+<h1>Lists and Dictionaries Answers<a class="headerlink" href="#lists-and-dictionaries-answers" title="Permalink to this headline">¶</a></h1>
 <section id="part-1">
 <h2>Part 1<a class="headerlink" href="#part-1" title="Permalink to this headline">¶</a></h2>
 <section id="lists">
@@ -779,17 +779,17 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <ol class="simple">
-<li><p>Create a list which contains some fake data, for example relative humidity measurements. Include a print statement which displays <code class="docutils literal notranslate"><span class="pre">Number</span> <span class="pre">of</span> <span class="pre">samples</span> <span class="pre">is:</span> <span class="pre">x</span></code> where <code class="docutils literal notranslate"><span class="pre">x</span></code> is calculated based on the number of items in your list.</p></li>
+<li><p>Write a line of code to figure out how many foods are in your list. Write a print statement which displays <code class="docutils literal notranslate"><span class="pre">Number</span> <span class="pre">of</span> <span class="pre">foods</span> <span class="pre">is:</span> <span class="pre">___</span></code> where the __ space is calculated based on the number of items in your list.</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rel_humidity</span> <span class="o">=</span> <span class="p">[</span><span class="mi">54</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">35</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of samples is: &#39;</span><span class="p">,</span> <span class="n">rel_humidity</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pastries</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;bagels&#39;</span><span class="p">,</span> <span class="s1">&#39;baklava&#39;</span><span class="p">,</span> <span class="s1">&#39;croissant&#39;</span><span class="p">,</span> <span class="s1">&#39;msemen&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of foods is: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">pastries</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of samples is:  [54, 23, 65, 34, 35]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of foods is:  4
 </pre></div>
 </div>
 </div>
@@ -807,7 +807,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/f8/rh42xb3d1tnbw2bxsjwgym1c0000gn/T/ipykernel_7571/276101631.py&quot;</span><span class="gt">, line </span><span class="mi">4</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/f8/rh42xb3d1tnbw2bxsjwgym1c0000gn/T/ipykernel_6680/276101631.py&quot;</span><span class="gt">, line </span><span class="mi">4</span>
     <span class="n">pollutants</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;co&quot; &#39;</span><span class="n">co2</span><span class="s1">&#39;, &#39;</span><span class="n">no2</span><span class="s1">&#39;, &#39;</span><span class="n">o3</span><span class="s1">&#39;]</span>
                         <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -830,7 +830,6 @@ const thebe_selector_output = ".output, .cell_output"
 </ol>
 <ul class="simple">
 <li><p>red</p></li>
-<li><p>your favorite color</p></li>
 <li><p>blue, yellow, white (together)</p></li>
 </ul>
 <div class="cell docutils container">
@@ -848,18 +847,6 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;red&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colors</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;yellow&#39;
 </pre></div>
 </div>
 </div>
@@ -890,7 +877,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_7571</span><span class="o">/</span><span class="mf">1183633172.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_6680</span><span class="o">/</span><span class="mf">1183633172.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Problem: there is no value at index 4.  The last item in this list is at index 3.</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">pollutants</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;co&#39;</span><span class="p">,</span> <span class="s1">&#39;co2&#39;</span><span class="p">,</span> <span class="s1">&#39;no2&#39;</span><span class="p">,</span> <span class="s1">&#39;o3&#39;</span><span class="p">]</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">pollutants</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
@@ -946,32 +933,18 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <ol class="simple">
-<li><p><a class="reference external" href="https://towardsdatascience.com/python-list-methods-fa7c53010300">This article</a> linked in the lecture describes a few common list methods.  Scroll down to where the article talks about <code class="docutils literal notranslate"><span class="pre">sort()</span></code> and apply that to our <code class="docutils literal notranslate"><span class="pre">pollutants</span></code> list.  Sort first forward and then in reverse, alphabetically.</p></li>
+<li><p><a class="reference external" href="https://towardsdatascience.com/python-list-methods-fa7c53010300">This article</a> linked in the lecture describes a few common list methods.  Scroll down to where the article talks about <code class="docutils literal notranslate"><span class="pre">pop()</span></code> and apply that to our <code class="docutils literal notranslate"><span class="pre">pollutants</span></code> list by removing ‘co’ from the list.</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sorting forward</span>
-<span class="n">pollutants</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="n">pollutants</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">pollutants</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;co&#39;, &#39;co2&#39;, &#39;nox&#39;, &#39;o3&#39;]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sorting in reverse</span>
-<span class="n">pollutants</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">pollutants</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;o3&#39;, &#39;nox&#39;, &#39;co2&#39;, &#39;co&#39;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;co2&#39;, &#39;nox&#39;, &#39;o3&#39;]
 </pre></div>
 </div>
 </div>
@@ -1056,7 +1029,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/f8/rh42xb3d1tnbw2bxsjwgym1c0000gn/T/ipykernel_7571/2441494028.py&quot;</span><span class="gt">, line </span><span class="mi">5</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/f8/rh42xb3d1tnbw2bxsjwgym1c0000gn/T/ipykernel_6680/2441494028.py&quot;</span><span class="gt">, line </span><span class="mi">5</span>
     <span class="s1">&#39;zenith&#39;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
     <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -1096,7 +1069,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;built-in method keys of dict object at 0x1084ba500&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;built-in method keys of dict object at 0x106380640&gt;
 </pre></div>
 </div>
 </div>
@@ -1302,7 +1275,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_7571</span><span class="o">/</span><span class="mf">3006024255.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_6680</span><span class="o">/</span><span class="mf">3006024255.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Rename the the key `ages_50_75` -- in one step</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">state_info</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">][</span><span class="s1">&#39;ages_50_75&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">state_info</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;ages_over_50&#39;</span><span class="p">)</span>
 
