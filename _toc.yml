@@ -58,6 +58,7 @@ parts:
       sections:
         - file: lessons/gridded_data/practice/1_xarray_practice
         - file: lessons/gridded_data/practice/2_xarray_practice
+        - file: lessons/gridded_data/practice/1_xarray_answers
     - file: lessons/index_practice_tabular.md
       title: Tabular Data Practice
       sections:
