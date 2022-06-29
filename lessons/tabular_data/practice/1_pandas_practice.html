@@ -246,7 +246,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../additional_lectures/rasters/index.html">
-   Raster data lessons
+   Raster Data Lessons
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -332,7 +332,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../general_python/practice/2_lists_dicts_practice.html">
-     Lists and Dictionaries Answers
+     Lists and Dictionaries Practice
     </a>
    </li>
    <li class="toctree-l2">
@@ -352,7 +352,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../general_python/practice/2_lists_dicts_answers.html">
-     Lists and Dictionaries Practice
+     Lists and Dictionaries Answers
     </a>
    </li>
    <li class="toctree-l2">
@@ -610,20 +610,27 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#part-2">
-   Part 2
+  <a class="reference internal nav-link" href="#filepaths">
+   Filepaths
   </a>
   <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#relative-filepaths">
-     Relative Filepaths
-    </a>
-   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#absolute-filepaths">
      Absolute Filepaths
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relative-filepaths">
+     Relative Filepaths
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-2">
+   Part 2
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#question-1">
      Question 1
@@ -699,20 +706,27 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#part-2">
-   Part 2
+  <a class="reference internal nav-link" href="#filepaths">
+   Filepaths
   </a>
   <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#relative-filepaths">
-     Relative Filepaths
-    </a>
-   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#absolute-filepaths">
      Absolute Filepaths
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relative-filepaths">
+     Relative Filepaths
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-2">
+   Part 2
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#question-1">
      Question 1
@@ -778,28 +792,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <ol class="simple">
-<li><p>Print just the Depth column from the dataframe.  What is the data type of that that subset of data?</p></li>
+<li><p>Print just the Depth column from the dataframe.  What is the data type of that subset of data?</p></li>
 </ol>
-<p>Check your answer using <code class="docutils literal notranslate"><span class="pre">type()</span></code></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">earthquake_df</span><span class="p">)</span>  <span class="c1"># Put your answer to #2 in place of `earthquake_df`</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_7714</span><span class="o">/</span><span class="mf">616807763.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Example</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">type</span><span class="p">(</span><span class="n">earthquake_df</span><span class="p">)</span>  <span class="c1"># Put your answer to #2 in place of `earthquake_df`</span>
-
-<span class="ne">NameError</span>: name &#39;earthquake_df&#39; is not defined
-</pre></div>
-</div>
-</div>
-</div>
+<p>Check your answer using <code class="docutils literal notranslate"><span class="pre">type()</span></code> (Ex. <code class="docutils literal notranslate"><span class="pre">type(earthquake_df)</span></code>)</p>
 </section>
 <section id="accessing-values-in-dataframes">
 <h3>Accessing values in Dataframes<a class="headerlink" href="#accessing-values-in-dataframes" title="Permalink to this headline">¶</a></h3>
@@ -833,34 +828,53 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Googling practice: Find the number of earthquakes that each of the regions in the dataframe had.</p></li>
 </ol>
 <p>In other words answer the question, “how many earthquakes occured in California?”, “how many earthquakes occured in the phillipeans?”, etc.</p>
-<p>If you’re looking for a place to start googling, try the phrase: “pandas dataframe number of occurances of a value”.</p>
-<p><em><strong>Hint</strong> Check out <a class="reference external" href="https://www.marsja.se/pandas-count-occurrences-in-column-unique-values/">this</a> piece of the internet</em></p>
+<div class="note dropdown admonition">
+<p class="admonition-title">Hint</p>
+<ul class="simple">
+<li><p>Googling suggestion: “pandas dataframe number of occurances of a value”</p></li>
+<li><p>Website suggestion: Check out <a class="reference external" href="https://www.marsja.se/pandas-count-occurrences-in-column-unique-values/">this</a> piece of the internet</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="filepaths">
+<h2>Filepaths<a class="headerlink" href="#filepaths" title="Permalink to this headline">¶</a></h2>
+<p>You have been given a laminated piece of paper with the following file structure on it. This file structure is an abbreviated version of the file structure of the SARP laptops. <code class="docutils literal notranslate"><span class="pre">...</span></code> represents additional folder contents which are not shown in this diagram.</p>
+<p><img alt="Folder structure" src="../../../_images/SARP_computer_structure.jpg" /></p>
+<p>To help you determine the filepaths you can use the provided laminated sheet with the filepath on it. For each path, do the following:</p>
+<ol class="simple">
+<li><p>Circle the file that you are finding the path to</p></li>
+<li><p>Circle the starting location of your file path. What will the starting location always be for an absolute filepath?  For a relative filepath, underline the file you are starting from and circle the starting directory.</p></li>
+<li><p>Write down the starting directory For a relative filepath. In this step there is 1 possible option for an absolute filepath and 2 options for a relative filepath</p></li>
+<li><p>Trace the lines from the starting directory to the end file. Whenever you cross a directory add the name of the directory to your filepath, followed by a <code class="docutils literal notranslate"><span class="pre">\</span></code>.</p></li>
+<li><p>Add the name of the file to the end of the filepath</p></li>
+</ol>
+<section id="absolute-filepaths">
+<h3>Absolute Filepaths<a class="headerlink" href="#absolute-filepaths" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">geopandas.ipynb</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shrubland_change_Jan2022-Dec2006.mp4</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dramatic_chipmunk.gif</span></code></p></li>
+</ol>
+</section>
+<section id="relative-filepaths">
+<h3>Relative Filepaths<a class="headerlink" href="#relative-filepaths" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">example_code.py</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">dramatic_chipmunk.gif</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">geopandas.ipynb</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">CAcountymap.geojson</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">extract_features.ipynb</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">aviris_f1806t01p00r02_img</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">geopandas.ipynb</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">aviris_f1806t01p00r02_img</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">classify_shrublands.ipynb</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">dramatic_chipmunk.gif</span></code></p></li>
+</ol>
 </section>
 </section>
 <section id="part-2">
 <h2>Part 2<a class="headerlink" href="#part-2" title="Permalink to this headline">¶</a></h2>
-<p>Give the absolute and relative filepaths between each of the following sets of files in the diagram:</p>
-<p><img alt="Folder structure" src="../../../_images/computer_structure.png" /></p>
-<section id="relative-filepaths">
-<h3>Relative Filepaths<a class="headerlink" href="#relative-filepaths" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Type_wetland -&gt; CityDataset</p></li>
-<li><p>Datasets -&gt; Type_Plants</p></li>
-<li><p>Type_Plants -&gt; Doc1.txt</p></li>
-</ul>
-</section>
-<section id="absolute-filepaths">
-<h3>Absolute Filepaths<a class="headerlink" href="#absolute-filepaths" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>CityDataset</p></li>
-<li><p>Type_Plants</p></li>
-<li><p>Doc1.txt</p></li>
-</ul>
 <p>Please run the following cells to have access to the sample USGS data before you start the practice problems.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read in the data</span>
-<span class="n">water_vars</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/englewood_3_12_21_usgs_water.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">water_vars</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/englewood_3_12_21_usgs_water.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
 <span class="c1"># There are a lot of variables here, so let&#39;s shorten our dataframe to a few variables</span>
 <span class="n">water_vars</span> <span class="o">=</span> <span class="n">water_vars</span><span class="p">[[</span><span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;210920_00060&#39;</span><span class="p">,</span> <span class="s1">&#39;210922_00010&#39;</span><span class="p">,</span> <span class="s1">&#39;210924_00300&#39;</span><span class="p">,</span> <span class="s1">&#39;210925_00400&#39;</span><span class="p">]]</span>
 <span class="c1"># Get rid of the first row of hard-coded datatype info</span>
@@ -874,76 +888,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_7714</span><span class="o">/</span><span class="mf">760720733.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Read in the data</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">water_vars</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/englewood_3_12_21_usgs_water.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># There are a lot of variables here, so let&#39;s shorten our dataframe to a few variables</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">water_vars</span> <span class="o">=</span> <span class="n">water_vars</span><span class="p">[[</span><span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;210920_00060&#39;</span><span class="p">,</span> <span class="s1">&#39;210922_00010&#39;</span><span class="p">,</span> <span class="s1">&#39;210924_00300&#39;</span><span class="p">,</span> <span class="s1">&#39;210925_00400&#39;</span><span class="p">]]</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Get rid of the first row of hard-coded datatype info</span>
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/util/_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">309</span>                     <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">310</span>                 <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">311</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">312</span> 
-<span class="g g-Whitespace">    </span><span class="mi">313</span>         <span class="k">return</span> <span class="n">wrapper</span>
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">584</span>     <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">585</span> 
-<span class="ne">--&gt; </span><span class="mi">586</span>     <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">587</span> 
-<span class="g g-Whitespace">    </span><span class="mi">588</span> 
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">480</span> 
-<span class="g g-Whitespace">    </span><span class="mi">481</span>     <span class="c1"># Create the parser.</span>
-<span class="ne">--&gt; </span><span class="mi">482</span>     <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">483</span> 
-<span class="g g-Whitespace">    </span><span class="mi">484</span>     <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">__init__</span><span class="nt">(self, f, engine, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">809</span>             <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">810</span> 
-<span class="ne">--&gt; </span><span class="mi">811</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">812</span> 
-<span class="g g-Whitespace">    </span><span class="mi">813</span>     <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_make_engine</span><span class="nt">(self, engine)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1038</span>             <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1039</span>         <span class="c1"># error: Too many arguments for &quot;ParserBase&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1040</span>         <span class="k">return</span> <span class="n">mapping</span><span class="p">[</span><span class="n">engine</span><span class="p">](</span><span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>  <span class="c1"># type: ignore[call-arg]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1041</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1042</span>     <span class="k">def</span> <span class="nf">_failover_to_python</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/parsers/c_parser_wrapper.py</span> in <span class="ni">__init__</span><span class="nt">(self, src, **kwds)</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span> 
-<span class="g g-Whitespace">     </span><span class="mi">50</span>         <span class="c1"># open handles</span>
-<span class="ne">---&gt; </span><span class="mi">51</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_open_handles</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-<span class="g g-Whitespace">     </span><span class="mi">53</span> 
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/parsers/base_parser.py</span> in <span class="ni">_open_handles</span><span class="nt">(self, src, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">220</span>         <span class="n">Let</span> <span class="n">the</span> <span class="n">readers</span> <span class="nb">open</span> <span class="n">IOHandles</span> <span class="n">after</span> <span class="n">they</span> <span class="n">are</span> <span class="n">done</span> <span class="k">with</span> <span class="n">their</span> <span class="n">potential</span> <span class="n">raises</span><span class="o">.</span>
-<span class="g g-Whitespace">    </span><span class="mi">221</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">222</span><span class="s2">         self.handles = get_handle(</span>
-<span class="g g-Whitespace">    </span><span class="mi">223</span><span class="s2">             src,</span>
-<span class="g g-Whitespace">    </span><span class="mi">224</span><span class="s2">             &quot;r&quot;,</span>
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/common.py</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">700</span><span class="s2">         if ioargs.encoding and &quot;b&quot; not in ioargs.mode:</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span><span class="s2">             # Encoding</span>
-<span class="ne">--&gt; </span><span class="mi">702</span><span class="s2">             handle = open(</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span><span class="s2">                 handle,</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span><span class="s2">                 ioargs.mode,</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./data/englewood_3_12_21_usgs_water.tsv&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -952,17 +896,125 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_7714</span><span class="o">/</span><span class="mf">1489515612.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
-</pre></div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>datetime</th>
+      <th>discharge</th>
+      <th>temperature (C)</th>
+      <th>dissolved oxygen</th>
+      <th>pH</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>2021-03-12 00:00</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.3</td>
+      <td>8.1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2021-03-12 00:15</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.2</td>
+      <td>8.1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2021-03-12 00:30</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.2</td>
+      <td>8.1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2021-03-12 00:45</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.1</td>
+      <td>8.1</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2021-03-12 01:00</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.1</td>
+      <td>8.1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>142</th>
+      <td>2021-03-13 11:15</td>
+      <td>42.6</td>
+      <td>6.7</td>
+      <td>9.8</td>
+      <td>7.9</td>
+    </tr>
+    <tr>
+      <th>143</th>
+      <td>2021-03-13 11:30</td>
+      <td>42.6</td>
+      <td>6.7</td>
+      <td>9.9</td>
+      <td>7.9</td>
+    </tr>
+    <tr>
+      <th>144</th>
+      <td>2021-03-13 11:45</td>
+      <td>42.6</td>
+      <td>6.7</td>
+      <td>10.2</td>
+      <td>7.9</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>2021-03-13 12:00</td>
+      <td>46.5</td>
+      <td>6.7</td>
+      <td>10.3</td>
+      <td>7.9</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>2021-03-13 12:15</td>
+      <td>NaN</td>
+      <td>6.6</td>
+      <td>10.3</td>
+      <td>7.9</td>
+    </tr>
+  </tbody>
+</table>
+<p>146 rows × 5 columns</p>
+</div></div></div>
 </div>
-</div>
-</div>
-</section>
 <section id="question-1">
 <h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h3>
 <p><strong>A)</strong> Return the mean of all the columns</p>
@@ -981,13 +1033,18 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_7714</span><span class="o">/</span><span class="mf">277869961.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Example: View a column</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;temperature (C)&#39;</span><span class="p">]</span>
-
-<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1      8.1
+2      8.1
+3      8.1
+4      8.1
+5      8.1
+      ... 
+142    6.7
+143    6.7
+144    6.7
+145    6.7
+146    6.6
+Name: temperature (C), Length: 146, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -996,17 +1053,6 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example: Assign a column (Set all the values to 6)</span>
 <span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">6</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_7714</span><span class="o">/</span><span class="mf">3127507886.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Example: Assign a column (Set all the values to 6)</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">6</span>
-
-<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1037,14 +1083,25 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>B)</strong> Use the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dropna.html"><code class="docutils literal notranslate"><span class="pre">.dropna()</span></code></a> method to replace all of the columns that have any NaN values.  (<em>That will require an argument in the function.</em>)</p>
 <p><strong>C)</strong> Drop any rows that have NaN values.  Assign that dataframe to a new variable called <code class="docutils literal notranslate"><span class="pre">water_vars_nonan</span></code>.</p>
 <p><strong>D)</strong> Replace all of the NaN values in this dataframe with a different value to indicate NaN: -999.</p>
-<p><em>Google hint: try “pandas dataframe replace null values”</em></p>
-<p><em>Stronger hint: <a class="reference external" href="https://www.geeksforgeeks.org/python-pandas-dataframe-fillna-to-replace-null-values-in-dataframe/">here’s a page</a></em></p>
+<div class="note dropdown admonition">
+<p class="admonition-title">Hint</p>
+<ul class="simple">
+<li><p>Google phrase suggestion: try “pandas dataframe replace null values”</p></li>
+<li><p>Website suggestion: <a class="reference external" href="https://www.geeksforgeeks.org/python-pandas-dataframe-fillna-to-replace-null-values-in-dataframe/">here’s a page</a></p></li>
+</ul>
+</div>
 <p>(After completing this problem please re-run the original data import cells at the top of Part 2 to set your data back to using NaNs.)</p>
 </section>
 <section id="question-4">
 <h3>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h3>
 <p>Sort the rows in the dataframe by discharge, with the largest discharge on the top (descending order).</p>
-<p><em>Google support: “pandas sort values” search.  Or, <a class="reference external" href="https://stackoverflow.com/questions/37787698/how-to-sort-pandas-dataframe-from-one-column">this stackoverflow article</a> would be helpful, the second answer in particular.</em></p>
+<div class="note dropdown admonition">
+<p class="admonition-title">Hint</p>
+<ul class="simple">
+<li><p>Google phrase suggestion: “pandas sort values”</p></li>
+<li><p>Website suggestion: <a class="reference external" href="https://stackoverflow.com/questions/37787698/how-to-sort-pandas-dataframe-from-one-column">this stackoverflow article</a> would be helpful, the second answer in particular</p></li>
+</ul>
+</div>
 </section>
 <section id="question-5">
 <h3>Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">¶</a></h3>
@@ -1055,19 +1112,6 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="n">water_vars</span> <span class="o">=</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]))</span>
 <span class="c1"># Drop the old datetime column</span>
 <span class="n">water_vars</span> <span class="o">=</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;datetime&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_7714</span><span class="o">/</span><span class="mf">3608221564.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Set a new index.  Instead of integers 0+, use the datetime instead</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">water_vars</span> <span class="o">=</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]))</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Drop the old datetime column</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">water_vars</span> <span class="o">=</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;datetime&#39;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
 </pre></div>
 </div>
 </div>

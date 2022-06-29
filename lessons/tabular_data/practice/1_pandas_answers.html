@@ -246,7 +246,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../additional_lectures/rasters/index.html">
-   Raster data lessons
+   Raster Data Lessons
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -332,7 +332,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../general_python/practice/2_lists_dicts_practice.html">
-     Lists and Dictionaries Answers
+     Lists and Dictionaries Practice
     </a>
    </li>
    <li class="toctree-l2">
@@ -352,7 +352,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../general_python/practice/2_lists_dicts_answers.html">
-     Lists and Dictionaries Practice
+     Lists and Dictionaries Answers
     </a>
    </li>
    <li class="toctree-l2">
@@ -610,6 +610,33 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filepaths">
+   Filepaths
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#absolute-filepaths">
+     Absolute Filepaths
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relative-filepaths">
+     Relative Filepaths
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Absolute Filepaths
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Relative Filepaths
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#part-2">
    Part 2
   </a>
@@ -686,6 +713,33 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#inspecting-and-aggregations">
      Inspecting and Aggregations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filepaths">
+   Filepaths
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#absolute-filepaths">
+     Absolute Filepaths
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relative-filepaths">
+     Relative Filepaths
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Absolute Filepaths
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Relative Filepaths
     </a>
    </li>
   </ul>
@@ -1040,6 +1094,47 @@ Name: region, dtype: int64
 <p><em><strong>Hint</strong> Check out <a class="reference external" href="https://www.marsja.se/pandas-count-occurrences-in-column-unique-values/">this</a> piece of the internet</em></p>
 </section>
 </section>
+<section id="filepaths">
+<h2>Filepaths<a class="headerlink" href="#filepaths" title="Permalink to this headline">¶</a></h2>
+<p>You have been given a laminated piece of paper with the following file structure on it. This file structure is an abbreviated version of the file structure of the SARP laptops. <code class="docutils literal notranslate"><span class="pre">...</span></code> represents additional folder contents which are not shown in this diagram.</p>
+<p><img alt="Folder structure" src="../../../_images/SARP_computer_structure.jpg" /></p>
+<section id="absolute-filepaths">
+<h3>Absolute Filepaths<a class="headerlink" href="#absolute-filepaths" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">geopandas.ipynb</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shrubland_change_Jan2022-Dec2006.mp4</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dramatic_chipmunk.gif</span></code></p></li>
+</ol>
+</section>
+<section id="relative-filepaths">
+<h3>Relative Filepaths<a class="headerlink" href="#relative-filepaths" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">example_code.py</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">dramatic_chipmunk.gif</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">geopandas.ipynb</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">CAcountymap.geojson</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">extract_features.ipynb</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">aviris_f1806t01p00r02_img</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">geopandas.ipynb</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">aviris_f1806t01p00r02_img</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">classify_shrublands.ipynb</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">dramatic_chipmunk.gif</span></code></p></li>
+</ol>
+</section>
+<section id="id1">
+<h3>Absolute Filepaths<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">C:\\Users\SARP\Documents\projects\lessons\geopandas.ipynb</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C:\\Users\SARP\Documents\projects\crop_detection\visualizations\shrubland_change_Jan2022-Dec2006.mp4</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C:\\Users\SARP\Desktop\dramatic_chipmunk.gif</span></code></p></li>
+</ol>
+</section>
+<section id="id2">
+<h3>Relative Filepaths<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>from <code class="docutils literal notranslate"><span class="pre">example_code.py</span></code>: <code class="docutils literal notranslate"><span class="pre">.\dramatic_chipmunk.gif</span></code></p></li>
+<li><p>from <code class="docutils literal notranslate"><span class="pre">geopandas.ipynb</span></code>: <code class="docutils literal notranslate"><span class="pre">.\data\CAcountymap.geojson</span></code></p></li>
+<li><p>from <code class="docutils literal notranslate"><span class="pre">extract_features.ipynb</span></code>: <code class="docutils literal notranslate"><span class="pre">..\data\aviris_f1806t01p00r02_img</span></code></p></li>
+<li><p>from <code class="docutils literal notranslate"><span class="pre">geopandas.ipynb</span></code>: <code class="docutils literal notranslate"><span class="pre">..\crop_detection\data\aviris_f1806t01p00r02_img</span></code></p></li>
+<li><p>from <code class="docutils literal notranslate"><span class="pre">classify_shrublands.ipynb</span></code>:  <code class="docutils literal notranslate"><span class="pre">..\..\..\..\Desktop\dramatic_chipmunk.gif</span></code></p></li>
+</ol>
+</section>
+</section>
 <section id="part-2">
 <h2>Part 2<a class="headerlink" href="#part-2" title="Permalink to this headline">¶</a></h2>
 <p>Please run the following cells to have access to the sample USGS data before you start the practice problems.</p>
@@ -1063,7 +1158,7 @@ Name: region, dtype: int64
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_7703</span><span class="o">/</span><span class="mf">760720733.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15844</span><span class="o">/</span><span class="mf">760720733.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Read in the data</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">water_vars</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/englewood_3_12_21_usgs_water.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># There are a lot of variables here, so let&#39;s shorten our dataframe to a few variables</span>
@@ -1140,7 +1235,7 @@ Name: region, dtype: int64
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_7703</span><span class="o">/</span><span class="mf">1489515612.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15844</span><span class="o">/</span><span class="mf">1489515612.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span>
 
 <span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
@@ -1167,7 +1262,7 @@ Name: region, dtype: int64
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_7703</span><span class="o">/</span><span class="mf">277869961.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15844</span><span class="o">/</span><span class="mf">277869961.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Example: View a column</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;temperature (C)&#39;</span><span class="p">]</span>
 
@@ -1186,7 +1281,7 @@ Name: region, dtype: int64
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_7703</span><span class="o">/</span><span class="mf">3127507886.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15844</span><span class="o">/</span><span class="mf">3127507886.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Example: Assign a column (Set all the values to 6)</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">6</span>
 
@@ -1219,7 +1314,7 @@ Name: region, dtype: int64
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_7703</span><span class="o">/</span><span class="mf">2932681084.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15844</span><span class="o">/</span><span class="mf">2932681084.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span>
 
 <span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
@@ -1254,7 +1349,7 @@ Name: region, dtype: int64
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_7703</span><span class="o">/</span><span class="mf">1472900729.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15844</span><span class="o">/</span><span class="mf">1472900729.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;discharge&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
@@ -1279,7 +1374,7 @@ Name: region, dtype: int64
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_7703</span><span class="o">/</span><span class="mf">3608221564.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15844</span><span class="o">/</span><span class="mf">3608221564.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Set a new index.  Instead of integers 0+, use the datetime instead</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">water_vars</span> <span class="o">=</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]))</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Drop the old datetime column</span>
@@ -1301,7 +1396,7 @@ Name: region, dtype: int64
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_7703</span><span class="o">/</span><span class="mf">4037684626.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15844</span><span class="o">/</span><span class="mf">4037684626.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 
 <span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
@@ -1319,7 +1414,7 @@ Name: region, dtype: int64
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_7703</span><span class="o">/</span><span class="mf">2731776781.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15844</span><span class="o">/</span><span class="mf">2731776781.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;dissolved oxygen&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 
 <span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
@@ -1342,7 +1437,7 @@ Name: region, dtype: int64
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_7703</span><span class="o">/</span><span class="mf">384250520.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15844</span><span class="o">/</span><span class="mf">384250520.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;discharge&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 
 <span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined

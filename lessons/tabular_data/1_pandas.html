@@ -246,7 +246,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../additional_lectures/rasters/index.html">
-   Raster data lessons
+   Raster Data Lessons
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -332,7 +332,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../general_python/practice/2_lists_dicts_practice.html">
-     Lists and Dictionaries Answers
+     Lists and Dictionaries Practice
     </a>
    </li>
    <li class="toctree-l2">
@@ -352,7 +352,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../general_python/practice/2_lists_dicts_answers.html">
-     Lists and Dictionaries Practice
+     Lists and Dictionaries Answers
     </a>
    </li>
    <li class="toctree-l2">
@@ -853,16 +853,16 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <section id="context">
 <h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
-<p>Today we are building up our arsenal of data structures with a really exciting one - the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">Dataframe</span></code>.  This is a data structure that models <strong>tabular data</strong>, or data with rows and columns. Learning this data structure will allow us to start manipulating large datasets of that format, and will allow us to do things that we couldn’t otherwise do in a program like excel.</p>
+<p>Today we are building up our arsenal of data structures with a really exciting one - the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">Dataframe</span></code>.  This is a data structure that models <strong>tabular data</strong>, or data with labelled rows and columns. Learning this data structure will allow us to start manipulating large datasets of that format, and do things that we couldn’t otherwise do in a program like excel.</p>
 <p>Today we will focus on opening and inspecting data, using USGS stream gauge data as an applied example.</p>
-<p><img alt="Summary Slide" src="../../_images/summaryslide_3tabular.jpg" /></p>
+<p><img alt="Summary Slide" src="../../_images/summary_pandas.jpg" /></p>
 </section>
 <section id="libraries">
 <h2>🗃️ Libraries<a class="headerlink" href="#libraries" title="Permalink to this headline">¶</a></h2>
 <p>Today we are going to dig into our first library in Python!  A <strong>library</strong> is a like an “extras” package for a programming language (think Settlers of Catan expansion pack).  It is a set of commands that doesn’t automatically come activated when you use Python, but that you can still use if you just tell Python that you plan to do so.  You let python know you are going to use a library with an <code class="docutils literal notranslate"><span class="pre">import</span></code> statment.  After you do that the additional commands become availble.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Attempting to use the `math` libray before importing</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Attempting to use the `math` library before importing</span>
 <span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -870,8 +870,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_7676</span><span class="o">/</span><span class="mf">642619898.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Attempting to use the `math` libray before importing</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15829</span><span class="o">/</span><span class="mf">1769790478.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Attempting to use the `math` library before importing</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 
 <span class="ne">NameError</span>: name &#39;math&#39; is not defined
@@ -901,6 +901,20 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>Once we have imported the library we can use the new commands that the library contains.  The <code class="docutils literal notranslate"><span class="pre">math</span></code> library was just an example and it isn’t the focus of this lesson, but if you want you can see a list of <code class="docutils literal notranslate"><span class="pre">math</span></code> commands <a class="reference external" href="https://docs.python.org/3/library/math.html">here</a>.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Vocabulary</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text"><strong>Library:</strong> additional coding objects (Ex. functions, data structures) that you can add to your code by importing them</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="note dropdown admonition">
 <p class="admonition-title">🌀 More Info: Standard vs. Non-standard Libraries</p>
 <p>One large chunk of libraries are together referred to as the <strong>Python Standard Library</strong>. These libraries are not a part of the “core” language (everything we can do without import statments) but have still been offically accepted into the Python distribution package and are maintained in the same way as the rest of the core language.  You can read more <a class="reference external" href="https://docs.python.org/3/tutorial/stdlib.html">here</a>.</p>
@@ -928,6 +942,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This line shortens the output. It will be explained more later in the notebook.</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -940,7 +955,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><code class="docutils literal notranslate"><span class="pre">pd.Series</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code></p></li>
 </ol>
-<p><code class="docutils literal notranslate"><span class="pre">Series</span></code> is the simplier of the two structures, but <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code> are more common so that is what you will likely mostly be working with.</p>
+<p>The primary structure of these two is a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> and a <code class="docutils literal notranslate"><span class="pre">Series</span></code> is a simpler version of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>. Knowing that both exist, however, can be helpful when debugging.</p>
 <section id="pd-dataframe">
 <h3><code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code><a class="headerlink" href="#pd-dataframe" title="Permalink to this headline">¶</a></h3>
 <p>A <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <strong>dataframe</strong> is a data structure organized into rows and columns.  Other important parts of the anatomy of a data frame are the columns names and the index.</p>
@@ -1032,7 +1047,14 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Our first dataframe!  We can see that we have 3 columns, with column names <code class="docutils literal notranslate"><span class="pre">temperature</span></code>, <code class="docutils literal notranslate"><span class="pre">humidity</span></code>, and <code class="docutils literal notranslate"><span class="pre">wind_speed</span></code>.  We have 4 data entries, or 4 rows, labeled by our indexes, which in this case are just the numbers 0-3.</p>
 <div class="tip admonition">
 <p class="admonition-title">📝 Check your understanding</p>
-<p>Label the boxed pieces of the dataframe.</p>
+<p>Label the boxed components of the dataframe.</p>
+<p><img alt="Example Pandas Dataframe" src="../../_images/pandas_checkin.png" /></p>
+<p>Answers reference the figure in the order: green, purple, red, orange</p>
+<p>a) (1) 1 row of data, (2) data series, (3) column names, (4) indexes</p>
+<p>b) (1) indexes, (2) data series, (3) 1 row of data, (4) column names</p>
+<p>c) (1) indexes, (2) 1 row of data, (3) data series, (4) column names</p>
+<p>d) (1) column names, (2) data series, (3) 1 row of data, (4) indexes</p>
+<p>e) (1) column names, (2) 1 row of data, (3) data series, (4) indexes</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1220,12 +1242,88 @@ Name: 2, dtype: int64
 </table>
 </div></div></div>
 </div>
+<p><em>The checkins below use the <code class="docutils literal notranslate"><span class="pre">forecast</span></code> dataframe we have been working with.</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">forecast</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;temperature&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">31</span><span class="p">],</span> 
+    <span class="s1">&#39;humidity&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">60</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">80</span><span class="p">],</span>
+    <span class="s1">&#39;wind_speed&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">forecast</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>temperature</th>
+      <th>humidity</th>
+      <th>wind_speed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>25</td>
+      <td>60</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>20</td>
+      <td>65</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>27</td>
+      <td>62</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>31</td>
+      <td>80</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
 <div class="tip admonition">
 <p class="admonition-title">📝 Check your understanding</p>
 <ol class="simple">
-<li><p>What would be the value of <code class="docutils literal notranslate"><span class="pre">forecast['humidity'].iloc[2]</span></code>?</p></li>
-<li><p>What is the datatype of <code class="docutils literal notranslate"><span class="pre">forecast['humidity']</span></code>?</p></li>
+<li><p>Write a line of code to get just the <code class="docutils literal notranslate"><span class="pre">wind_speed</span></code> column.</p></li>
+<li><p>Write a new line of code to get just the row of index 3.</p></li>
 </ol>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">📝 Check your understanding</p>
+<p>What is the value of <code class="docutils literal notranslate"><span class="pre">forecast['humidity'].iloc[2]</span></code>?</p>
+<p>a) the row: 27	62	10</p>
+<p>b) the column: 60  65  62  80</p>
+<p>c) the row: 20	65	9</p>
+<p>d) 65</p>
+<p>e) 62</p>
 </div>
 </section>
 <section id="a-note-about-assigning-dataframes-to-variables">
@@ -1439,12 +1537,7 @@ Name: 2, dtype: int64
       <th>agency_cd</th>
       <th>site_no</th>
       <th>datetime</th>
-      <th>tz_cd</th>
-      <th>210920_00060</th>
-      <th>210920_00060_cd</th>
-      <th>210922_00010</th>
-      <th>210922_00010_cd</th>
-      <th>210924_00300</th>
+      <th>...</th>
       <th>210924_00300_cd</th>
       <th>210925_00400</th>
       <th>210925_00400_cd</th>
@@ -1456,12 +1549,7 @@ Name: 2, dtype: int64
       <td>5s</td>
       <td>15s</td>
       <td>20d</td>
-      <td>6s</td>
-      <td>14n</td>
-      <td>10s</td>
-      <td>14n</td>
-      <td>10s</td>
-      <td>14n</td>
+      <td>...</td>
       <td>10s</td>
       <td>14n</td>
       <td>10s</td>
@@ -1471,12 +1559,7 @@ Name: 2, dtype: int64
       <td>USGS</td>
       <td>06711565</td>
       <td>2021-03-12 00:00</td>
-      <td>MST</td>
-      <td>44.5</td>
-      <td>P</td>
-      <td>8.1</td>
-      <td>P</td>
-      <td>8.3</td>
+      <td>...</td>
       <td>P</td>
       <td>8.1</td>
       <td>P</td>
@@ -1486,12 +1569,7 @@ Name: 2, dtype: int64
       <td>USGS</td>
       <td>06711565</td>
       <td>2021-03-12 00:15</td>
-      <td>MST</td>
-      <td>44.5</td>
-      <td>P</td>
-      <td>8.1</td>
-      <td>P</td>
-      <td>8.2</td>
+      <td>...</td>
       <td>P</td>
       <td>8.1</td>
       <td>P</td>
@@ -1501,12 +1579,7 @@ Name: 2, dtype: int64
       <td>USGS</td>
       <td>06711565</td>
       <td>2021-03-12 00:30</td>
-      <td>MST</td>
-      <td>44.5</td>
-      <td>P</td>
-      <td>8.1</td>
-      <td>P</td>
-      <td>8.2</td>
+      <td>...</td>
       <td>P</td>
       <td>8.1</td>
       <td>P</td>
@@ -1516,12 +1589,7 @@ Name: 2, dtype: int64
       <td>USGS</td>
       <td>06711565</td>
       <td>2021-03-12 00:45</td>
-      <td>MST</td>
-      <td>44.5</td>
-      <td>P</td>
-      <td>8.1</td>
-      <td>P</td>
-      <td>8.1</td>
+      <td>...</td>
       <td>P</td>
       <td>8.1</td>
       <td>P</td>
@@ -1535,23 +1603,13 @@ Name: 2, dtype: int64
       <td>...</td>
       <td>...</td>
       <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
     </tr>
     <tr>
       <th>142</th>
       <td>USGS</td>
       <td>06711565</td>
       <td>2021-03-13 11:15</td>
-      <td>MST</td>
-      <td>42.6</td>
-      <td>P</td>
-      <td>6.7</td>
-      <td>P</td>
-      <td>9.8</td>
+      <td>...</td>
       <td>P</td>
       <td>7.9</td>
       <td>P</td>
@@ -1561,12 +1619,7 @@ Name: 2, dtype: int64
       <td>USGS</td>
       <td>06711565</td>
       <td>2021-03-13 11:30</td>
-      <td>MST</td>
-      <td>42.6</td>
-      <td>P</td>
-      <td>6.7</td>
-      <td>P</td>
-      <td>9.9</td>
+      <td>...</td>
       <td>P</td>
       <td>7.9</td>
       <td>P</td>
@@ -1576,12 +1629,7 @@ Name: 2, dtype: int64
       <td>USGS</td>
       <td>06711565</td>
       <td>2021-03-13 11:45</td>
-      <td>MST</td>
-      <td>42.6</td>
-      <td>P</td>
-      <td>6.7</td>
-      <td>P</td>
-      <td>10.2</td>
+      <td>...</td>
       <td>P</td>
       <td>7.9</td>
       <td>P</td>
@@ -1591,12 +1639,7 @@ Name: 2, dtype: int64
       <td>USGS</td>
       <td>06711565</td>
       <td>2021-03-13 12:00</td>
-      <td>MST</td>
-      <td>46.5</td>
-      <td>P</td>
-      <td>6.7</td>
-      <td>P</td>
-      <td>10.3</td>
+      <td>...</td>
       <td>P</td>
       <td>7.9</td>
       <td>P</td>
@@ -1606,12 +1649,7 @@ Name: 2, dtype: int64
       <td>USGS</td>
       <td>06711565</td>
       <td>2021-03-13 12:15</td>
-      <td>MST</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>6.6</td>
-      <td>P</td>
-      <td>10.3</td>
+      <td>...</td>
       <td>P</td>
       <td>7.9</td>
       <td>P</td>
@@ -1629,12 +1667,12 @@ Name: 2, dtype: int64
 <h3>Filepaths<a class="headerlink" href="#filepaths" title="Permalink to this headline">¶</a></h3>
 <p>Your computer is organized <strong>hierarchically</strong>.
 <img alt="File Structure" src="../../_images/computer_structure.png" /></p>
-<p>Figure <a class="reference external" href="https://www.researchgate.net/figure/Overview-of-structure-of-folders-for-tool_fig1_332775326">from</a></p>
+<p>Figure from <a class="reference external" href="https://www.researchgate.net/figure/Overview-of-structure-of-folders-for-tool_fig1_332775326">ResearchGate</a></p>
 <p>The other part of that data loading statement to take note is the <code class="docutils literal notranslate"><span class="pre">'./data/englewood_3_12_21_usgs_water.tsv'</span></code> part.  This is called the <strong>filepath</strong> and it is a string that describes the location of the data that you want to open.  A few pieces of the anatomy of a filepath to notice:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">/</span></code> - forward slashes signal that you have entered a new folder.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/</span></code> - forward slashes signal that you have entered a new folder. (Windows machines natively use a back slash <code class="docutils literal notranslate"><span class="pre">\</span></code>, but the Anaconda powershell can handle either)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.tsv</span></code> - this is the file extension, which tells us what type of file format the data is stored in an informs us how we open it</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.</span></code> - the period at the beginning tells the computer to start looking for data in the same place tht the code is being run in.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.</span></code> - the period at the beginning tells the computer to start looking for data in the same place that the code is being run in.</p></li>
 </ul>
 <p>Choosing to start your filepath with a <code class="docutils literal notranslate"><span class="pre">.</span></code> is called specificying a <strong>relative filepath</strong>, because you are telling the computer to start looking for the file relative to where the file is being run. If you move this file to another place on your computer and don’t move the data with it the import statment won’t work anymore.  The alternative to a relative filepath is an <strong>aboslute filepath</strong>, in which case you start your file path at the very tippy top of your computer’s organizational structure (the root directory).</p>
 <p>Other vocab notes:</p>
@@ -1648,6 +1686,25 @@ Name: 2, dtype: int64
 <li><p>choose the file named englewood_3_12_21_usgs_water.tsv: <code class="docutils literal notranslate"><span class="pre">'./data/englewood_3_12_21_usgs_water.tsv'</span></code></p></li>
 </ol>
 <p>🎉 And there we have our file</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Vocabulary</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text"><strong>Filepath:</strong> A string that describes the location of a file on a computer. Filepath can be either relative, with respect to a particular file, or absolute, with respect to the highest file in the file structure.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">📝 Check your understanding</p>
+<p>Say you are working in the folder structure shown in the image above.</p>
+<p>What is the absolute relative filepath from the code file <code class="docutils literal notranslate"><span class="pre">PARAMETER2.R</span></code> to the data file <code class="docutils literal notranslate"><span class="pre">CountryDataset</span></code>?</p>
+</div>
 </section>
 <section id="back-to-our-data">
 <h3>Back to our data<a class="headerlink" href="#back-to-our-data" title="Permalink to this headline">¶</a></h3>
@@ -1663,6 +1720,20 @@ Name: 2, dtype: int64
 <span class="n">name_codes</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;210920_00060&#39;</span><span class="p">:</span> <span class="s1">&#39;discharge&#39;</span><span class="p">,</span><span class="s1">&#39;210922_00010&#39;</span><span class="p">:</span> <span class="s1">&#39;temperature&#39;</span><span class="p">,</span> <span class="s1">&#39;210924_00300&#39;</span><span class="p">:</span> <span class="s1">&#39;dissolved oxygen&#39;</span><span class="p">,</span> <span class="s1">&#39;210925_00400&#39;</span><span class="p">:</span> <span class="s1">&#39;pH&#39;</span><span class="p">}</span>
 <span class="n">water_vars</span> <span class="o">=</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">name_codes</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Vocabulary</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text"><strong>Data Cleaning:</strong> The often necessary step of organizing and formatting a data source after it is opened.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1927,7 +1998,7 @@ Some common aggregations:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/f8/rh42xb3d1tnbw2bxsjwgym1c0000gn/T/ipykernel_7676/2541290807.py:1: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/f8/rh42xb3d1tnbw2bxsjwgym1c0000gn/T/ipykernel_15829/2541290807.py:1: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
   water_vars.max()
 </pre></div>
 </div>
