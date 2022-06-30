@@ -769,7 +769,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read in the data</span>
-<span class="n">water_vars</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/englewood_3_12_21_usgs_water.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">water_vars</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/englewood_3_12_21_usgs_water.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
 <span class="c1"># There are a lot of variables here, so let&#39;s shorten our dataframe to a few variables</span>
 <span class="n">water_vars</span> <span class="o">=</span> <span class="n">water_vars</span><span class="p">[[</span><span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;210920_00060&#39;</span><span class="p">,</span> <span class="s1">&#39;210922_00010&#39;</span><span class="p">,</span> <span class="s1">&#39;210924_00300&#39;</span><span class="p">,</span> <span class="s1">&#39;210925_00400&#39;</span><span class="p">]]</span>
 <span class="c1"># Get rid of the first row of hard-coded datatype info</span>
@@ -785,76 +785,6 @@ const thebe_selector_output = ".output, .cell_output"
 
 <span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;dam release&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">water_vars</span><span class="p">))]</span>
 <span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;safety level&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;low&#39;</span><span class="p">,</span> <span class="s1">&#39;medium&#39;</span><span class="p">,</span> <span class="s1">&#39;high&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">water_vars</span><span class="p">))]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_18705</span><span class="o">/</span><span class="mf">477571415.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Read in the data</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">water_vars</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/englewood_3_12_21_usgs_water.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># There are a lot of variables here, so let&#39;s shorten our dataframe to a few variables</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">water_vars</span> <span class="o">=</span> <span class="n">water_vars</span><span class="p">[[</span><span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;210920_00060&#39;</span><span class="p">,</span> <span class="s1">&#39;210922_00010&#39;</span><span class="p">,</span> <span class="s1">&#39;210924_00300&#39;</span><span class="p">,</span> <span class="s1">&#39;210925_00400&#39;</span><span class="p">]]</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Get rid of the first row of hard-coded datatype info</span>
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/util/_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">309</span>                     <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">310</span>                 <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">311</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">312</span> 
-<span class="g g-Whitespace">    </span><span class="mi">313</span>         <span class="k">return</span> <span class="n">wrapper</span>
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">584</span>     <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">585</span> 
-<span class="ne">--&gt; </span><span class="mi">586</span>     <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">587</span> 
-<span class="g g-Whitespace">    </span><span class="mi">588</span> 
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">480</span> 
-<span class="g g-Whitespace">    </span><span class="mi">481</span>     <span class="c1"># Create the parser.</span>
-<span class="ne">--&gt; </span><span class="mi">482</span>     <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">483</span> 
-<span class="g g-Whitespace">    </span><span class="mi">484</span>     <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">__init__</span><span class="nt">(self, f, engine, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">809</span>             <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">810</span> 
-<span class="ne">--&gt; </span><span class="mi">811</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">812</span> 
-<span class="g g-Whitespace">    </span><span class="mi">813</span>     <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_make_engine</span><span class="nt">(self, engine)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1038</span>             <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1039</span>         <span class="c1"># error: Too many arguments for &quot;ParserBase&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1040</span>         <span class="k">return</span> <span class="n">mapping</span><span class="p">[</span><span class="n">engine</span><span class="p">](</span><span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>  <span class="c1"># type: ignore[call-arg]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1041</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1042</span>     <span class="k">def</span> <span class="nf">_failover_to_python</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/parsers/c_parser_wrapper.py</span> in <span class="ni">__init__</span><span class="nt">(self, src, **kwds)</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span> 
-<span class="g g-Whitespace">     </span><span class="mi">50</span>         <span class="c1"># open handles</span>
-<span class="ne">---&gt; </span><span class="mi">51</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_open_handles</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-<span class="g g-Whitespace">     </span><span class="mi">53</span> 
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/parsers/base_parser.py</span> in <span class="ni">_open_handles</span><span class="nt">(self, src, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">220</span>         <span class="n">Let</span> <span class="n">the</span> <span class="n">readers</span> <span class="nb">open</span> <span class="n">IOHandles</span> <span class="n">after</span> <span class="n">they</span> <span class="n">are</span> <span class="n">done</span> <span class="k">with</span> <span class="n">their</span> <span class="n">potential</span> <span class="n">raises</span><span class="o">.</span>
-<span class="g g-Whitespace">    </span><span class="mi">221</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">222</span><span class="s2">         self.handles = get_handle(</span>
-<span class="g g-Whitespace">    </span><span class="mi">223</span><span class="s2">             src,</span>
-<span class="g g-Whitespace">    </span><span class="mi">224</span><span class="s2">             &quot;r&quot;,</span>
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/common.py</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">700</span><span class="s2">         if ioargs.encoding and &quot;b&quot; not in ioargs.mode:</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span><span class="s2">             # Encoding</span>
-<span class="ne">--&gt; </span><span class="mi">702</span><span class="s2">             handle = open(</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span><span class="s2">                 handle,</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span><span class="s2">                 ioargs.mode,</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./data/englewood_3_12_21_usgs_water.tsv&#39;
 </pre></div>
 </div>
 </div>
@@ -897,16 +827,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_18705</span><span class="o">/</span><span class="mf">732696936.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;sample id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">letter_ids</span>
-
-<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <ol class="simple">
 <li><p>Use the new <code class="docutils literal notranslate"><span class="pre">'sample</span> <span class="pre">id'</span></code> column and set it as the index in the <code class="docutils literal notranslate"><span class="pre">water_vars</span></code> dataframe.</p></li>
@@ -914,16 +834,6 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">water_vars</span> <span class="o">=</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;sample id&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_18705</span><span class="o">/</span><span class="mf">2017424127.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span> <span class="o">=</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;sample id&#39;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -935,15 +845,158 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_18705</span><span class="o">/</span><span class="mf">1489515612.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>datetime</th>
+      <th>discharge</th>
+      <th>temperature</th>
+      <th>dissolved oxygen</th>
+      <th>pH</th>
+      <th>dam release</th>
+      <th>safety level</th>
+    </tr>
+    <tr>
+      <th>sample id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>knono</th>
+      <td>2021-03-12 00:00</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.3</td>
+      <td>8.1</td>
+      <td>False</td>
+      <td>low</td>
+    </tr>
+    <tr>
+      <th>hhnvp</th>
+      <td>2021-03-12 00:15</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.2</td>
+      <td>8.1</td>
+      <td>False</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <th>gvpwk</th>
+      <td>2021-03-12 00:30</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.2</td>
+      <td>8.1</td>
+      <td>False</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>pxhau</th>
+      <td>2021-03-12 00:45</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.1</td>
+      <td>8.1</td>
+      <td>False</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>oodmj</th>
+      <td>2021-03-12 01:00</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.1</td>
+      <td>8.1</td>
+      <td>True</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>tqnwz</th>
+      <td>2021-03-13 11:15</td>
+      <td>42.6</td>
+      <td>6.7</td>
+      <td>9.8</td>
+      <td>7.9</td>
+      <td>False</td>
+      <td>low</td>
+    </tr>
+    <tr>
+      <th>ehwwt</th>
+      <td>2021-03-13 11:30</td>
+      <td>42.6</td>
+      <td>6.7</td>
+      <td>9.9</td>
+      <td>7.9</td>
+      <td>False</td>
+      <td>low</td>
+    </tr>
+    <tr>
+      <th>jdlgx</th>
+      <td>2021-03-13 11:45</td>
+      <td>42.6</td>
+      <td>6.7</td>
+      <td>10.2</td>
+      <td>7.9</td>
+      <td>True</td>
+      <td>low</td>
+    </tr>
+    <tr>
+      <th>kcjbh</th>
+      <td>2021-03-13 12:00</td>
+      <td>46.5</td>
+      <td>6.7</td>
+      <td>10.3</td>
+      <td>7.9</td>
+      <td>False</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>krbga</th>
+      <td>2021-03-13 12:15</td>
+      <td>NaN</td>
+      <td>6.6</td>
+      <td>10.3</td>
+      <td>7.9</td>
+      <td>True</td>
+      <td>low</td>
+    </tr>
+  </tbody>
+</table>
+<p>146 rows × 7 columns</p>
+</div></div></div>
 </div>
 <ol class="simple">
 <li><p>Pick a sample id and get the data for just that row.</p></li>
@@ -966,12 +1019,23 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_18705</span><span class="o">/</span><span class="mf">281239708.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ True, False,  True, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+        True, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+        True,  True, False,  True, False, False, False, False, False,
+       False, False, False, False, False, False,  True, False, False,
+       False, False, False, False,  True, False, False, False, False,
+       False, False, False, False, False, False, False,  True,  True,
+       False, False, False,  True, False, False,  True, False, False,
+       False, False, False, False, False,  True, False, False, False,
+       False, False, False, False, False, False, False, False, False,
+       False, False, False, False, False, False,  True, False, False,
+       False, False,  True,  True, False, False, False, False, False,
+       False, False, False,  True, False, False, False, False, False,
+       False, False, False, False, False,  True, False, False, False,
+        True,  True])
 </pre></div>
 </div>
 </div>
@@ -985,15 +1049,247 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_18705</span><span class="o">/</span><span class="mf">4247138914.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">water_vars</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">)]</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>datetime</th>
+      <th>discharge</th>
+      <th>temperature</th>
+      <th>dissolved oxygen</th>
+      <th>pH</th>
+      <th>dam release</th>
+      <th>safety level</th>
+    </tr>
+    <tr>
+      <th>sample id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>knono</th>
+      <td>2021-03-12 00:00</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.3</td>
+      <td>8.1</td>
+      <td>False</td>
+      <td>low</td>
+    </tr>
+    <tr>
+      <th>gvpwk</th>
+      <td>2021-03-12 00:30</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.2</td>
+      <td>8.1</td>
+      <td>False</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>rnvkn</th>
+      <td>2021-03-12 04:30</td>
+      <td>46.5</td>
+      <td>7.5</td>
+      <td>8.0</td>
+      <td>8.1</td>
+      <td>False</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <th>jkevr</th>
+      <td>2021-03-12 11:15</td>
+      <td>44.5</td>
+      <td>6.9</td>
+      <td>10.3</td>
+      <td>7.9</td>
+      <td>False</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <th>zpklp</th>
+      <td>2021-03-12 11:30</td>
+      <td>42.6</td>
+      <td>6.9</td>
+      <td>10.4</td>
+      <td>8.0</td>
+      <td>False</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>zkrmz</th>
+      <td>2021-03-12 12:00</td>
+      <td>42.6</td>
+      <td>7.0</td>
+      <td>10.9</td>
+      <td>8.0</td>
+      <td>True</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>rfkjb</th>
+      <td>2021-03-12 15:00</td>
+      <td>39.0</td>
+      <td>8.4</td>
+      <td>12.9</td>
+      <td>8.2</td>
+      <td>True</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <th>chkme</th>
+      <td>2021-03-12 16:45</td>
+      <td>40.8</td>
+      <td>8.4</td>
+      <td>12.7</td>
+      <td>8.2</td>
+      <td>False</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <th>ktcmo</th>
+      <td>2021-03-12 19:45</td>
+      <td>46.5</td>
+      <td>8.2</td>
+      <td>10.4</td>
+      <td>8.0</td>
+      <td>False</td>
+      <td>low</td>
+    </tr>
+    <tr>
+      <th>bpkdm</th>
+      <td>2021-03-12 20:00</td>
+      <td>46.5</td>
+      <td>8.2</td>
+      <td>10.3</td>
+      <td>8.0</td>
+      <td>False</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <th>xhkfa</th>
+      <td>2021-03-12 21:00</td>
+      <td>46.5</td>
+      <td>8.0</td>
+      <td>9.8</td>
+      <td>7.9</td>
+      <td>True</td>
+      <td>low</td>
+    </tr>
+    <tr>
+      <th>dkiqg</th>
+      <td>2021-03-12 21:45</td>
+      <td>46.5</td>
+      <td>7.9</td>
+      <td>9.4</td>
+      <td>7.9</td>
+      <td>True</td>
+      <td>low</td>
+    </tr>
+    <tr>
+      <th>lsgzk</th>
+      <td>2021-03-12 23:45</td>
+      <td>44.5</td>
+      <td>7.7</td>
+      <td>8.6</td>
+      <td>8.0</td>
+      <td>True</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <th>pdykj</th>
+      <td>2021-03-13 04:30</td>
+      <td>46.5</td>
+      <td>7.5</td>
+      <td>8.2</td>
+      <td>8.0</td>
+      <td>True</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>zckks</th>
+      <td>2021-03-13 05:45</td>
+      <td>46.5</td>
+      <td>7.3</td>
+      <td>8.2</td>
+      <td>7.9</td>
+      <td>True</td>
+      <td>low</td>
+    </tr>
+    <tr>
+      <th>ltkqg</th>
+      <td>2021-03-13 06:00</td>
+      <td>46.5</td>
+      <td>7.2</td>
+      <td>8.2</td>
+      <td>7.9</td>
+      <td>False</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>lkoav</th>
+      <td>2021-03-13 08:15</td>
+      <td>46.5</td>
+      <td>6.9</td>
+      <td>8.5</td>
+      <td>7.8</td>
+      <td>True</td>
+      <td>low</td>
+    </tr>
+    <tr>
+      <th>tvqok</th>
+      <td>2021-03-13 11:00</td>
+      <td>42.6</td>
+      <td>6.7</td>
+      <td>9.7</td>
+      <td>7.9</td>
+      <td>False</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>kcjbh</th>
+      <td>2021-03-13 12:00</td>
+      <td>46.5</td>
+      <td>6.7</td>
+      <td>10.3</td>
+      <td>7.9</td>
+      <td>False</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>krbga</th>
+      <td>2021-03-13 12:15</td>
+      <td>NaN</td>
+      <td>6.6</td>
+      <td>10.3</td>
+      <td>7.9</td>
+      <td>True</td>
+      <td>low</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="groupby">
@@ -1026,15 +1322,67 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_18705</span><span class="o">/</span><span class="mf">2310898237.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;safety level&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>discharge</th>
+      <th>temperature</th>
+      <th>dissolved oxygen</th>
+      <th>pH</th>
+      <th>dam release</th>
+    </tr>
+    <tr>
+      <th>safety level</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>high</th>
+      <td>44.734694</td>
+      <td>7.495745</td>
+      <td>9.446939</td>
+      <td>7.989796</td>
+      <td>0.428571</td>
+    </tr>
+    <tr>
+      <th>low</th>
+      <td>45.200000</td>
+      <td>7.481481</td>
+      <td>9.085185</td>
+      <td>7.966667</td>
+      <td>0.592593</td>
+    </tr>
+    <tr>
+      <th>medium</th>
+      <td>44.395349</td>
+      <td>7.569767</td>
+      <td>9.755814</td>
+      <td>8.013953</td>
+      <td>0.465116</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <ol class="simple">
 <li><p>Find the mean values of all of the columns at each discharge (less meaningful, but just for practice)</p></li>
@@ -1046,15 +1394,83 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_18705</span><span class="o">/</span><span class="mf">603980201.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;discharge&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>temperature</th>
+      <th>dissolved oxygen</th>
+      <th>pH</th>
+      <th>dam release</th>
+    </tr>
+    <tr>
+      <th>discharge</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>39.0</th>
+      <td>8.385714</td>
+      <td>12.957143</td>
+      <td>8.200000</td>
+      <td>0.714286</td>
+    </tr>
+    <tr>
+      <th>40.8</th>
+      <td>8.027273</td>
+      <td>12.309091</td>
+      <td>8.136364</td>
+      <td>0.545455</td>
+    </tr>
+    <tr>
+      <th>42.6</th>
+      <td>7.261538</td>
+      <td>10.807692</td>
+      <td>7.992308</td>
+      <td>0.461538</td>
+    </tr>
+    <tr>
+      <th>44.5</th>
+      <td>7.665385</td>
+      <td>8.778846</td>
+      <td>8.005769</td>
+      <td>0.423077</td>
+    </tr>
+    <tr>
+      <th>46.5</th>
+      <td>7.314583</td>
+      <td>8.820000</td>
+      <td>7.922000</td>
+      <td>0.520000</td>
+    </tr>
+    <tr>
+      <th>48.5</th>
+      <td>7.008333</td>
+      <td>8.216667</td>
+      <td>7.933333</td>
+      <td>0.583333</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <ol class="simple">
 <li><p>Find the number of non-nan observations for each column at each safety level</p></li>
@@ -1066,15 +1482,72 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_18705</span><span class="o">/</span><span class="mf">3628919017.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;safety level&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>datetime</th>
+      <th>discharge</th>
+      <th>temperature</th>
+      <th>dissolved oxygen</th>
+      <th>pH</th>
+      <th>dam release</th>
+    </tr>
+    <tr>
+      <th>safety level</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>high</th>
+      <td>49</td>
+      <td>49</td>
+      <td>47</td>
+      <td>49</td>
+      <td>49</td>
+      <td>49</td>
+    </tr>
+    <tr>
+      <th>low</th>
+      <td>54</td>
+      <td>53</td>
+      <td>54</td>
+      <td>54</td>
+      <td>54</td>
+      <td>54</td>
+    </tr>
+    <tr>
+      <th>medium</th>
+      <td>43</td>
+      <td>43</td>
+      <td>43</td>
+      <td>43</td>
+      <td>43</td>
+      <td>43</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <ol class="simple">
 <li><p>Display the mean values of just the temperature column at each safety level</p></li>
@@ -1086,12 +1559,11 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_18705</span><span class="o">/</span><span class="mf">365052504.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;safety level&quot;</span><span class="p">)[</span><span class="s1">&#39;temperature&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>safety level
+high      7.495745
+low       7.481481
+medium    7.569767
+Name: temperature, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -1103,71 +1575,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p>For the next set of practice problems we are going to use the WAS 2020 SARP data.  Run the following lines of code to import the data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">was_2020_filepath</span> <span class="o">=</span> <span class="s2">&quot;./data/SARP 2020 final.xlsx&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">was_2020_filepath</span> <span class="o">=</span> <span class="s2">&quot;../data/SARP 2020 final.xlsx&quot;</span>
 <span class="n">was_2020</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">was_2020_filepath</span><span class="p">,</span> <span class="s2">&quot;INPUT&quot;</span><span class="p">,</span> <span class="n">skipfooter</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_18705</span><span class="o">/</span><span class="mf">3729768600.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">was_2020_filepath</span> <span class="o">=</span> <span class="s2">&quot;./data/SARP 2020 final.xlsx&quot;</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">was_2020</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">was_2020_filepath</span><span class="p">,</span> <span class="s2">&quot;INPUT&quot;</span><span class="p">,</span> <span class="n">skipfooter</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/util/_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">309</span>                     <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">310</span>                 <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">311</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">312</span> 
-<span class="g g-Whitespace">    </span><span class="mi">313</span>         <span class="k">return</span> <span class="n">wrapper</span>
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/excel/_base.py</span> in <span class="ni">read_excel</span><span class="nt">(io, sheet_name, header, names, index_col, usecols, squeeze, dtype, engine, converters, true_values, false_values, skiprows, nrows, na_values, keep_default_na, na_filter, verbose, parse_dates, date_parser, thousands, comment, skipfooter, convert_float, mangle_dupe_cols, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">362</span>     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">io</span><span class="p">,</span> <span class="n">ExcelFile</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">363</span>         <span class="n">should_close</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="ne">--&gt; </span><span class="mi">364</span>         <span class="n">io</span> <span class="o">=</span> <span class="n">ExcelFile</span><span class="p">(</span><span class="n">io</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="n">engine</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">365</span>     <span class="k">elif</span> <span class="n">engine</span> <span class="ow">and</span> <span class="n">engine</span> <span class="o">!=</span> <span class="n">io</span><span class="o">.</span><span class="n">engine</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">366</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/excel/_base.py</span> in <span class="ni">__init__</span><span class="nt">(self, path_or_buffer, engine, storage_options)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1189</span>                 <span class="n">ext</span> <span class="o">=</span> <span class="s2">&quot;xls&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1190</span>             <span class="k">else</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1191</span>                 <span class="n">ext</span> <span class="o">=</span> <span class="n">inspect_excel_format</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1192</span>                     <span class="n">content_or_path</span><span class="o">=</span><span class="n">path_or_buffer</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span>
-<span class="g g-Whitespace">   </span><span class="mi">1193</span>                 <span class="p">)</span>
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/excel/_base.py</span> in <span class="ni">inspect_excel_format</span><span class="nt">(content_or_path, storage_options)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1068</span>         <span class="n">content_or_path</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">(</span><span class="n">content_or_path</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1069</span> 
-<span class="ne">-&gt; </span><span class="mi">1070</span>     <span class="k">with</span> <span class="n">get_handle</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1071</span>         <span class="n">content_or_path</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span> <span class="n">is_text</span><span class="o">=</span><span class="kc">False</span>
-<span class="g g-Whitespace">   </span><span class="mi">1072</span>     <span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/pandas/io/common.py</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">709</span>         <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">710</span>             <span class="c1"># Binary mode</span>
-<span class="ne">--&gt; </span><span class="mi">711</span>             <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">712</span>         <span class="n">handles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">713</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./data/SARP 2020 final.xlsx&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">was_2020</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_18705</span><span class="o">/</span><span class="mf">150536728.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">was_2020</span>
-
-<span class="ne">NameError</span>: name &#39;was_2020&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1182,15 +1591,316 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_18705</span><span class="o">/</span><span class="mf">142342929.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">was_2020</span><span class="p">[</span><span class="n">was_2020</span><span class="p">[</span><span class="s1">&#39;CO2 (ppmv)&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">420</span><span class="p">]</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;was_2020&#39; is not defined
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Can #</th>
+      <th>Snake can #</th>
+      <th>Location</th>
+      <th>State</th>
+      <th>Box</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Altitude (m)</th>
+      <th>Temp. Celsius</th>
+      <th>Wind Spd (mph)</th>
+      <th>...</th>
+      <th>3-Ethyltoluene (MS)</th>
+      <th>4-Ethyltoluene (MS)</th>
+      <th>2-Ethyltoluene (MS)</th>
+      <th>1,3,5-Trimethylbenzene (MS)</th>
+      <th>1,2,4-Trimethylbenzene (MS)</th>
+      <th>alpha-Pinene (B/MS)</th>
+      <th>beta-Pinene (B/MS)</th>
+      <th>Unnamed: 113</th>
+      <th>Box.1</th>
+      <th>CH4 (ppmv height).1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>7338</td>
+      <td>3716</td>
+      <td>Buffalo Park, Flagstaff, Arizona</td>
+      <td>Arizona</td>
+      <td>37</td>
+      <td>2020-04-24</td>
+      <td>11:44:00</td>
+      <td>2100</td>
+      <td>18</td>
+      <td>5</td>
+      <td>...</td>
+      <td>12</td>
+      <td>16</td>
+      <td>15</td>
+      <td>14</td>
+      <td>22</td>
+      <td>31</td>
+      <td>9</td>
+      <td>NaN</td>
+      <td>37</td>
+      <td>1.916</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5012</td>
+      <td>3702</td>
+      <td>Buffalo Park, Flagstaff, Arizona</td>
+      <td>Arizona</td>
+      <td>37</td>
+      <td>2020-05-01</td>
+      <td>11:16:00</td>
+      <td>2100</td>
+      <td>19</td>
+      <td>16</td>
+      <td>...</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>22</td>
+      <td>-888</td>
+      <td>NaN</td>
+      <td>37</td>
+      <td>1.895</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>5061</td>
+      <td>3703</td>
+      <td>Downtown Sedona, Arizona</td>
+      <td>Arizona</td>
+      <td>37</td>
+      <td>2020-05-01</td>
+      <td>12:40:00</td>
+      <td>1350</td>
+      <td>26</td>
+      <td>8</td>
+      <td>...</td>
+      <td>-888</td>
+      <td>3</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>5</td>
+      <td>26</td>
+      <td>-888</td>
+      <td>NaN</td>
+      <td>37</td>
+      <td>1.907</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>6123</td>
+      <td>3721</td>
+      <td>Mars Hill/Lowell Observatory, Flagstaff, Arizona</td>
+      <td>Arizona</td>
+      <td>37</td>
+      <td>2020-06-03</td>
+      <td>12:50:00</td>
+      <td>2200</td>
+      <td>27</td>
+      <td>8</td>
+      <td>...</td>
+      <td>4</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>6</td>
+      <td>67</td>
+      <td>16</td>
+      <td>NaN</td>
+      <td>37</td>
+      <td>1.887</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>7335</td>
+      <td>3711</td>
+      <td>Downtown Sedona, Arizona</td>
+      <td>Arizona</td>
+      <td>37</td>
+      <td>2020-06-21</td>
+      <td>17:20:00</td>
+      <td>1350</td>
+      <td>36</td>
+      <td>12</td>
+      <td>...</td>
+      <td>34</td>
+      <td>15</td>
+      <td>13</td>
+      <td>16</td>
+      <td>51</td>
+      <td>16</td>
+      <td>-888</td>
+      <td>NaN</td>
+      <td>37</td>
+      <td>1.902</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>898</th>
+      <td>9172</td>
+      <td>2211</td>
+      <td>Elizabeth Park, central Bellingham, Washington</td>
+      <td>Washington</td>
+      <td>22</td>
+      <td>2020-06-05</td>
+      <td>10:59:00</td>
+      <td>22</td>
+      <td>16.1</td>
+      <td>5</td>
+      <td>...</td>
+      <td>5</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>7</td>
+      <td>5</td>
+      <td>-888</td>
+      <td>NaN</td>
+      <td>22</td>
+      <td>2.041</td>
+    </tr>
+    <tr>
+      <th>902</th>
+      <td>9168</td>
+      <td>2208</td>
+      <td>My backyard, rural Bellingham, Washington</td>
+      <td>Washington</td>
+      <td>22</td>
+      <td>2020-07-15</td>
+      <td>10:00:00</td>
+      <td>153</td>
+      <td>17.2</td>
+      <td>0-2mph</td>
+      <td>...</td>
+      <td>4</td>
+      <td>3</td>
+      <td>3</td>
+      <td>-888</td>
+      <td>8</td>
+      <td>121</td>
+      <td>26</td>
+      <td>NaN</td>
+      <td>22</td>
+      <td>1.916</td>
+    </tr>
+    <tr>
+      <th>905</th>
+      <td>5109</td>
+      <td>2601</td>
+      <td>Carl Traeger middle school, Oshkosh, Wisconsin</td>
+      <td>Wisconsin</td>
+      <td>26</td>
+      <td>2020-04-15</td>
+      <td>10:49:00</td>
+      <td>243.84</td>
+      <td>-2.2</td>
+      <td>7</td>
+      <td>...</td>
+      <td>55</td>
+      <td>25</td>
+      <td>17</td>
+      <td>19</td>
+      <td>64</td>
+      <td>47</td>
+      <td>11</td>
+      <td>NaN</td>
+      <td>26</td>
+      <td>1.968</td>
+    </tr>
+    <tr>
+      <th>906</th>
+      <td>7027</td>
+      <td>2616</td>
+      <td>South Park, Oshkosh, Wisconsin</td>
+      <td>Wisconsin</td>
+      <td>26</td>
+      <td>2020-04-15</td>
+      <td>11:01:00</td>
+      <td>231.64</td>
+      <td>-1.1</td>
+      <td>3</td>
+      <td>...</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>4</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>NaN</td>
+      <td>26</td>
+      <td>1.965</td>
+    </tr>
+    <tr>
+      <th>908</th>
+      <td>5131</td>
+      <td>2602</td>
+      <td>South Park, Oshkosh, Wisconsin</td>
+      <td>Wisconsin</td>
+      <td>26</td>
+      <td>2020-04-22</td>
+      <td>12:26:00</td>
+      <td>231.64</td>
+      <td>7.2</td>
+      <td>17</td>
+      <td>...</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>3</td>
+      <td>-888</td>
+      <td>NaN</td>
+      <td>26</td>
+      <td>1.953</td>
+    </tr>
+  </tbody>
+</table>
+<p>420 rows × 116 columns</p>
+</div></div></div>
 </div>
 <p><strong>B)</strong> How many data samples had CO2 over 420?</p>
 </section>
@@ -1204,12 +1914,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_18705</span><span class="o">/</span><span class="mf">4034131888.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">was_2020</span><span class="p">[</span><span class="s1">&#39;Isoprene (E/B)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;was_2020&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>346.80193756727664
 </pre></div>
 </div>
 </div>
@@ -1222,12 +1927,18 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_18705</span><span class="o">/</span><span class="mf">4134182473.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">was_2020</span><span class="p">[</span><span class="n">was_2020</span><span class="p">[</span><span class="s1">&#39;Isoprene (E/B)&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">][</span><span class="s1">&#39;Isoprene (E/B)&#39;</span><span class="p">]</span>
-
-<span class="ne">NameError</span>: name &#39;was_2020&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0        4
+26       5
+27    -888
+35       5
+66       6
+      ... 
+911      5
+912   -888
+915      5
+917      4
+920      4
+Name: Isoprene (E/B), Length: 157, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -1257,12 +1968,49 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_18705</span><span class="o">/</span><span class="mf">3046552385.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">was_2020</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Box&#39;</span><span class="p">)[</span><span class="s1">&#39;CO (ppbv)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;was_2020&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Box
+1     128.652174
+3     141.217391
+4     125.565217
+6     114.333333
+7     138.695652
+8     204.454545
+9     182.045455
+10    122.217391
+12    240.041667
+14    121.818182
+15    136.850000
+16    127.083333
+17    147.826087
+19    137.863636
+22    108.695652
+23    151.958333
+26    119.625000
+27    157.739130
+28    150.391304
+29    152.304348
+30    115.909091
+31    136.125000
+32    120.565217
+34    118.380952
+35    154.318182
+36    159.541667
+37    111.727273
+38    120.285714
+40    121.652174
+41    197.045455
+46    155.136364
+49    102.125000
+50    132.363636
+52    102.625000
+54    101.400000
+55    107.521739
+56    155.590909
+57    143.000000
+60    112.333333
+61    110.260870
+62    133.391304
+Name: CO (ppbv), dtype: float64
 </pre></div>
 </div>
 </div>
@@ -1275,12 +2023,19 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_18705</span><span class="o">/</span><span class="mf">2814038564.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">was_2020</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Weather&#39;</span><span class="p">)[</span><span class="s1">&#39;CH4 (ppmv height)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;was_2020&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Weather
+Clear                            1.892
+Clear and sunny                  1.882
+Clear skies and sunny            1.936
+Clear skies, sunny, warm wind    1.933
+Clear/Sunny                      1.976
+                                 ...  
+sunny sky but hazy               1.980
+sunny, but a bit hazy            1.950
+sunny, hazy                      1.993
+sunny, slightly hazy             1.976
+windy, about to rain             1.932
+Name: CH4 (ppmv height), Length: 87, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -1293,12 +2048,29 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_18705</span><span class="o">/</span><span class="mf">1817776406.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">was_2020</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;State&quot;</span><span class="p">)[</span><span class="s2">&quot;Can #&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;was_2020&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>State
+Arizona           22
+California       204
+Colorado          64
+Connecticut       23
+Florida           22
+Georgia           23
+Illinois          22
+Kentucky          24
+Louisiana         21
+Massachusetts     46
+Minnesota         24
+Missouri          22
+New Jersey        23
+New York          94
+Ohio              22
+Oregon            24
+Texas            113
+Utah              23
+Virginia          66
+Washington        23
+Wisconsin         24
+Name: Can #, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -1318,12 +2090,22 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_18705</span><span class="o">/</span><span class="mf">2886414309.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">was_2020</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;State&quot;</span><span class="p">,</span> <span class="s2">&quot;Wind Spd (mph)&quot;</span><span class="p">])[</span><span class="s1">&#39;CO (ppbv)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()[</span><span class="s1">&#39;Illinois&#39;</span><span class="p">]</span>
-
-<span class="ne">NameError</span>: name &#39;was_2020&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Wind Spd (mph)
+3        128.0
+4        124.5
+5        229.5
+6        122.5
+7        151.0
+8        153.0
+9         79.0
+10        97.0
+11       115.0
+15-25     94.0
+15-26    108.0
+15-27    116.0
+17-26    109.0
+18-26    111.0
+Name: CO (ppbv), dtype: float64
 </pre></div>
 </div>
 </div>
@@ -1345,18 +2127,47 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_18705</span><span class="o">/</span><span class="mf">2947653852.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;dam release&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="n">max_discharge</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">NamedAgg</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;discharge&#39;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;max&#39;</span><span class="p">),</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">mean_doxy</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">NamedAgg</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s2">&quot;dissolved oxygen&quot;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="p">)</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>max_discharge</th>
+      <th>mean_doxy</th>
+    </tr>
+    <tr>
+      <th>dam release</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>False</th>
+      <td>48.5</td>
+      <td>9.246575</td>
+    </tr>
+    <tr>
+      <th>True</th>
+      <td>48.5</td>
+      <td>9.561644</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">.agg()</span></code> function to find the maximum values of <code class="docutils literal notranslate"><span class="pre">'CH4</span> <span class="pre">(ppmv</span> <span class="pre">height)'</span></code>, the mean values of ‘Toluene (E/B/MS)’, and the total number of samples for each state.</p>
 <div class="cell docutils container">
