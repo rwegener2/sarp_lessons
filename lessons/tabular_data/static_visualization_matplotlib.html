@@ -703,11 +703,6 @@ const thebe_selector_output = ".output, .cell_output"
      , “The object oriented API”
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#group-practice-evolving-our-time-series-plot">
-     Group practice - Evolving our Time Series plot
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -885,11 +880,6 @@ const thebe_selector_output = ".output, .cell_output"
      , “The object oriented API”
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#group-practice-evolving-our-time-series-plot">
-     Group practice - Evolving our Time Series plot
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1003,7 +993,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove NaN values</span>
-<span class="n">naames</span> <span class="o">=</span> <span class="n">naames</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="o">-</span><span class="mi">999999</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">})</span>
+<span class="n">naames</span> <span class="o">=</span> <span class="n">naames</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="o">-</span><span class="mi">999999</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
 
 <span class="c1"># naames.plot.scatter(x=&#39; Fractional_Day&#39;, y=&#39; ALTP&#39;)</span>
 <span class="n">naames</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39; BC_mass&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39; ALTP&#39;</span><span class="p">)</span>
@@ -1102,7 +1092,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1110e46a0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1150e0580&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/static_visualization_matplotlib_23_1.png" src="../../_images/static_visualization_matplotlib_23_1.png" />
@@ -1162,7 +1152,7 @@ Where <code class="docutils literal notranslate"><span class="pre">x</span></cod
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x111148bb0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x115144ca0&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/static_visualization_matplotlib_33_1.png" src="../../_images/static_visualization_matplotlib_33_1.png" />
@@ -1210,7 +1200,7 @@ Where <code class="docutils literal notranslate"><span class="pre">x</span></cod
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x11122bca0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x115228af0&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/static_visualization_matplotlib_39_1.png" src="../../_images/static_visualization_matplotlib_39_1.png" />
@@ -1356,105 +1346,6 @@ Where <code class="docutils literal notranslate"><span class="pre">x</span></cod
 </pre></div>
 </div>
 </div>
-</section>
-<section id="group-practice-evolving-our-time-series-plot">
-<h3>Group practice - Evolving our Time Series plot<a class="headerlink" href="#group-practice-evolving-our-time-series-plot" title="Permalink to this headline">¶</a></h3>
-<p>Steps:</p>
-<ul class="simple">
-<li><p>zoom into a subsection of the flight</p></li>
-<li><p>time plot, methanol</p></li>
-<li><p>color by another value</p></li>
-<li><p>add CO mixing ratio to the plot</p></li>
-<li><p>2 axis labels</p></li>
-<li><p>add a legend</p></li>
-</ul>
-<p>When googling:</p>
-<ul class="simple">
-<li><p>In each example you find, be sure to take note of how the person created their plot object. If they specified figure and axes, what did they name them?</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">naames</span><span class="p">[</span><span class="s1">&#39; H2O_MixingRatio_LARGE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    34196.000000
-mean      1070.046350
-std       1547.211618
-min         -1.000000
-25%         -1.000000
-50%        191.000000
-75%       1506.250000
-max       5370.000000
-Name:  H2O_MixingRatio_LARGE, dtype: float64
-</pre></div>
-</div>
-</div>
-</div>
-<p>Resource for problem solving: (double axes) <a class="reference external" href="https://matplotlib.org/3.5.0/gallery/subplots_axes_and_figures/two_scales.html">https://matplotlib.org/3.5.0/gallery/subplots_axes_and_figures/two_scales.html</a></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
-
-<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-
-<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">naames</span><span class="p">[</span><span class="s1">&#39; H2O_MixingRatio_LARGE&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;H2O MR&#39;</span><span class="p">)</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$H_</span><span class="si">{2}</span><span class="s1">O\:Mixing\:Ratio$&#39;</span><span class="p">)</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
-
-<span class="n">scatter1</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">naames</span><span class="p">[</span><span class="s1">&#39; Methanol_MixingRatio&#39;</span><span class="p">])</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Altitude (km)&#39;</span><span class="p">)</span>
-
-<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Pollutants by Altitude over Time&#39;</span><span class="p">)</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Julian Day&#39;</span><span class="p">)</span>
-
-<span class="n">cb</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">scatter1</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Methanol Mixing Ratio&quot;</span><span class="p">,</span> <span class="n">pad</span> <span class="o">=</span> <span class="mf">0.08</span><span class="p">)</span>  <span class="c1"># orientation = horizontal</span>
-
-<span class="c1"># error example - trying to color a line plot by another column</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/static_visualization_matplotlib_63_0.png" src="../../_images/static_visualization_matplotlib_63_0.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">naames</span><span class="p">[</span><span class="s1">&#39;Datetime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;2014-12-31&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_timedelta</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;D&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.dates</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">naames</span><span class="p">[</span><span class="s1">&#39;Datetime&#39;</span><span class="p">],</span> <span class="n">naames</span><span class="p">[</span><span class="s1">&#39; ALTP&#39;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">dates</span><span class="o">.</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s1">&#39;%y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M:</span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/static_visualization_matplotlib_66_0.png" src="../../_images/static_visualization_matplotlib_66_0.png" />
-</div>
-</div>
-<p>Good example of SO showing pyplot and OOP version <a class="reference external" href="https://stackoverflow.com/questions/6063876/matplotlib-colorbar-for-scatter">https://stackoverflow.com/questions/6063876/matplotlib-colorbar-for-scatter</a></p>
 </section>
 </section>
 <section id="which-method-should-i-use">
