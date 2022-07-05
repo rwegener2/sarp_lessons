@@ -603,20 +603,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#all-the-world-s-a-coordinate-system">
-   All the world’s a coordinate system
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bounding-boxes">
-     Bounding Boxes
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#geodesy-copied-to-additional-lecture-shorten">
-   Geodesy (copied to additional lecture – shorten)
+  <a class="reference internal nav-link" href="#geodesy">
+   Geodesy
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -634,9 +622,21 @@ const thebe_selector_output = ".output, .cell_output"
      Coordinate Reference Systems (CRS)
     </a>
    </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#standardized-geodesy-epsg-codes">
+   Standardized Geodesy: EPSG Codes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#all-the-world-s-a-coordinate-system">
+   All the world’s a coordinate system
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#geodesy-in-code-epsg">
-     Geodesy in Code: EPSG
+    <a class="reference internal nav-link" href="#bounding-boxes">
+     Bounding Boxes
     </a>
    </li>
   </ul>
@@ -774,20 +774,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#all-the-world-s-a-coordinate-system">
-   All the world’s a coordinate system
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bounding-boxes">
-     Bounding Boxes
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#geodesy-copied-to-additional-lecture-shorten">
-   Geodesy (copied to additional lecture – shorten)
+  <a class="reference internal nav-link" href="#geodesy">
+   Geodesy
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -805,9 +793,21 @@ const thebe_selector_output = ".output, .cell_output"
      Coordinate Reference Systems (CRS)
     </a>
    </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#standardized-geodesy-epsg-codes">
+   Standardized Geodesy: EPSG Codes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#all-the-world-s-a-coordinate-system">
+   All the world’s a coordinate system
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#geodesy-in-code-epsg">
-     Geodesy in Code: EPSG
+    <a class="reference internal nav-link" href="#bounding-boxes">
+     Bounding Boxes
     </a>
    </li>
   </ul>
@@ -957,10 +957,85 @@ const thebe_selector_output = ".output, .cell_output"
 <ol class="simple">
 <li><p>temperature output from a weather model of spatitially continuous temperature predicitions</p></li>
 <li><p>temperature taken from individual ground stations</p></li>
-<li><p>rock types from several park locations</p></li>
 <li><p>whole air samples taken on an airplane flight</p></li>
-<li><p>elevations across a state</p></li>
+<li><p>elevation across an entire state</p></li>
 </ol>
+</div>
+</section>
+<section id="geodesy">
+<h2>Geodesy<a class="headerlink" href="#geodesy" title="Permalink to this headline">¶</a></h2>
+<p><strong>geodesy</strong> is the science of understanding and measureing the earth’s shape.  There are people who spend their whole careers as geodesists.  Geodesy and mapping is an integral part of <strong>georeferencing</strong> your data - or placing your data in space.  Without georeferencing raster datasets are just pretty images that could have been taken anywhere in the world, or not on this world at all.</p>
+<p>The three concepts we will be distinguishing between today are:</p>
+<ol class="simple">
+<li><p>ellipsoids and datums - define the shape of the earth</p></li>
+<li><p>map projections - define how we put a round earth on a flat map</p></li>
+<li><p>coordinate reference systems - define how we define distances on the flat map</p></li>
+</ol>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Vocabulary</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text"><strong>Georeferencing:</strong> The process of assigning a data value a location in space.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="ellipsoids-and-datums">
+<h3>Ellipsoids and Datums<a class="headerlink" href="#ellipsoids-and-datums" title="Permalink to this headline">¶</a></h3>
+<p>The earth is not a perfect circle. It isn’t even a perfect squished circle. It’s bumpy with mountain ranges, ocean topography (bathymetry) and ice sheets. Because of this, in order to define where something is we have to first agree on a basic starting shape for the earth. The agreed upon starting shape is called the <strong>ellipsoid</strong> and agreeing upon where to center that shape is called the <strong>datum</strong>.</p>
+<p>Geodesists have defined the shape of an ellipsoid which is believed to best align with the shape of the earth.  The mostly commonly used ellisoid is the WGS 84 ellipsoid which was defined in 1984. In addition to defining the size of the ellipsoid we also need to define where the center of the ellipsoid should sit so that it is acurrate for as many places on earth at once.  Defining where to put the ellipsoid is called the datum.</p>
+<p><img alt="Datums" src="../../_images/datums.png" /></p>
+<p>Together the ellipsoid and the datum become the mathematical definition of the earth’s surface.</p>
+</section>
+<section id="map-projections">
+<h3>Map Projections<a class="headerlink" href="#map-projections" title="Permalink to this headline">¶</a></h3>
+<p>The ellipsoid is a 3D shape.  Map projections are the result of taking a 3D shape and turning it into being 2D.</p>
+<img src="https://tomroth.com.au/projections/map-projections.png" width=500><p>There are <a class="reference external" href="https://xkcd.com/977/">an insane number of ways to do this</a> and they are grouped into different families.  The most important takeaway is just to know that when you convert a 3D object into a 2D you aren’t going to be able to be accurate in every aspect.  Something has to sacrifice.  It might be relative size or it might be straight lines but everything can’t be perfect on a given map projection.</p>
+<p><img alt="Projection Distortion" src="../../_images/projection_distortion.png" /></p>
+</section>
+<section id="coordinate-reference-systems-crs">
+<h3>Coordinate Reference Systems (CRS)<a class="headerlink" href="#coordinate-reference-systems-crs" title="Permalink to this headline">¶</a></h3>
+<p>Once you lay out your 2d surface representing the earth you next need to label the map so you can refer to points on that surface.  The system you uses for labelling points on the map is a <strong>coordinate reference system (crs)</strong>.</p>
+<p>CRS fit into two main categories:</p>
+<ul class="simple">
+<li><p>units of degrees (ex. latitude and longitude) - geographic CRS</p></li>
+<li><p>units of distance (ex. meters, kilometers, miles, …) - projected CRS</p></li>
+</ul>
+<p>The units of a CRS will be a piece of information that you use frequently when working with spatial data.</p>
+<p>Knowing what type of CRS you are using is important for measuring distances. If you have a dataset in degrees the benefit is that it is usually intuitive to think of data in latitude and longitudes. The downside is that if you ask a program about the distance between two things it will give you an answer back in degrees.</p>
+<p>In a projected system the general location of the image can be counter intuitive, but the distances from one point to another are easier because they will be returned to you in the units of the coordiante system.</p>
+<div class="tip admonition">
+<p class="admonition-title">📝 Check your understanding</p>
+<p>What purpose does each of the three elements of geodesy serve?</p>
+<ol class="simple">
+<li><p>Ellipsoid + Datum</p></li>
+<li><p>Map projection</p></li>
+<li><p>Coordinate Reference System</p></li>
+</ol>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">📝 Check your understanding</p>
+<p>What is the difference between a projected and a geographic coordinate system? What are the units in each one?</p>
+</div>
+</section>
+</section>
+<section id="standardized-geodesy-epsg-codes">
+<h2>Standardized Geodesy: EPSG Codes<a class="headerlink" href="#standardized-geodesy-epsg-codes" title="Permalink to this headline">¶</a></h2>
+<p>We aren’t talking about geodesy to do a deep dive into it, but we do need to understand that any geospatial data we look at is going to need to communicate to us how they are describing place and distance.</p>
+<p>One common way to do that is with <strong>EPSG codes</strong>.  These codes assign an integer number to many of the common map projection/crs combinations.</p>
+<p>Really common projections include:</p>
+<ul class="simple">
+<li><p>EPSG:4326 - what most people think of as “regular” latitude/longitude coordinates</p></li>
+<li><p>EPSG:3857 - Web mercator, the projection used by Google maps and most web maps.  The de facto standard of web mapping. Nice for distance calculations on most parts of the globe.</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">📝 Check your understanding</p>
+<p>Look at the <a class="reference external" href="http://epsg.io">epsg.io</a> page for the 4326 projection (<a class="reference external" href="http://www.epsg.io/4326">www.epsg.io/4326</a>). What are the units of that projection?</p>
 </div>
 </section>
 <section id="all-the-world-s-a-coordinate-system">
@@ -988,56 +1063,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <div class="tip admonition">
 <p class="admonition-title">📝 Check your understanding</p>
-<p>Pull up Google maps or your favorite mapping appliation and zoom into the state of Wyoming. Click the map to view latitude and longitude locations for the edges.  Write down an approximate bounding box (to ~the nearest half of a degree) for the state in the form <code class="docutils literal notranslate"><span class="pre">[minimum_x</span> <span class="pre">minimum_y</span> <span class="pre">maximum_x</span> <span class="pre">maximum_y]</span></code></p>
+<p>Pull up Google maps or your favorite mapping appliation and zoom into the state of California. Click the map to view latitude and longitude locations for the edges.  Write down an approximate bounding box (to ~the nearest half of a degree) for the state in the form <code class="docutils literal notranslate"><span class="pre">[minimum_x</span> <span class="pre">minimum_y</span> <span class="pre">maximum_x</span> <span class="pre">maximum_y]</span></code></p>
 </div>
-</section>
-</section>
-<section id="geodesy-copied-to-additional-lecture-shorten">
-<h2>Geodesy (copied to additional lecture – shorten)<a class="headerlink" href="#geodesy-copied-to-additional-lecture-shorten" title="Permalink to this headline">¶</a></h2>
-<p><strong>geodesy</strong> is the science of understanding and measureing the earth’s shape.  There are people who spend their whole careers as geodesists.  Geodesy and mapping is an integral part of <strong>georeferencing</strong> your data - or placing your data in space.  Without georeferencing raster datasets are just pretty images that could have been taken anywhere in the world, or not on this world at all.</p>
-<p>The three major concept we will be distinguishing between today are:</p>
-<ol class="simple">
-<li><p>datums</p></li>
-<li><p>map projections</p></li>
-<li><p>coordinate reference systems</p></li>
-</ol>
-<section id="ellipsoids-and-datums">
-<h3>Ellipsoids and Datums<a class="headerlink" href="#ellipsoids-and-datums" title="Permalink to this headline">¶</a></h3>
-<p>Geodesists have defined the shape of an ellipsoid which is believed to best align with the shape of the earth.  The mostly commonly used ellisoid is the WGS 84 ellipsoid which was defined in 1984. In addition to defining the size of the ellipsoid we also need to define where the center of the ellipsoid should sit so that it is acurrate for as many places on earth at once.  Defining where to put the ellipsoid is called the <strong>datum</strong>.</p>
-<p><img alt="Datums" src="../../_images/datums.png" /></p>
-<p>Together the ellipsoid and the datum become the mathematical definition of the earth’s surface.</p>
-</section>
-<section id="map-projections">
-<h3>Map Projections<a class="headerlink" href="#map-projections" title="Permalink to this headline">¶</a></h3>
-<p>The ellipsoid is a 3D shape.  Map projections are the result of taking a 3D shape and turning it into being 2D.</p>
-<img src="https://tomroth.com.au/projections/map-projections.png" width=500><p>There are <a class="reference external" href="https://xkcd.com/977/">an insane number of ways to do this</a> and they are grouped into different families.  The most important takeaway is just to know that when you convert a 3D object into a 2D you aren’t going to be able to be accurate in every aspect.  Something has to sacrifice.  It might be relative size or it might be straight lines but everything can’t be perfect on a given map projection.</p>
-<p><img alt="Projection Distortion" src="../../_images/projection_distortion.png" /></p>
-</section>
-<section id="coordinate-reference-systems-crs">
-<h3>Coordinate Reference Systems (CRS)<a class="headerlink" href="#coordinate-reference-systems-crs" title="Permalink to this headline">¶</a></h3>
-<p>Once you lay out your 2d surface representing the earth you next need to label the map so you can refer to points on that surface.  The system you uses for labelling points on the map is a <strong>coordinate reference system (crs)</strong>.</p>
-<p>CRS fit into two main categories:</p>
-<ul class="simple">
-<li><p>units of degrees (ex. latitude and longitude) - geographic CRS</p></li>
-<li><p>units of distance (ex. meters, kilometers, miles, …) - projected CRS</p></li>
-</ul>
-<p>The units of a CRS will be a piece of information that you use frequently when working with spatial data.</p>
-<div class="tip admonition">
-<p class="admonition-title">📝 Check your understanding</p>
-<p>What purpose does each of the three elements of geodesy serve?</p>
-<ol class="simple">
-<li><p>Ellipsoid + Datum</p></li>
-<li><p>Map projection</p></li>
-<li><p>Coordinate Reference System</p></li>
-</ol>
-</div>
-</section>
-<section id="geodesy-in-code-epsg">
-<h3>Geodesy in Code: EPSG<a class="headerlink" href="#geodesy-in-code-epsg" title="Permalink to this headline">¶</a></h3>
-<p>One common way to notate coordinate reference systems and map projections is with EPSG codes.  These codes assign an integer number to many of the common map projection/crs combinations.</p>
-<p>Really common projections include:</p>
-<p>EPSG:4326 - what most people think of as “regular” lat/lon coordinates
-EPSG:3857 - Web mercator, the projection used by Google maps and most web maps.  The de facto standard of web mapping.</p>
 </section>
 </section>
 <section id="utm-grids">
@@ -1086,7 +1113,7 @@ EPSG:3857 - Web mercator, the projection used by Google maps and most web maps. 
 <p>The x direction should only range from about 0 to 1,000,000 where as the y direction could range from 0 to about 10,000,000.</p>
 <div class="tip admonition">
 <p class="admonition-title">📝 Check your understanding</p>
-<p>What is the set of coordinates corresponding to the exact center of a UTM grid?</p>
+<p>What is the set of coordinates corresponding to the exact center of a northern hemisphere UTM grid at the equator?</p>
 </div>
 </section>
 <section id="epsg-codes-for-utm-grids">
@@ -1224,7 +1251,7 @@ EPSG:3857 - Web mercator, the projection used by Google maps and most web maps. 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/spatial_data_53_0.svg" src="../../_images/spatial_data_53_0.svg" /></div>
+<img alt="../../_images/spatial_data_56_0.svg" src="../../_images/spatial_data_56_0.svg" /></div>
 </div>
 </section>
 <section id="example">
@@ -1278,7 +1305,7 @@ EPSG:3857 - Web mercator, the projection used by Google maps and most web maps. 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/spatial_data_60_0.svg" src="../../_images/spatial_data_60_0.svg" /></div>
+<img alt="../../_images/spatial_data_63_0.svg" src="../../_images/spatial_data_63_0.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1287,7 +1314,7 @@ EPSG:3857 - Web mercator, the projection used by Google maps and most web maps. 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/spatial_data_61_0.svg" src="../../_images/spatial_data_61_0.svg" /></div>
+<img alt="../../_images/spatial_data_64_0.svg" src="../../_images/spatial_data_64_0.svg" /></div>
 </div>
 <section id="an-example-of-buffer-using-the-shape-of-california">
 <h4>An example of buffer using the shape of California<a class="headerlink" href="#an-example-of-buffer-using-the-shape-of-california" title="Permalink to this headline">¶</a></h4>
@@ -1316,7 +1343,7 @@ EPSG:3857 - Web mercator, the projection used by Google maps and most web maps. 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/spatial_data_65_0.svg" src="../../_images/spatial_data_65_0.svg" /></div>
+<img alt="../../_images/spatial_data_68_0.svg" src="../../_images/spatial_data_68_0.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1325,7 +1352,7 @@ EPSG:3857 - Web mercator, the projection used by Google maps and most web maps. 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/spatial_data_66_0.svg" src="../../_images/spatial_data_66_0.svg" /></div>
+<img alt="../../_images/spatial_data_69_0.svg" src="../../_images/spatial_data_69_0.svg" /></div>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">📝 Check your understanding</p>
