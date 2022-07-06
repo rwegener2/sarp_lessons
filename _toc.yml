@@ -17,6 +17,7 @@ parts:
         - file: lessons/gridded_data/1_xarray
         - file: lessons/gridded_data/2_xarray_computation
         - file: lessons/gridded_data/3_xarray_groupby
+        - file: lessons/gridded_data/spatial_operations
     - file: lessons/tabular_data/index.md
       sections:
         - file: lessons/tabular_data/1_pandas
