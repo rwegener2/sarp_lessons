@@ -1,0 +1,1426 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Mapping with cartopy and Colors &#8212; SARP Programming Lessons</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Debugging" href="../../additional_lectures/Debugging/debugging_lesson.html" />
+    <link rel="prev" title="Static Visualization with matplotlib" href="static_visualization_matplotlib.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/sarp_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SARP Programming Lessons</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   Welcome to SARP Programming
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lessons
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../general_python/index.html">
+   General Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/1_variables_types_ifstatements.html">
+     Variables, Data Types, and if Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/2_lists_dictionaries.html">
+     Lists and Dictionaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/datetimes.html">
+     Datetimes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/spatial_data.html">
+     Spatial Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../gridded_data/index.html">
+   Gridded Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gridded_data/1_xarray.html">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray
+      </span>
+     </code>
+     Library
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gridded_data/2_xarray_computation.html">
+     Starting Computations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gridded_data/3_xarray_groupby.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray
+      </span>
+     </code>
+     Groupby
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gridded_data/spatial_operations.html">
+     Spatial Operations and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       rio
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Tabular Data
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_pandas.html">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
+     Library
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2_filtering_groupby.html">
+     Filtering and groupby
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_geopandas.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       geopandas
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="static_visualization_matplotlib.html">
+     Static Visualization with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Mapping with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       cartopy
+      </span>
+     </code>
+     and Colors
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Additional Lectures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../additional_lectures/Debugging/debugging_lesson.html">
+   Debugging
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../additional_lectures/time_series_statistics/oceans_stats_examples.html">
+   Time Series Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../additional_lectures/hierarchical_data/hierarchical_data.html">
+   Hierarchical Data Structure
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../additional_lectures/rasters/index.html">
+   Raster Data Lessons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/1_arrays_numpy.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/2_raster_fundamentals.html">
+     Working with rasters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/3_accessing_coordinates.html">
+     Accessing Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../additional_lectures/Visualization/index.html">
+   Visualization
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/Visualization/2_building_on_matplotlib.html">
+     Building on top of
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/Visualization/3_dynamic_visualization.html">
+     Dynamic Visualization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/Visualization/viewing_images.html">
+     Viewing Images
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Practice Sheets
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../index_practice.html">
+   General Python Practice
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/practice/1_variables_data_practice.html">
+     Variables, Data Types and If statements Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/practice/2_lists_dicts_practice.html">
+     Lists and Dictionaries Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/practice/datetimes_practice.html">
+     Datetimes Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/practice/spatial_data_practice.html">
+     Spatial Data Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/practice/1_variables_data_answers.html">
+     Variables, Data Types and If statements Answers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/practice/2_lists_dicts_answers.html">
+     Lists and Dictionaries Answers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/practice/datetimes_answers.html">
+     Datetimes Answers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../general_python/practice/spatial_data_answers.html">
+     Spatial Data Answers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../index_practice_raster.html">
+   Gridded Data Practice
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gridded_data/practice/1_xarray_practice.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray
+      </span>
+     </code>
+     Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gridded_data/practice/2_xarray_practice.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray
+      </span>
+     </code>
+     Computation Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gridded_data/practice/1_xarray_answers.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray
+      </span>
+     </code>
+     Practice
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../index_practice_tabular.html">
+   Tabular Data Practice
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice/1_pandas_practice.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
+     Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice/2_filtering_groupby_practice.html">
+     Filtering and Groupby Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice/3_geopandas_practice.html">
+     Practice with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       geopandas
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice/1_pandas_answers.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
+     Answers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice/2_filtering_groupby_answers.html">
+     Filtering and Groupby Answers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../additional_lectures/index_practice.html">
+   Raster Data Practice (Additional Lectures)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/practice/1_arrays_numpy_practice.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+     Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/practice/2_raster_fundamentals_practice.html">
+     Raster Fundamentals Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/practice/3_accessing_coordinates_practice.html">
+     Accessing Coordinates Practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../additional_lectures/rasters/practice/1_arrays_numpy_answers.html">
+     Arrays and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+     Answers
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/lessons/tabular_data/mapping_colors.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/rwegener2/sarp_lessons"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/rwegener2/sarp_lessons/issues/new?title=Issue%20on%20page%20%2Flessons/tabular_data/mapping_colors.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#context">
+   Context
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cartopy">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     cartopy
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cartopy-features">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       cartopy
+      </span>
+     </code>
+     Features
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transforming-data">
+   Transforming Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#color-in-matplotlib">
+   Color in
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     matplotlib
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-summary">
+   Code Summary
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preprocessing">
+     Preprocessing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mapping">
+     Mapping
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#using-geopandas">
+       Using
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         geopandas
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#using-cartopy">
+       Using
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         cartopy
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#colors">
+     Colors
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Mapping with cartopy and Colors</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#context">
+   Context
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cartopy">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     cartopy
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cartopy-features">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       cartopy
+      </span>
+     </code>
+     Features
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transforming-data">
+   Transforming Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#color-in-matplotlib">
+   Color in
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     matplotlib
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-summary">
+   Code Summary
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preprocessing">
+     Preprocessing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mapping">
+     Mapping
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#using-geopandas">
+       Using
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         geopandas
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#using-cartopy">
+       Using
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         cartopy
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#colors">
+     Colors
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="mapping-with-cartopy-and-colors">
+<h1>Mapping with <code class="docutils literal notranslate"><span class="pre">cartopy</span></code> and Colors<a class="headerlink" href="#mapping-with-cartopy-and-colors" title="Permalink to this headline">¶</a></h1>
+<section id="context">
+<h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
+<p>Yesterday we explored the exciting world of combining geospatial information with our pandas dataframe in the context of analysis and computations. Today we are going to now see what we can do with visualization when we have geospatial information. We are going to use the library <code class="docutils literal notranslate"><span class="pre">cartopy</span></code> to make maps and also explore some more visualization features of <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p>
+<p>Today are going to use a geodataframe of the NAAMES dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">naames</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/naames-mrg01-c130_merge_20151112_R5_thru20151114.csv&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">223</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Filter down to just 1 day</span>
+<span class="n">naames</span> <span class="o">=</span> <span class="n">naames</span><span class="p">[</span><span class="n">naames</span><span class="p">[</span><span class="s1">&#39; Fractional_Day&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">317</span><span class="p">]</span>
+<span class="c1"># Remove NaN values</span>
+<span class="n">naames</span> <span class="o">=</span> <span class="n">naames</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="o">-</span><span class="mi">999999</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">})</span>
+<span class="c1"># Create geodataframe</span>
+<span class="n">naames_gpd</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">naames</span><span class="p">,</span> 
+                            <span class="n">geometry</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">naames</span><span class="p">[</span><span class="s1">&#39; LONGITUDE&#39;</span><span class="p">],</span> <span class="n">naames</span><span class="p">[</span><span class="s1">&#39; LATITUDE&#39;</span><span class="p">]),</span> 
+                            <span class="n">crs</span><span class="o">=</span><span class="s1">&#39;epsg:4326&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="cartopy">
+<h2><code class="docutils literal notranslate"><span class="pre">cartopy</span></code><a class="headerlink" href="#cartopy" title="Permalink to this headline">¶</a></h2>
+<p>Yesterday we saw that for a quick visual we could use the <code class="docutils literal notranslate"><span class="pre">.plot()</span></code> function to look at our data on a latitude/longitude axis. This is nice and it is easy, but we lack context in this simplified view.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">naames_gpd</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39; ALTP&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../_images/mapping_colors_6_1.png" src="../../_images/mapping_colors_6_1.png" />
+</div>
+</div>
+<p>To expand our map we are going to use <code class="docutils literal notranslate"><span class="pre">cartopy</span></code>. Some advantages of <code class="docutils literal notranslate"><span class="pre">cartopy</span></code> are:</p>
+<ul class="simple">
+<li><p>ability to reproject a dataset</p></li>
+<li><p>ability to plot data from different projections together</p></li>
+<li><p>ability to add features such as coastlines below your data, similar to a basemap</p></li>
+</ul>
+<p>Let’s see an example of using <code class="docutils literal notranslate"><span class="pre">cartopy</span></code> by re-creating the map above with some features below.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cartopy</span></code> builds into the <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> OOP interface, so let’s start by creating a map with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> OOP.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">()</span>
+
+<span class="n">naames_gpd</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39; ALTP&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../_images/mapping_colors_9_1.png" src="../../_images/mapping_colors_9_1.png" />
+</div>
+</div>
+<p>Now the plot above doesn’t use cartopy, it’s just the same map as the geopandas version but plotted in a different way. To change to using cartopy we have to:</p>
+<ol class="simple">
+<li><p>define our crs</p></li>
+<li><p>convert our geopandas dataframe to that crs</p></li>
+<li><p>add the crs as an argument to <code class="docutils literal notranslate"><span class="pre">plt.axes()</span></code></p></li>
+</ol>
+<p>The CRS we are going to use is called <a class="reference external" href="https://pro.arcgis.com/en/pro-app/2.8/help/mapping/properties/plate-carree.htm"><code class="docutils literal notranslate"><span class="pre">PlateCarree</span></code></a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_20967</span><span class="o">/</span><span class="mf">3236971065.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;cartopy&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the projection</span>
+<span class="n">crs</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()</span>
+
+<span class="c1"># This can be converted into a `proj4` string/dict compatible with GeoPandas</span>
+<span class="n">naames_platecarree</span> <span class="o">=</span> <span class="n">naames_gpd</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">crs</span><span class="o">.</span><span class="n">proj4_init</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_20967</span><span class="o">/</span><span class="mf">191829466.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Create the projection</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">crs</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># This can be converted into a `proj4` string/dict compatible with GeoPandas</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">naames_platecarree</span> <span class="o">=</span> <span class="n">naames_gpd</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">crs</span><span class="o">.</span><span class="n">proj4_init</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;ccrs&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Recreate the plot with the projection as an argument</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">crs</span><span class="p">)</span>
+
+<span class="n">naames_platecarree</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39; ALTP&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_20967</span><span class="o">/</span><span class="mf">958336982.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Recreate the plot with the projection as an argument</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">crs</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">naames_platecarree</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39; ALTP&#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;crs&#39; is not defined
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 432x288 with 0 Axes&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>So far it looks like we’ve taken a step backwards because we have lost our nice axis labels. We can add those back, however, using the <code class="docutils literal notranslate"><span class="pre">.gridlines()</span></code> method. Additionally, we can use the <code class="docutils literal notranslate"><span class="pre">.coastlines()</span></code> feature to add in the shape of the nearby continent. I’m also going to use <code class="docutils literal notranslate"><span class="pre">.set_extent()</span></code> to give us a bit broader view and a title for clarity.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Recreate the plot with the projection as an argument</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">crs</span><span class="p">)</span>
+
+<span class="c1"># Add the data</span>
+<span class="n">naames_platecarree</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39; ALTP&#39;</span><span class="p">)</span>
+
+<span class="c1"># Change the field of view</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">([</span><span class="o">-</span><span class="mi">63</span><span class="p">,</span> <span class="o">-</span><span class="mi">38</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">57</span><span class="p">])</span>
+<span class="c1"># Add labels and gridlines</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span><span class="n">crs</span><span class="o">=</span><span class="n">crs</span><span class="p">,</span> <span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># Add the shape of the coast</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">()</span>
+
+<span class="c1"># Add a title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Flight Track Altitude&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_20967</span><span class="o">/</span><span class="mf">3671316539.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Recreate the plot with the projection as an argument</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">crs</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Add the data</span>
+
+<span class="ne">NameError</span>: name &#39;crs&#39; is not defined
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 432x288 with 0 Axes&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Looks nice! So with a bit of extra work we have converted out quick geopandas plot into a map with nice labels, gridlines and coastlines.</p>
+<section id="cartopy-features">
+<h3><code class="docutils literal notranslate"><span class="pre">cartopy</span></code> Features<a class="headerlink" href="#cartopy-features" title="Permalink to this headline">¶</a></h3>
+<p>One of the nice built-in features of <code class="docutils literal notranslate"><span class="pre">cartopy</span></code> is that it can download and render features layers such as coastlines, rivers, and some political boundaries on your map. The example below shows how to use features with the pre-built <code class="docutils literal notranslate"><span class="pre">cartopy</span></code> features. <a class="reference external" href="https://scitools.org.uk/cartopy/docs/latest/gallery/lines_and_polygons/feature_creation.html">This example</a> also shows how to create a custom feature.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cartopy.feature</span> <span class="k">as</span> <span class="nn">cfeature</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_20967</span><span class="o">/</span><span class="mf">2187969116.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">cartopy.feature</span> <span class="k">as</span> <span class="nn">cfeature</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;cartopy&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Recreate the plot with the projection as an argument</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">crs</span><span class="p">)</span>
+
+<span class="c1"># Add the data</span>
+<span class="n">naames_platecarree</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39; ALTP&#39;</span><span class="p">)</span>
+
+<span class="c1"># Change the field of view</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">([</span><span class="o">-</span><span class="mi">63</span><span class="p">,</span> <span class="o">-</span><span class="mi">38</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">57</span><span class="p">])</span>
+<span class="c1"># Add labels and gridlines</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span><span class="n">crs</span><span class="o">=</span><span class="n">crs</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Add background features</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">LAND</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">OCEAN</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">COASTLINE</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">LAKES</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">RIVERS</span><span class="p">)</span>
+
+<span class="c1"># Add a title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Flight Track Altitude&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_20967</span><span class="o">/</span><span class="mf">2021871338.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Recreate the plot with the projection as an argument</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">crs</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Add the data</span>
+
+<span class="ne">NameError</span>: name &#39;crs&#39; is not defined
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 432x288 with 0 Axes&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="transforming-data">
+<h2>Transforming Data<a class="headerlink" href="#transforming-data" title="Permalink to this headline">¶</a></h2>
+<p>One of the nice parts of <code class="docutils literal notranslate"><span class="pre">cartopy</span></code> is that it lets you change your projection farily easily. To do this we will define a different starting projection, then run the same code again.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the projection</span>
+<span class="n">crs</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">AlbersEqualArea</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">52</span><span class="p">)</span>
+
+<span class="c1"># This can be converted into a `proj4` string/dict compatible with GeoPandas</span>
+<span class="n">naames_albers</span> <span class="o">=</span> <span class="n">naames_gpd</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">crs</span><span class="o">.</span><span class="n">proj4_init</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_20967</span><span class="o">/</span><span class="mf">3440635744.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Create the projection</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">crs</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">AlbersEqualArea</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">52</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># This can be converted into a `proj4` string/dict compatible with GeoPandas</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">naames_albers</span> <span class="o">=</span> <span class="n">naames_gpd</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">crs</span><span class="o">.</span><span class="n">proj4_init</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;ccrs&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Recreate the plot with the projection as an argument</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">crs</span><span class="p">)</span>
+
+<span class="c1"># Add the data</span>
+<span class="n">naames_albers</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39; ALTP&#39;</span><span class="p">)</span>
+
+<span class="c1"># Change the field of view</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">([</span><span class="o">-</span><span class="mi">63</span><span class="p">,</span> <span class="o">-</span><span class="mi">38</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">57</span><span class="p">])</span>
+<span class="c1"># Add labels and gridlines</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span><span class="n">crs</span><span class="o">=</span><span class="n">crs</span><span class="p">)</span>
+<span class="c1"># Add the shape of the coast</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">()</span>
+
+<span class="c1"># Add a title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Flight Track Altitude&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_20967</span><span class="o">/</span><span class="mf">833716985.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Recreate the plot with the projection as an argument</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">crs</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Add the data</span>
+
+<span class="ne">NameError</span>: name &#39;crs&#39; is not defined
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 432x288 with 0 Axes&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are lots of projections and which one you want depends on where in the world you are. A full list of projections can be found <a class="reference external" href="https://scitools.org.uk/cartopy/docs/v0.15/crs/projections.html">here</a>.</p>
+<p>For flight track data the change in projection likely won’t matter very much. Where this feature becomes useful is if you are plotting two data sources with different starting projections. If that is the case then we can use these features to convert the different sources to the same projection.</p>
+</section>
+<section id="color-in-matplotlib">
+<h2>Color in <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code><a class="headerlink" href="#color-in-matplotlib" title="Permalink to this headline">¶</a></h2>
+<p>There are a variety of ways to deal with color and colorbars in <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p>
+<p>Firstly, color can be specified in several ways. When specifying a single color you can use RGB, hexadecimal, or sometimes by a written name. A full list of the options is <a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colors.html">in the docs</a>. Another useful tool is an online color picker. There are dozens of these available so try a couple to find your favorite. One I have used before is the <a class="reference external" href="https://www.w3schools.com/colors/colors_picker.asp">W3Schools Color Picker</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">naames</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39; Fractional_Day&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39; ALTP&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;#7eb54e&#39;</span><span class="p">)</span>  <span class="c1"># hexadecimal color code</span>
+<span class="c1"># naames.plot.scatter(x=&#39; Fractional_Day&#39;, y=&#39; ALTP&#39;, c=(0.49, 0.75, 0.97))  # RGB color code</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39; Fractional_Day&#39;, ylabel=&#39; ALTP&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../_images/mapping_colors_25_1.png" src="../../_images/mapping_colors_25_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">naames</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39; Fractional_Day&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39; ALTP&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39; Fractional_Day&#39;, ylabel=&#39; ALTP&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../_images/mapping_colors_26_1.png" src="../../_images/mapping_colors_26_1.png" />
+</div>
+</div>
+<p>We have also seen that you can use another column to create the color for a scatter plot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">naames</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39; Fractional_Day&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39; ALTP&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39; BC_mass&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39; Fractional_Day&#39;, ylabel=&#39; ALTP&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../_images/mapping_colors_28_1.png" src="../../_images/mapping_colors_28_1.png" />
+</div>
+</div>
+<p>Adding a color-based legend to a plot is called adding a colorbar. When adding a colorbar there are multiple components:</p>
+<ol class="simple">
+<li><p>The values that are used to determine the color at that point</p></li>
+<li><p>The colors that are going to be used for the range of values
+These two things are two seperate inputs, <code class="docutils literal notranslate"><span class="pre">c</span></code> for the first one, and <code class="docutils literal notranslate"><span class="pre">cmap</span></code> for the second one.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># _r on the colormap reverses. So viridis and viridis_r both work</span>
+<span class="n">naames</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39; Fractional_Day&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39; ALTP&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39; BC_mass&#39;</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39; Fractional_Day&#39;, ylabel=&#39; ALTP&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../_images/mapping_colors_30_1.png" src="../../_images/mapping_colors_30_1.png" />
+</div>
+</div>
+<p>A list of the available colormaps can be found <a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormaps.html">here</a>.</p>
+<p>A common parameter you may want to access are <code class="docutils literal notranslate"><span class="pre">vmax</span></code> and <code class="docutils literal notranslate"><span class="pre">vmin</span></code>. These don’t change the values in your dataset, but they do change the which values correspond to which colors in your colormap.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">naames</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39; Fractional_Day&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39; ALTP&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39; BC_mass&#39;</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39; Fractional_Day&#39;, ylabel=&#39; ALTP&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../_images/mapping_colors_33_1.png" src="../../_images/mapping_colors_33_1.png" />
+</div>
+</div>
+<p>It is possible to have your colorbar have a log colormap, you just have to switch into matplotlib.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.colors</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">naames</span><span class="p">[</span><span class="s1">&#39; Fractional_Day&#39;</span><span class="p">],</span> <span class="n">naames</span><span class="p">[</span><span class="s1">&#39; ALTP&#39;</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">naames</span><span class="p">[</span><span class="s1">&#39; BC_mass&#39;</span><span class="p">],</span>
+                    <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">LogNorm</span><span class="p">())</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;BC Mass&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x162d616d0&gt;
+</pre></div>
+</div>
+<img alt="../../_images/mapping_colors_36_1.png" src="../../_images/mapping_colors_36_1.png" />
+</div>
+</div>
+</section>
+<section id="code-summary">
+<h2>Code Summary<a class="headerlink" href="#code-summary" title="Permalink to this headline">¶</a></h2>
+<section id="preprocessing">
+<h3>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">naames</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/naames-mrg01-c130_merge_20151112_R5_thru20151114.csv&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">223</span><span class="p">)</span>
+<span class="c1"># Filter down to just 1 day</span>
+<span class="n">naames</span> <span class="o">=</span> <span class="n">naames</span><span class="p">[</span><span class="n">naames</span><span class="p">[</span><span class="s1">&#39; Fractional_Day&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">317</span><span class="p">]</span>
+<span class="c1"># Remove NaN values</span>
+<span class="n">naames</span> <span class="o">=</span> <span class="n">naames</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="o">-</span><span class="mi">999999</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">})</span>
+<span class="c1"># Create geodataframe</span>
+<span class="n">naames_gpd</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">naames</span><span class="p">,</span> 
+                            <span class="n">geometry</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">naames</span><span class="p">[</span><span class="s1">&#39; LONGITUDE&#39;</span><span class="p">],</span> <span class="n">naames</span><span class="p">[</span><span class="s1">&#39; LATITUDE&#39;</span><span class="p">]),</span> 
+                            <span class="n">crs</span><span class="o">=</span><span class="s1">&#39;epsg:4326&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="mapping">
+<h3>Mapping<a class="headerlink" href="#mapping" title="Permalink to this headline">¶</a></h3>
+<section id="using-geopandas">
+<h4>Using <code class="docutils literal notranslate"><span class="pre">geopandas</span></code><a class="headerlink" href="#using-geopandas" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">()</span>
+
+<span class="n">naames_gpd</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39; ALTP&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../_images/mapping_colors_43_1.png" src="../../_images/mapping_colors_43_1.png" />
+</div>
+</div>
+</section>
+<section id="using-cartopy">
+<h4>Using <code class="docutils literal notranslate"><span class="pre">cartopy</span></code><a class="headerlink" href="#using-cartopy" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Recreate the plot with the projection as an argument</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">crs</span><span class="p">)</span>
+
+<span class="c1"># Add the data</span>
+<span class="n">naames_platecarree</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39; ALTP&#39;</span><span class="p">)</span>
+
+<span class="c1"># Change the field of view</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">([</span><span class="o">-</span><span class="mi">63</span><span class="p">,</span> <span class="o">-</span><span class="mi">38</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">57</span><span class="p">])</span>
+<span class="c1"># Add labels and gridlines</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span><span class="n">crs</span><span class="o">=</span><span class="n">crs</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># ax.gridlines(crs=crs, color=&#39;#&#39;, linestyle=&#39;--&#39;, draw_labels=True)</span>
+
+<span class="c1"># Add background features</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">LAND</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">OCEAN</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">COASTLINE</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">LAKES</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">RIVERS</span><span class="p">)</span>
+
+<span class="c1"># Add a title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Flight Track Altitude&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_20967</span><span class="o">/</span><span class="mf">838294268.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Recreate the plot with the projection as an argument</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">crs</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Add the data</span>
+
+<span class="ne">NameError</span>: name &#39;crs&#39; is not defined
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 432x288 with 0 Axes&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="colors">
+<h3>Colors<a class="headerlink" href="#colors" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons/tabular_data"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="static_visualization_matplotlib.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Static Visualization with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../../additional_lectures/Debugging/debugging_lesson.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Debugging</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Rachel Wegener<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
