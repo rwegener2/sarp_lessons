@@ -24,6 +24,7 @@ parts:
         - file: lessons/tabular_data/2_filtering_groupby
         - file: lessons/tabular_data/3_geopandas
         - file: lessons/tabular_data/static_visualization_matplotlib
+        - file: lessons/tabular_data/mapping_colors
 
   - caption: Additional Lectures
     chapters:
@@ -75,3 +76,7 @@ parts:
         - file: additional_lectures/rasters/practice/2_raster_fundamentals_practice
         - file: additional_lectures/rasters/practice/3_accessing_coordinates_practice
         - file: additional_lectures/rasters/practice/1_arrays_numpy_answers
+
+  # - caption: Examples
+  #   - file: examples/logplot
+  #   - file: examples/flight_track
