@@ -77,6 +77,8 @@ parts:
         - file: additional_lectures/rasters/practice/3_accessing_coordinates_practice
         - file: additional_lectures/rasters/practice/1_arrays_numpy_answers
 
-  # - caption: Examples
-  #   - file: examples/logplot
-  #   - file: examples/flight_track
+  - caption: Examples
+    chapters:
+    - file: examples/logplot
+    - file: examples/flight_track
+    - file: examples/altitude_twin_axes
