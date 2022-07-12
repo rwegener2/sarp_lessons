@@ -54,6 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Plot with multiple lines and a log axis" href="../../../examples/logplot.html" />
     <link rel="prev" title="Accessing Coordinates Practice" href="3_accessing_coordinates_practice.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -524,6 +525,33 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
   </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Examples
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../examples/logplot.html">
+   Plot with multiple lines and a log axis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../examples/flight_track.html">
+   Flight Track Plot
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../examples/altitude_twin_axes.html">
+   Altitude Plot with Twin Axes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../examples/gridded_mapping.html">
+   Cartopy with gridded data
+  </a>
  </li>
 </ul>
 
@@ -1063,9 +1091,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[46, 35, 25, 65, 62,  0, 66, 74, 44, 66],
-       [98, 35,  7, 35, 53,  8, 26, 25, 29, 69],
-       [24, 47, 67, 61, 17,  2,  8, 19, 30,  4]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[63, 23, 91, 82, 64, 94, 30, 42, 92, 13],
+       [30, 89, 69, 46, 67, 26, 44, 19, 58, 38],
+       [12, 26, 17, 30, 40, 82, 18, 16, 79, 73]])
 </pre></div>
 </div>
 </div>
@@ -1083,7 +1111,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>94
 </pre></div>
 </div>
 </div>
@@ -1099,13 +1127,13 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 61,  87, 108, ...,  58,  89,  89],
-       [ 93,  51,  42, ...,  29,  38,  34],
-       [ 32,  73,  81, ...,  81,  86,  32],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 53,  19,  76, ...,  98,  40,  31],
+       [ 57,  84,  58, ...,  51,  59,  61],
+       [ 80,  21,  69, ...,  41,  73,  31],
        ...,
-       [102,  87,  76, ..., 103,  96,  27],
-       [ 38,  50,  58, ...,  54,  90,  35],
-       [ 21,  86, 103, ...,  15, 100,  89]])
+       [ 55, 107,  89, ...,  90,  86,  60],
+       [ 43,  81,  80, ...,  88,  64,  93],
+       [ 84,  22, 109, ...,  90,  52,  74]])
 </pre></div>
 </div>
 </div>
@@ -1190,7 +1218,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>49.01533333333333
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>49.211
 </pre></div>
 </div>
 </div>
@@ -1202,7 +1230,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.714574085103347
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.744248334811843
 </pre></div>
 </div>
 </div>
@@ -1252,45 +1280,45 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[27., 57., 67., ...,  5., 64., 41.],
-        [21., 21., 19., ..., 58., 56., 61.],
-        [34., 11., 83., ...,  0., 64., 29.],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[22., 87., 60., ..., 99., 98., 23.],
+        [36., 45., 50., ..., 31., 73., 89.],
+        [52., 82., 84., ..., 45., 51., 95.],
         ...,
-        [41., 85., 62., ..., 67., 12., 64.],
-        [92., 74.,  1., ..., 17., 81., 74.],
-        [35., 61., 20., ..., 47., 98., 58.]],
+        [28., 36., 98., ..., 88., 52., 95.],
+        [59., 50., 98., ..., 33., 88., 82.],
+        [ 4., 19., 12., ..., 60., 87.,  8.]],
 
-       [[40., 84., 26., ..., 34., 37., 93.],
-        [98., 25., 63., ..., 18., 55., 53.],
-        [44.,  9.,  7., ..., 82., 41., 35.],
+       [[23.,  3., 83., ..., 42.,  6., 19.],
+        [82., 11., 56., ...,  7., 90., 69.],
+        [95., 33., 45., ..., 40., 86., 98.],
         ...,
-        [ 2., 89., 45., ..., 25., 95., 42.],
-        [59., 15., 81., ..., 26., 40., 55.],
-        [30., 19., 86., ..., 66., 11., 61.]],
+        [28., 14., 35., ..., 35., 14., 17.],
+        [99., 99., 91., ..., 12., 72., 22.],
+        [11., 86., 32., ..., 21., 43., 24.]],
 
-       [[72., 15., 77., ...,  2., 10., 95.],
-        [50., 13., 52., ..., 58., 47., 49.],
-        [34., 54., 90., ..., 51., 88., 91.],
+       [[ 3., 51., 51., ..., 29.,  7., 54.],
+        [71., 71., 26., ...,  8., 79.,  5.],
+        [93.,  4., 38., ..., 72., 43., 52.],
         ...,
-        [70., 56., 79., ..., 56., 16., 29.],
-        [14., 28., 45., ..., 69.,  3., 80.],
-        [62., 38., 86., ..., 35., 74., 63.]],
+        [76., 18., 94., ...,  1., 28., 88.],
+        [77., 51., 97., ..., 24., 32., 21.],
+        [44., 48., 46., ..., 88., 52., 59.]],
 
-       [[66., 58., 78., ..., 26., 14.,  5.],
-        [79.,  3., 34., ..., 57., 60., 40.],
-        [61., 86., 34., ..., 87.,  7., 20.],
+       [[87., 63., 19., ...,  2.,  8., 65.],
+        [ 4., 20., 84., ..., 35., 31., 98.],
+        [31., 54., 29., ..., 99., 49., 38.],
         ...,
-        [20., 65., 88., ..., 69., 29., 68.],
-        [28., 39., 13., ..., 95., 47., 59.],
-        [ 3., 28., 96., ..., 49.,  4., 75.]],
+        [36., 24., 32., ..., 23., 25., 39.],
+        [37.,  8., 73., ..., 77., 61., 66.],
+        [53., 55., 77., ..., 97., 49., 25.]],
 
-       [[46., 82., 74., ..., 42., 69., 11.],
-        [39., 44., 99., ..., 35., 70., 15.],
-        [37., 41., 78., ..., 60.,  7., 58.],
+       [[ 4., 85., 19., ..., 99., 25., 34.],
+        [10.,  7., 74., ..., 11., 82., 33.],
+        [15.,  7., 31., ..., 29., 66., 27.],
         ...,
-        [33., 75., 69., ..., 67., 37., 49.],
-        [76., 78., 21., ..., 27.,  4., 24.],
-        [ 6., 87.,  3., ..., 30., 43., 41.]]])
+        [ 9., 44., 88., ..., 88., 45., 61.],
+        [18., 77., 35., ..., 25., 65.,  5.],
+        [36., 38., 81., ..., 32.,  1., 74.]]])
 </pre></div>
 </div>
 </div>
@@ -1305,25 +1333,25 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[98, 97, 98, 97, 98, 93, 93, 96, 94, 94, 98, 99, 87, 97, 94, 98,
-         95, 98, 99, 96, 99, 99, 99, 85, 98, 99, 97, 99, 95, 94, 98, 99,
-         96, 83, 99, 96, 99, 93, 98, 92]],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[98, 95, 98, 99, 99, 92, 98, 96, 98, 89, 99, 97, 98, 98, 99, 87,
+         93, 96, 84, 97, 97, 99, 99, 85, 96, 98, 99, 94, 95, 99, 94, 94,
+         96, 97, 96, 90, 91, 99, 98, 95]],
 
-       [[98, 97, 97, 97, 99, 98, 98, 96, 99, 97, 99, 95, 98, 99, 99, 98,
-         98, 94, 94, 91, 96, 94, 99, 98, 99, 96, 92, 98, 90, 89, 92, 98,
-         87, 98, 98, 99, 99, 98, 98, 95]],
+       [[99, 99, 93, 96, 97, 92, 99, 97, 92, 94, 99, 95, 95, 98, 92, 95,
+         98, 99, 99, 94, 98, 97, 99, 97, 97, 98, 96, 99, 96, 97, 97, 99,
+         98, 99, 95, 99, 95, 95, 93, 98]],
 
-       [[92, 98, 92, 90, 90, 99, 87, 99, 98, 98, 95, 95, 98, 97, 95, 96,
-         98, 93, 88, 99, 99, 87, 94, 99, 99, 94, 93, 99, 97, 97, 98, 98,
-         98, 97, 96, 99, 98, 97, 95, 95]],
+       [[93, 99, 99, 97, 97, 99, 88, 97, 99, 96, 96, 97, 97, 96, 90, 94,
+         99, 95, 96, 99, 98, 94, 98, 98, 99, 98, 96, 93, 98, 98, 98, 99,
+         98, 98, 93, 99, 99, 99, 89, 98]],
 
-       [[98, 99, 96, 99, 93, 94, 98, 93, 99, 99, 97, 99, 99, 99, 98, 98,
-         98, 99, 99, 96, 93, 98, 97, 98, 99, 97, 79, 98, 97, 91, 99, 98,
-         99, 99, 96, 99, 90, 95, 96, 87]],
+       [[97, 96, 96, 90, 96, 98, 94, 97, 98, 98, 97, 95, 98, 97, 99, 98,
+         95, 97, 98, 99, 93, 99, 92, 98, 96, 91, 99, 97, 95, 88, 97, 96,
+         95, 99, 88, 97, 91, 99, 93, 98]],
 
-       [[91, 99, 99, 97, 92, 98, 99, 99, 97, 96, 98, 96, 99, 98, 95, 88,
-         98, 95, 97, 99, 88, 92, 99, 96, 97, 98, 99, 99, 98, 97, 99, 93,
-         92, 94, 96, 96, 97, 98, 99, 99]]])
+       [[99, 95, 96, 91, 99, 99, 99, 94, 99, 96, 99, 99, 96, 97, 99, 99,
+         98, 96, 96, 94, 99, 99, 97, 99, 99, 99, 95, 98, 98, 99, 99, 97,
+         97, 96, 96, 98, 93, 99, 98, 99]]])
 </pre></div>
 </div>
 </div>
@@ -1498,6 +1526,13 @@ const thebe_selector_output = ".output, .cell_output"
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Accessing Coordinates Practice</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="../../../examples/logplot.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Plot with multiple lines and a log axis</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             

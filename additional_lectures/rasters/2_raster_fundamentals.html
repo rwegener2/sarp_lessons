@@ -527,6 +527,33 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Examples
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../examples/logplot.html">
+   Plot with multiple lines and a log axis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../examples/flight_track.html">
+   Flight Track Plot
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../examples/altitude_twin_axes.html">
+   Altitude Plot with Twin Axes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../examples/gridded_mapping.html">
+   Cartopy with gridded data
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -925,7 +952,41 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;open DatasetReader name=&#39;./data/subset_f180628t01p00r02_corr_v1k1_img&#39; mode=&#39;r&#39;&gt;
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">CPLE_OpenFailedError</span><span class="g g-Whitespace">                      </span>Traceback (most recent call last)
+<span class="nn">rasterio/_base.pyx</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
+
+<span class="nn">rasterio/_shim.pyx</span> in <span class="ni">rasterio._shim.open_dataset</span><span class="nt">()</span>
+
+<span class="nn">rasterio/_err.pyx</span> in <span class="ni">rasterio._err.exc_wrap_pointer</span><span class="nt">()</span>
+
+<span class="ne">CPLE_OpenFailedError</span>: ./data/subset_f180628t01p00r02_corr_v1k1_img: No such file or directory
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">RasterioIOError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15340</span><span class="o">/</span><span class="mf">2534692442.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Open the file</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">with</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filepath_rad</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">src</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="nb">print</span><span class="p">(</span><span class="n">src</span><span class="p">)</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/rasterio/env.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">435</span> 
+<span class="g g-Whitespace">    </span><span class="mi">436</span>         <span class="k">with</span> <span class="n">env_ctor</span><span class="p">(</span><span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">437</span>             <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">438</span> 
+<span class="g g-Whitespace">    </span><span class="mi">439</span>     <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/rasterio/__init__.py</span> in <span class="ni">open</span><span class="nt">(fp, mode, driver, width, height, count, crs, transform, dtype, nodata, sharing, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">218</span>         <span class="c1"># None.</span>
+<span class="g g-Whitespace">    </span><span class="mi">219</span>         <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s1">&#39;r&#39;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">220</span>             <span class="n">s</span> <span class="o">=</span> <span class="n">DatasetReader</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="n">sharing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span>         <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;r+&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">222</span>             <span class="n">s</span> <span class="o">=</span> <span class="n">get_writer_for_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">)(</span>
+
+<span class="nn">rasterio/_base.pyx</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
+
+<span class="ne">RasterioIOError</span>: ./data/subset_f180628t01p00r02_corr_v1k1_img: No such file or directory
 </pre></div>
 </div>
 </div>
@@ -952,19 +1013,41 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-8.8028395e-01 -8.8028395e-01 -8.8028395e-01 ...  7.7182706e-04
-   1.8142069e-02  2.4249963e-02]
- [-8.8028395e-01 -8.8028395e-01 -8.8028395e-01 ...  1.2664238e-02
-   1.7274955e-02  2.1294061e-02]
- [-8.8028395e-01 -8.8028395e-01 -8.8028395e-01 ...  1.6278537e-02
-   1.4166061e-02  1.2966915e-02]
- ...
- [-8.8028395e-01 -8.8028395e-01 -8.8028395e-01 ...  3.9758585e-02
-   3.6750916e-02  4.9293626e-02]
- [-8.8028395e-01 -8.8028395e-01 -8.8028395e-01 ...  4.6895660e-02
-   5.5631310e-02  4.7900975e-02]
- [-8.8028395e-01 -8.8028395e-01 -8.8028395e-01 ...  5.4747202e-02
-   5.0485637e-02  5.1755313e-02]]
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">CPLE_OpenFailedError</span><span class="g g-Whitespace">                      </span>Traceback (most recent call last)
+<span class="nn">rasterio/_base.pyx</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
+
+<span class="nn">rasterio/_shim.pyx</span> in <span class="ni">rasterio._shim.open_dataset</span><span class="nt">()</span>
+
+<span class="nn">rasterio/_err.pyx</span> in <span class="ni">rasterio._err.exc_wrap_pointer</span><span class="nt">()</span>
+
+<span class="ne">CPLE_OpenFailedError</span>: ./data/subset_f180628t01p00r02_corr_v1k1_img: No such file or directory
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">RasterioIOError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15340</span><span class="o">/</span><span class="mf">2747303699.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Reading the first band from our file</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">with</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filepath_rad</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">src</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="nb">print</span><span class="p">(</span><span class="n">src</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/rasterio/env.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">435</span> 
+<span class="g g-Whitespace">    </span><span class="mi">436</span>         <span class="k">with</span> <span class="n">env_ctor</span><span class="p">(</span><span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">437</span>             <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">438</span> 
+<span class="g g-Whitespace">    </span><span class="mi">439</span>     <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/rasterio/__init__.py</span> in <span class="ni">open</span><span class="nt">(fp, mode, driver, width, height, count, crs, transform, dtype, nodata, sharing, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">218</span>         <span class="c1"># None.</span>
+<span class="g g-Whitespace">    </span><span class="mi">219</span>         <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s1">&#39;r&#39;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">220</span>             <span class="n">s</span> <span class="o">=</span> <span class="n">DatasetReader</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="n">sharing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span>         <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;r+&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">222</span>             <span class="n">s</span> <span class="o">=</span> <span class="n">get_writer_for_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">)(</span>
+
+<span class="nn">rasterio/_base.pyx</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
+
+<span class="ne">RasterioIOError</span>: ./data/subset_f180628t01p00r02_corr_v1k1_img: No such file or directory
 </pre></div>
 </div>
 </div>
@@ -989,7 +1072,42 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/2_raster_fundamentals_25_0.png" src="../../_images/2_raster_fundamentals_25_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">CPLE_OpenFailedError</span><span class="g g-Whitespace">                      </span>Traceback (most recent call last)
+<span class="nn">rasterio/_base.pyx</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
+
+<span class="nn">rasterio/_shim.pyx</span> in <span class="ni">rasterio._shim.open_dataset</span><span class="nt">()</span>
+
+<span class="nn">rasterio/_err.pyx</span> in <span class="ni">rasterio._err.exc_wrap_pointer</span><span class="nt">()</span>
+
+<span class="ne">CPLE_OpenFailedError</span>: ./data/subset_f180628t01p00r02_corr_v1k1_img: No such file or directory
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">RasterioIOError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15340</span><span class="o">/</span><span class="mf">1588742019.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">with</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filepath_rad</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">src</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="n">pyplot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">src</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/rasterio/env.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">435</span> 
+<span class="g g-Whitespace">    </span><span class="mi">436</span>         <span class="k">with</span> <span class="n">env_ctor</span><span class="p">(</span><span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">437</span>             <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">438</span> 
+<span class="g g-Whitespace">    </span><span class="mi">439</span>     <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/rasterio/__init__.py</span> in <span class="ni">open</span><span class="nt">(fp, mode, driver, width, height, count, crs, transform, dtype, nodata, sharing, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">218</span>         <span class="c1"># None.</span>
+<span class="g g-Whitespace">    </span><span class="mi">219</span>         <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s1">&#39;r&#39;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">220</span>             <span class="n">s</span> <span class="o">=</span> <span class="n">DatasetReader</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="n">sharing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span>         <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;r+&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">222</span>             <span class="n">s</span> <span class="o">=</span> <span class="n">get_writer_for_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">)(</span>
+
+<span class="nn">rasterio/_base.pyx</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
+
+<span class="ne">RasterioIOError</span>: ./data/subset_f180628t01p00r02_corr_v1k1_img: No such file or directory
+</pre></div>
+</div>
 </div>
 </div>
 <p>The plot and the array might not be very useful right now, but at least we have validated that we can open our raster and that it contains data.</p>
@@ -1053,8 +1171,41 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;driver&#39;: &#39;ENVI&#39;, &#39;dtype&#39;: &#39;float32&#39;, &#39;nodata&#39;: None, &#39;width&#39;: 375, &#39;height&#39;: 250, &#39;count&#39;: 224, &#39;crs&#39;: CRS.from_epsg(32610), &#39;transform&#39;: Affine(1.02258007728804e-15, 16.7, 769855.79,
-       16.7, -1.02258007728804e-15, 3751257.6)}
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">CPLE_OpenFailedError</span><span class="g g-Whitespace">                      </span>Traceback (most recent call last)
+<span class="nn">rasterio/_base.pyx</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
+
+<span class="nn">rasterio/_shim.pyx</span> in <span class="ni">rasterio._shim.open_dataset</span><span class="nt">()</span>
+
+<span class="nn">rasterio/_err.pyx</span> in <span class="ni">rasterio._err.exc_wrap_pointer</span><span class="nt">()</span>
+
+<span class="ne">CPLE_OpenFailedError</span>: ./data/subset_f180628t01p00r02_corr_v1k1_img: No such file or directory
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">RasterioIOError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15340</span><span class="o">/</span><span class="mf">1799628655.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Try substituting any of the above attributes in for this dataset</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">with</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filepath_rad</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">src</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="nb">print</span><span class="p">(</span><span class="n">src</span><span class="o">.</span><span class="n">meta</span><span class="p">)</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/rasterio/env.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">435</span> 
+<span class="g g-Whitespace">    </span><span class="mi">436</span>         <span class="k">with</span> <span class="n">env_ctor</span><span class="p">(</span><span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">437</span>             <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">438</span> 
+<span class="g g-Whitespace">    </span><span class="mi">439</span>     <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/rasterio/__init__.py</span> in <span class="ni">open</span><span class="nt">(fp, mode, driver, width, height, count, crs, transform, dtype, nodata, sharing, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">218</span>         <span class="c1"># None.</span>
+<span class="g g-Whitespace">    </span><span class="mi">219</span>         <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s1">&#39;r&#39;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">220</span>             <span class="n">s</span> <span class="o">=</span> <span class="n">DatasetReader</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="n">sharing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span>         <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;r+&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">222</span>             <span class="n">s</span> <span class="o">=</span> <span class="n">get_writer_for_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">)(</span>
+
+<span class="nn">rasterio/_base.pyx</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
+
+<span class="ne">RasterioIOError</span>: ./data/subset_f180628t01p00r02_corr_v1k1_img: No such file or directory
 </pre></div>
 </div>
 </div>
@@ -1067,7 +1218,40 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(224, 250, 375)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">CPLE_OpenFailedError</span><span class="g g-Whitespace">                      </span>Traceback (most recent call last)
+<span class="nn">rasterio/_base.pyx</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
+
+<span class="nn">rasterio/_shim.pyx</span> in <span class="ni">rasterio._shim.open_dataset</span><span class="nt">()</span>
+
+<span class="nn">rasterio/_err.pyx</span> in <span class="ni">rasterio._err.exc_wrap_pointer</span><span class="nt">()</span>
+
+<span class="ne">CPLE_OpenFailedError</span>: ./data/subset_f180628t01p00r02_corr_v1k1_img: No such file or directory
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">RasterioIOError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15340</span><span class="o">/</span><span class="mf">3732641244.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">with</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filepath_rad</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">src</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="nb">print</span><span class="p">(</span><span class="n">src</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/rasterio/env.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">435</span> 
+<span class="g g-Whitespace">    </span><span class="mi">436</span>         <span class="k">with</span> <span class="n">env_ctor</span><span class="p">(</span><span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">437</span>             <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">438</span> 
+<span class="g g-Whitespace">    </span><span class="mi">439</span>     <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/rasterio/__init__.py</span> in <span class="ni">open</span><span class="nt">(fp, mode, driver, width, height, count, crs, transform, dtype, nodata, sharing, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">218</span>         <span class="c1"># None.</span>
+<span class="g g-Whitespace">    </span><span class="mi">219</span>         <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s1">&#39;r&#39;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">220</span>             <span class="n">s</span> <span class="o">=</span> <span class="n">DatasetReader</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="n">sharing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span>         <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;r+&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">222</span>             <span class="n">s</span> <span class="o">=</span> <span class="n">get_writer_for_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">)(</span>
+
+<span class="nn">rasterio/_base.pyx</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
+
+<span class="ne">RasterioIOError</span>: ./data/subset_f180628t01p00r02_corr_v1k1_img: No such file or directory
 </pre></div>
 </div>
 </div>
@@ -1099,6 +1283,46 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">CPLE_OpenFailedError</span><span class="g g-Whitespace">                      </span>Traceback (most recent call last)
+<span class="nn">rasterio/_base.pyx</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
+
+<span class="nn">rasterio/_shim.pyx</span> in <span class="ni">rasterio._shim.open_dataset</span><span class="nt">()</span>
+
+<span class="nn">rasterio/_err.pyx</span> in <span class="ni">rasterio._err.exc_wrap_pointer</span><span class="nt">()</span>
+
+<span class="ne">CPLE_OpenFailedError</span>: ./data/subset_f180628t01p00r02_corr_v1k1_img: No such file or directory
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">RasterioIOError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15340</span><span class="o">/</span><span class="mf">2484995532.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">with</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filepath_rad</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">src</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="n">red_band</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">blue_band</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">green_band</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/rasterio/env.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">435</span> 
+<span class="g g-Whitespace">    </span><span class="mi">436</span>         <span class="k">with</span> <span class="n">env_ctor</span><span class="p">(</span><span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">437</span>             <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">438</span> 
+<span class="g g-Whitespace">    </span><span class="mi">439</span>     <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/rasterio/__init__.py</span> in <span class="ni">open</span><span class="nt">(fp, mode, driver, width, height, count, crs, transform, dtype, nodata, sharing, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">218</span>         <span class="c1"># None.</span>
+<span class="g g-Whitespace">    </span><span class="mi">219</span>         <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s1">&#39;r&#39;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">220</span>             <span class="n">s</span> <span class="o">=</span> <span class="n">DatasetReader</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="n">sharing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span>         <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;r+&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">222</span>             <span class="n">s</span> <span class="o">=</span> <span class="n">get_writer_for_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">)(</span>
+
+<span class="nn">rasterio/_base.pyx</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
+
+<span class="ne">RasterioIOError</span>: ./data/subset_f180628t01p00r02_corr_v1k1_img: No such file or directory
+</pre></div>
+</div>
+</div>
 </div>
 <section id="indexing">
 <h3>Indexing<a class="headerlink" href="#indexing" title="Permalink to this headline">¶</a></h3>
@@ -1114,7 +1338,12 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.005221703
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15340</span><span class="o">/</span><span class="mf">2523812834.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">red_band</span><span class="p">[</span><span class="mi">249</span><span class="p">,</span> <span class="mi">374</span><span class="p">]</span>
+
+<span class="ne">NameError</span>: name &#39;red_band&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1126,7 +1355,12 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0062336302
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15340</span><span class="o">/</span><span class="mf">1261475331.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">red_band</span><span class="p">[</span><span class="mi">144</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
+
+<span class="ne">NameError</span>: name &#39;red_band&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1139,100 +1373,13 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-9.89863992e-01, -9.89863992e-01, -9.89863992e-01, -9.89863992e-01,
-       -9.89863992e-01, -9.89863992e-01, -9.89863992e-01, -9.89863992e-01,
-       -9.89863992e-01, -9.89863992e-01, -9.89863992e-01, -9.89863992e-01,
-       -9.89863992e-01, -9.89863992e-01, -9.89863992e-01, -9.89863992e-01,
-       -9.89863992e-01, -9.89863992e-01, -9.89863992e-01, -9.89863992e-01,
-       -9.89863992e-01, -9.89863992e-01, -9.89863992e-01, -9.89863992e-01,
-       -9.89863992e-01, -9.89863992e-01, -9.89863992e-01, -9.89863992e-01,
-       -9.89863992e-01, -9.89863992e-01, -9.89863992e-01, -9.89863992e-01,
-        9.60341003e-03,  8.56745243e-03,  9.77658853e-03,  1.21959150e-02,
-        1.21608926e-02,  1.01511301e-02,  1.22256568e-02,  1.22256568e-02,
-        9.97462496e-03,  1.32317590e-02,  9.90260020e-03,  7.78485741e-03,
-        1.16055440e-02,  1.03626624e-02,  1.03626624e-02,  8.48274026e-03,
-        1.07032945e-02,  1.05163530e-02,  5.99020347e-03,  9.29890200e-03,
-        1.20315310e-02,  8.23581219e-03,  8.52218829e-03,  8.52218829e-03,
-        9.99249145e-03,  1.08621847e-02,  1.27621852e-02,  9.74960625e-03,
-        9.93011892e-03,  1.10991010e-02,  9.72998329e-03,  9.72998329e-03,
-        1.37429517e-02,  1.07355947e-02,  1.04636298e-02,  1.22513892e-02,
-        1.17190378e-02,  9.16020479e-03,  1.16725871e-02,  1.16725871e-02,
-        9.93436389e-03,  9.92709771e-03,  7.87495449e-03,  9.22061317e-03,
-        1.08120767e-02,  1.17061716e-02,  7.62484455e-03,  7.62484455e-03,
-        1.27769317e-02,  1.16161704e-02,  1.13528278e-02,  9.19037219e-03,
-        1.14430059e-02,  1.06365317e-02,  7.00194389e-03,  9.92375892e-03,
-        1.04948664e-02,  1.04948664e-02,  9.83347651e-03,  4.01473558e-03,
-        1.02585070e-02,  6.51265541e-03,  3.85753764e-03,  1.37749342e-02,
-        1.18129533e-02,  1.18129533e-02,  1.16536515e-02,  8.72882642e-03,
-        1.08521413e-02,  1.13936057e-02,  1.24934735e-02,  1.01565169e-02,
-        7.94219784e-03,  1.11402711e-02,  1.11402711e-02,  1.07124457e-02,
-        9.70683526e-03,  9.39665642e-03,  1.11531522e-02,  1.22633809e-02,
-        1.00097349e-02,  1.03047434e-02,  1.22710364e-02,  7.45117245e-03,
-        8.91800411e-03,  8.91800411e-03,  1.00032743e-02,  1.03893792e-02,
-        1.14607411e-02,  1.13273570e-02,  9.52258985e-03,  1.04254112e-02,
-        9.68714152e-03,  7.56124547e-03,  7.56124547e-03,  9.12059192e-03,
-        1.15978923e-02,  8.94551259e-03,  9.03818756e-03,  1.14348466e-02,
-        1.12770488e-02,  1.01099340e-02,  1.09425560e-02,  1.27936015e-02,
-        1.03212325e-02,  1.20040122e-02,  1.15839001e-02,  1.09657971e-02,
-        1.08133005e-02,  1.14410305e-02,  1.02785453e-02,  1.22435279e-02,
-        1.13794953e-02,  1.03773763e-02,  1.46823423e-02,  1.31757027e-02,
-        1.31757027e-02,  1.34336296e-02,  1.34091042e-02,  1.01813180e-02,
-        7.18480861e-03,  1.32976491e-02,  9.29967128e-03,  9.34869051e-03,
-        8.52198992e-03,  8.50201119e-03,  8.50201119e-03,  1.13882786e-02,
-        8.57987348e-03,  8.28727987e-03,  1.09522119e-02,  8.20450671e-03,
-        1.02974121e-02,  9.24416911e-03,  1.05280252e-02,  9.57950391e-03,
-        9.75759793e-03,  9.37086716e-03,  9.37086716e-03,  8.56183190e-03,
-        9.64759290e-03,  1.14238849e-02,  7.76233617e-03,  7.44129391e-03,
-        5.89989871e-03,  6.99818227e-03,  8.07397719e-03,  7.37830950e-03,
-        5.37360925e-03,  7.98865873e-03,  7.98865873e-03,  5.78207243e-03,
-        3.37526924e-03,  1.02493092e-02,  8.17018934e-03,  5.70513587e-03,
-        9.31401737e-03,  5.99309057e-03,  1.04032306e-03,  2.40463717e-03,
-        7.23264366e-03,  6.07277872e-03,  7.87939131e-03,  7.87939131e-03,
-        5.02707716e-03,  1.04341060e-02,  6.54117577e-03,  6.40173163e-03,
-        8.48427694e-03,  9.44371521e-03,  1.09653706e-02,  8.80982541e-03,
-        8.23528913e-04,  5.77815436e-03,  1.14251103e-03,  1.14251103e-03,
-        5.72341774e-03,  7.61449104e-03,  5.68367587e-03,  1.26515748e-02,
-        5.33479173e-03,  6.80172350e-03,  8.36720411e-03,  7.88195804e-03,
-        1.25120173e-03,  1.03334403e-02,  9.92541667e-03,  1.33938612e-02,
-        1.33938612e-02,  7.69980485e-03,  9.40576103e-03,  5.77459997e-03,
-        6.79657003e-03,  1.15214370e-03,  4.47639171e-03,  1.15755051e-02,
-        8.78010783e-03,  8.72862712e-03,  9.10193846e-03,  5.86174522e-03,
-        6.20170590e-03,  5.15950611e-03,  4.94923256e-03,  4.94923256e-03,
-        7.73387915e-03,  6.25468977e-03,  7.82719348e-03,  6.18605362e-03,
-        5.79997199e-03,  8.95670056e-03,  8.15831777e-03,  1.17874248e-02,
-        5.76946558e-03,  7.13090133e-03,  4.88395710e-03,  2.29153968e-03,
-        7.00125797e-03,  5.55184297e-03,  5.44924103e-03,  5.44924103e-03,
-        5.80242230e-03,  8.49946123e-03,  7.27876043e-03,  9.87273734e-03,
-        6.17004791e-03,  4.39421041e-03,  3.98266455e-03,  6.80908607e-03,
-        8.64381902e-03,  7.45708495e-03,  5.65337949e-03,  7.08853174e-03,
-        9.51331947e-03,  9.51331947e-03,  1.79716554e-02,  6.48755431e-02,
-        1.11067332e-01,  3.25312838e-02,  1.32159684e-02,  1.57204792e-02,
-        1.82487592e-02,  2.96701975e-02,  9.13888589e-02,  1.68310538e-01,
-        2.26290867e-01,  1.68618903e-01,  1.52089566e-01,  1.53015971e-01,
-        1.71361595e-01,  1.71361595e-01,  1.78749010e-01,  1.68540463e-01,
-        1.47794291e-01,  1.26275867e-01,  1.13734059e-01,  1.01421140e-01,
-        8.83982405e-02,  9.72591266e-02,  1.32041112e-01,  1.59027189e-01,
-        1.94381401e-01,  2.22682908e-01,  2.15925947e-01,  2.15925947e-01,
-        2.29753554e-01,  2.33850136e-01,  2.35325441e-01,  2.55388141e-01,
-        2.82413244e-01,  3.10377479e-01,  3.28700691e-01,  2.59206623e-01,
-        2.51021773e-01,  2.54293412e-01,  2.89322555e-01,  3.31567198e-01,
-        3.36291105e-01,  3.10564101e-01,  3.10564101e-01,  2.74938077e-01,
-        2.63735503e-01,  2.59882569e-01,  2.79308110e-01,  2.56433010e-01,
-        2.47580290e-01,  2.55837888e-01,  2.67711788e-01,  2.15465501e-01,
-        1.56197593e-01,  1.37191728e-01,  1.23051502e-01,  1.19016066e-01,
-        1.14996009e-01,  1.30868509e-01,  1.41310662e-01,  1.41310662e-01,
-        1.36986896e-01,  1.45302624e-01,  1.62975192e-01,  1.80153936e-01,
-        2.03104600e-01,  1.95680529e-01,  2.11470127e-01,  2.07485899e-01,
-        1.85355276e-01,  1.83796972e-01,  1.77590415e-01,  1.59322709e-01,
-        1.48297369e-01,  1.56327918e-01,  1.51601136e-01,  1.51601136e-01,
-        1.54474974e-01,  1.83645815e-01,  2.62981385e-01,  2.58784413e-01,
-        1.68838456e-01,  1.10366546e-01,  9.83937159e-02,  8.98709968e-02,
-        7.62339979e-02,  1.12549394e-01,  1.21540807e-01,  1.02702200e-01,
-        1.04190111e-01,  1.32186681e-01,  1.56810403e-01,  1.60454646e-01,
-        1.45415485e-01,  1.29735738e-01,  1.34829611e-01,  1.46270335e-01,
-        1.47036850e-01,  1.60749197e-01,  1.60749197e-01,  1.77667767e-01,
-        1.45186886e-01,  1.20232992e-01,  1.24302126e-01,  1.59918860e-01,
-        1.74745366e-01,  1.62464723e-01,  9.29672793e-02], dtype=float32)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15340</span><span class="o">/</span><span class="mf">4124709960.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># One long row of data</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">red_band</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+
+<span class="ne">NameError</span>: name &#39;red_band&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1250,9 +1397,14 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>max value:  0.4638913
-mean value:  -0.037566137
-min value:  -0.9919098
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15340</span><span class="o">/</span><span class="mf">4112547216.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;max value: &#39;</span><span class="p">,</span> <span class="n">green_band</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;mean value: &#39;</span><span class="p">,</span> <span class="n">green_band</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;min value: &#39;</span><span class="p">,</span> <span class="n">green_band</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+
+<span class="ne">NameError</span>: name &#39;green_band&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1268,19 +1420,12 @@ min value:  -0.9919098
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-1.9817739 , -1.9817739 , -1.9817739 , ...,  0.13850516,
-         0.20546283,  0.33700895],
-       [-1.9817739 , -1.9817739 , -1.9817739 , ...,  0.18310083,
-         0.27180833,  0.28681755],
-       [-1.9817739 , -1.9817739 , -1.9817739 , ...,  0.28129148,
-         0.29883683,  0.23306896],
-       ...,
-       [-1.9817739 , -1.9817739 , -1.9817739 , ...,  0.04379314,
-         0.04434666,  0.04983609],
-       [-1.9817739 , -1.9817739 , -1.9817739 , ...,  0.04094062,
-         0.05011846,  0.04768296],
-       [-1.9817739 , -1.9817739 , -1.9817739 , ...,  0.05058881,
-         0.04569351,  0.04583649]], dtype=float32)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15340</span><span class="o">/</span><span class="mf">2664479446.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">red_band</span> <span class="o">+</span> <span class="n">green_band</span>
+
+<span class="ne">NameError</span>: name &#39;red_band&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1292,19 +1437,12 @@ min value:  -0.9919098
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 0.03121787,  0.03121787,  0.03121787, ..., -0.06602393,
-        -0.11272857, -0.20093265],
-       [ 0.03121787,  0.03121787,  0.03121787, ..., -0.0920296 ,
-        -0.15151955, -0.14239667],
-       [ 0.03121787,  0.03121787,  0.03121787, ..., -0.15002072,
-        -0.17034033, -0.11561722],
-       ...,
-       [ 0.03121787,  0.03121787,  0.03121787, ...,  0.04716351,
-         0.04572179,  0.05058041],
-       [ 0.03121787,  0.03121787,  0.03121787, ...,  0.05341611,
-         0.05365299,  0.05151878],
-       [ 0.03121787,  0.03121787,  0.03121787, ...,  0.05188685,
-         0.05395792,  0.0552441 ]], dtype=float32)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15340</span><span class="o">/</span><span class="mf">2069794427.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">blue_band</span> <span class="o">-</span> <span class="n">red_band</span>
+
+<span class="ne">NameError</span>: name &#39;blue_band&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1317,19 +1455,12 @@ min value:  -0.9919098
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-4.94932   , -4.94932   , -4.94932   , ...,  0.4822076 ,
-         0.768427  ,  1.2765377 ],
-       [-4.94932   , -4.94932   , -4.94932   , ...,  0.6515627 ,
-         1.0018888 ,  1.0037379 ],
-       [-4.94932   , -4.94932   , -4.94932   , ...,  1.0025584 ,
-         1.0973514 ,  0.81842124],
-       ...,
-       [-4.94932   , -4.94932   , -4.94932   , ...,  0.02871939,
-         0.03346157,  0.04347686],
-       [-4.94932   , -4.94932   , -4.94932   , ...,  0.01182676,
-         0.04153725,  0.03549127],
-       [-4.94932   , -4.94932   , -4.94932   , ...,  0.05110819,
-         0.02780656,  0.02610851]], dtype=float32)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15340</span><span class="o">/</span><span class="mf">3415744180.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">red_band</span><span class="o">*</span><span class="mi">5</span>
+
+<span class="ne">NameError</span>: name &#39;red_band&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1341,19 +1472,12 @@ min value:  -0.9919098
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-0.1417014 , -0.1417014 , -0.1417014 , ...,  0.00600909,
-         0.00739677,  0.01167163],
-       [-0.1417014 , -0.1417014 , -0.1417014 , ...,  0.00754119,
-         0.01020437,  0.01229571],
-       [-0.1417014 , -0.1417014 , -0.1417014 , ...,  0.01153998,
-         0.01133808,  0.0099121 ],
-       ...,
-       [-0.1417014 , -0.1417014 , -0.1417014 , ...,  0.00543561,
-         0.00537919,  0.00587725],
-       [-0.1417014 , -0.1417014 , -0.1417014 , ...,  0.00551075,
-         0.005973  ,  0.00579782],
-       [-0.1417014 , -0.1417014 , -0.1417014 , ...,  0.00576674,
-         0.00573317,  0.00580211]], dtype=float32)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15340</span><span class="o">/</span><span class="mf">281845214.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">green_band</span><span class="o">/</span><span class="mi">7</span>
+
+<span class="ne">NameError</span>: name &#39;green_band&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1375,19 +1499,14 @@ min value:  -0.9919098
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.99491906, 0.99491906, 0.99491906, ..., 0.31055036, 0.3920273 ,
-        0.50527966],
-       [0.99491906, 0.99491906, 0.99491906, ..., 0.36098826, 0.44763574,
-        0.44804865],
-       [0.99491906, 0.99491906, 0.99491906, ..., 0.4477853 , 0.46847656,
-        0.4045791 ],
-       ...,
-       [0.99491906, 0.99491906, 0.99491906, ..., 0.07578838, 0.08180656,
-        0.09324898],
-       [0.99491906, 0.99491906, 0.99491906, ..., 0.04863489, 0.09114521,
-        0.08425114],
-       [0.99491906, 0.99491906, 0.99491906, ..., 0.10110211, 0.07457421,
-        0.07226136]], dtype=float32)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15340</span><span class="o">/</span><span class="mf">1076825812.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># We have to take the absolute value of red because the nodata values are negative</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># and that throws an error</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">red_band</span><span class="p">))</span>
+
+<span class="ne">NameError</span>: name &#39;red_band&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1399,19 +1518,12 @@ min value:  -0.9919098
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-9.50336993e-01, -9.50336993e-01, -9.50336993e-01, ...,
-         8.34296225e-06,  8.57359846e-05,  1.08472107e-03],
-       [-9.50336993e-01, -9.50336993e-01, -9.50336993e-01, ...,
-         3.75777636e-05,  3.23033426e-04,  3.26025620e-04],
-       [-9.50336993e-01, -9.50336993e-01, -9.50336993e-01, ...,
-         3.24114313e-04,  5.09188452e-04,  1.17499076e-04],
-       ...,
-       [-9.50336993e-01, -9.50336993e-01, -9.50336993e-01, ...,
-         6.25210387e-12,  1.34239833e-11,  4.97096496e-11],
-       [-9.50336993e-01, -9.50336993e-01, -9.50336993e-01, ...,
-         7.40421450e-14,  3.95674951e-11,  1.80201236e-11],
-       [-9.50336993e-01, -9.50336993e-01, -9.50336993e-01, ...,
-         1.11584131e-10,  5.31969304e-12,  3.88204789e-12]], dtype=float32)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15340</span><span class="o">/</span><span class="mf">3227455763.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">red_band</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;red_band&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1428,10 +1540,14 @@ min value:  -0.9919098
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x111ecb910&gt;
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15340</span><span class="o">/</span><span class="mf">3108707071.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">red_band</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;red_band&#39; is not defined
 </pre></div>
 </div>
-<img alt="../../_images/2_raster_fundamentals_62_1.png" src="../../_images/2_raster_fundamentals_62_1.png" />
 </div>
 </div>
 <div class="tip admonition">
@@ -1455,12 +1571,63 @@ min value:  -0.9919098
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">CPLE_OpenFailedError</span><span class="g g-Whitespace">                      </span>Traceback (most recent call last)
+<span class="nn">rasterio/_base.pyx</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
+
+<span class="nn">rasterio/_shim.pyx</span> in <span class="ni">rasterio._shim.open_dataset</span><span class="nt">()</span>
+
+<span class="nn">rasterio/_err.pyx</span> in <span class="ni">rasterio._err.exc_wrap_pointer</span><span class="nt">()</span>
+
+<span class="ne">CPLE_OpenFailedError</span>: ./data/subset_f180628t01p00r02_corr_v1k1_img: No such file or directory
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">RasterioIOError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15340</span><span class="o">/</span><span class="mf">3639944890.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Get our data setup</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">with</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filepath_rad</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">src</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">red_src</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">blue_src</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">green_src</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/rasterio/env.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">435</span> 
+<span class="g g-Whitespace">    </span><span class="mi">436</span>         <span class="k">with</span> <span class="n">env_ctor</span><span class="p">(</span><span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">437</span>             <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">438</span> 
+<span class="g g-Whitespace">    </span><span class="mi">439</span>     <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/rasterio/__init__.py</span> in <span class="ni">open</span><span class="nt">(fp, mode, driver, width, height, count, crs, transform, dtype, nodata, sharing, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">218</span>         <span class="c1"># None.</span>
+<span class="g g-Whitespace">    </span><span class="mi">219</span>         <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s1">&#39;r&#39;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">220</span>             <span class="n">s</span> <span class="o">=</span> <span class="n">DatasetReader</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="n">sharing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span>         <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;r+&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">222</span>             <span class="n">s</span> <span class="o">=</span> <span class="n">get_writer_for_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">)(</span>
+
+<span class="nn">rasterio/_base.pyx</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
+
+<span class="ne">RasterioIOError</span>: ./data/subset_f180628t01p00r02_corr_v1k1_img: No such file or directory
+</pre></div>
+</div>
+</div>
 </div>
 <p>It is best practice to persist or update as much of the metadata from your old raster as you can.  As you may have experienced working with data, complete and accurate metadata can make someone else’s life (and maybe even your own) much easier down the road.  Make sure you look at it, though, to make sure all the information still applies to your new raster.</p>
 <p>Count has changed, since we are only saving 3 of the 224 total bands, so we need to upadate the <code class="docutils literal notranslate"><span class="pre">count</span></code> value.  I am also going to set -50 as the nodata value.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">meta</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15340</span><span class="o">/</span><span class="mf">387058374.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">meta</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="ne">NameError</span>: name &#39;meta&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1494,6 +1661,20 @@ min value:  -0.9919098
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15340</span><span class="o">/</span><span class="mf">1202046276.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="s1">&#39;../output_data/rgb&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="s1">&#39;w&#39;</span><span class="p">,</span>
+<span class="ne">----&gt; </span><span class="mi">4</span>     <span class="o">**</span><span class="n">meta</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="p">)</span> <span class="k">as</span> <span class="n">dst</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="c1"># Write data matrices</span>
+
+<span class="ne">NameError</span>: name &#39;meta&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 <p>If we want to confirm that our dataset saved properly we can open it back up and look at what we saved.</p>
 <div class="cell docutils container">
@@ -1521,13 +1702,18 @@ min value:  -0.9919098
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Source stats: 
-red:  -0.043670043 0.40461412
-green:  -0.022554584 0.41501164
-blue:  -0.037566137 0.4638913
-Destination stats: 
-red:  -0.043670043 0.40461412
-green:  -0.022554584 0.41501164
-blue:  -0.037566137 0.4638913
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">f8</span><span class="o">/</span><span class="n">rh42xb3d1tnbw2bxsjwgym1c0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15340</span><span class="o">/</span><span class="mf">1912604737.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Source stats: &#39;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;red: &#39;</span><span class="p">,</span> <span class="n">red_src</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">red_src</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;green: &#39;</span><span class="p">,</span> <span class="n">green_src</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">green_src</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;blue: &#39;</span><span class="p">,</span> <span class="n">blue_src</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">blue_src</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Destination stats: &#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;red_src&#39; is not defined
 </pre></div>
 </div>
 </div>

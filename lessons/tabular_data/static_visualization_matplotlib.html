@@ -527,6 +527,33 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Examples
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../examples/logplot.html">
+   Plot with multiple lines and a log axis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../examples/flight_track.html">
+   Flight Track Plot
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../examples/altitude_twin_axes.html">
+   Altitude Plot with Twin Axes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../examples/gridded_mapping.html">
+   Cartopy with gridded data
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -971,7 +998,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import example data - flight from NAAMES campaign</span>
-<span class="n">naames</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/naames-mrg01-c130_merge_20151112_R5_thru20151114.csv&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">223</span><span class="p">)</span>
+<span class="n">naames</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/naames-mrg01-c130_merge_20151112_R5_thru20151114.csv&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">223</span><span class="p">)</span>
 <span class="c1"># Filter down to just 1 day</span>
 <span class="n">naames</span> <span class="o">=</span> <span class="n">naames</span><span class="p">[</span><span class="n">naames</span><span class="p">[</span><span class="s1">&#39; Fractional_Day&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">317</span><span class="p">]</span>
 </pre></div>
@@ -1113,7 +1140,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x10bb1c820&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x10e29a7c0&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/static_visualization_matplotlib_23_1.png" src="../../_images/static_visualization_matplotlib_23_1.png" />
@@ -1173,7 +1200,7 @@ Where <code class="docutils literal notranslate"><span class="pre">x</span></cod
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x10bb80bb0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x10e2fff70&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/static_visualization_matplotlib_33_1.png" src="../../_images/static_visualization_matplotlib_33_1.png" />
@@ -1221,7 +1248,7 @@ Where <code class="docutils literal notranslate"><span class="pre">x</span></cod
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x10bc63c70&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x10e3e2d90&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/static_visualization_matplotlib_39_1.png" src="../../_images/static_visualization_matplotlib_39_1.png" />
