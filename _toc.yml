@@ -82,3 +82,4 @@ parts:
     - file: examples/logplot
     - file: examples/flight_track
     - file: examples/altitude_twin_axes
+    - file: examples/gridded_mapping
