@@ -32,8 +32,8 @@ conda config --add channels conda-forge
 **Part B**
 Install jupyter lab, as well as an additional library that allows juptyer lab to see other conda environments on your system.
 ```
-install -n base nb_conda_kernels
-install -n base -c conda-forge jupyterlab
+conda install -n base nb_conda_kernels
+conda install -n base -c conda-forge jupyterlab
 ```
 
 After installing the two packages above, you can set `conda-forge` to be your default channel.
