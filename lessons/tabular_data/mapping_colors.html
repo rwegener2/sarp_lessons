@@ -466,6 +466,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="practice/firex_exercise.html">
+     FIREX Campaign Spatial Intersect Exercise
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="practice/1_pandas_answers.html">
      <code class="docutils literal notranslate">
       <span class="pre">
@@ -1174,7 +1179,7 @@ These two things are two seperate inputs, <code class="docutils literal notransl
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x1601b65e0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x15fd11670&gt;
 </pre></div>
 </div>
 <img alt="../../_images/mapping_colors_36_1.png" src="../../_images/mapping_colors_36_1.png" />
@@ -1265,7 +1270,7 @@ These two things are two seperate inputs, <code class="docutils literal notransl
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Flight Track Altitude&#39;)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error in callback &lt;function flush_figures at 0x15d33e9d0&gt; (for post_execute):
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error in callback &lt;function flush_figures at 0x15ce789d0&gt; (for post_execute):
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
@@ -1425,46 +1430,25 @@ These two things are two seperate inputs, <code class="docutils literal notransl
 <span class="g g-Whitespace">    </span><span class="mi">923</span>                 <span class="n">geoms</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">geoms</span><span class="p">)</span>
 
 <span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/cartopy/crs.py</span> in <span class="ni">_project_polygon</span><span class="nt">(self, polygon, src_crs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">958</span>         <span class="c1"># Resolve all the inside vs. outside rings, and convert to the</span>
-<span class="g g-Whitespace">    </span><span class="mi">959</span>         <span class="c1"># final MultiPolygon.</span>
-<span class="ne">--&gt; </span><span class="mi">960</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rings_to_multi_polygon</span><span class="p">(</span><span class="n">rings</span><span class="p">,</span> <span class="n">is_ccw</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">961</span> 
-<span class="g g-Whitespace">    </span><span class="mi">962</span>     <span class="k">def</span> <span class="nf">_attach_lines_to_boundary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">multi_line_strings</span><span class="p">,</span> <span class="n">is_ccw</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">946</span>         <span class="n">multi_lines</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="g g-Whitespace">    </span><span class="mi">947</span>         <span class="k">for</span> <span class="n">src_ring</span> <span class="ow">in</span> <span class="p">[</span><span class="n">polygon</span><span class="o">.</span><span class="n">exterior</span><span class="p">]</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">polygon</span><span class="o">.</span><span class="n">interiors</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">948</span>             <span class="n">p_rings</span><span class="p">,</span> <span class="n">p_mline</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_project_linear_ring</span><span class="p">(</span><span class="n">src_ring</span><span class="p">,</span> <span class="n">src_crs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">949</span>             <span class="k">if</span> <span class="n">p_rings</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">950</span>                 <span class="n">rings</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">p_rings</span><span class="p">)</span>
 
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/cartopy/crs.py</span> in <span class="ni">_rings_to_multi_polygon</span><span class="nt">(self, rings, is_ccw)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1159</span>         <span class="n">interior_rings</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1160</span>         <span class="k">for</span> <span class="n">ring</span> <span class="ow">in</span> <span class="n">rings</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1161</span>             <span class="k">if</span> <span class="n">ring</span><span class="o">.</span><span class="n">is_ccw</span> <span class="o">!=</span> <span class="n">is_ccw</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1162</span>                 <span class="n">interior_rings</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ring</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1163</span>             <span class="k">else</span><span class="p">:</span>
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/cartopy/crs.py</span> in <span class="ni">_project_linear_ring</span><span class="nt">(self, linear_ring, src_crs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">886</span>                                                     <span class="n">line</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+<span class="g g-Whitespace">    </span><span class="mi">887</span>                                                     <span class="n">atol</span><span class="o">=</span><span class="n">threshold</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">888</span>                 <span class="n">result_geometry</span> <span class="o">=</span> <span class="n">sgeom</span><span class="o">.</span><span class="n">LinearRing</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">coords</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="g g-Whitespace">    </span><span class="mi">889</span>                 <span class="n">rings</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result_geometry</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">890</span>             <span class="k">else</span><span class="p">:</span>
 
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/shapely/geometry/polygon.py</span> in <span class="ni">is_ccw</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">97</span>     <span class="k">def</span> <span class="nf">is_ccw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">98</span>         <span class="sd">&quot;&quot;&quot;True is the ring is oriented counter clock-wise&quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">99</span>         <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">impl</span><span class="p">[</span><span class="s1">&#39;is_ccw&#39;</span><span class="p">](</span><span class="bp">self</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">100</span> 
-<span class="g g-Whitespace">    </span><span class="mi">101</span>     <span class="nd">@property</span>
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/shapely/algorithms/cga.py</span> in <span class="ni">is_ccw_op</span><span class="nt">(ring)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>     <span class="sd">&quot;&quot;&quot;Predicate implementation&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="k">def</span> <span class="nf">is_ccw_op</span><span class="p">(</span><span class="n">ring</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">14</span>         <span class="k">return</span> <span class="n">signed_area</span><span class="p">(</span><span class="n">ring</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mf">0.0</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="k">return</span> <span class="n">is_ccw_op</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span> 
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/shapely/algorithms/cga.py</span> in <span class="ni">signed_area</span><span class="nt">(ring)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="n">xs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">xs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="n">ys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ys</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="ne">----&gt; </span><span class="mi">9</span>     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">xs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">ys</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">ys</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ring</span><span class="o">.</span><span class="n">coords</span><span class="p">)))</span><span class="o">/</span><span class="mf">2.0</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> 
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="k">def</span> <span class="nf">is_ccw_impl</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-
-<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/shapely/algorithms/cga.py</span> in <span class="ni">&lt;genexpr&gt;</span><span class="nt">(.0)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="n">xs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">xs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="n">ys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ys</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="ne">----&gt; </span><span class="mi">9</span>     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">xs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">ys</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">ys</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ring</span><span class="o">.</span><span class="n">coords</span><span class="p">)))</span><span class="o">/</span><span class="mf">2.0</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> 
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="k">def</span> <span class="nf">is_ccw_impl</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+<span class="nn">~/.pyenv/versions/miniconda3-4.7.12/envs/sarp_docs/lib/python3.9/site-packages/shapely/coords.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">    </span><span class="mi">108</span>                         <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">dx</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">dy</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">dz</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">109</span>                     <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">110</span>                         <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">dx</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">dy</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">111</span>                 <span class="k">return</span> <span class="n">res</span>
+<span class="g g-Whitespace">    </span><span class="mi">112</span>         <span class="k">else</span><span class="p">:</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>

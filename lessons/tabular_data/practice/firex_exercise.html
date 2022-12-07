@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Practice with geopandas &#8212; SARP Programming Lessons</title>
+    <title>FIREX Campaign Spatial Intersect Exercise &#8212; SARP Programming Lessons</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="FIREX Campaign Spatial Intersect Exercise" href="firex_exercise.html" />
-    <link rel="prev" title="Filtering and Groupby Practice" href="2_filtering_groupby_practice.html" />
+    <link rel="next" title="pandas Answers" href="1_pandas_answers.html" />
+    <link rel="prev" title="Practice with geopandas" href="3_geopandas_practice.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -455,8 +455,8 @@ const thebe_selector_output = ".output, .cell_output"
      Filtering and Groupby Practice
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_geopandas_practice.html">
      Practice with
      <code class="docutils literal notranslate">
       <span class="pre">
@@ -465,8 +465,8 @@ const thebe_selector_output = ".output, .cell_output"
      </code>
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="firex_exercise.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      FIREX Campaign Spatial Intersect Exercise
     </a>
    </li>
@@ -599,7 +599,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../_sources/lessons/tabular_data/practice/3_geopandas_practice.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../../_sources/lessons/tabular_data/practice/firex_exercise.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -619,7 +619,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/rwegener2/sarp_lessons/issues/new?title=Issue%20on%20page%20%2Flessons/tabular_data/practice/3_geopandas_practice.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/rwegener2/sarp_lessons/issues/new?title=Issue%20on%20page%20%2Flessons/tabular_data/practice/firex_exercise.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -645,10 +645,63 @@ const thebe_selector_output = ".output, .cell_output"
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hints">
-   Hints
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   FIREX Campaign Spatial Intersect Exercise
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preprocessing-the-firex-data">
+     Preprocessing the FIREX Data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#filtering-firex">
+     Filtering FIREX
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting-firex">
+     Plotting FIREX
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spatially-orienting-firex">
+     Spatially Orienting FIREX
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#congrats">
+       Congrats!
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bonus-challenge">
+   Bonus Challenge
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#processing-the-wildfires-shapefile">
+     Processing the Wildfires Shapefile
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#firex-spatial-filtering">
+     FIREX Spatial Filtering
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Congrats!
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -660,7 +713,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Practice with geopandas</h1>
+                <h1>FIREX Campaign Spatial Intersect Exercise</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -670,10 +723,63 @@ const thebe_selector_output = ".output, .cell_output"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hints">
-   Hints
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   FIREX Campaign Spatial Intersect Exercise
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preprocessing-the-firex-data">
+     Preprocessing the FIREX Data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#filtering-firex">
+     Filtering FIREX
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting-firex">
+     Plotting FIREX
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spatially-orienting-firex">
+     Spatially Orienting FIREX
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#congrats">
+       Congrats!
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bonus-challenge">
+   Bonus Challenge
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#processing-the-wildfires-shapefile">
+     Processing the Wildfires Shapefile
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#firex-spatial-filtering">
+     FIREX Spatial Filtering
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Congrats!
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -684,103 +790,182 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="practice-with-geopandas">
-<h1>Practice with <code class="docutils literal notranslate"><span class="pre">geopandas</span></code><a class="headerlink" href="#practice-with-geopandas" title="Permalink to this headline">¶</a></h1>
-<p>Here I have write out the code to load in the SARP 2020 at home data.  If you’d like to use your own dataset for this practice the questions are generally generic enough for you to try this with any spatial dataset.</p>
-<p>Hints are below</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="firex-campaign-spatial-intersect-exercise">
+<h1>FIREX Campaign Spatial Intersect Exercise<a class="headerlink" href="#firex-campaign-spatial-intersect-exercise" title="Permalink to this headline">¶</a></h1>
+<p>In this exercise we are going to be looking at data from the FIREX campaign and comparing it with wildfire data shapes from the USGS. The <code class="docutils literal notranslate"><span class="pre">geopandas</span></code> lesson page will be a helpful reference. <a class="reference external" href="https://rwegener2.github.io/sarp_lessons/lessons/tabular_data/3_geopandas.html">https://rwegener2.github.io/sarp_lessons/lessons/tabular_data/3_geopandas.html</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="preprocessing-the-firex-data">
+<h2>Preprocessing the FIREX Data<a class="headerlink" href="#preprocessing-the-firex-data" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>To start let’s open our dataset! The file is called <code class="docutils literal notranslate"><span class="pre">firexaq-mrg60-dc8_merge_20190722_R1_thru20190905.csv</span></code> and it is located in a <code class="docutils literal notranslate"><span class="pre">data</span></code> folder with this code.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="note dropdown admonition">
+<p class="admonition-title">Hint</p>
+<p>This is a <code class="docutils literal notranslate"><span class="pre">csv</span></code> file so try the <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code> function with the filepath as an argument. Don’t forget to check for metadata at the top of the file and <code class="docutils literal notranslate"><span class="pre">skiprows</span></code> if needed.</p>
+</div>
+<p><em>Note: This file was originally a <code class="docutils literal notranslate"><span class="pre">.ict</span></code> file but I used the File Explorer to re-name it to a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file. Pandas can open <code class="docutils literal notranslate"><span class="pre">.ict</span></code> files just fine, but I find that Excel has a hard time with them. If you rename the same file from <code class="docutils literal notranslate"><span class="pre">.ict</span></code> to <code class="docutils literal notranslate"><span class="pre">.csv</span></code>, however, Excel will open it up.</em></p>
+<ol class="simple">
+<li><p>This file has multiple nodata values. You can see this by running <code class="docutils literal notranslate"><span class="pre">df.describe()</span></code> and looking at the minimum values. Replace the values -999999, -888888, and -66666 with <code class="docutils literal notranslate"><span class="pre">np.nan</span></code>.</p></li>
+</ol>
+<div class="note dropdown admonition">
+<p class="admonition-title">Hint</p>
+<p>When we use <code class="docutils literal notranslate"><span class="pre">.replace()</span></code> with 1 value we use <code class="docutils literal notranslate"><span class="pre">df.replace(-9999,</span> <span class="pre">np.nan)</span></code>. Here we have multiple values, so we can either run the single-value version once or use a dictionary as an argument. For an example of dictionary arguments check out the <strong>dict-like <code class="docutils literal notranslate"><span class="pre">to_replace</span></code></strong> section of <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.replace.html">the <code class="docutils literal notranslate"><span class="pre">replace</span></code> docs page</a>.</p>
+</div>
+<ol class="simple">
+<li><p>How many rows and columns are in this dataframe?</p></li>
+</ol>
+</section>
+<section id="filtering-firex">
+<h2>Filtering FIREX<a class="headerlink" href="#filtering-firex" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>We have a pretty big dataframe. Let’s filter it down to just the following columns:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;Fractional_Day&#39;</span><span class="p">,</span> <span class="s1">&#39; Time_Start&#39;</span><span class="p">,</span> <span class="s1">&#39; Time_Stop&#39;</span><span class="p">,</span> <span class="s1">&#39; Day_Of_Year_YANG&#39;</span><span class="p">,</span>
+       <span class="s1">&#39; Latitude_YANG&#39;</span><span class="p">,</span> <span class="s1">&#39; Longitude_YANG&#39;</span><span class="p">,</span> <span class="s1">&#39; Pressure_Altitude_YANG&#39;</span><span class="p">,</span> <span class="s1">&#39; Potential_Temp_YANG&#39;</span><span class="p">,</span> 
+       <span class="s1">&#39; Sat_Vapor_Press_H2O_YANG&#39;</span><span class="p">,</span> <span class="s1">&#39; CO_LGR_ppb_PEISCHL&#39;</span><span class="p">,</span> <span class="s1">&#39; Relative_Humidity_YANG&#39;</span><span class="p">,</span> 
+       <span class="s1">&#39; fRH450_RH20to85_MOORE&#39;</span><span class="p">,</span> <span class="s1">&#39; H2O_LGR_ppmv_PEISCHL&#39;</span><span class="p">,</span> <span class="s1">&#39; BC_mass_90_550_nm_SCHWARZ&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="note dropdown admonition">
+<p class="admonition-title">Hint</p>
+<p>Google suggestion: “pandas select multiple columns”
+Suggested link: <a class="reference external" href="https://stackoverflow.com/questions/11285613/selecting-multiple-columns-in-a-pandas-dataframe">Stack Overflow</a></p>
+</div>
+<ol class="simple">
+<li><p>To keep trimming it, let’s filter it down to just the Fractional Day 203.</p></li>
+</ol>
+<div class="note dropdown admonition">
+<p class="admonition-title">Hint</p>
+<ol class="simple">
+<li><p>Remember that there are two steps in a fitler - first you use do the comparison, which returns a series of True/False values. Second you use the boolean dataframe inside of square brackets to filter the original dataframe. See the “Filtering and groupby” section of the website for more examples.</p></li>
+<li><p>Since it is the first day of the</p></li>
+</ol>
+</div>
+</section>
+<section id="plotting-firex">
+<h2>Plotting FIREX<a class="headerlink" href="#plotting-firex" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Let’s start getting a look at our data! Make a scatter plot of Fractional Day vs. Pressure Altitude.</p></li>
+</ol>
+<ol class="simple">
+<li><p>Add a color argument to your graph, to color the values by the mixing ratio of water vapor, H2O_LGR_ppmv_PEISCHL. Choose an interesting colormap from <a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormaps.html">the docs page</a> to use.</p></li>
+</ol>
+<p>Looks like we are seeing super moist air at the surface and really dry air above. Interesting 🤔</p>
+<ol class="simple">
+<li><p>Now try making a scatter plot of Pressure Altitude vs. <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">BC_mass_90_550_nm_SCHWARZ'</span></code> (no color argument). When you do this, the plot will return empty. Why is that?</p></li>
+</ol>
+</section>
+<section id="spatially-orienting-firex">
+<h2>Spatially Orienting FIREX<a class="headerlink" href="#spatially-orienting-firex" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>In order to do spatial filtering we will have to convert our pandas dataframe to a geopandas dataframe. The code to do so is shown below, but you will have to change my instances of <code class="docutils literal notranslate"><span class="pre">firex_day1</span></code> to whatever you named your filtered dataframe.</p></li>
+</ol>
+<ol class="simple">
+<li><p>What is the geometry type of this dataframe (Points, Lines, Polygons, etc.)?</p></li>
+</ol>
+<ol class="simple">
+<li><p>Let’s get a quick look at our data on a map. Use the <code class="docutils literal notranslate"><span class="pre">df.explore()</span></code> function to get a rough idea of the flight path.</p></li>
+</ol>
+<p><em>These maps seem to take up a lot of computer memory, so when you are done looking at them it can be a good idea to “Clear Cell Outputs” on the cell.</em></p>
+<ol class="simple">
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">.plot()</span></code> function on the geodataframe to get a quick plot of the flight path. Use the <code class="docutils literal notranslate"><span class="pre">column</span></code> argument to color the flight path by the Saturation Vapor Pressure column and the <code class="docutils literal notranslate"><span class="pre">legend=True</span></code> argument to add a colorbar.</p></li>
+</ol>
+<section id="congrats">
+<h3>Congrats!<a class="headerlink" href="#congrats" title="Permalink to this headline">¶</a></h3>
+<p>You downloaded a file, opened it, looked around, cleaned the nodata, made some plots, filtered it, organized its spatial information, and plotted it again! And all of that on a dataset that you haven’t seen before. That is pretty cool 🙂</p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="bonus-challenge">
+<h1>Bonus Challenge<a class="headerlink" href="#bonus-challenge" title="Permalink to this headline">¶</a></h1>
+<section id="processing-the-wildfires-shapefile">
+<h2>Processing the Wildfires Shapefile<a class="headerlink" href="#processing-the-wildfires-shapefile" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">data</span></code> folder has a file at <code class="docutils literal notranslate"><span class="pre">wildfires_2019_usgs/wildfires_2019_usgs.shp</span></code> which contains all of the burn areas of fires in 2019. Open that file up using <code class="docutils literal notranslate"><span class="pre">gpd.read_file()</span></code> and give the filepath to that <code class="docutils literal notranslate"><span class="pre">.shp</span></code> file as an argument. Assign output to a variable called <code class="docutils literal notranslate"><span class="pre">wildfires</span></code>.</p></li>
+</ol>
+<p>An example of using <code class="docutils literal notranslate"><span class="pre">gpd.read_file()</span></code> is <a class="reference external" href="https://geopandas.org/en/stable/docs/reference/api/geopandas.read_file.html">on the docs page</a>.</p>
+<ol class="simple">
+<li><p>Look at the new dataframe. How many rows and columns does it have? What is the type of the geometry (Point, Polygon, Multipolygon, Line, etc.)?</p></li>
+</ol>
+<ol class="simple">
+<li><p>What is the CRS of this dataframe?</p></li>
+</ol>
+<ol class="simple">
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">df.explore()</span></code> method to get a look at the data layer.</p></li>
+</ol>
+<p><em>These maps seem to take up a lot of computer memory, so when you are done looking at them it can be a good idea to “Clear Cell Outputs” on the cell.</em></p>
+<ol class="simple">
+<li><p>From that shape we can see that the wildfire data is spread out between the contiguous US (CONUS), Hawai’i, and Alaska. To make our file more manegable, let’s cut it down to only the fires in CONUS using and intersect function, shown below.</p></li>
+</ol>
+<p><img alt="Intersect" src="https://desktop.arcgis.com/en/arcmap/latest/tools/analysis-toolbox/GUID-93B78EC9-4024-43AC-87BF-765FAD873B00-web.gif" /></p>
+<p>In order to do that we are going to create a new shape that covers the area we want to keep and intersect the two areas. We are going to create a shape that is a box using <code class="docutils literal notranslate"><span class="pre">shapely</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="kn">import</span> <span class="n">box</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filepath</span> <span class="o">=</span> <span class="s1">&#39;../data/SARP 2020 final.xlsx&#39;</span>
-<span class="n">SARP_2020</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">filepath</span><span class="p">)[:</span><span class="mi">929</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conus</span> <span class="o">=</span> <span class="n">box</span><span class="p">(</span><span class="o">-</span><span class="mi">3000000</span><span class="p">,</span> <span class="o">-</span><span class="mi">2000000</span><span class="p">,</span> <span class="mi">2000000</span><span class="p">,</span> <span class="mi">2000000</span><span class="p">)</span>  <span class="c1"># In units of the dataset, meters</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Now that we have a shape <code class="docutils literal notranslate"><span class="pre">conus</span></code> defined, use the <code class="docutils literal notranslate"><span class="pre">.intersects()</span></code> method on the <code class="docutils literal notranslate"><span class="pre">wildfires</span></code> dataframe with <code class="docutils literal notranslate"><span class="pre">conus</span></code> as an argument. This will return a True/False boolean array indicating if each row in the dataframe intersects the <code class="docutils literal notranslate"><span class="pre">conus</span></code> shape.</p>
 <ol class="simple">
-<li><p>What are the column names for latitude and longitude?</p></li>
+<li><p>Use the True/False dataframe from the previous step to filter the <code class="docutils literal notranslate"><span class="pre">wildfires</span></code> dataframe.  Assign this dataframe to a new variable called <code class="docutils literal notranslate"><span class="pre">wildfires_conus</span></code>.</p></li>
+</ol>
+</section>
+<section id="firex-spatial-filtering">
+<h2>FIREX Spatial Filtering<a class="headerlink" href="#firex-spatial-filtering" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>In order to intersect the two dataframes we will need to make sure that they use the same coordinate reference system. Reproject the firex dataframe to be the same CRS as the wildfires dataframe.</p></li>
+</ol>
+<p>Hint: We have been using crs codes that start with <code class="docutils literal notranslate"><span class="pre">epsg:</span></code>. The wildfires dataframe uses a crs code that starts with <code class="docutils literal notranslate"><span class="pre">esri:</span></code>.</p>
+<ol class="simple">
+<li><p>As an input into the <code class="docutils literal notranslate"><span class="pre">.intersects()</span></code> function we are going to use we want a single geometry that represents all the areas of burn in 2019 in CONUS.</p></li>
+</ol>
+<p>To do this use the <code class="docutils literal notranslate"><span class="pre">.unary_union</span></code> method on the geometry column of the conus wildfires data frame and assign the output to a variable called <code class="docutils literal notranslate"><span class="pre">all_fires_shp</span></code>. The <a class="reference external" href="https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoSeries.unary_union.html">docs page</a> has an additional example of using that attribute.</p>
+<ol class="simple">
+<li><p>Now let’s see if the flight passed over a fire at all. Use the <code class="docutils literal notranslate"><span class="pre">.intersects()</span></code> function. Buffer to 10km away from the fire.</p></li>
+</ol>
+<p>This image visually shows what a buffer operation does to points, lines, and polygons.</p>
+<p><img alt="Buffers" src="https://pro.arcgis.com/en/pro-app/2.8/tool-reference/analysis/GUID-267CF0D1-DB92-456F-A8FE-F819981F5467-web.png" /></p>
+<ol class="simple">
+<li><p>We got 16 data points. Let’s add a new column to the firex geodataframe called <code class="docutils literal notranslate"><span class="pre">NearFire</span></code> that holds the boolean outputs of that intersection.</p></li>
 </ol>
 <ol class="simple">
-<li><p>Use the latitude and longitude columns to create a list of geometry objects that represents the data location of this dataframe.</p></li>
+<li><p>Finally, let’s look to see if we can see a discernable difference in any of the species near and far from the fire. To do this you can use a technique called groupby that can be a conceptual leap, but is really powerful. The section of the website that talks about groupby is <a class="reference external" href="https://rwegener2.github.io/sarp_lessons/lessons/tabular_data/2_filtering_groupby.html#groupby">here</a>.</p></li>
 </ol>
+<p>When we group the <code class="docutils literal notranslate"><span class="pre">NearFire</span></code> points together and take the mean we can see that the points near the fire had much lower water saturation vapor pressure. Pretty cool!</p>
 <ol class="simple">
-<li><p>Create a GeoDataFrame for the SARP_2020 data.  Call the dataset <code class="docutils literal notranslate"><span class="pre">geoSARP_2020</span></code>.</p></li>
+<li><p>To keep all this hard work let’s save the output dataframe into a new file. This is a geodataframe, so we can save it to a shapefile. Shapefiles have multiple files that make them up, so its common practice to put the shapefile in its own folder.</p></li>
 </ol>
-<ol class="simple">
-<li><p>Since you know you will likely want to do some distance or area calculations, reproject your dataframe to epsg:3857 and save the reprojected dataframe to the variable <code class="docutils literal notranslate"><span class="pre">geoSARP_2020_meters</span></code></p></li>
-</ol>
-<ol class="simple">
-<li><p>The world’s largest ball of twine is located in Cawker City, Kansas, at 39.5094° N, 98.4344° W.  For reasons which are scientifically ambiguous, find the distance from each location to the world’s largest ball of twine.</p></li>
-</ol>
-<ol class="simple">
-<li><p>Which sampling location is closest to the world’s largest ball of twine?  Which is the furthest away?</p></li>
-</ol>
-<ol class="simple">
-<li><p>(process not covered in lecture) What is the total area covered by all all of the points in the dataset?</p></li>
-</ol>
-<p><em><strong>Google hint</strong></em>: “shapely calcuale area of set of points” or <a class="reference external" href="https://stackoverflow.com/questions/20094346/is-there-an-envelope-class-in-shapely">this article</a>_</p>
-<ol class="simple">
-<li><p>Here I have imported the shape of California from a geojson.</p></li>
-</ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="kn">import</span> <span class="n">shape</span>
-<span class="kn">import</span> <span class="nn">json</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../data/california.geojson&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">ca_geom_json</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-<span class="n">ca_geom</span> <span class="o">=</span> <span class="n">shape</span><span class="p">(</span><span class="n">ca_geom_json</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Create a boolean Series showing if each point is intersects the state of California.</p>
-<ol class="simple">
-<li><p>Use that boolean series to filter your dataframe to only the samples which were taken in California</p></li>
-</ol>
-<ol class="simple">
-<li><p>Filter your dataset to only samples which were taken in California and also had a <code class="docutils literal notranslate"><span class="pre">'CO</span> <span class="pre">(ppbv)'</span></code> value over 102</p></li>
-</ol>
-<section id="hints">
-<h2>Hints<a class="headerlink" href="#hints" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>Try using <code class="docutils literal notranslate"><span class="pre">DATAFRAME.columns.values</span></code></p></li>
-</ol>
-<ol class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">gpd.points_from_xy()</span></code>, with an example in the lecture notebook</p></li>
-</ol>
-<ol class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">gpd.GeoDataFrame(DATAFRAME,</span> <span class="pre">geometry=LIST_OF_GEOMETRIES)</span></code></p></li>
-</ol>
-<ol class="simple">
-<li><p>Don’t forget to set the crs of the dataframe to epsg=4326 before reprojecting</p></li>
-</ol>
-<ol class="simple">
-<li><p>Remember to use the dataframe in meters</p></li>
-</ol>
-<ol class="simple">
-<li><p>First answer in the <a class="reference external" href="https://stackoverflow.com/questions/20094346/is-there-an-envelope-class-in-shapely">stackoverflow article</a>.  Calculate area with <code class="docutils literal notranslate"><span class="pre">SHAPELY_OBJ.area</span></code></p></li>
-</ol>
-<ol class="simple">
-<li><p>Which version of the SARP_2020 data should you be using?  The one in meters or in degrees?</p></li>
-</ol>
-<ol class="simple">
-<li><p>The spatial operation that corresponds to “taken in California” is <code class="docutils literal notranslate"><span class="pre">.intersects()</span></code></p></li>
-</ol>
-<ol class="simple">
-<li><p>Here we are using multiple statements in a filter.  Look back at lesson 4 for a reminder on this syntax</p></li>
-</ol>
+<p>Docs for saving a geopandas dataframe. <a class="reference external" href="https://geopandas.org/en/stable/docs/user_guide/io.html#writing-spatial-data">https://geopandas.org/en/stable/docs/user_guide/io.html#writing-spatial-data</a></p>
+<p>If you wanted to save your day 1 filtered pandas (non geo) data frame you could use <code class="docutils literal notranslate"><span class="pre">df.to_csv('filepath.csv')</span></code></p>
+<section id="id1">
+<h3>Congrats!<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Nice work! You have used two spatial data operations – buffer and intersects – in Python AND used those to spatially filter a dataframe! That’s pretty cool 🙂</p>
+</section>
 </section>
 </section>
 
@@ -809,17 +994,17 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="2_filtering_groupby_practice.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="3_geopandas_practice.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Filtering and Groupby Practice</p>
+            <p class="prev-next-title">Practice with <code class="docutils literal notranslate"><span class="pre">geopandas</span></code></p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="firex_exercise.html" title="next page">
+    <a class='right-next' id="next-link" href="1_pandas_answers.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">FIREX Campaign Spatial Intersect Exercise</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">pandas</span></code> Answers</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
