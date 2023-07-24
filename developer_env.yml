@@ -1,0 +1,7 @@
+name: sarp_docs
+channels:
+  - conda-forge
+# Using Python3.10
+dependencies:
+  - jupyter-book
+  - ghp-import

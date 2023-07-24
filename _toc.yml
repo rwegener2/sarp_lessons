@@ -83,3 +83,7 @@ parts:
     - file: examples/flight_track
     - file: examples/altitude_twin_axes
     - file: examples/gridded_mapping
+
+  - caption: Contributor Guide
+    chapters:
+    - file: contributing/env_setup.md
