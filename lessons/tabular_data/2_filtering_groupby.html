@@ -1,38 +1,45 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Filtering and groupby &#8212; SARP Programming Lessons</title>
-    
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -40,874 +47,432 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lessons/tabular_data/2_filtering_groupby';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="geopandas" href="3_geopandas.html" />
     <link rel="prev" title="The pandas Library" href="1_pandas.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../_static/sarp_logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">SARP Programming Lessons</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../index.html">
-   Welcome to SARP Programming
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Lessons
- </span>
-</p>
+    
+    
+    <img src="../../_static/sarp_logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/sarp_logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../index.html">
+                    Welcome to SARP Programming
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lessons</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../general_python/index.html">
-   General Python
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/1_variables_types_ifstatements.html">
-     Variables, Data Types, and if Statements
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/2_lists_dictionaries.html">
-     Lists and Dictionaries
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/datetimes.html">
-     Datetimes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/spatial_data.html">
-     Spatial Data
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../gridded_data/index.html">
-   Gridded Data
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../gridded_data/1_xarray.html">
-     The
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       xarray
-      </span>
-     </code>
-     Library
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../gridded_data/2_xarray_computation.html">
-     Starting Computations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../gridded_data/3_xarray_groupby.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       xarray
-      </span>
-     </code>
-     Groupby
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../gridded_data/spatial_operations.html">
-     Spatial Operations and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       rio
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="index.html">
-   Tabular Data
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="1_pandas.html">
-     The
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pandas
-      </span>
-     </code>
-     Library
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Filtering and groupby
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_geopandas.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       geopandas
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="static_visualization_matplotlib.html">
-     Static Visualization with
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       matplotlib
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="mapping_colors.html">
-     Mapping with
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       cartopy
-      </span>
-     </code>
-     and Colors
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../general_python/index.html">General Python</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/1_variables_types_ifstatements.html">Variables, Data Types, and if Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/2_lists_dictionaries.html">Lists and Dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/datetimes.html">Datetimes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/spatial_data.html">Spatial Data</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Additional Lectures
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../additional_lectures/Debugging/debugging_lesson.html">
-   Debugging
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../additional_lectures/time_series_statistics/oceans_stats_examples.html">
-   Time Series Statistics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../additional_lectures/hierarchical_data/hierarchical_data.html">
-   Hierarchical Data Structure
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../additional_lectures/rasters/index.html">
-   Raster Data Lessons
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../additional_lectures/rasters/1_arrays_numpy.html">
-     Arrays and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       numpy
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../additional_lectures/rasters/2_raster_fundamentals.html">
-     Working with rasters
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../additional_lectures/rasters/3_accessing_coordinates.html">
-     Accessing Data
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../additional_lectures/Visualization/index.html">
-   Visualization
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../additional_lectures/Visualization/2_building_on_matplotlib.html">
-     Building on top of
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       matplotlib
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../additional_lectures/Visualization/3_dynamic_visualization.html">
-     Dynamic Visualization
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../additional_lectures/Visualization/viewing_images.html">
-     Viewing Images
-    </a>
-   </li>
-  </ul>
- </li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../gridded_data/index.html">Gridded Data</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gridded_data/1_xarray.html">The <code class="docutils literal notranslate"><span class="pre">xarray</span></code> Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gridded_data/2_xarray_computation.html">Starting Computations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gridded_data/3_xarray_groupby.html"><code class="docutils literal notranslate"><span class="pre">xarray</span></code> Groupby</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gridded_data/spatial_operations.html">Spatial Operations and <code class="docutils literal notranslate"><span class="pre">rio</span></code></a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Practice Sheets
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../index_practice.html">
-   General Python Practice
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/practice/1_variables_data_practice.html">
-     Variables, Data Types and If statements Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/practice/2_lists_dicts_practice.html">
-     Lists and Dictionaries Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/practice/datetimes_practice.html">
-     Datetimes Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/practice/spatial_data_practice.html">
-     Spatial Data Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/practice/1_variables_data_answers.html">
-     Variables, Data Types and If statements Answers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/practice/2_lists_dicts_answers.html">
-     Lists and Dictionaries Answers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/practice/datetimes_answers.html">
-     Datetimes Answers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/practice/spatial_data_answers.html">
-     Spatial Data Answers
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../index_practice_raster.html">
-   Gridded Data Practice
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../gridded_data/practice/1_xarray_practice.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       xarray
-      </span>
-     </code>
-     Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../gridded_data/practice/2_xarray_practice.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       xarray
-      </span>
-     </code>
-     Computation Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../gridded_data/practice/1_xarray_answers.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       xarray
-      </span>
-     </code>
-     Practice
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../index_practice_tabular.html">
-   Tabular Data Practice
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="practice/1_pandas_practice.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pandas
-      </span>
-     </code>
-     Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="practice/2_filtering_groupby_practice.html">
-     Filtering and Groupby Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="practice/3_geopandas_practice.html">
-     Practice with
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       geopandas
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="practice/firex_exercise.html">
-     FIREX Campaign Spatial Intersect Exercise
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="practice/1_pandas_answers.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pandas
-      </span>
-     </code>
-     Answers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="practice/2_filtering_groupby_answers.html">
-     Filtering and Groupby Answers
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../additional_lectures/index_practice.html">
-   Raster Data Practice (Additional Lectures)
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../additional_lectures/rasters/practice/1_arrays_numpy_practice.html">
-     Arrays and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       numpy
-      </span>
-     </code>
-     Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../additional_lectures/rasters/practice/2_raster_fundamentals_practice.html">
-     Raster Fundamentals Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../additional_lectures/rasters/practice/3_accessing_coordinates_practice.html">
-     Accessing Coordinates Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../additional_lectures/rasters/practice/1_arrays_numpy_answers.html">
-     Arrays and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       numpy
-      </span>
-     </code>
-     Answers
-    </a>
-   </li>
-  </ul>
- </li>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Tabular Data</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1_pandas.html">The <code class="docutils literal notranslate"><span class="pre">pandas</span></code> Library</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Filtering and groupby</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_geopandas.html"><code class="docutils literal notranslate"><span class="pre">geopandas</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="static_visualization_matplotlib.html">Static Visualization with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapping_colors.html">Mapping with <code class="docutils literal notranslate"><span class="pre">cartopy</span></code> and Colors</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Examples
- </span>
-</p>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Lectures</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../examples/logplot.html">
-   Plot with multiple lines and a log axis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../examples/flight_track.html">
-   Flight Track Plot
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../examples/altitude_twin_axes.html">
-   Altitude Plot with Twin Axes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../examples/gridded_mapping.html">
-   Cartopy with gridded data
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../additional_lectures/Debugging/debugging_lesson.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../additional_lectures/time_series_statistics/oceans_stats_examples.html">Time Series Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../additional_lectures/hierarchical_data/hierarchical_data.html">Hierarchical Data Structure</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../additional_lectures/rasters/index.html">Raster Data Lessons</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../additional_lectures/rasters/1_arrays_numpy.html">Arrays and <code class="docutils literal notranslate"><span class="pre">numpy</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../additional_lectures/rasters/2_raster_fundamentals.html">Working with rasters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../additional_lectures/rasters/3_accessing_coordinates.html">Accessing Data</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../additional_lectures/Visualization/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../additional_lectures/Visualization/2_building_on_matplotlib.html">Building on top of <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../additional_lectures/Visualization/3_dynamic_visualization.html">Dynamic Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../additional_lectures/Visualization/viewing_images.html">Viewing Images</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Practice Sheets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../index_practice.html">General Python Practice</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/practice/1_variables_data_practice.html">Variables, Data Types and If statements Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/practice/2_lists_dicts_practice.html">Lists and Dictionaries Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/practice/datetimes_practice.html">Datetimes Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/practice/spatial_data_practice.html">Spatial Data Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/practice/1_variables_data_answers.html">Variables, Data Types and If statements Answers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/practice/2_lists_dicts_answers.html">Lists and Dictionaries Answers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/practice/datetimes_answers.html">Datetimes Answers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/practice/spatial_data_answers.html">Spatial Data Answers</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../index_practice_raster.html">Gridded Data Practice</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gridded_data/practice/1_xarray_practice.html"><code class="docutils literal notranslate"><span class="pre">xarray</span></code> Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gridded_data/practice/2_xarray_practice.html"><code class="docutils literal notranslate"><span class="pre">xarray</span></code> Computation Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gridded_data/practice/1_xarray_answers.html"><code class="docutils literal notranslate"><span class="pre">xarray</span></code> Practice</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../index_practice_tabular.html">Tabular Data Practice</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="practice/1_pandas_practice.html"><code class="docutils literal notranslate"><span class="pre">pandas</span></code> Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practice/2_filtering_groupby_practice.html">Filtering and Groupby Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practice/3_geopandas_practice.html">Practice with <code class="docutils literal notranslate"><span class="pre">geopandas</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="practice/1_pandas_answers.html"><code class="docutils literal notranslate"><span class="pre">pandas</span></code> Answers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practice/2_filtering_groupby_answers.html">Filtering and Groupby Answers</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../additional_lectures/index_practice.html">Raster Data Practice (Additional Lectures)</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../additional_lectures/rasters/practice/1_arrays_numpy_practice.html">Arrays and <code class="docutils literal notranslate"><span class="pre">numpy</span></code> Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../additional_lectures/rasters/practice/2_raster_fundamentals_practice.html">Raster Fundamentals Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../additional_lectures/rasters/practice/3_accessing_coordinates_practice.html">Accessing Coordinates Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../additional_lectures/rasters/practice/1_arrays_numpy_answers.html">Arrays and <code class="docutils literal notranslate"><span class="pre">numpy</span></code> Answers</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../examples/logplot.html">Plot with multiple lines and a log axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/flight_track.html">Flight Track Plot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/altitude_twin_axes.html">Altitude Plot with Twin Axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/gridded_mapping.html">Cartopy with gridded data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contributor Guide</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/env_setup.html">Contributing to SARP Lessons</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/lessons/tabular_data/2_filtering_groupby.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/rwegener2/sarp_lessons"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/rwegener2/sarp_lessons/issues/new?title=Issue%20on%20page%20%2Flessons/tabular_data/2_filtering_groupby.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/rwegener2/sarp_lessons" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/rwegener2/sarp_lessons/issues/new?title=Issue%20on%20page%20%2Flessons/tabular_data/2_filtering_groupby.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-        </div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/lessons/tabular_data/2_filtering_groupby.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Filtering and groupby</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#context">
-   Context
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#loading-our-data">
-     Loading our data
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#filtering">
-   Filtering
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-and-and-or">
-     Using
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       and
-      </span>
-     </code>
-     and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       or
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setting-an-index">
-   Setting an Index
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#iloc-vs-loc">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .iloc
-      </span>
-     </code>
-     vs.
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       loc
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#one-more-example-datetime-indices">
-     One more example - datetime indices
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#groupby">
-   Groupby
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#breaking-groupby-into-conceptual-parts">
-     Breaking
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       groupby
-      </span>
-     </code>
-     into conceptual parts
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#groupby-syntax">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       groupby
-      </span>
-     </code>
-     syntax
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#which-group">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         'WHICH_GROUP'
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#aggregation-functions">
-       Aggregation Functions
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#the-third-input">
-       The third input
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#breaking-down-the-process">
-     Breaking down the process
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#context">Context</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-our-data">Loading our data</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering">Filtering</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-and-and-or">Using <code class="docutils literal notranslate"><span class="pre">and</span></code> and <code class="docutils literal notranslate"><span class="pre">or</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-an-index">Setting an Index</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iloc-vs-loc"><code class="docutils literal notranslate"><span class="pre">.iloc</span></code> vs. <code class="docutils literal notranslate"><span class="pre">loc</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-more-example-datetime-indices">One more example - datetime indices</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#groupby">Groupby</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#breaking-groupby-into-conceptual-parts">Breaking <code class="docutils literal notranslate"><span class="pre">groupby</span></code> into conceptual parts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#groupby-syntax"><code class="docutils literal notranslate"><span class="pre">groupby</span></code> syntax</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#which-group"><code class="docutils literal notranslate"><span class="pre">'WHICH_GROUP'</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregation-functions">Aggregation Functions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-third-input">The third input</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#breaking-down-the-process">Breaking down the process</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Filtering and groupby</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#context">
-   Context
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#loading-our-data">
-     Loading our data
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#filtering">
-   Filtering
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-and-and-or">
-     Using
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       and
-      </span>
-     </code>
-     and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       or
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setting-an-index">
-   Setting an Index
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#iloc-vs-loc">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .iloc
-      </span>
-     </code>
-     vs.
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       loc
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#one-more-example-datetime-indices">
-     One more example - datetime indices
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#groupby">
-   Groupby
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#breaking-groupby-into-conceptual-parts">
-     Breaking
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       groupby
-      </span>
-     </code>
-     into conceptual parts
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#groupby-syntax">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       groupby
-      </span>
-     </code>
-     syntax
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#which-group">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         'WHICH_GROUP'
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#aggregation-functions">
-       Aggregation Functions
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#the-third-input">
-       The third input
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#breaking-down-the-process">
-     Breaking down the process
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="filtering-and-groupby">
-<h1>Filtering and groupby<a class="headerlink" href="#filtering-and-groupby" title="Permalink to this headline">¶</a></h1>
+<h1>Filtering and groupby<a class="headerlink" href="#filtering-and-groupby" title="Permalink to this headline">#</a></h1>
 <div class="note dropdown admonition">
 <p class="admonition-title">Lesson Content</p>
 <ul class="simple">
@@ -917,10 +482,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </div>
 <section id="context">
-<h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
+<h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">#</a></h2>
 <p>We spent yesterday getting comfortable in <code class="docutils literal notranslate"><span class="pre">pandas</span></code>. We opened some data, explored it, and ran a few functions.  Today we are going to expand on what we are doing by learning a few powerful ways to interrogate our data – filtering and grouping.  These manipulations help us get at the specific part of a dataset that we need.</p>
 <section id="loading-our-data">
-<h3>Loading our data<a class="headerlink" href="#loading-our-data" title="Permalink to this headline">¶</a></h3>
+<h3>Loading our data<a class="headerlink" href="#loading-our-data" title="Permalink to this headline">#</a></h3>
 <p>We’ll be using the same USGS water dataset as lesson 3.  Here we read and pre-process the data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1011,7 +576,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.3</td>
       <td>8.1</td>
       <td>False</td>
-      <td>medium</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>2</th>
@@ -1021,7 +586,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.2</td>
       <td>8.1</td>
       <td>False</td>
-      <td>high</td>
+      <td>medium</td>
     </tr>
     <tr>
       <th>3</th>
@@ -1031,7 +596,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.2</td>
       <td>8.1</td>
       <td>True</td>
-      <td>high</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>4</th>
@@ -1041,7 +606,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.1</td>
       <td>8.1</td>
       <td>False</td>
-      <td>low</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>5</th>
@@ -1051,7 +616,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.1</td>
       <td>8.1</td>
       <td>False</td>
-      <td>low</td>
+      <td>medium</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1070,8 +635,8 @@ const thebe_selector_output = ".output, .cell_output"
       <td>6.7</td>
       <td>9.8</td>
       <td>7.9</td>
-      <td>False</td>
-      <td>medium</td>
+      <td>True</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>143</th>
@@ -1081,7 +646,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>9.9</td>
       <td>7.9</td>
       <td>True</td>
-      <td>medium</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>144</th>
@@ -1090,7 +655,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>6.7</td>
       <td>10.2</td>
       <td>7.9</td>
-      <td>True</td>
+      <td>False</td>
       <td>low</td>
     </tr>
     <tr>
@@ -1100,8 +665,8 @@ const thebe_selector_output = ".output, .cell_output"
       <td>6.7</td>
       <td>10.3</td>
       <td>7.9</td>
-      <td>False</td>
-      <td>low</td>
+      <td>True</td>
+      <td>medium</td>
     </tr>
     <tr>
       <th>146</th>
@@ -1110,8 +675,8 @@ const thebe_selector_output = ".output, .cell_output"
       <td>6.6</td>
       <td>10.3</td>
       <td>7.9</td>
-      <td>True</td>
-      <td>high</td>
+      <td>False</td>
+      <td>low</td>
     </tr>
   </tbody>
 </table>
@@ -1121,7 +686,7 @@ const thebe_selector_output = ".output, .cell_output"
 </section>
 </section>
 <section id="filtering">
-<h2>Filtering<a class="headerlink" href="#filtering" title="Permalink to this headline">¶</a></h2>
+<h2>Filtering<a class="headerlink" href="#filtering" title="Permalink to this headline">#</a></h2>
 <p>So let’s start with a general question.  We learned about booleans and comparisons on Monday of this week.</p>
 <blockquote>
 <div><p>What would happen if we used a comparison on a pandas dataframe?</p>
@@ -1182,6 +747,16 @@ const thebe_selector_output = ".output, .cell_output"
   </thead>
   <tbody>
     <tr>
+      <th>1</th>
+      <td>2021-03-12 00:00</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.3</td>
+      <td>8.1</td>
+      <td>False</td>
+      <td>high</td>
+    </tr>
+    <tr>
       <th>2</th>
       <td>2021-03-12 00:15</td>
       <td>44.5</td>
@@ -1189,11 +764,21 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.2</td>
       <td>8.1</td>
       <td>False</td>
-      <td>high</td>
+      <td>medium</td>
     </tr>
     <tr>
       <th>4</th>
       <td>2021-03-12 00:45</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.1</td>
+      <td>8.1</td>
+      <td>False</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2021-03-12 01:15</td>
       <td>44.5</td>
       <td>8.1</td>
       <td>8.1</td>
@@ -1208,27 +793,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.0</td>
       <td>8.0</td>
       <td>8.1</td>
-      <td>True</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>2021-03-12 02:30</td>
-      <td>44.5</td>
-      <td>7.9</td>
-      <td>8.0</td>
-      <td>8.1</td>
-      <td>True</td>
-      <td>medium</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>2021-03-12 02:45</td>
-      <td>44.5</td>
-      <td>7.9</td>
-      <td>7.9</td>
-      <td>8.1</td>
-      <td>True</td>
+      <td>False</td>
       <td>high</td>
     </tr>
     <tr>
@@ -1242,24 +807,14 @@ const thebe_selector_output = ".output, .cell_output"
       <td>...</td>
     </tr>
     <tr>
-      <th>135</th>
-      <td>2021-03-13 09:30</td>
-      <td>46.5</td>
+      <th>139</th>
+      <td>2021-03-13 10:30</td>
+      <td>44.5</td>
       <td>6.8</td>
-      <td>9.1</td>
+      <td>9.6</td>
       <td>7.9</td>
-      <td>True</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>2021-03-13 10:00</td>
-      <td>46.5</td>
-      <td>6.8</td>
-      <td>9.3</td>
-      <td>7.9</td>
-      <td>True</td>
-      <td>medium</td>
+      <td>False</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>140</th>
@@ -1269,31 +824,41 @@ const thebe_selector_output = ".output, .cell_output"
       <td>9.6</td>
       <td>7.9</td>
       <td>False</td>
-      <td>low</td>
+      <td>medium</td>
     </tr>
     <tr>
-      <th>141</th>
-      <td>2021-03-13 11:00</td>
+      <th>142</th>
+      <td>2021-03-13 11:15</td>
       <td>42.6</td>
       <td>6.7</td>
-      <td>9.7</td>
+      <td>9.8</td>
       <td>7.9</td>
-      <td>False</td>
+      <td>True</td>
       <td>low</td>
     </tr>
     <tr>
-      <th>145</th>
-      <td>2021-03-13 12:00</td>
-      <td>46.5</td>
+      <th>143</th>
+      <td>2021-03-13 11:30</td>
+      <td>42.6</td>
       <td>6.7</td>
-      <td>10.3</td>
+      <td>9.9</td>
+      <td>7.9</td>
+      <td>True</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>144</th>
+      <td>2021-03-13 11:45</td>
+      <td>42.6</td>
+      <td>6.7</td>
+      <td>10.2</td>
       <td>7.9</td>
       <td>False</td>
       <td>low</td>
     </tr>
   </tbody>
 </table>
-<p>78 rows × 7 columns</p>
+<p>69 rows × 7 columns</p>
 </div></div></div>
 </div>
 <p>That returned only the rows where the value in the list was True!</p>
@@ -1350,7 +915,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.2</td>
       <td>8.1</td>
       <td>False</td>
-      <td>high</td>
+      <td>medium</td>
     </tr>
     <tr>
       <th>3</th>
@@ -1360,7 +925,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.2</td>
       <td>8.1</td>
       <td>True</td>
-      <td>high</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>27</th>
@@ -1369,8 +934,8 @@ const thebe_selector_output = ".output, .cell_output"
       <td>7.1</td>
       <td>8.2</td>
       <td>7.9</td>
-      <td>True</td>
-      <td>medium</td>
+      <td>False</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>28</th>
@@ -1379,7 +944,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>7.0</td>
       <td>8.2</td>
       <td>7.9</td>
-      <td>False</td>
+      <td>True</td>
       <td>high</td>
     </tr>
     <tr>
@@ -1390,7 +955,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.2</td>
       <td>7.9</td>
       <td>True</td>
-      <td>medium</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1410,7 +975,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.2</td>
       <td>7.9</td>
       <td>False</td>
-      <td>medium</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>122</th>
@@ -1420,7 +985,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.2</td>
       <td>7.9</td>
       <td>False</td>
-      <td>medium</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>123</th>
@@ -1429,8 +994,8 @@ const thebe_selector_output = ".output, .cell_output"
       <td>7.1</td>
       <td>8.2</td>
       <td>7.9</td>
-      <td>True</td>
-      <td>low</td>
+      <td>False</td>
+      <td>medium</td>
     </tr>
     <tr>
       <th>124</th>
@@ -1501,7 +1066,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.2</td>
       <td>8.1</td>
       <td>False</td>
-      <td>high</td>
+      <td>medium</td>
     </tr>
     <tr>
       <th>3</th>
@@ -1511,7 +1076,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.2</td>
       <td>8.1</td>
       <td>True</td>
-      <td>high</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>27</th>
@@ -1520,8 +1085,8 @@ const thebe_selector_output = ".output, .cell_output"
       <td>7.1</td>
       <td>8.2</td>
       <td>7.9</td>
-      <td>True</td>
-      <td>medium</td>
+      <td>False</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>28</th>
@@ -1530,7 +1095,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>7.0</td>
       <td>8.2</td>
       <td>7.9</td>
-      <td>False</td>
+      <td>True</td>
       <td>high</td>
     </tr>
     <tr>
@@ -1541,7 +1106,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.2</td>
       <td>7.9</td>
       <td>True</td>
-      <td>medium</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1561,7 +1126,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.2</td>
       <td>7.9</td>
       <td>False</td>
-      <td>medium</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>122</th>
@@ -1571,7 +1136,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>8.2</td>
       <td>7.9</td>
       <td>False</td>
-      <td>medium</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>123</th>
@@ -1580,8 +1145,8 @@ const thebe_selector_output = ".output, .cell_output"
       <td>7.1</td>
       <td>8.2</td>
       <td>7.9</td>
-      <td>True</td>
-      <td>low</td>
+      <td>False</td>
+      <td>medium</td>
     </tr>
     <tr>
       <th>124</th>
@@ -1613,7 +1178,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Write a cell of code that returns only the rows of the <code class="docutils literal notranslate"><span class="pre">water_vars</span></code> dataframe where discharge is less than or equal to 46.</p>
 </div>
 <section id="using-and-and-or">
-<h3>Using <code class="docutils literal notranslate"><span class="pre">and</span></code> and <code class="docutils literal notranslate"><span class="pre">or</span></code><a class="headerlink" href="#using-and-and-or" title="Permalink to this headline">¶</a></h3>
+<h3>Using <code class="docutils literal notranslate"><span class="pre">and</span></code> and <code class="docutils literal notranslate"><span class="pre">or</span></code><a class="headerlink" href="#using-and-and-or" title="Permalink to this headline">#</a></h3>
 <p>You can continue to make your filter more specific by using multiple filters.  The syntax that we used in the first lesson was:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1634,16 +1199,16 @@ True
 <p>While the meaning of <code class="docutils literal notranslate"><span class="pre">and</span></code> and <code class="docutils literal notranslate"><span class="pre">or</span></code> is the same in <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, the syntax is slightly different.  In pandas:</p>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="text-align:center head"><p>Python</p></th>
-<th class="text-align:center head"><p>Pandas</p></th>
+<tr class="row-odd"><th class="text-center head"><p>Python</p></th>
+<th class="text-center head"><p>Pandas</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:center"><p>and</p></td>
-<td class="text-align:center"><p>&amp;</p></td>
+<tr class="row-even"><td class="text-center"><p>and</p></td>
+<td class="text-center"><p>&amp;</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:center"><p>or</p></td>
-<td class="text-align:center"><p>|</p></td>
+<tr class="row-odd"><td class="text-center"><p>or</p></td>
+<td class="text-center"><p>|</p></td>
 </tr>
 </tbody>
 </table>
@@ -1685,14 +1250,14 @@ True
   </thead>
   <tbody>
     <tr>
-      <th>27</th>
-      <td>2021-03-12 06:30</td>
+      <th>28</th>
+      <td>2021-03-12 06:45</td>
       <td>48.5</td>
-      <td>7.1</td>
+      <td>7.0</td>
       <td>8.2</td>
       <td>7.9</td>
       <td>True</td>
-      <td>medium</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>29</th>
@@ -1702,7 +1267,7 @@ True
       <td>8.2</td>
       <td>7.9</td>
       <td>True</td>
-      <td>medium</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>31</th>
@@ -1712,7 +1277,17 @@ True
       <td>8.3</td>
       <td>7.9</td>
       <td>True</td>
-      <td>low</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>2021-03-12 08:00</td>
+      <td>48.5</td>
+      <td>6.8</td>
+      <td>8.4</td>
+      <td>7.9</td>
+      <td>True</td>
+      <td>medium</td>
     </tr>
     <tr>
       <th>35</th>
@@ -1722,17 +1297,7 @@ True
       <td>8.5</td>
       <td>7.9</td>
       <td>True</td>
-      <td>medium</td>
-    </tr>
-    <tr>
-      <th>36</th>
-      <td>2021-03-12 08:45</td>
-      <td>46.5</td>
-      <td>6.7</td>
-      <td>8.6</td>
-      <td>7.9</td>
-      <td>True</td>
-      <td>low</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1745,6 +1310,16 @@ True
       <td>...</td>
     </tr>
     <tr>
+      <th>137</th>
+      <td>2021-03-13 10:00</td>
+      <td>46.5</td>
+      <td>6.8</td>
+      <td>9.3</td>
+      <td>7.9</td>
+      <td>True</td>
+      <td>medium</td>
+    </tr>
+    <tr>
       <th>138</th>
       <td>2021-03-13 10:15</td>
       <td>44.5</td>
@@ -1752,17 +1327,17 @@ True
       <td>9.4</td>
       <td>7.9</td>
       <td>True</td>
-      <td>high</td>
+      <td>low</td>
     </tr>
     <tr>
-      <th>139</th>
-      <td>2021-03-13 10:30</td>
-      <td>44.5</td>
-      <td>6.8</td>
-      <td>9.6</td>
+      <th>142</th>
+      <td>2021-03-13 11:15</td>
+      <td>42.6</td>
+      <td>6.7</td>
+      <td>9.8</td>
       <td>7.9</td>
       <td>True</td>
-      <td>high</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>143</th>
@@ -1772,31 +1347,21 @@ True
       <td>9.9</td>
       <td>7.9</td>
       <td>True</td>
-      <td>medium</td>
+      <td>high</td>
     </tr>
     <tr>
-      <th>144</th>
-      <td>2021-03-13 11:45</td>
-      <td>42.6</td>
+      <th>145</th>
+      <td>2021-03-13 12:00</td>
+      <td>46.5</td>
       <td>6.7</td>
-      <td>10.2</td>
-      <td>7.9</td>
-      <td>True</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>146</th>
-      <td>2021-03-13 12:15</td>
-      <td>NaN</td>
-      <td>6.6</td>
       <td>10.3</td>
       <td>7.9</td>
       <td>True</td>
-      <td>high</td>
+      <td>medium</td>
     </tr>
   </tbody>
 </table>
-<p>32 rows × 7 columns</p>
+<p>31 rows × 7 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -1842,47 +1407,47 @@ True
       <td>8.2</td>
       <td>8.1</td>
       <td>True</td>
-      <td>high</td>
+      <td>low</td>
     </tr>
     <tr>
-      <th>6</th>
-      <td>2021-03-12 01:15</td>
+      <th>14</th>
+      <td>2021-03-12 03:15</td>
       <td>44.5</td>
-      <td>8.1</td>
-      <td>8.1</td>
-      <td>8.1</td>
-      <td>True</td>
-      <td>medium</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>2021-03-12 01:30</td>
-      <td>44.5</td>
-      <td>8.0</td>
+      <td>7.8</td>
       <td>8.0</td>
       <td>8.1</td>
       <td>True</td>
       <td>low</td>
     </tr>
     <tr>
-      <th>9</th>
-      <td>2021-03-12 02:00</td>
-      <td>44.5</td>
+      <th>21</th>
+      <td>2021-03-12 05:00</td>
+      <td>46.5</td>
+      <td>7.4</td>
       <td>8.0</td>
       <td>8.0</td>
+      <td>True</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>2021-03-12 05:45</td>
+      <td>48.5</td>
+      <td>7.3</td>
       <td>8.1</td>
+      <td>8.0</td>
       <td>True</td>
       <td>high</td>
     </tr>
     <tr>
-      <th>11</th>
-      <td>2021-03-12 02:30</td>
-      <td>44.5</td>
+      <th>27</th>
+      <td>2021-03-12 06:30</td>
+      <td>48.5</td>
+      <td>7.1</td>
+      <td>8.2</td>
       <td>7.9</td>
-      <td>8.0</td>
-      <td>8.1</td>
-      <td>True</td>
-      <td>medium</td>
+      <td>False</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1901,8 +1466,8 @@ True
       <td>6.7</td>
       <td>9.8</td>
       <td>7.9</td>
-      <td>False</td>
-      <td>medium</td>
+      <td>True</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>143</th>
@@ -1912,7 +1477,7 @@ True
       <td>9.9</td>
       <td>7.9</td>
       <td>True</td>
-      <td>medium</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>144</th>
@@ -1921,7 +1486,7 @@ True
       <td>6.7</td>
       <td>10.2</td>
       <td>7.9</td>
-      <td>True</td>
+      <td>False</td>
       <td>low</td>
     </tr>
     <tr>
@@ -1931,8 +1496,8 @@ True
       <td>6.7</td>
       <td>10.3</td>
       <td>7.9</td>
-      <td>False</td>
-      <td>low</td>
+      <td>True</td>
+      <td>medium</td>
     </tr>
     <tr>
       <th>146</th>
@@ -1941,12 +1506,12 @@ True
       <td>6.6</td>
       <td>10.3</td>
       <td>7.9</td>
-      <td>True</td>
-      <td>high</td>
+      <td>False</td>
+      <td>low</td>
     </tr>
   </tbody>
 </table>
-<p>103 rows × 7 columns</p>
+<p>91 rows × 7 columns</p>
 </div></div></div>
 </div>
 <p>There is more than one way to do this type of filtering in pandas, but it is fine to start with one method and feel really comfortable with it before moving to the others.  <a class="reference external" href="https://www.listendata.com/2019/07/how-to-filter-pandas-dataframe.html">This article</a> has a pretty nice overview of some other methods.</p>
@@ -1958,7 +1523,7 @@ True
 </section>
 </section>
 <section id="setting-an-index">
-<h2>Setting an Index<a class="headerlink" href="#setting-an-index" title="Permalink to this headline">¶</a></h2>
+<h2>Setting an Index<a class="headerlink" href="#setting-an-index" title="Permalink to this headline">#</a></h2>
 <p>Whether using pandas or excel or a SQL database, the index is an important part of your organization.</p>
 <blockquote>
 <div><p>The most important part of in index is that it is <strong>unique</strong>, meaning no two rows of data is allowed to have the same index</p>
@@ -2132,7 +1697,7 @@ True
 </div>
 </div>
 <section id="iloc-vs-loc">
-<h3><code class="docutils literal notranslate"><span class="pre">.iloc</span></code> vs. <code class="docutils literal notranslate"><span class="pre">loc</span></code><a class="headerlink" href="#iloc-vs-loc" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">.iloc</span></code> vs. <code class="docutils literal notranslate"><span class="pre">loc</span></code><a class="headerlink" href="#iloc-vs-loc" title="Permalink to this headline">#</a></h3>
 <p>So now that we have names as indexes, how do we select specific rows?</p>
 <p>We can still use the same method we already know, <code class="docutils literal notranslate"><span class="pre">iloc</span></code>, with an integer index number and we will still get the same result.</p>
 <div class="cell docutils container">
@@ -2174,7 +1739,7 @@ Name: Hassan A, dtype: int64
 </div>
 </section>
 <section id="one-more-example-datetime-indices">
-<h3>One more example - datetime indices<a class="headerlink" href="#one-more-example-datetime-indices" title="Permalink to this headline">¶</a></h3>
+<h3>One more example - datetime indices<a class="headerlink" href="#one-more-example-datetime-indices" title="Permalink to this headline">#</a></h3>
 <p>To move away from our toy example baack to our real data, we have a great column in the <code class="docutils literal notranslate"><span class="pre">water_vars</span></code> table just waiting to be an index – <code class="docutils literal notranslate"><span class="pre">datetime</span></code>.</p>
 <p>Dates and times are generally fantastic indices, because, if the world is working in proper order, each moment in time only happens once, meaning their values are unique and they are really common indices.</p>
 <div class="cell docutils container">
@@ -2234,7 +1799,7 @@ Name: Hassan A, dtype: int64
       <td>8.3</td>
       <td>8.1</td>
       <td>False</td>
-      <td>medium</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>2021-03-12 00:15</th>
@@ -2243,7 +1808,7 @@ Name: Hassan A, dtype: int64
       <td>8.2</td>
       <td>8.1</td>
       <td>False</td>
-      <td>high</td>
+      <td>medium</td>
     </tr>
     <tr>
       <th>2021-03-12 00:30</th>
@@ -2252,7 +1817,7 @@ Name: Hassan A, dtype: int64
       <td>8.2</td>
       <td>8.1</td>
       <td>True</td>
-      <td>high</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>2021-03-12 00:45</th>
@@ -2261,7 +1826,7 @@ Name: Hassan A, dtype: int64
       <td>8.1</td>
       <td>8.1</td>
       <td>False</td>
-      <td>low</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>2021-03-12 01:00</th>
@@ -2270,7 +1835,7 @@ Name: Hassan A, dtype: int64
       <td>8.1</td>
       <td>8.1</td>
       <td>False</td>
-      <td>low</td>
+      <td>medium</td>
     </tr>
     <tr>
       <th>...</th>
@@ -2287,8 +1852,8 @@ Name: Hassan A, dtype: int64
       <td>6.7</td>
       <td>9.8</td>
       <td>7.9</td>
-      <td>False</td>
-      <td>medium</td>
+      <td>True</td>
+      <td>low</td>
     </tr>
     <tr>
       <th>2021-03-13 11:30</th>
@@ -2297,7 +1862,7 @@ Name: Hassan A, dtype: int64
       <td>9.9</td>
       <td>7.9</td>
       <td>True</td>
-      <td>medium</td>
+      <td>high</td>
     </tr>
     <tr>
       <th>2021-03-13 11:45</th>
@@ -2305,7 +1870,7 @@ Name: Hassan A, dtype: int64
       <td>6.7</td>
       <td>10.2</td>
       <td>7.9</td>
-      <td>True</td>
+      <td>False</td>
       <td>low</td>
     </tr>
     <tr>
@@ -2314,8 +1879,8 @@ Name: Hassan A, dtype: int64
       <td>6.7</td>
       <td>10.3</td>
       <td>7.9</td>
-      <td>False</td>
-      <td>low</td>
+      <td>True</td>
+      <td>medium</td>
     </tr>
     <tr>
       <th>2021-03-13 12:15</th>
@@ -2323,8 +1888,8 @@ Name: Hassan A, dtype: int64
       <td>6.6</td>
       <td>10.3</td>
       <td>7.9</td>
-      <td>True</td>
-      <td>high</td>
+      <td>False</td>
+      <td>low</td>
     </tr>
   </tbody>
 </table>
@@ -2338,12 +1903,12 @@ Name: Hassan A, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>discharge           40.8
-temperature          7.4
-dissolved oxygen    11.6
-pH                   8.1
-dam release         True
-safety level         low
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>discharge             40.8
+temperature            7.4
+dissolved oxygen      11.6
+pH                     8.1
+dam release          False
+safety level        medium
 Name: 2021-03-12 13:00, dtype: object
 </pre></div>
 </div>
@@ -2356,7 +1921,7 @@ Name: 2021-03-12 13:00, dtype: object
 </section>
 </section>
 <section id="groupby">
-<h2>Groupby<a class="headerlink" href="#groupby" title="Permalink to this headline">¶</a></h2>
+<h2>Groupby<a class="headerlink" href="#groupby" title="Permalink to this headline">#</a></h2>
 <p>While we have 146 individual readings in our dataset sometimes we don’t care about each individual reading.  Instead we probably care about the aggregate of a specific group of readings.</p>
 <p>For example:</p>
 <ul class="simple">
@@ -2365,9 +1930,9 @@ Name: 2021-03-12 13:00, dtype: object
 </ul>
 <p>In pandas (and tabular data in general) we answer questions like that that with <code class="docutils literal notranslate"><span class="pre">groupby</span></code>.</p>
 <section id="breaking-groupby-into-conceptual-parts">
-<h3>Breaking <code class="docutils literal notranslate"><span class="pre">groupby</span></code> into conceptual parts<a class="headerlink" href="#breaking-groupby-into-conceptual-parts" title="Permalink to this headline">¶</a></h3>
+<h3>Breaking <code class="docutils literal notranslate"><span class="pre">groupby</span></code> into conceptual parts<a class="headerlink" href="#breaking-groupby-into-conceptual-parts" title="Permalink to this headline">#</a></h3>
 <p>In addition to the dataframe, there are three main parts to a groupby:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Which variable we want to group together</p></li>
 <li><p>How we want to group</p></li>
 <li><p>The variable we want to see in the end</p></li>
@@ -2389,7 +1954,7 @@ Name: 2021-03-12 13:00, dtype: object
 <p class="admonition-title">📝 Check your understanding</p>
 <p>Identify each of three main groupby parts in the following scenario:</p>
 <p><strong>Given the hourly temperatures for a location over the course of a month, what were the daily highs?</strong></p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p><em>Which variable to group together?</em></p></li>
 <li><p><em>How do we want to group?</em></p></li>
 <li><p><em>What variable do we want to look at?</em></p></li>
@@ -2397,7 +1962,7 @@ Name: 2021-03-12 13:00, dtype: object
 </div>
 </section>
 <section id="groupby-syntax">
-<h3><code class="docutils literal notranslate"><span class="pre">groupby</span></code> syntax<a class="headerlink" href="#groupby-syntax" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">groupby</span></code> syntax<a class="headerlink" href="#groupby-syntax" title="Permalink to this headline">#</a></h3>
 <p>We can take these <code class="docutils literal notranslate"><span class="pre">groupby</span></code> concepts and translate them into syntax.  The first two parts (which variable to group &amp; how do we want to group) are required for pandas.  The third one is optional.</p>
 <p>Starting with just the two required variables, the general syntax is:</p>
 <p><code class="docutils literal notranslate"><span class="pre">DATAFRAME.groupby(WHICH_GROUP).AGGREGATION()</span></code></p>
@@ -2445,16 +2010,16 @@ Name: 2021-03-12 13:00, dtype: object
   <tbody>
     <tr>
       <th>high</th>
-      <td>40.8</td>
-      <td>6.6</td>
-      <td>7.9</td>
+      <td>39.0</td>
+      <td>6.7</td>
+      <td>8.0</td>
       <td>7.8</td>
       <td>False</td>
     </tr>
     <tr>
       <th>low</th>
       <td>39.0</td>
-      <td>6.7</td>
+      <td>6.6</td>
       <td>8.0</td>
       <td>7.8</td>
       <td>False</td>
@@ -2463,7 +2028,7 @@ Name: 2021-03-12 13:00, dtype: object
       <th>medium</th>
       <td>39.0</td>
       <td>6.7</td>
-      <td>8.0</td>
+      <td>7.9</td>
       <td>7.8</td>
       <td>False</td>
     </tr>
@@ -2472,7 +2037,7 @@ Name: 2021-03-12 13:00, dtype: object
 </div></div></div>
 </div>
 <section id="which-group">
-<h4><code class="docutils literal notranslate"><span class="pre">'WHICH_GROUP'</span></code><a class="headerlink" href="#which-group" title="Permalink to this headline">¶</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">'WHICH_GROUP'</span></code><a class="headerlink" href="#which-group" title="Permalink to this headline">#</a></h4>
 <p>This variable can be any of the columns in the dataframe that can be put into discrete piles.  We used <code class="docutils literal notranslate"><span class="pre">'safety_level'</span></code> because it can easily be put into piles – <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">medium</span></code> and <code class="docutils literal notranslate"><span class="pre">high</span></code>.</p>
 <p>We are still allowed to group on other columns, it’s just that the practicality can become questionable.</p>
 <div class="cell docutils container">
@@ -2554,7 +2119,7 @@ Name: 2021-03-12 13:00, dtype: object
       <td>8.1</td>
       <td>12.5</td>
       <td>False</td>
-      <td>low</td>
+      <td>high</td>
     </tr>
   </tbody>
 </table>
@@ -2566,7 +2131,7 @@ Name: 2021-03-12 13:00, dtype: object
 </div>
 </section>
 <section id="aggregation-functions">
-<h4>Aggregation Functions<a class="headerlink" href="#aggregation-functions" title="Permalink to this headline">¶</a></h4>
+<h4>Aggregation Functions<a class="headerlink" href="#aggregation-functions" title="Permalink to this headline">#</a></h4>
 <p>The functions you can use in a groupby are limited, but there are still lots of options.  Common ones include:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">.count()</span></code> - find the total number of rows</p></li>
@@ -2577,7 +2142,7 @@ Name: 2021-03-12 13:00, dtype: object
 </ul>
 </section>
 <section id="the-third-input">
-<h4>The third input<a class="headerlink" href="#the-third-input" title="Permalink to this headline">¶</a></h4>
+<h4>The third input<a class="headerlink" href="#the-third-input" title="Permalink to this headline">#</a></h4>
 <p>In the conceptual explanation we often also specify which variable we want to look at.  In <code class="docutils literal notranslate"><span class="pre">pandas</span></code> this isn’t always as important, since by default it gives us the full dataframe.  If for some reason we do need to specify the exact variable of interest (ex. we have a very large dataframe, we are making a plot), we do that by adding the column name in after the groupby.</p>
 <p><code class="docutils literal notranslate"><span class="pre">DATAFRAME.groupby(WHICH_GROUP)[INTEREST_VAR].AGGREGATION()</span></code></p>
 <div class="cell docutils container">
@@ -2589,9 +2154,9 @@ Name: 2021-03-12 13:00, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>safety level
-high      44.977551
-low       44.405455
-medium    45.131707
+high      45.016327
+low       44.463415
+medium    44.869091
 Name: discharge, dtype: float64
 </pre></div>
 </div>
@@ -2599,7 +2164,7 @@ Name: discharge, dtype: float64
 </div>
 <div class="tip admonition">
 <p class="admonition-title">📝 Check your understanding</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>What is the maximum pH value during low safety level?</p></li>
 <li><p>What is the mean discharge when dam releases are happening?</p></li>
 </ol>
@@ -2607,10 +2172,10 @@ Name: discharge, dtype: float64
 </section>
 </section>
 <section id="breaking-down-the-process">
-<h3>Breaking down the process<a class="headerlink" href="#breaking-down-the-process" title="Permalink to this headline">¶</a></h3>
+<h3>Breaking down the process<a class="headerlink" href="#breaking-down-the-process" title="Permalink to this headline">#</a></h3>
 <p>There is a lot that happens in a single step with <code class="docutils literal notranslate"><span class="pre">groupby</span></code> and it can be a lot to take in.  One way to mentally situate this process is to think about <strong>split-apply-combine</strong>.</p>
 <p><strong>split-apply-combine</strong> breaks down the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> process into those three steps:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>SPLIT the full data set into groups.  Split is related to the question <em>Which variable to group together?</em></p></li>
 <li><p>APPLY the aggregation function to the individual groups.  Apply is related to the question <em>How do we want to group?</em></p></li>
 <li><p>COMBINE the aggregated data into a new dataframe</p></li>
@@ -2632,7 +2197,7 @@ Name: discharge, dtype: float64
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./lessons/tabular_data"
         },
         predefinedOutput: true
@@ -2640,44 +2205,128 @@ Name: discharge, dtype: float64
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="1_pandas.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">The <code class="docutils literal notranslate"><span class="pre">pandas</span></code> Library</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="1_pandas.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">The <code class="docutils literal notranslate"><span class="pre">pandas</span></code> Library</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="3_geopandas.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="3_geopandas.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">geopandas</span></code></p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By Rachel Wegener<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
-
-
       </div>
-    </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+</div>
 
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#context">Context</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-our-data">Loading our data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering">Filtering</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-and-and-or">Using <code class="docutils literal notranslate"><span class="pre">and</span></code> and <code class="docutils literal notranslate"><span class="pre">or</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-an-index">Setting an Index</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iloc-vs-loc"><code class="docutils literal notranslate"><span class="pre">.iloc</span></code> vs. <code class="docutils literal notranslate"><span class="pre">loc</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-more-example-datetime-indices">One more example - datetime indices</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#groupby">Groupby</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#breaking-groupby-into-conceptual-parts">Breaking <code class="docutils literal notranslate"><span class="pre">groupby</span></code> into conceptual parts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#groupby-syntax"><code class="docutils literal notranslate"><span class="pre">groupby</span></code> syntax</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#which-group"><code class="docutils literal notranslate"><span class="pre">'WHICH_GROUP'</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregation-functions">Aggregation Functions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-third-input">The third input</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#breaking-down-the-process">Breaking down the process</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Rachel Wegener
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

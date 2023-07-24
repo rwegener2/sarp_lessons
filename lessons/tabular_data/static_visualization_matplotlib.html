@@ -1,38 +1,45 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Static Visualization with matplotlib &#8212; SARP Programming Lessons</title>
-    
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -40,958 +47,447 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lessons/tabular_data/static_visualization_matplotlib';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Mapping with cartopy and Colors" href="mapping_colors.html" />
     <link rel="prev" title="geopandas" href="3_geopandas.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../_static/sarp_logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">SARP Programming Lessons</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../index.html">
-   Welcome to SARP Programming
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Lessons
- </span>
-</p>
+    
+    
+    <img src="../../_static/sarp_logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/sarp_logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../index.html">
+                    Welcome to SARP Programming
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lessons</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../general_python/index.html">
-   General Python
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/1_variables_types_ifstatements.html">
-     Variables, Data Types, and if Statements
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/2_lists_dictionaries.html">
-     Lists and Dictionaries
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/datetimes.html">
-     Datetimes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/spatial_data.html">
-     Spatial Data
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../gridded_data/index.html">
-   Gridded Data
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../gridded_data/1_xarray.html">
-     The
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       xarray
-      </span>
-     </code>
-     Library
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../gridded_data/2_xarray_computation.html">
-     Starting Computations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../gridded_data/3_xarray_groupby.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       xarray
-      </span>
-     </code>
-     Groupby
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../gridded_data/spatial_operations.html">
-     Spatial Operations and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       rio
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="index.html">
-   Tabular Data
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="1_pandas.html">
-     The
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pandas
-      </span>
-     </code>
-     Library
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2_filtering_groupby.html">
-     Filtering and groupby
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_geopandas.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       geopandas
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Static Visualization with
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       matplotlib
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="mapping_colors.html">
-     Mapping with
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       cartopy
-      </span>
-     </code>
-     and Colors
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../general_python/index.html">General Python</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/1_variables_types_ifstatements.html">Variables, Data Types, and if Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/2_lists_dictionaries.html">Lists and Dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/datetimes.html">Datetimes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/spatial_data.html">Spatial Data</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Additional Lectures
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../additional_lectures/Debugging/debugging_lesson.html">
-   Debugging
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../additional_lectures/time_series_statistics/oceans_stats_examples.html">
-   Time Series Statistics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../additional_lectures/hierarchical_data/hierarchical_data.html">
-   Hierarchical Data Structure
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../additional_lectures/rasters/index.html">
-   Raster Data Lessons
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../additional_lectures/rasters/1_arrays_numpy.html">
-     Arrays and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       numpy
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../additional_lectures/rasters/2_raster_fundamentals.html">
-     Working with rasters
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../additional_lectures/rasters/3_accessing_coordinates.html">
-     Accessing Data
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../additional_lectures/Visualization/index.html">
-   Visualization
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../additional_lectures/Visualization/2_building_on_matplotlib.html">
-     Building on top of
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       matplotlib
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../additional_lectures/Visualization/3_dynamic_visualization.html">
-     Dynamic Visualization
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../additional_lectures/Visualization/viewing_images.html">
-     Viewing Images
-    </a>
-   </li>
-  </ul>
- </li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../gridded_data/index.html">Gridded Data</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gridded_data/1_xarray.html">The <code class="docutils literal notranslate"><span class="pre">xarray</span></code> Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gridded_data/2_xarray_computation.html">Starting Computations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gridded_data/3_xarray_groupby.html"><code class="docutils literal notranslate"><span class="pre">xarray</span></code> Groupby</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gridded_data/spatial_operations.html">Spatial Operations and <code class="docutils literal notranslate"><span class="pre">rio</span></code></a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Practice Sheets
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../index_practice.html">
-   General Python Practice
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/practice/1_variables_data_practice.html">
-     Variables, Data Types and If statements Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/practice/2_lists_dicts_practice.html">
-     Lists and Dictionaries Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/practice/datetimes_practice.html">
-     Datetimes Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/practice/spatial_data_practice.html">
-     Spatial Data Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/practice/1_variables_data_answers.html">
-     Variables, Data Types and If statements Answers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/practice/2_lists_dicts_answers.html">
-     Lists and Dictionaries Answers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/practice/datetimes_answers.html">
-     Datetimes Answers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../general_python/practice/spatial_data_answers.html">
-     Spatial Data Answers
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../index_practice_raster.html">
-   Gridded Data Practice
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../gridded_data/practice/1_xarray_practice.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       xarray
-      </span>
-     </code>
-     Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../gridded_data/practice/2_xarray_practice.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       xarray
-      </span>
-     </code>
-     Computation Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../gridded_data/practice/1_xarray_answers.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       xarray
-      </span>
-     </code>
-     Practice
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../index_practice_tabular.html">
-   Tabular Data Practice
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="practice/1_pandas_practice.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pandas
-      </span>
-     </code>
-     Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="practice/2_filtering_groupby_practice.html">
-     Filtering and Groupby Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="practice/3_geopandas_practice.html">
-     Practice with
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       geopandas
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="practice/firex_exercise.html">
-     FIREX Campaign Spatial Intersect Exercise
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="practice/1_pandas_answers.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pandas
-      </span>
-     </code>
-     Answers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="practice/2_filtering_groupby_answers.html">
-     Filtering and Groupby Answers
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../additional_lectures/index_practice.html">
-   Raster Data Practice (Additional Lectures)
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../additional_lectures/rasters/practice/1_arrays_numpy_practice.html">
-     Arrays and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       numpy
-      </span>
-     </code>
-     Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../additional_lectures/rasters/practice/2_raster_fundamentals_practice.html">
-     Raster Fundamentals Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../additional_lectures/rasters/practice/3_accessing_coordinates_practice.html">
-     Accessing Coordinates Practice
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../additional_lectures/rasters/practice/1_arrays_numpy_answers.html">
-     Arrays and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       numpy
-      </span>
-     </code>
-     Answers
-    </a>
-   </li>
-  </ul>
- </li>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Tabular Data</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1_pandas.html">The <code class="docutils literal notranslate"><span class="pre">pandas</span></code> Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_filtering_groupby.html">Filtering and groupby</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_geopandas.html"><code class="docutils literal notranslate"><span class="pre">geopandas</span></code></a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Static Visualization with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapping_colors.html">Mapping with <code class="docutils literal notranslate"><span class="pre">cartopy</span></code> and Colors</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Examples
- </span>
-</p>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Lectures</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../examples/logplot.html">
-   Plot with multiple lines and a log axis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../examples/flight_track.html">
-   Flight Track Plot
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../examples/altitude_twin_axes.html">
-   Altitude Plot with Twin Axes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../examples/gridded_mapping.html">
-   Cartopy with gridded data
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../additional_lectures/Debugging/debugging_lesson.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../additional_lectures/time_series_statistics/oceans_stats_examples.html">Time Series Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../additional_lectures/hierarchical_data/hierarchical_data.html">Hierarchical Data Structure</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../additional_lectures/rasters/index.html">Raster Data Lessons</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../additional_lectures/rasters/1_arrays_numpy.html">Arrays and <code class="docutils literal notranslate"><span class="pre">numpy</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../additional_lectures/rasters/2_raster_fundamentals.html">Working with rasters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../additional_lectures/rasters/3_accessing_coordinates.html">Accessing Data</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../additional_lectures/Visualization/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../additional_lectures/Visualization/2_building_on_matplotlib.html">Building on top of <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../additional_lectures/Visualization/3_dynamic_visualization.html">Dynamic Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../additional_lectures/Visualization/viewing_images.html">Viewing Images</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Practice Sheets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../index_practice.html">General Python Practice</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/practice/1_variables_data_practice.html">Variables, Data Types and If statements Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/practice/2_lists_dicts_practice.html">Lists and Dictionaries Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/practice/datetimes_practice.html">Datetimes Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/practice/spatial_data_practice.html">Spatial Data Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/practice/1_variables_data_answers.html">Variables, Data Types and If statements Answers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/practice/2_lists_dicts_answers.html">Lists and Dictionaries Answers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/practice/datetimes_answers.html">Datetimes Answers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/practice/spatial_data_answers.html">Spatial Data Answers</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../index_practice_raster.html">Gridded Data Practice</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gridded_data/practice/1_xarray_practice.html"><code class="docutils literal notranslate"><span class="pre">xarray</span></code> Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gridded_data/practice/2_xarray_practice.html"><code class="docutils literal notranslate"><span class="pre">xarray</span></code> Computation Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gridded_data/practice/1_xarray_answers.html"><code class="docutils literal notranslate"><span class="pre">xarray</span></code> Practice</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../index_practice_tabular.html">Tabular Data Practice</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="practice/1_pandas_practice.html"><code class="docutils literal notranslate"><span class="pre">pandas</span></code> Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practice/2_filtering_groupby_practice.html">Filtering and Groupby Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practice/3_geopandas_practice.html">Practice with <code class="docutils literal notranslate"><span class="pre">geopandas</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="practice/1_pandas_answers.html"><code class="docutils literal notranslate"><span class="pre">pandas</span></code> Answers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practice/2_filtering_groupby_answers.html">Filtering and Groupby Answers</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../additional_lectures/index_practice.html">Raster Data Practice (Additional Lectures)</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../additional_lectures/rasters/practice/1_arrays_numpy_practice.html">Arrays and <code class="docutils literal notranslate"><span class="pre">numpy</span></code> Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../additional_lectures/rasters/practice/2_raster_fundamentals_practice.html">Raster Fundamentals Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../additional_lectures/rasters/practice/3_accessing_coordinates_practice.html">Accessing Coordinates Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../additional_lectures/rasters/practice/1_arrays_numpy_answers.html">Arrays and <code class="docutils literal notranslate"><span class="pre">numpy</span></code> Answers</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../examples/logplot.html">Plot with multiple lines and a log axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/flight_track.html">Flight Track Plot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/altitude_twin_axes.html">Altitude Plot with Twin Axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/gridded_mapping.html">Cartopy with gridded data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contributor Guide</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/env_setup.html">Contributing to SARP Lessons</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/lessons/tabular_data/static_visualization_matplotlib.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/rwegener2/sarp_lessons"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/rwegener2/sarp_lessons/issues/new?title=Issue%20on%20page%20%2Flessons/tabular_data/static_visualization_matplotlib.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/rwegener2/sarp_lessons" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/rwegener2/sarp_lessons/issues/new?title=Issue%20on%20page%20%2Flessons/tabular_data/static_visualization_matplotlib.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-        </div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/lessons/tabular_data/static_visualization_matplotlib.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Static Visualization with matplotlib</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#loading-data">
-   Loading data
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#context">
-   Context
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#choosing-a-plotting-technique-ease-vs-complexity">
-     Choosing a plotting technique: Ease vs. Complexity
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#plotting-for-a-quick-data-check">
-     Plotting for a quick data check
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#object-class">
-     Object Class
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#matplotlib-concepts">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     matplotlib
-    </span>
-   </code>
-   Concepts
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#different-parts-of-a-graph-are-seperate-objects">
-     1. Different parts of a graph are seperate objects
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#objects-are-stacked-from-the-bottom-up">
-     2. Objects are stacked from the bottom up
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plotting-apis">
-   Plotting APIs
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#method-1-using-plt-plot-the-pyplot-interface">
-     Method 1: Using
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       plt.plot()
-      </span>
-     </code>
-     , “The pyplot Interface”
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#step-1-organize-our-data">
-       Step 1: Organize our data
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#step-2-make-our-graph">
-       Step 2: Make our graph
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#more-types-of-plots">
-     More types of plots
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#example-scatter-plot">
-       Example: scatter plot
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#example-histogram">
-       Example: histogram
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#method-2-accessing-the-figure-with-plt-subplots-the-object-oriented-api">
-     Method 2: Accessing the
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       figure
-      </span>
-     </code>
-     with
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       plt.subplots()
-      </span>
-     </code>
-     , “The object oriented API”
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#which-method-should-i-use">
-   Which method should I use?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#closing-concepts">
-   Closing concepts
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#concept-1-building-on-top-of-matplotlib">
-     Concept 1: Building on top of
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       matplotlib
-      </span>
-     </code>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#an-analogy-with-legos">
-       An analogy with legos
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#translating-to-python">
-       Translating to Python
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#concept-2-static-vs-interactive-visualization">
-     Concept 2: Static vs. Interactive Visualization
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#interactive-viz-example">
-     Interactive viz example
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-data">Loading data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#context">Context</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-a-plotting-technique-ease-vs-complexity">Choosing a plotting technique: Ease vs. Complexity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-for-a-quick-data-check">Plotting for a quick data check</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#object-class">Object Class</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib-concepts"><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> Concepts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#different-parts-of-a-graph-are-seperate-objects">1. Different parts of a graph are seperate objects</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objects-are-stacked-from-the-bottom-up">2. Objects are stacked from the bottom up</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-apis">Plotting APIs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1-using-plt-plot-the-pyplot-interface">Method 1: Using <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code>, “The pyplot Interface”</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-organize-our-data">Step 1: Organize our data</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-make-our-graph">Step 2: Make our graph</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#more-types-of-plots">More types of plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-scatter-plot">Example: scatter plot</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-histogram">Example: histogram</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-accessing-the-figure-with-plt-subplots-the-object-oriented-api">Method 2: Accessing the <code class="docutils literal notranslate"><span class="pre">figure</span></code> with <code class="docutils literal notranslate"><span class="pre">plt.subplots()</span></code>, “The object oriented API”</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#which-method-should-i-use">Which method should I use?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closing-concepts">Closing concepts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concept-1-building-on-top-of-matplotlib">Concept 1: Building on top of <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#an-analogy-with-legos">An analogy with legos</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#translating-to-python">Translating to Python</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concept-2-static-vs-interactive-visualization">Concept 2: Static vs. Interactive Visualization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-viz-example">Interactive viz example</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Static Visualization with matplotlib</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#loading-data">
-   Loading data
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#context">
-   Context
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#choosing-a-plotting-technique-ease-vs-complexity">
-     Choosing a plotting technique: Ease vs. Complexity
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#plotting-for-a-quick-data-check">
-     Plotting for a quick data check
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#object-class">
-     Object Class
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#matplotlib-concepts">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     matplotlib
-    </span>
-   </code>
-   Concepts
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#different-parts-of-a-graph-are-seperate-objects">
-     1. Different parts of a graph are seperate objects
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#objects-are-stacked-from-the-bottom-up">
-     2. Objects are stacked from the bottom up
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plotting-apis">
-   Plotting APIs
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#method-1-using-plt-plot-the-pyplot-interface">
-     Method 1: Using
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       plt.plot()
-      </span>
-     </code>
-     , “The pyplot Interface”
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#step-1-organize-our-data">
-       Step 1: Organize our data
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#step-2-make-our-graph">
-       Step 2: Make our graph
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#more-types-of-plots">
-     More types of plots
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#example-scatter-plot">
-       Example: scatter plot
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#example-histogram">
-       Example: histogram
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#method-2-accessing-the-figure-with-plt-subplots-the-object-oriented-api">
-     Method 2: Accessing the
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       figure
-      </span>
-     </code>
-     with
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       plt.subplots()
-      </span>
-     </code>
-     , “The object oriented API”
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#which-method-should-i-use">
-   Which method should I use?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#closing-concepts">
-   Closing concepts
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#concept-1-building-on-top-of-matplotlib">
-     Concept 1: Building on top of
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       matplotlib
-      </span>
-     </code>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#an-analogy-with-legos">
-       An analogy with legos
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#translating-to-python">
-       Translating to Python
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#concept-2-static-vs-interactive-visualization">
-     Concept 2: Static vs. Interactive Visualization
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#interactive-viz-example">
-     Interactive viz example
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="static-visualization-with-matplotlib">
-<h1>Static Visualization with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code><a class="headerlink" href="#static-visualization-with-matplotlib" title="Permalink to this headline">¶</a></h1>
+<h1>Static Visualization with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code><a class="headerlink" href="#static-visualization-with-matplotlib" title="Permalink to this headline">#</a></h1>
 <section id="loading-data">
-<h2>Loading data<a class="headerlink" href="#loading-data" title="Permalink to this headline">¶</a></h2>
+<h2>Loading data<a class="headerlink" href="#loading-data" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -1012,22 +508,22 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </section>
 <section id="context">
-<h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
+<h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">#</a></h2>
 <p>Viewing your data is an integral part of the science process and it happens at many steps along the way. Reasons you may want to plot include:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>view your data for a quick check</p></li>
 <li><p>answer a science question (often iterative)</p></li>
 <li><p>create final plots for publication</p></li>
 </ol>
 <p>The reason why you are plotting influences how you might choose to plot. Are you trying to make a high-quality plot for publication? Or are you just trying to get an easy glance at your data to make sure nothing is amiss? You’ll likely have to do both.</p>
 <section id="choosing-a-plotting-technique-ease-vs-complexity">
-<h3>Choosing a plotting technique: Ease vs. Complexity<a class="headerlink" href="#choosing-a-plotting-technique-ease-vs-complexity" title="Permalink to this headline">¶</a></h3>
+<h3>Choosing a plotting technique: Ease vs. Complexity<a class="headerlink" href="#choosing-a-plotting-technique-ease-vs-complexity" title="Permalink to this headline">#</a></h3>
 <p>One way the goal of plotting can influence your technology choice is by influencing how much time you are willing to trade for control over detailed aspects of your plot. This tradeoff is summarized below.</p>
 <p><img alt="Ease vs Complexity" src="../../_images/ease_vs_complexity.jpg" /></p>
 <p>We see that <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, the library being used here, is able to make highly sophisticated but potentially time consuming plots. On the opposite end of the spectrum from <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> are other plotting libraries, such as <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> or <code class="docutils literal notranslate"><span class="pre">altair</span></code>. I also consider the plotting functions built into pandas to be located on the “Ease of use” end of the spectrum.</p>
 </section>
 <section id="plotting-for-a-quick-data-check">
-<h3>Plotting for a quick data check<a class="headerlink" href="#plotting-for-a-quick-data-check" title="Permalink to this headline">¶</a></h3>
+<h3>Plotting for a quick data check<a class="headerlink" href="#plotting-for-a-quick-data-check" title="Permalink to this headline">#</a></h3>
 <p>Here is an example of using the plotting libraries built into <code class="docutils literal notranslate"><span class="pre">pandas</span></code> to make a quick plot.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1036,10 +532,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39; BC_mass&#39;, ylabel=&#39; ALTP&#39;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39; BC_mass&#39;, ylabel=&#39; ALTP&#39;&gt;
 </pre></div>
 </div>
-<img alt="../../_images/static_visualization_matplotlib_8_1.png" src="../../_images/static_visualization_matplotlib_8_1.png" />
+<img alt="../../_images/42b069e4967672d3b0d43e2a9782873803200233d660db365c6d02f2d95ed3aa.png" src="../../_images/42b069e4967672d3b0d43e2a9782873803200233d660db365c6d02f2d95ed3aa.png" />
 </div>
 </div>
 <p>What did we learn in this quick plot? The first thing we see is that there is likely some data that has a NAN value we did’t account for. This is likely because two of the way that we see all of the dots located in exactly the same spot in three locations. Let’s remove those and try again.</p>
@@ -1054,10 +550,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39; BC_mass&#39;, ylabel=&#39; ALTP&#39;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39; BC_mass&#39;, ylabel=&#39; ALTP&#39;&gt;
 </pre></div>
 </div>
-<img alt="../../_images/static_visualization_matplotlib_10_1.png" src="../../_images/static_visualization_matplotlib_10_1.png" />
+<img alt="../../_images/1e11c9b569642c2a42394f5beac71bddbc327182f47416a92e8cfdb7d106fa2b.png" src="../../_images/1e11c9b569642c2a42394f5beac71bddbc327182f47416a92e8cfdb7d106fa2b.png" />
 </div>
 </div>
 <p>Much better!  What did we learn this time?</p>
@@ -1068,7 +564,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Making plots like this is a great thing when you first open a dataset.</p>
 </section>
 <section id="object-class">
-<h3>Object Class<a class="headerlink" href="#object-class" title="Permalink to this headline">¶</a></h3>
+<h3>Object Class<a class="headerlink" href="#object-class" title="Permalink to this headline">#</a></h3>
 <p>When plotting in Python it is often really important to pay attention to the type, or class, or object that you are working with. As we will see, many pieces of a plot from axes, to colorbars to gridlines, can have their own type of object. You can’t do the same things on a colorbar object as an axes object so noticing the difference is important, especially when readying Stack Overflow.</p>
 <p>If you are ever confused about what type of object you have you can access the <code class="docutils literal notranslate"><span class="pre">.__class__</span></code> attribute on most any variable in Python to see what type of object it is. We call the type of object the <strong>class</strong>, hence the name of that method.</p>
 <div class="cell docutils container">
@@ -1087,9 +583,9 @@ const thebe_selector_output = ".output, .cell_output"
 </section>
 </section>
 <section id="matplotlib-concepts">
-<h2><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> Concepts<a class="headerlink" href="#matplotlib-concepts" title="Permalink to this headline">¶</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> Concepts<a class="headerlink" href="#matplotlib-concepts" title="Permalink to this headline">#</a></h2>
 <section id="different-parts-of-a-graph-are-seperate-objects">
-<h3>1. Different parts of a graph are seperate objects<a class="headerlink" href="#different-parts-of-a-graph-are-seperate-objects" title="Permalink to this headline">¶</a></h3>
+<h3>1. Different parts of a graph are seperate objects<a class="headerlink" href="#different-parts-of-a-graph-are-seperate-objects" title="Permalink to this headline">#</a></h3>
 <p>Plots in Matplotlib or organized as a collection of overlapping objects.  Each object can be created independently accessed, although it doesn’t have to be.</p>
 <p>A few of the most important objects to start with are <strong>figure</strong>, <strong>axes</strong> and <strong>axis</strong>.</p>
 <img src="https://files.realpython.com/media/fig_map.bc8c7cabd823.png">
@@ -1111,7 +607,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/static_visualization_matplotlib_18_0.png" src="../../_images/static_visualization_matplotlib_18_0.png" />
+<img alt="../../_images/b939873a0ebfe0d1abe1e7218ce8f485bb698d87d0fd5a003af297c5e30b4bbf.png" src="../../_images/b939873a0ebfe0d1abe1e7218ce8f485bb698d87d0fd5a003af297c5e30b4bbf.png" />
 </div>
 </div>
 <p>Now let’s change the color of the figure (<code class="docutils literal notranslate"><span class="pre">fig</span></code>) and the axes (<code class="docutils literal notranslate"><span class="pre">ax</span></code>) to see how they occupy different parts of the plot.</p>
@@ -1126,13 +622,13 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/static_visualization_matplotlib_20_0.png" src="../../_images/static_visualization_matplotlib_20_0.png" />
+<img alt="../../_images/a8b5a097478e702c7081890a0a45c5bef64c14dea0a4fa00cf8a8f705836036b.png" src="../../_images/a8b5a097478e702c7081890a0a45c5bef64c14dea0a4fa00cf8a8f705836036b.png" />
 </div>
 </div>
 <p>Distinguishin between figure and axes seems redundant when you have a single dataset to show, but if you start adding multiple axes into a figure the distinction becomes more clear.</p>
 </section>
 <section id="objects-are-stacked-from-the-bottom-up">
-<h3>2. Objects are stacked from the bottom up<a class="headerlink" href="#objects-are-stacked-from-the-bottom-up" title="Permalink to this headline">¶</a></h3>
+<h3>2. Objects are stacked from the bottom up<a class="headerlink" href="#objects-are-stacked-from-the-bottom-up" title="Permalink to this headline">#</a></h3>
 <p>Everytime you add something new to a matplotlib figure it gets layered onto the plot it gets added to the top of the plot in the order it was created. I think of matplotlib as being a large, blank canvas. You can add most anything you want anywhere you want, but after each new thing you have to stop and let the paint dry. Anything you paint after that gets added on top of your previous layer of paint.</p>
 <p>Let’s look at an example of this, again, without getting too bogged down on the code.</p>
 <div class="cell docutils container">
@@ -1145,10 +641,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x10d35d7f0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x10ddb6290&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/static_visualization_matplotlib_23_1.png" src="../../_images/static_visualization_matplotlib_23_1.png" />
+<img alt="../../_images/ab149a2e62265bc1e512fe77009cf55e274b59675ec9bc4a8b5215be69a16424.png" src="../../_images/ab149a2e62265bc1e512fe77009cf55e274b59675ec9bc4a8b5215be69a16424.png" />
 </div>
 </div>
 <p>Above we see different aspects of the plot being added, one on top of each other. The black dot, which comes last, even totally covers up the red dot in the first line.</p>
@@ -1160,9 +656,9 @@ const thebe_selector_output = ".output, .cell_output"
 </section>
 </section>
 <section id="plotting-apis">
-<h2>Plotting APIs<a class="headerlink" href="#plotting-apis" title="Permalink to this headline">¶</a></h2>
+<h2>Plotting APIs<a class="headerlink" href="#plotting-apis" title="Permalink to this headline">#</a></h2>
 <p>A strength and a weakness of matplotlib is that there are many ways to create exactly the same plot. The two major approaches, or APIs, are:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>pyplot API - uses <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> to change the plot</p></li>
 <li><p>object-oriented (OOP) API - uses <code class="docutils literal notranslate"><span class="pre">fig,</span> <span class="pre">ax</span> <span class="pre">=</span> <span class="pre">subplots()</span></code> to create <code class="docutils literal notranslate"><span class="pre">fig</span></code> and <code class="docutils literal notranslate"><span class="pre">ax</span></code> objects. Changes are then made by manipulating <code class="docutils literal notranslate"><span class="pre">fig</span></code> and <code class="docutils literal notranslate"><span class="pre">ax</span></code> directly.</p></li>
 </ol>
@@ -1172,14 +668,14 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Give 2 examples of matplotlib objects. What do each of the 3 object represent?</p>
 </div>
 <section id="method-1-using-plt-plot-the-pyplot-interface">
-<h3>Method 1: Using <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code>, “The pyplot Interface”<a class="headerlink" href="#method-1-using-plt-plot-the-pyplot-interface" title="Permalink to this headline">¶</a></h3>
+<h3>Method 1: Using <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code>, “The pyplot Interface”<a class="headerlink" href="#method-1-using-plt-plot-the-pyplot-interface" title="Permalink to this headline">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> method is a one-line command to make a plot. The format is:</p>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">plt.plot(x,</span> <span class="pre">y)</span></code>
 Where <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> are arrays of data that you want on each the <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> axis.</p>
 </div></blockquote>
 <section id="step-1-organize-our-data">
-<h4>Step 1: Organize our data<a class="headerlink" href="#step-1-organize-our-data" title="Permalink to this headline">¶</a></h4>
+<h4>Step 1: Organize our data<a class="headerlink" href="#step-1-organize-our-data" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">naames</span><span class="p">[</span><span class="s1">&#39; Fractional_Day&#39;</span><span class="p">]</span>
@@ -1190,7 +686,7 @@ Where <code class="docutils literal notranslate"><span class="pre">x</span></cod
 </div>
 </section>
 <section id="step-2-make-our-graph">
-<h4>Step 2: Make our graph<a class="headerlink" href="#step-2-make-our-graph" title="Permalink to this headline">¶</a></h4>
+<h4>Step 2: Make our graph<a class="headerlink" href="#step-2-make-our-graph" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -1205,10 +701,10 @@ Where <code class="docutils literal notranslate"><span class="pre">x</span></cod
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x10d3c2ee0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x10de06590&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/static_visualization_matplotlib_33_1.png" src="../../_images/static_visualization_matplotlib_33_1.png" />
+<img alt="../../_images/9e7cd80016f2b9f712954d76b4dc62a0de0d5d7aa0208342285deea227616c05.png" src="../../_images/9e7cd80016f2b9f712954d76b4dc62a0de0d5d7aa0208342285deea227616c05.png" />
 </div>
 </div>
 <p>Even though we didn’t explicitly create a figure, axes, axis, line, axis labels, or tick marks they were all created together with <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code>.  If we want to change something about any of those elements or add elements that don’t exist right now we do that by using methods on the <code class="docutils literal notranslate"><span class="pre">plt</span></code> object.</p>
@@ -1226,7 +722,7 @@ Where <code class="docutils literal notranslate"><span class="pre">x</span></cod
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Altitude&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/static_visualization_matplotlib_35_1.png" src="../../_images/static_visualization_matplotlib_35_1.png" />
+<img alt="../../_images/72f8df32e4cc1e5547451380985ea76c4e655c431bfe6ae9da8b2a92f8e90d82.png" src="../../_images/72f8df32e4cc1e5547451380985ea76c4e655c431bfe6ae9da8b2a92f8e90d82.png" />
 </div>
 </div>
 <p>How do you find out where all those options (ex. <code class="docutils literal notranslate"><span class="pre">plt.xlabel()</span></code>) came from? Realistically, you probably reference code example you found online. There are truly thousands of commands so googling is really an important skill while plotting.</p>
@@ -1253,10 +749,10 @@ Where <code class="docutils literal notranslate"><span class="pre">x</span></cod
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x10d4a7df0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x10df23f10&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/static_visualization_matplotlib_39_1.png" src="../../_images/static_visualization_matplotlib_39_1.png" />
+<img alt="../../_images/7803b94741827929df55d9947e96b2c88b7c1209c117f776e3334d962b0575c3.png" src="../../_images/7803b94741827929df55d9947e96b2c88b7c1209c117f776e3334d962b0575c3.png" />
 </div>
 </div>
 <p>In addition to <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> there are a dozen or so other types of plots you can make that operate in the same way as <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code>.  A list of all the options is <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html">here</a>.</p>
@@ -1270,10 +766,10 @@ Where <code class="docutils literal notranslate"><span class="pre">x</span></cod
 </section>
 </section>
 <section id="more-types-of-plots">
-<h3>More types of plots<a class="headerlink" href="#more-types-of-plots" title="Permalink to this headline">¶</a></h3>
+<h3>More types of plots<a class="headerlink" href="#more-types-of-plots" title="Permalink to this headline">#</a></h3>
 <p>In addition to <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code>, which creates a line plot, there are a dozen or so other types of plots you can make that operate in the same way as <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code>.  A list of all the options is <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html">here</a>.</p>
 <section id="example-scatter-plot">
-<h4>Example: scatter plot<a class="headerlink" href="#example-scatter-plot" title="Permalink to this headline">¶</a></h4>
+<h4>Example: scatter plot<a class="headerlink" href="#example-scatter-plot" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">naames_subset</span><span class="p">[</span><span class="s1">&#39; Fractional_Day&#39;</span><span class="p">],</span> <span class="n">naames_subset</span><span class="p">[</span><span class="s1">&#39; CO_MixingRatio_LARGE&#39;</span><span class="p">])</span>
@@ -1285,12 +781,12 @@ Where <code class="docutils literal notranslate"><span class="pre">x</span></cod
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;CO Mixing Ratio vs. Time&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/static_visualization_matplotlib_45_1.png" src="../../_images/static_visualization_matplotlib_45_1.png" />
+<img alt="../../_images/eafbd4833ff567a11010010187a9b476e0ca571e6b73d53f15109e62400db07b.png" src="../../_images/eafbd4833ff567a11010010187a9b476e0ca571e6b73d53f15109e62400db07b.png" />
 </div>
 </div>
 </section>
 <section id="example-histogram">
-<h4>Example: histogram<a class="headerlink" href="#example-histogram" title="Permalink to this headline">¶</a></h4>
+<h4>Example: histogram<a class="headerlink" href="#example-histogram" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">naames</span><span class="p">[</span><span class="s1">&#39; CO_MixingRatio_LARGE&#39;</span><span class="p">])</span>
@@ -1303,14 +799,14 @@ Where <code class="docutils literal notranslate"><span class="pre">x</span></cod
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Carbon Monoxide Mixing Ratio (LARGE)&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/static_visualization_matplotlib_47_1.png" src="../../_images/static_visualization_matplotlib_47_1.png" />
+<img alt="../../_images/76fb7d7161a405d3f2f2add3ef4853847c834c92c7f61825ea79d7b21cd9ab6b.png" src="../../_images/76fb7d7161a405d3f2f2add3ef4853847c834c92c7f61825ea79d7b21cd9ab6b.png" />
 </div>
 </div>
 <p>While you can read <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot">the API docs</a> to see every possible function available to you, I often prefer to peruse <a class="reference external" href="https://matplotlib.org/stable/gallery/index.html">the example gallery</a>.</p>
 </section>
 </section>
 <section id="method-2-accessing-the-figure-with-plt-subplots-the-object-oriented-api">
-<h3>Method 2: Accessing the <code class="docutils literal notranslate"><span class="pre">figure</span></code> with <code class="docutils literal notranslate"><span class="pre">plt.subplots()</span></code>, “The object oriented API”<a class="headerlink" href="#method-2-accessing-the-figure-with-plt-subplots-the-object-oriented-api" title="Permalink to this headline">¶</a></h3>
+<h3>Method 2: Accessing the <code class="docutils literal notranslate"><span class="pre">figure</span></code> with <code class="docutils literal notranslate"><span class="pre">plt.subplots()</span></code>, “The object oriented API”<a class="headerlink" href="#method-2-accessing-the-figure-with-plt-subplots-the-object-oriented-api" title="Permalink to this headline">#</a></h3>
 <p>It’s been said now that this method is more complicated, but has broader functionality. Let’s see what that means with an example.</p>
 <p>To start let’s recreate our good ol’ figure and axes combo.</p>
 <div class="cell docutils container">
@@ -1320,10 +816,10 @@ Where <code class="docutils literal notranslate"><span class="pre">x</span></cod
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;Figure size 1080x216 with 1 Axes&gt;, &lt;AxesSubplot:&gt;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;Figure size 1500x300 with 1 Axes&gt;, &lt;Axes: &gt;)
 </pre></div>
 </div>
-<img alt="../../_images/static_visualization_matplotlib_50_1.png" src="../../_images/static_visualization_matplotlib_50_1.png" />
+<img alt="../../_images/39b0b7e7985f70d28e812e54060fa23686bcc68188acc5305b49ae88df9d4aeb.png" src="../../_images/39b0b7e7985f70d28e812e54060fa23686bcc68188acc5305b49ae88df9d4aeb.png" />
 </div>
 </div>
 <p>Looks good. But what is so different about this method? In order to do anything with this figure/axes we need to use that command to create figure and axes objects. Those objects are what we will build the rest of the plot around.</p>
@@ -1337,10 +833,10 @@ Where <code class="docutils literal notranslate"><span class="pre">x</span></cod
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;matplotlib.figure.Figure&#39;&gt;
-&lt;class &#39;matplotlib.axes._subplots.AxesSubplot&#39;&gt;
+&lt;class &#39;matplotlib.axes._axes.Axes&#39;&gt;
 </pre></div>
 </div>
-<img alt="../../_images/static_visualization_matplotlib_52_1.png" src="../../_images/static_visualization_matplotlib_52_1.png" />
+<img alt="../../_images/39b0b7e7985f70d28e812e54060fa23686bcc68188acc5305b49ae88df9d4aeb.png" src="../../_images/39b0b7e7985f70d28e812e54060fa23686bcc68188acc5305b49ae88df9d4aeb.png" />
 </div>
 </div>
 <p>Now let’s add some data to the axes object.</p>
@@ -1356,7 +852,7 @@ Where <code class="docutils literal notranslate"><span class="pre">x</span></cod
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Altitude&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/static_visualization_matplotlib_54_1.png" src="../../_images/static_visualization_matplotlib_54_1.png" />
+<img alt="../../_images/87fca8f238c9e052d50853c060fcc2db44220059cbab932d03ce3b32c264fffe.png" src="../../_images/87fca8f238c9e052d50853c060fcc2db44220059cbab932d03ce3b32c264fffe.png" />
 </div>
 </div>
 <p>And there we have a plot of alitutde!</p>
@@ -1376,7 +872,7 @@ Where <code class="docutils literal notranslate"><span class="pre">x</span></cod
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;CO Mixing Ratio&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/static_visualization_matplotlib_56_1.png" src="../../_images/static_visualization_matplotlib_56_1.png" />
+<img alt="../../_images/46fa83aef343da3db929dc9c6dcc84184cca513c1ba10fc83f79af62ef17a4df.png" src="../../_images/46fa83aef343da3db929dc9c6dcc84184cca513c1ba10fc83f79af62ef17a4df.png" />
 </div>
 </div>
 <p>Notice here that we used <code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code> to create a line plot for altitude, but we used <code class="docutils literal notranslate"><span class="pre">ax.scatter()</span></code> for CO Mixing Ratio to create individual points for each observation.</p>
@@ -1402,7 +898,7 @@ Where <code class="docutils literal notranslate"><span class="pre">x</span></cod
 </section>
 </section>
 <section id="which-method-should-i-use">
-<h2>Which method should I use?<a class="headerlink" href="#which-method-should-i-use" title="Permalink to this headline">¶</a></h2>
+<h2>Which method should I use?<a class="headerlink" href="#which-method-should-i-use" title="Permalink to this headline">#</a></h2>
 <p>There is no correct strategy. A variety of different opinions I have encountered are:</p>
 <ul class="simple">
 <li><p>Start with <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> because it is simpler and switch to <code class="docutils literal notranslate"><span class="pre">subplots()</span></code> if it seems like you need something that <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> can’t do</p></li>
@@ -1412,26 +908,26 @@ Where <code class="docutils literal notranslate"><span class="pre">x</span></cod
 <p>It will take time to develop your favorite strategy. To start I’d pick something that sounds right to you. Trying something out and developing preferences is a fun part of programming - it’s a tangible sign of experience!</p>
 </section>
 <section id="closing-concepts">
-<h2>Closing concepts<a class="headerlink" href="#closing-concepts" title="Permalink to this headline">¶</a></h2>
+<h2>Closing concepts<a class="headerlink" href="#closing-concepts" title="Permalink to this headline">#</a></h2>
 <section id="concept-1-building-on-top-of-matplotlib">
-<h3>Concept 1: Building on top of <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code><a class="headerlink" href="#concept-1-building-on-top-of-matplotlib" title="Permalink to this headline">¶</a></h3>
+<h3>Concept 1: Building on top of <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code><a class="headerlink" href="#concept-1-building-on-top-of-matplotlib" title="Permalink to this headline">#</a></h3>
 <p>You may not need the specific control that <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> gives in which case you may choose to use another library. Because <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> is the old standby of the Python plotting world you are often still using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.  This is described by saying that a given plotting function, such as <code class="docutils literal notranslate"><span class="pre">pandas</span></code> is <strong>built on top of</strong> <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p>
 <section id="an-analogy-with-legos">
-<h4>An analogy with legos<a class="headerlink" href="#an-analogy-with-legos" title="Permalink to this headline">¶</a></h4>
+<h4>An analogy with legos<a class="headerlink" href="#an-analogy-with-legos" title="Permalink to this headline">#</a></h4>
 <p><img alt="Lego Libraries 1" src="../../_images/building_on_libraries-legos.jpg" /></p>
 </section>
 <section id="translating-to-python">
-<h4>Translating to Python<a class="headerlink" href="#translating-to-python" title="Permalink to this headline">¶</a></h4>
+<h4>Translating to Python<a class="headerlink" href="#translating-to-python" title="Permalink to this headline">#</a></h4>
 <p><img alt="Building on Libraries 2" src="../../_images/building_on_libraries-python.jpg" /></p>
 </section>
 </section>
 <section id="concept-2-static-vs-interactive-visualization">
-<h3>Concept 2: Static vs. Interactive Visualization<a class="headerlink" href="#concept-2-static-vs-interactive-visualization" title="Permalink to this headline">¶</a></h3>
+<h3>Concept 2: Static vs. Interactive Visualization<a class="headerlink" href="#concept-2-static-vs-interactive-visualization" title="Permalink to this headline">#</a></h3>
 <p><strong>static visualization</strong> is creating a visual that creates a singel image.  You might choose to make many images and flash them together to take a move, but in the end you can view the output from a single perspective (the one you defined when creating the image.  Historically, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> is a library for static images although it does have some interactive elements.</p>
 <p><strong>interactive visualization</strong> (also thought of as web visualization) are visuals that are created that you can click on or move around.  You can zoom or hover over a point to see its value.  <code class="docutils literal notranslate"><span class="pre">bokeh</span></code> is a library for interactive visualization.</p>
 </section>
 <section id="interactive-viz-example">
-<h3>Interactive viz example<a class="headerlink" href="#interactive-viz-example" title="Permalink to this headline">¶</a></h3>
+<h3>Interactive viz example<a class="headerlink" href="#interactive-viz-example" title="Permalink to this headline">#</a></h3>
 <img src="http://www.pybloggers.com/wp-content/uploads/2018/11/files.realpython.comhover_tooltip_example.ff0-5fa53f70fc7ac0f5f171df0d92f593d0f2b31250.gif"></section>
 </section>
 </section>
@@ -1448,7 +944,7 @@ Where <code class="docutils literal notranslate"><span class="pre">x</span></cod
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./lessons/tabular_data"
         },
         predefinedOutput: true
@@ -1456,44 +952,141 @@ Where <code class="docutils literal notranslate"><span class="pre">x</span></cod
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="3_geopandas.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">geopandas</span></code></p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="3_geopandas.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">geopandas</span></code></p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="mapping_colors.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="mapping_colors.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Mapping with <code class="docutils literal notranslate"><span class="pre">cartopy</span></code> and Colors</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By Rachel Wegener<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
-
-
       </div>
-    </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+</div>
 
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-data">Loading data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#context">Context</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-a-plotting-technique-ease-vs-complexity">Choosing a plotting technique: Ease vs. Complexity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-for-a-quick-data-check">Plotting for a quick data check</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#object-class">Object Class</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib-concepts"><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> Concepts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#different-parts-of-a-graph-are-seperate-objects">1. Different parts of a graph are seperate objects</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objects-are-stacked-from-the-bottom-up">2. Objects are stacked from the bottom up</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-apis">Plotting APIs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1-using-plt-plot-the-pyplot-interface">Method 1: Using <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code>, “The pyplot Interface”</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-organize-our-data">Step 1: Organize our data</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-make-our-graph">Step 2: Make our graph</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#more-types-of-plots">More types of plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-scatter-plot">Example: scatter plot</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-histogram">Example: histogram</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-accessing-the-figure-with-plt-subplots-the-object-oriented-api">Method 2: Accessing the <code class="docutils literal notranslate"><span class="pre">figure</span></code> with <code class="docutils literal notranslate"><span class="pre">plt.subplots()</span></code>, “The object oriented API”</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#which-method-should-i-use">Which method should I use?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closing-concepts">Closing concepts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concept-1-building-on-top-of-matplotlib">Concept 1: Building on top of <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#an-analogy-with-legos">An analogy with legos</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#translating-to-python">Translating to Python</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concept-2-static-vs-interactive-visualization">Concept 2: Static vs. Interactive Visualization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-viz-example">Interactive viz example</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Rachel Wegener
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
