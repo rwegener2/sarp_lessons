@@ -608,25 +608,23 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">20</span><span class="o">-</span><span class="mi">001</span><span class="n">c4c88cc57</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># This errors</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">date_string</span><span class="p">,</span> <span class="s1">&#39;%b </span><span class="si">%d</span><span class="s1"> %Y %-H:%M:%S&#39;</span><span class="p">)</span>
 
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/_strptime.py:568,</span> in <span class="ni">_strptime_datetime</span><span class="nt">(cls, data_string, format)</span>
-<span class="g g-Whitespace">    </span><span class="mi">565</span> <span class="k">def</span> <span class="nf">_strptime_datetime</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data_string</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%a</span><span class="s2"> %b </span><span class="si">%d</span><span class="s2"> %H:%M:%S %Y&quot;</span><span class="p">):</span>
+<span class="nn">~\.conda\envs\lessons\lib\_strptime.py</span> in <span class="ni">_strptime_datetime</span><span class="nt">(cls, data_string, format)</span>
 <span class="g g-Whitespace">    </span><span class="mi">566</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Return a class cls instance based on the input string and the</span>
 <span class="g g-Whitespace">    </span><span class="mi">567</span><span class="sd">     format string.&quot;&quot;&quot;</span>
 <span class="ne">--&gt; </span><span class="mi">568</span>     <span class="n">tt</span><span class="p">,</span> <span class="n">fraction</span><span class="p">,</span> <span class="n">gmtoff_fraction</span> <span class="o">=</span> <span class="n">_strptime</span><span class="p">(</span><span class="n">data_string</span><span class="p">,</span> <span class="nb">format</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">569</span>     <span class="n">tzname</span><span class="p">,</span> <span class="n">gmtoff</span> <span class="o">=</span> <span class="n">tt</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
 <span class="g g-Whitespace">    </span><span class="mi">570</span>     <span class="n">args</span> <span class="o">=</span> <span class="n">tt</span><span class="p">[:</span><span class="mi">6</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">fraction</span><span class="p">,)</span>
 
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/_strptime.py:341,</span> in <span class="ni">_strptime</span><span class="nt">(data_string, format)</span>
-<span class="g g-Whitespace">    </span><span class="mi">339</span>         <span class="n">bad_directive</span> <span class="o">=</span> <span class="s2">&quot;%&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">340</span>     <span class="k">del</span> <span class="n">err</span>
-<span class="ne">--&gt; </span><span class="mi">341</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;&#39;</span><span class="si">%s</span><span class="s2">&#39; is a bad directive in format &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span>
-<span class="g g-Whitespace">    </span><span class="mi">342</span>                         <span class="p">(</span><span class="n">bad_directive</span><span class="p">,</span> <span class="nb">format</span><span class="p">))</span> <span class="kn">from</span> <span class="kc">None</span>
-<span class="g g-Whitespace">    </span><span class="mi">343</span> <span class="c1"># IndexError only occurs when the format string is &quot;%&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">344</span> <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+<span class="nn">~\.conda\envs\lessons\lib\_strptime.py</span> in <span class="ni">_strptime</span><span class="nt">(data_string, format)</span>
+<span class="g g-Whitespace">    </span><span class="mi">339</span>                     <span class="n">bad_directive</span> <span class="o">=</span> <span class="s2">&quot;%&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">340</span>                 <span class="k">del</span> <span class="n">err</span>
+<span class="ne">--&gt; </span><span class="mi">341</span>                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;&#39;</span><span class="si">%s</span><span class="s2">&#39; is a bad directive in format &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span>
+<span class="g g-Whitespace">    </span><span class="mi">342</span>                                     <span class="p">(</span><span class="n">bad_directive</span><span class="p">,</span> <span class="nb">format</span><span class="p">))</span> <span class="kn">from</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">343</span>             <span class="c1"># IndexError only occurs when the format string is &quot;%&quot;</span>
 
 <span class="ne">ValueError</span>: &#39;-&#39; is a bad directive in format &#39;%b %d %Y %-H:%M:%S&#39;
 </pre></div>
@@ -654,27 +652,24 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># This errors</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">date_string</span><span class="p">,</span> <span class="s1">&#39;%m/</span><span class="si">%-d</span><span class="s1">/%y %H %M %S&#39;</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">24</span><span class="o">-</span><span class="mi">8273</span><span class="n">d2976c5f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">date_string</span><span class="p">,</span> <span class="s1">&#39;%m/</span><span class="si">%-*d</span><span class="s1">/%y %H %M %S&#39;</span><span class="p">)</span>
 
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/_strptime.py:568,</span> in <span class="ni">_strptime_datetime</span><span class="nt">(cls, data_string, format)</span>
-<span class="g g-Whitespace">    </span><span class="mi">565</span> <span class="k">def</span> <span class="nf">_strptime_datetime</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data_string</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%a</span><span class="s2"> %b </span><span class="si">%d</span><span class="s2"> %H:%M:%S %Y&quot;</span><span class="p">):</span>
+<span class="nn">~\.conda\envs\lessons\lib\_strptime.py</span> in <span class="ni">_strptime_datetime</span><span class="nt">(cls, data_string, format)</span>
 <span class="g g-Whitespace">    </span><span class="mi">566</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Return a class cls instance based on the input string and the</span>
 <span class="g g-Whitespace">    </span><span class="mi">567</span><span class="sd">     format string.&quot;&quot;&quot;</span>
 <span class="ne">--&gt; </span><span class="mi">568</span>     <span class="n">tt</span><span class="p">,</span> <span class="n">fraction</span><span class="p">,</span> <span class="n">gmtoff_fraction</span> <span class="o">=</span> <span class="n">_strptime</span><span class="p">(</span><span class="n">data_string</span><span class="p">,</span> <span class="nb">format</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">569</span>     <span class="n">tzname</span><span class="p">,</span> <span class="n">gmtoff</span> <span class="o">=</span> <span class="n">tt</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
 <span class="g g-Whitespace">    </span><span class="mi">570</span>     <span class="n">args</span> <span class="o">=</span> <span class="n">tt</span><span class="p">[:</span><span class="mi">6</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">fraction</span><span class="p">,)</span>
 
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/_strptime.py:341,</span> in <span class="ni">_strptime</span><span class="nt">(data_string, format)</span>
-<span class="g g-Whitespace">    </span><span class="mi">339</span>         <span class="n">bad_directive</span> <span class="o">=</span> <span class="s2">&quot;%&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">340</span>     <span class="k">del</span> <span class="n">err</span>
-<span class="ne">--&gt; </span><span class="mi">341</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;&#39;</span><span class="si">%s</span><span class="s2">&#39; is a bad directive in format &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span>
-<span class="g g-Whitespace">    </span><span class="mi">342</span>                         <span class="p">(</span><span class="n">bad_directive</span><span class="p">,</span> <span class="nb">format</span><span class="p">))</span> <span class="kn">from</span> <span class="kc">None</span>
-<span class="g g-Whitespace">    </span><span class="mi">343</span> <span class="c1"># IndexError only occurs when the format string is &quot;%&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">344</span> <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+<span class="nn">~\.conda\envs\lessons\lib\_strptime.py</span> in <span class="ni">_strptime</span><span class="nt">(data_string, format)</span>
+<span class="g g-Whitespace">    </span><span class="mi">339</span>                     <span class="n">bad_directive</span> <span class="o">=</span> <span class="s2">&quot;%&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">340</span>                 <span class="k">del</span> <span class="n">err</span>
+<span class="ne">--&gt; </span><span class="mi">341</span>                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;&#39;</span><span class="si">%s</span><span class="s2">&#39; is a bad directive in format &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span>
+<span class="g g-Whitespace">    </span><span class="mi">342</span>                                     <span class="p">(</span><span class="n">bad_directive</span><span class="p">,</span> <span class="nb">format</span><span class="p">))</span> <span class="kn">from</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">343</span>             <span class="c1"># IndexError only occurs when the format string is &quot;%&quot;</span>
 
-<span class="ne">ValueError</span>: &#39;-&#39; is a bad directive in format &#39;%m/%-d/%y %H %M %S&#39;
+<span class="ne">ValueError</span>: &#39;-&#39; is a bad directive in format &#39;%m/%-*d/%y %H %M %S&#39;
 </pre></div>
 </div>
 </div>
@@ -722,7 +717,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.timedelta(days=824)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.timedelta(days=69)
 </pre></div>
 </div>
 </div>
@@ -744,7 +739,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.timedelta(days=10686, seconds=32799, microseconds=827430)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.timedelta(days=9931, seconds=17267, microseconds=131821)
 </pre></div>
 </div>
 </div>
@@ -768,57 +763,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">was_2020_filepath</span> <span class="o">=</span> <span class="s2">&quot;./data/SARP 2020 final.xlsx&quot;</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">was_2020</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">was_2020_filepath</span><span class="p">,</span> <span class="s2">&quot;INPUT&quot;</span><span class="p">,</span> <span class="n">skipfooter</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/io/excel/_base.py:478,</span> in <span class="ni">read_excel</span><span class="nt">(io, sheet_name, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skiprows, nrows, na_values, keep_default_na, na_filter, verbose, parse_dates, date_parser, date_format, thousands, decimal, comment, skipfooter, storage_options, dtype_backend)</span>
-<span class="g g-Whitespace">    </span><span class="mi">476</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">io</span><span class="p">,</span> <span class="n">ExcelFile</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">477</span>     <span class="n">should_close</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="ne">--&gt; </span><span class="mi">478</span>     <span class="n">io</span> <span class="o">=</span> <span class="n">ExcelFile</span><span class="p">(</span><span class="n">io</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="n">engine</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">479</span> <span class="k">elif</span> <span class="n">engine</span> <span class="ow">and</span> <span class="n">engine</span> <span class="o">!=</span> <span class="n">io</span><span class="o">.</span><span class="n">engine</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">480</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">481</span>         <span class="s2">&quot;Engine should not be specified when passing &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">482</span>         <span class="s2">&quot;an ExcelFile - ExcelFile already has the engine set&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">483</span>     <span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/io/excel/_base.py:1496,</span> in <span class="ni">ExcelFile.__init__</span><span class="nt">(self, path_or_buffer, engine, storage_options)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1494</span>     <span class="n">ext</span> <span class="o">=</span> <span class="s2">&quot;xls&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1495</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1496</span>     <span class="n">ext</span> <span class="o">=</span> <span class="n">inspect_excel_format</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1497</span>         <span class="n">content_or_path</span><span class="o">=</span><span class="n">path_or_buffer</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span>
-<span class="g g-Whitespace">   </span><span class="mi">1498</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1499</span>     <span class="k">if</span> <span class="n">ext</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1500</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1501</span>             <span class="s2">&quot;Excel file format cannot be determined, you must specify &quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1502</span>             <span class="s2">&quot;an engine manually.&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1503</span>         <span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/io/excel/_base.py:1371,</span> in <span class="ni">inspect_excel_format</span><span class="nt">(content_or_path, storage_options)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1368</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">content_or_path</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1369</span>     <span class="n">content_or_path</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">(</span><span class="n">content_or_path</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1371</span> <span class="k">with</span> <span class="n">get_handle</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1372</span>     <span class="n">content_or_path</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span> <span class="n">is_text</span><span class="o">=</span><span class="kc">False</span>
-<span class="g g-Whitespace">   </span><span class="mi">1373</span> <span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1374</span>     <span class="n">stream</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">handle</span>
-<span class="g g-Whitespace">   </span><span class="mi">1375</span>     <span class="n">stream</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/io/common.py:868,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">859</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">860</span>             <span class="n">handle</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">861</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">864</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">865</span>         <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">866</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">867</span>         <span class="c1"># Binary mode</span>
-<span class="ne">--&gt; </span><span class="mi">868</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">869</span>     <span class="n">handles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">871</span> <span class="c1"># Convert BytesIO or file objects passed with an encoding</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./data/SARP 2020 final.xlsx&#39;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-36-f4ef3a08305f&gt;:2: FutureWarning: Your version of xlrd is 1.2.0. In xlrd &gt;= 2.0, only the xls format is supported. As a result, the openpyxl engine will be used if it is installed and the engine argument is not specified. Install openpyxl instead.
+  was_2020 = pd.read_excel(was_2020_filepath, &quot;INPUT&quot;, skipfooter=7)
 </pre></div>
 </div>
 </div>
@@ -830,15 +776,316 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">23</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">was_2020</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;was_2020&#39; is not defined
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Can #</th>
+      <th>Snake can #</th>
+      <th>Location</th>
+      <th>State</th>
+      <th>Box</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Altitude (m)</th>
+      <th>Temp. Celsius</th>
+      <th>Wind Spd (mph)</th>
+      <th>...</th>
+      <th>3-Ethyltoluene (MS)</th>
+      <th>4-Ethyltoluene (MS)</th>
+      <th>2-Ethyltoluene (MS)</th>
+      <th>1,3,5-Trimethylbenzene (MS)</th>
+      <th>1,2,4-Trimethylbenzene (MS)</th>
+      <th>alpha-Pinene (B/MS)</th>
+      <th>beta-Pinene (B/MS)</th>
+      <th>Unnamed: 113</th>
+      <th>Box.1</th>
+      <th>CH4 (ppmv height).1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5044</td>
+      <td>3701</td>
+      <td>Mars Hill/Lowell Observatory, Flagstaff, Arizona</td>
+      <td>Arizona</td>
+      <td>37</td>
+      <td>2020-04-24</td>
+      <td>11:23:00</td>
+      <td>2200</td>
+      <td>18</td>
+      <td>5</td>
+      <td>...</td>
+      <td>12</td>
+      <td>17</td>
+      <td>17</td>
+      <td>15</td>
+      <td>23</td>
+      <td>12</td>
+      <td>7</td>
+      <td>NaN</td>
+      <td>37</td>
+      <td>1.914</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>7338</td>
+      <td>3716</td>
+      <td>Buffalo Park, Flagstaff, Arizona</td>
+      <td>Arizona</td>
+      <td>37</td>
+      <td>2020-04-24</td>
+      <td>11:44:00</td>
+      <td>2100</td>
+      <td>18</td>
+      <td>5</td>
+      <td>...</td>
+      <td>12</td>
+      <td>16</td>
+      <td>15</td>
+      <td>14</td>
+      <td>22</td>
+      <td>31</td>
+      <td>9</td>
+      <td>NaN</td>
+      <td>37</td>
+      <td>1.916</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6027</td>
+      <td>3717</td>
+      <td>Downtown Sedona, Arizona</td>
+      <td>Arizona</td>
+      <td>37</td>
+      <td>2020-04-24</td>
+      <td>12:47:00</td>
+      <td>1350</td>
+      <td>27</td>
+      <td>5</td>
+      <td>...</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>6</td>
+      <td>11</td>
+      <td>-888</td>
+      <td>NaN</td>
+      <td>37</td>
+      <td>1.914</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5012</td>
+      <td>3702</td>
+      <td>Buffalo Park, Flagstaff, Arizona</td>
+      <td>Arizona</td>
+      <td>37</td>
+      <td>2020-05-01</td>
+      <td>11:16:00</td>
+      <td>2100</td>
+      <td>19</td>
+      <td>16</td>
+      <td>...</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>22</td>
+      <td>-888</td>
+      <td>NaN</td>
+      <td>37</td>
+      <td>1.895</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>7330</td>
+      <td>3715</td>
+      <td>Mars Hill/Lowell Observatory, Flagstaff, Arizona</td>
+      <td>Arizona</td>
+      <td>37</td>
+      <td>2020-05-01</td>
+      <td>11:49:00</td>
+      <td>2200</td>
+      <td>19</td>
+      <td>16</td>
+      <td>...</td>
+      <td>6</td>
+      <td>3</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>8</td>
+      <td>23</td>
+      <td>-888</td>
+      <td>NaN</td>
+      <td>37</td>
+      <td>1.900</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>924</th>
+      <td>7267</td>
+      <td>2610</td>
+      <td>Oakwood Manor, Oshkosh, Wisconsin</td>
+      <td>Wisconsin</td>
+      <td>26</td>
+      <td>2020-06-24</td>
+      <td>10:28:00</td>
+      <td>234.696</td>
+      <td>20</td>
+      <td>7</td>
+      <td>...</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>3</td>
+      <td>68</td>
+      <td>45</td>
+      <td>NaN</td>
+      <td>26</td>
+      <td>2.131</td>
+    </tr>
+    <tr>
+      <th>925</th>
+      <td>8257</td>
+      <td>2623</td>
+      <td>South Park, Oshkosh, Wisconsin</td>
+      <td>Wisconsin</td>
+      <td>26</td>
+      <td>2020-06-24</td>
+      <td>10:42:00</td>
+      <td>231.64</td>
+      <td>21.67</td>
+      <td>6</td>
+      <td>...</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>4</td>
+      <td>33</td>
+      <td>18</td>
+      <td>NaN</td>
+      <td>26</td>
+      <td>2.074</td>
+    </tr>
+    <tr>
+      <th>926</th>
+      <td>5194</td>
+      <td>2608</td>
+      <td>Carl Traeger middle school, Oshkosh, Wisconsin</td>
+      <td>Wisconsin</td>
+      <td>26</td>
+      <td>2020-07-01</td>
+      <td>13:09:00</td>
+      <td>243.84</td>
+      <td>28.89</td>
+      <td>9</td>
+      <td>...</td>
+      <td>4</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>5</td>
+      <td>7</td>
+      <td>-888</td>
+      <td>NaN</td>
+      <td>26</td>
+      <td>2.017</td>
+    </tr>
+    <tr>
+      <th>927</th>
+      <td>7101</td>
+      <td>2609</td>
+      <td>Oakwood Manor, Oshkosh, Wisconsin</td>
+      <td>Wisconsin</td>
+      <td>26</td>
+      <td>2020-07-01</td>
+      <td>13:26:00</td>
+      <td>234.696</td>
+      <td>30.5</td>
+      <td>8</td>
+      <td>...</td>
+      <td>3</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>5</td>
+      <td>23</td>
+      <td>5</td>
+      <td>NaN</td>
+      <td>26</td>
+      <td>2.027</td>
+    </tr>
+    <tr>
+      <th>928</th>
+      <td>8190</td>
+      <td>2624</td>
+      <td>South Park, Oshkosh, Wisconsin</td>
+      <td>Wisconsin</td>
+      <td>26</td>
+      <td>2020-07-01</td>
+      <td>13:50:00</td>
+      <td>231.64</td>
+      <td>30.5</td>
+      <td>9</td>
+      <td>...</td>
+      <td>3</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>5</td>
+      <td>11</td>
+      <td>3</td>
+      <td>NaN</td>
+      <td>26</td>
+      <td>1.983</td>
+    </tr>
+  </tbody>
+</table>
+<p>929 rows × 116 columns</p>
+</div></div></div>
 </div>
 <section id="question-1">
 <h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">#</a></h3>
@@ -850,12 +1097,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">24</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">was_2020</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">was_2020</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;was_2020&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Timedelta(&#39;132 days 00:00:00&#39;)
 </pre></div>
 </div>
 </div>
@@ -889,16 +1131,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">26</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">combined_datetime</span> <span class="o">=</span> <span class="n">was_2020</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">+</span> <span class="n">was_2020</span><span class="p">[</span><span class="s1">&#39;Time &#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;was_2020&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -907,12 +1139,18 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">27</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">combined_datetime</span>
-
-<span class="ne">NameError</span>: name &#39;combined_datetime&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      2020-04-2411:23:00
+1      2020-04-2411:44:00
+2      2020-04-2412:47:00
+3      2020-05-0111:16:00
+4      2020-05-0111:49:00
+              ...        
+924    2020-06-2410:28:00
+925    2020-06-2410:42:00
+926    2020-07-0113:09:00
+927    2020-07-0113:26:00
+928    2020-07-0113:50:00
+Length: 929, dtype: object
 </pre></div>
 </div>
 </div>
@@ -924,32 +1162,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">28</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">was_2020</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">combined_datetime</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">%H:%M:%S&#39;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;combined_datetime&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <p><em><strong>Google suggestion</strong> “pandas to_datetime” or the examples in <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.to_datetime.html">the docs</a></em></p>
 <p><strong>C)</strong> Delete the old <code class="docutils literal notranslate"><span class="pre">'Date'</span></code> and <code class="docutils literal notranslate"><span class="pre">'Time'</span></code> columns with the <code class="docutils literal notranslate"><span class="pre">DATAFRAME.drop()</span></code> method.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">was_2020</span> <span class="o">=</span> <span class="n">was_2020</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="s1">&#39;Time &#39;</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">29</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">was_2020</span> <span class="o">=</span> <span class="n">was_2020</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="s1">&#39;Time &#39;</span><span class="p">])</span>
-
-<span class="ne">NameError</span>: name &#39;was_2020&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -984,12 +1202,18 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">32</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">was_2020</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">target_date</span>
-
-<span class="ne">NameError</span>: name &#39;was_2020&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     -72 days +11:23:00
+1     -72 days +11:44:00
+2     -72 days +12:47:00
+3     -65 days +11:16:00
+4     -65 days +11:49:00
+             ...        
+924   -11 days +10:28:00
+925   -11 days +10:42:00
+926    -4 days +13:09:00
+927    -4 days +13:26:00
+928    -4 days +13:50:00
+Name: datetime, Length: 929, dtype: timedelta64[ns]
 </pre></div>
 </div>
 </div>
@@ -1002,12 +1226,18 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">33</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">abs</span><span class="p">(</span><span class="n">was_2020</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">target_date</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;was_2020&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      False
+1      False
+2      False
+3      False
+4      False
+       ...  
+924    False
+925    False
+926     True
+927     True
+928     True
+Name: datetime, Length: 929, dtype: bool
 </pre></div>
 </div>
 </div>
@@ -1021,16 +1251,316 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">34</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># abs() or absolute value is what caputres days both before and after, since it gets positive and negative numbers</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">was_2020</span><span class="p">[</span><span class="nb">abs</span><span class="p">(</span><span class="n">was_2020</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">target_date</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">7</span><span class="p">)]</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;was_2020&#39; is not defined
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Can #</th>
+      <th>Snake can #</th>
+      <th>Location</th>
+      <th>State</th>
+      <th>Box</th>
+      <th>Altitude (m)</th>
+      <th>Temp. Celsius</th>
+      <th>Wind Spd (mph)</th>
+      <th>Wind direction (blowing from direction)</th>
+      <th>Weather</th>
+      <th>...</th>
+      <th>4-Ethyltoluene (MS)</th>
+      <th>2-Ethyltoluene (MS)</th>
+      <th>1,3,5-Trimethylbenzene (MS)</th>
+      <th>1,2,4-Trimethylbenzene (MS)</th>
+      <th>alpha-Pinene (B/MS)</th>
+      <th>beta-Pinene (B/MS)</th>
+      <th>Unnamed: 113</th>
+      <th>Box.1</th>
+      <th>CH4 (ppmv height).1</th>
+      <th>datetime</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>17</th>
+      <td>7336</td>
+      <td>3710</td>
+      <td>Mars Hill/Lowell Observatory, Flagstaff, Arizona</td>
+      <td>Arizona</td>
+      <td>37</td>
+      <td>2200</td>
+      <td>27</td>
+      <td>10</td>
+      <td>SW</td>
+      <td>Slightly Cloudy</td>
+      <td>...</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>4</td>
+      <td>126</td>
+      <td>12</td>
+      <td>NaN</td>
+      <td>37</td>
+      <td>1.882</td>
+      <td>2020-07-04 12:48:00</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>6035</td>
+      <td>3723</td>
+      <td>Downtown Sedona, Arizona</td>
+      <td>Arizona</td>
+      <td>37</td>
+      <td>1350</td>
+      <td>36</td>
+      <td>7</td>
+      <td>SW</td>
+      <td>Clear and sunny</td>
+      <td>...</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>9</td>
+      <td>44</td>
+      <td>10</td>
+      <td>NaN</td>
+      <td>37</td>
+      <td>1.882</td>
+      <td>2020-07-04 14:09:00</td>
+    </tr>
+    <tr>
+      <th>209</th>
+      <td>7993</td>
+      <td>810</td>
+      <td>Anaheim AQMD site Loara Elementary school, Ana...</td>
+      <td>California</td>
+      <td>8</td>
+      <td>40</td>
+      <td>22</td>
+      <td>5</td>
+      <td>SSW</td>
+      <td>sunny, but a bit hazy</td>
+      <td>...</td>
+      <td>3</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>6</td>
+      <td>4</td>
+      <td>-888</td>
+      <td>NaN</td>
+      <td>8</td>
+      <td>1.968</td>
+      <td>2020-07-02 12:06:00</td>
+    </tr>
+    <tr>
+      <th>210</th>
+      <td>8247</td>
+      <td>808</td>
+      <td>Imperial Park, Anaheim Hills, California</td>
+      <td>California</td>
+      <td>8</td>
+      <td>137</td>
+      <td>23</td>
+      <td>5</td>
+      <td>WSW</td>
+      <td>sunny, but a bit hazy</td>
+      <td>...</td>
+      <td>22</td>
+      <td>22</td>
+      <td>20</td>
+      <td>30</td>
+      <td>27</td>
+      <td>9</td>
+      <td>NaN</td>
+      <td>8</td>
+      <td>1.984</td>
+      <td>2020-07-02 12:35:00</td>
+    </tr>
+    <tr>
+      <th>211</th>
+      <td>9343</td>
+      <td>4110</td>
+      <td>Corona, California</td>
+      <td>California</td>
+      <td>41</td>
+      <td>NaN</td>
+      <td>29</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>Clear</td>
+      <td>...</td>
+      <td>4</td>
+      <td>3</td>
+      <td>-888</td>
+      <td>5</td>
+      <td>60</td>
+      <td>-888</td>
+      <td>NaN</td>
+      <td>41</td>
+      <td>1.979</td>
+      <td>2020-07-03 11:21:00</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>785</th>
+      <td>6157</td>
+      <td>3210</td>
+      <td>Spring Creek Park (Downwind), Tomball, Texas</td>
+      <td>Texas</td>
+      <td>32</td>
+      <td>70</td>
+      <td>95 F</td>
+      <td>6</td>
+      <td>S</td>
+      <td>Partly Cloudy</td>
+      <td>...</td>
+      <td>8</td>
+      <td>6</td>
+      <td>7</td>
+      <td>19</td>
+      <td>147</td>
+      <td>58</td>
+      <td>NaN</td>
+      <td>32</td>
+      <td>1.881</td>
+      <td>2020-07-08 15:00:00</td>
+    </tr>
+    <tr>
+      <th>786</th>
+      <td>5105</td>
+      <td>3223</td>
+      <td>Spring Creek Park (Downwind), Tomball, Texas</td>
+      <td>Texas</td>
+      <td>32</td>
+      <td>70</td>
+      <td>94 F</td>
+      <td>5</td>
+      <td>SSW</td>
+      <td>Partly Cloudy</td>
+      <td>...</td>
+      <td>6</td>
+      <td>6</td>
+      <td>6</td>
+      <td>24</td>
+      <td>61</td>
+      <td>41</td>
+      <td>NaN</td>
+      <td>32</td>
+      <td>1.878</td>
+      <td>2020-07-08 16:00:00</td>
+    </tr>
+    <tr>
+      <th>926</th>
+      <td>5194</td>
+      <td>2608</td>
+      <td>Carl Traeger middle school, Oshkosh, Wisconsin</td>
+      <td>Wisconsin</td>
+      <td>26</td>
+      <td>243.84</td>
+      <td>28.89</td>
+      <td>9</td>
+      <td>ENE</td>
+      <td>Clear skies and sunny</td>
+      <td>...</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>5</td>
+      <td>7</td>
+      <td>-888</td>
+      <td>NaN</td>
+      <td>26</td>
+      <td>2.017</td>
+      <td>2020-07-01 13:09:00</td>
+    </tr>
+    <tr>
+      <th>927</th>
+      <td>7101</td>
+      <td>2609</td>
+      <td>Oakwood Manor, Oshkosh, Wisconsin</td>
+      <td>Wisconsin</td>
+      <td>26</td>
+      <td>234.696</td>
+      <td>30.5</td>
+      <td>8</td>
+      <td>ENE</td>
+      <td>Clear skies and sunny</td>
+      <td>...</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>5</td>
+      <td>23</td>
+      <td>5</td>
+      <td>NaN</td>
+      <td>26</td>
+      <td>2.027</td>
+      <td>2020-07-01 13:26:00</td>
+    </tr>
+    <tr>
+      <th>928</th>
+      <td>8190</td>
+      <td>2624</td>
+      <td>South Park, Oshkosh, Wisconsin</td>
+      <td>Wisconsin</td>
+      <td>26</td>
+      <td>231.64</td>
+      <td>30.5</td>
+      <td>9</td>
+      <td>ENE</td>
+      <td>Clear skies and sunny</td>
+      <td>...</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>5</td>
+      <td>11</td>
+      <td>3</td>
+      <td>NaN</td>
+      <td>26</td>
+      <td>1.983</td>
+      <td>2020-07-01 13:50:00</td>
+    </tr>
+  </tbody>
+</table>
+<p>66 rows × 115 columns</p>
+</div></div></div>
 </div>
 </section>
 <section id="question-4">
@@ -1054,74 +1584,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">35</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Read in the data</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">water_vars</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/englewood_3_12_21_usgs_water.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># There are a lot of variables here, so let&#39;s shorten our dataframe to a few variables</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">water_vars</span> <span class="o">=</span> <span class="n">water_vars</span><span class="p">[[</span><span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;210920_00060&#39;</span><span class="p">,</span> <span class="s1">&#39;210922_00010&#39;</span><span class="p">,</span> <span class="s1">&#39;210924_00300&#39;</span><span class="p">,</span> <span class="s1">&#39;210925_00400&#39;</span><span class="p">]]</span>
-
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/io/parsers/readers.py:912,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)</span>
-<span class="g g-Whitespace">    </span><span class="mi">899</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">900</span>     <span class="n">dialect</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">901</span>     <span class="n">delimiter</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">908</span>     <span class="n">dtype_backend</span><span class="o">=</span><span class="n">dtype_backend</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">909</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">910</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">912</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/io/parsers/readers.py:577,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">574</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">576</span> <span class="c1"># Create the parser.</span>
-<span class="ne">--&gt; </span><span class="mi">577</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">579</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">580</span>     <span class="k">return</span> <span class="n">parser</span>
-
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/io/parsers/readers.py:1407,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1404</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1406</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="ne">-&gt; </span><span class="mi">1407</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/io/parsers/readers.py:1661,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, f, engine)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1659</span>     <span class="k">if</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mode</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1660</span>         <span class="n">mode</span> <span class="o">+=</span> <span class="s2">&quot;b&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1661</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1662</span>     <span class="n">f</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1663</span>     <span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1664</span>     <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1665</span>     <span class="n">compression</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compression&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1666</span>     <span class="n">memory_map</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1667</span>     <span class="n">is_text</span><span class="o">=</span><span class="n">is_text</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1668</span>     <span class="n">errors</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1669</span>     <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1670</span> <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1671</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-<span class="g g-Whitespace">   </span><span class="mi">1672</span> <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
-
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/io/common.py:859,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">854</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">855</span>     <span class="c1"># Check whether the filename is to be opened in binary mode.</span>
-<span class="g g-Whitespace">    </span><span class="mi">856</span>     <span class="c1"># Binary mode does not support &#39;encoding&#39; and &#39;newline&#39;.</span>
-<span class="g g-Whitespace">    </span><span class="mi">857</span>     <span class="k">if</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">and</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">858</span>         <span class="c1"># Encoding</span>
-<span class="ne">--&gt; </span><span class="mi">859</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">860</span>             <span class="n">handle</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">861</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">862</span>             <span class="n">encoding</span><span class="o">=</span><span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">863</span>             <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">864</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">865</span>         <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">866</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">867</span>         <span class="c1"># Binary mode</span>
-<span class="g g-Whitespace">    </span><span class="mi">868</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./data/englewood_3_12_21_usgs_water.tsv&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1130,15 +1592,124 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">36</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>datetime</th>
+      <th>discharge</th>
+      <th>temperature</th>
+      <th>dissolved oxygen</th>
+      <th>pH</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>2021-03-12 00:00</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.3</td>
+      <td>8.1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2021-03-12 00:15</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.2</td>
+      <td>8.1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2021-03-12 00:30</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.2</td>
+      <td>8.1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2021-03-12 00:45</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.1</td>
+      <td>8.1</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2021-03-12 01:00</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.1</td>
+      <td>8.1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>142</th>
+      <td>2021-03-13 11:15</td>
+      <td>42.6</td>
+      <td>6.7</td>
+      <td>9.8</td>
+      <td>7.9</td>
+    </tr>
+    <tr>
+      <th>143</th>
+      <td>2021-03-13 11:30</td>
+      <td>42.6</td>
+      <td>6.7</td>
+      <td>9.9</td>
+      <td>7.9</td>
+    </tr>
+    <tr>
+      <th>144</th>
+      <td>2021-03-13 11:45</td>
+      <td>42.6</td>
+      <td>6.7</td>
+      <td>10.2</td>
+      <td>7.9</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>2021-03-13 12:00</td>
+      <td>46.5</td>
+      <td>6.7</td>
+      <td>10.3</td>
+      <td>7.9</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>2021-03-13 12:15</td>
+      <td>NaN</td>
+      <td>6.6</td>
+      <td>10.3</td>
+      <td>7.9</td>
+    </tr>
+  </tbody>
+</table>
+<p>146 rows × 5 columns</p>
+</div></div></div>
 </div>
 <p><strong>A)</strong> Convert the ‘datetime’ string column to a column of datetime objects using <code class="docutils literal notranslate"><span class="pre">pd.to_datetime()</span></code>.</p>
 <div class="cell docutils container">
@@ -1147,31 +1718,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">37</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">water_vars</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M&#39;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <p><strong>B)</strong> Set the new datetime column as the index of the dataframe.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">water_vars</span> <span class="o">=</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;datetime&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">38</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span> <span class="o">=</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;datetime&#39;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1184,12 +1735,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">39</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2021-03-12 13:30:00&#39;</span><span class="p">]</span>
-
-<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>discharge           40.8
+temperature          7.6
+dissolved oxygen    11.9
+pH                   8.1
+Name: 2021-03-12 13:30:00, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -1203,15 +1753,300 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">40</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s2">&quot;H&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;water_vars&#39; is not defined
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>discharge</th>
+      <th>temperature</th>
+      <th>dissolved oxygen</th>
+      <th>pH</th>
+    </tr>
+    <tr>
+      <th>datetime</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2021-03-12 00:00:00</th>
+      <td>44.500</td>
+      <td>8.100000</td>
+      <td>8.200</td>
+      <td>8.100</td>
+    </tr>
+    <tr>
+      <th>2021-03-12 01:00:00</th>
+      <td>44.500</td>
+      <td>8.050000</td>
+      <td>8.050</td>
+      <td>8.100</td>
+    </tr>
+    <tr>
+      <th>2021-03-12 02:00:00</th>
+      <td>44.500</td>
+      <td>7.950000</td>
+      <td>7.975</td>
+      <td>8.100</td>
+    </tr>
+    <tr>
+      <th>2021-03-12 03:00:00</th>
+      <td>44.500</td>
+      <td>7.750000</td>
+      <td>8.000</td>
+      <td>8.100</td>
+    </tr>
+    <tr>
+      <th>2021-03-12 04:00:00</th>
+      <td>46.500</td>
+      <td>7.533333</td>
+      <td>8.000</td>
+      <td>8.100</td>
+    </tr>
+    <tr>
+      <th>2021-03-12 05:00:00</th>
+      <td>47.500</td>
+      <td>7.350000</td>
+      <td>8.050</td>
+      <td>8.000</td>
+    </tr>
+    <tr>
+      <th>2021-03-12 06:00:00</th>
+      <td>48.500</td>
+      <td>7.100000</td>
+      <td>8.150</td>
+      <td>7.950</td>
+    </tr>
+    <tr>
+      <th>2021-03-12 07:00:00</th>
+      <td>48.500</td>
+      <td>6.900000</td>
+      <td>8.250</td>
+      <td>7.900</td>
+    </tr>
+    <tr>
+      <th>2021-03-12 08:00:00</th>
+      <td>47.500</td>
+      <td>6.725000</td>
+      <td>8.475</td>
+      <td>7.900</td>
+    </tr>
+    <tr>
+      <th>2021-03-12 09:00:00</th>
+      <td>46.500</td>
+      <td>6.700000</td>
+      <td>8.850</td>
+      <td>7.900</td>
+    </tr>
+    <tr>
+      <th>2021-03-12 10:00:00</th>
+      <td>44.500</td>
+      <td>6.725000</td>
+      <td>9.500</td>
+      <td>7.900</td>
+    </tr>
+    <tr>
+      <th>2021-03-12 11:00:00</th>
+      <td>43.550</td>
+      <td>6.900000</td>
+      <td>10.325</td>
+      <td>7.950</td>
+    </tr>
+    <tr>
+      <th>2021-03-12 12:00:00</th>
+      <td>42.600</td>
+      <td>7.150000</td>
+      <td>11.150</td>
+      <td>8.000</td>
+    </tr>
+    <tr>
+      <th>2021-03-12 13:00:00</th>
+      <td>40.800</td>
+      <td>7.550000</td>
+      <td>11.850</td>
+      <td>8.100</td>
+    </tr>
+    <tr>
+      <th>2021-03-12 14:00:00</th>
+      <td>39.900</td>
+      <td>8.075000</td>
+      <td>12.525</td>
+      <td>8.150</td>
+    </tr>
+    <tr>
+      <th>2021-03-12 15:00:00</th>
+      <td>39.000</td>
+      <td>8.450000</td>
+      <td>13.025</td>
+      <td>8.200</td>
+    </tr>
+    <tr>
+      <th>2021-03-12 16:00:00</th>
+      <td>40.350</td>
+      <td>8.475000</td>
+      <td>12.950</td>
+      <td>8.200</td>
+    </tr>
+    <tr>
+      <th>2021-03-12 17:00:00</th>
+      <td>41.700</td>
+      <td>8.400000</td>
+      <td>12.125</td>
+      <td>8.125</td>
+    </tr>
+    <tr>
+      <th>2021-03-12 18:00:00</th>
+      <td>44.025</td>
+      <td>8.300000</td>
+      <td>11.225</td>
+      <td>8.025</td>
+    </tr>
+    <tr>
+      <th>2021-03-12 19:00:00</th>
+      <td>45.500</td>
+      <td>8.250000</td>
+      <td>10.650</td>
+      <td>8.000</td>
+    </tr>
+    <tr>
+      <th>2021-03-12 20:00:00</th>
+      <td>46.500</td>
+      <td>8.100000</td>
+      <td>10.100</td>
+      <td>7.925</td>
+    </tr>
+    <tr>
+      <th>2021-03-12 21:00:00</th>
+      <td>46.500</td>
+      <td>7.950000</td>
+      <td>9.575</td>
+      <td>7.900</td>
+    </tr>
+    <tr>
+      <th>2021-03-12 22:00:00</th>
+      <td>46.000</td>
+      <td>7.800000</td>
+      <td>9.050</td>
+      <td>7.900</td>
+    </tr>
+    <tr>
+      <th>2021-03-12 23:00:00</th>
+      <td>44.500</td>
+      <td>7.700000</td>
+      <td>8.750</td>
+      <td>7.925</td>
+    </tr>
+    <tr>
+      <th>2021-03-13 00:00:00</th>
+      <td>44.500</td>
+      <td>7.700000</td>
+      <td>8.550</td>
+      <td>8.000</td>
+    </tr>
+    <tr>
+      <th>2021-03-13 01:00:00</th>
+      <td>44.500</td>
+      <td>7.700000</td>
+      <td>8.375</td>
+      <td>8.000</td>
+    </tr>
+    <tr>
+      <th>2021-03-13 02:00:00</th>
+      <td>44.500</td>
+      <td>7.675000</td>
+      <td>8.275</td>
+      <td>8.000</td>
+    </tr>
+    <tr>
+      <th>2021-03-13 03:00:00</th>
+      <td>44.500</td>
+      <td>7.600000</td>
+      <td>8.200</td>
+      <td>8.000</td>
+    </tr>
+    <tr>
+      <th>2021-03-13 04:00:00</th>
+      <td>46.000</td>
+      <td>7.475000</td>
+      <td>8.200</td>
+      <td>8.000</td>
+    </tr>
+    <tr>
+      <th>2021-03-13 05:00:00</th>
+      <td>46.500</td>
+      <td>7.350000</td>
+      <td>8.200</td>
+      <td>7.950</td>
+    </tr>
+    <tr>
+      <th>2021-03-13 06:00:00</th>
+      <td>46.500</td>
+      <td>7.150000</td>
+      <td>8.200</td>
+      <td>7.900</td>
+    </tr>
+    <tr>
+      <th>2021-03-13 07:00:00</th>
+      <td>46.500</td>
+      <td>6.966667</td>
+      <td>8.300</td>
+      <td>7.850</td>
+    </tr>
+    <tr>
+      <th>2021-03-13 08:00:00</th>
+      <td>46.500</td>
+      <td>6.875000</td>
+      <td>8.575</td>
+      <td>7.800</td>
+    </tr>
+    <tr>
+      <th>2021-03-13 09:00:00</th>
+      <td>46.500</td>
+      <td>6.800000</td>
+      <td>9.050</td>
+      <td>7.875</td>
+    </tr>
+    <tr>
+      <th>2021-03-13 10:00:00</th>
+      <td>45.000</td>
+      <td>6.775000</td>
+      <td>9.475</td>
+      <td>7.900</td>
+    </tr>
+    <tr>
+      <th>2021-03-13 11:00:00</th>
+      <td>42.600</td>
+      <td>6.700000</td>
+      <td>9.900</td>
+      <td>7.900</td>
+    </tr>
+    <tr>
+      <th>2021-03-13 12:00:00</th>
+      <td>46.500</td>
+      <td>6.650000</td>
+      <td>10.300</td>
+      <td>7.900</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 </section>

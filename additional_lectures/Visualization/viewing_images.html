@@ -462,16 +462,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;rasterio&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -479,19 +469,6 @@ document.write(`
 <span class="k">with</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;./data/subset_f180628t01p00r02_corr_v1k1_img&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">src</span><span class="p">:</span>
     <span class="n">metadata</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">meta</span>
     <span class="n">bands</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Import example AVIRIS data</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">with</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;./data/subset_f180628t01p00r02_corr_v1k1_img&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">src</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">metadata</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">meta</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">bands</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;rasterio&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -516,15 +493,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># plt.imshow() hands only one band at a time (or 3 bands, in the case of rgb images)</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">bands</span><span class="p">[</span><span class="mi">100</span><span class="p">])</span>
-
-<span class="ne">NameError</span>: name &#39;bands&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x1178f9cf0&gt;
 </pre></div>
 </div>
+<img alt="../../_images/d7aee112332640971fd7e2bb42b3e28edb2b3b00c3fe95661174212da3bfa507.png" src="../../_images/d7aee112332640971fd7e2bb42b3e28edb2b3b00c3fe95661174212da3bfa507.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -536,16 +508,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># make the plot bigger</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">bands</span><span class="p">[</span><span class="mi">100</span><span class="p">])</span>
-
-<span class="ne">NameError</span>: name &#39;bands&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x117a997e0&gt;
 </pre></div>
 </div>
+<img alt="../../_images/e8beb307c66a2244f31e075895904c2b672e61207fee42b3a9898f3e1720b52d.png" src="../../_images/e8beb307c66a2244f31e075895904c2b672e61207fee42b3a9898f3e1720b52d.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -557,16 +523,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Change the color, add a color bar</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">bands</span><span class="p">[</span><span class="mi">100</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;GnBu&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;bands&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x117b724a0&gt;
 </pre></div>
 </div>
+<img alt="../../_images/0a63645cd738221d47fc9e5d86c6513e30b4365108e25e5cc89ce69ceaafa103.png" src="../../_images/0a63645cd738221d47fc9e5d86c6513e30b4365108e25e5cc89ce69ceaafa103.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -583,17 +543,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Mask out invalid numbers, (but be sure to make sure this is scientifically sound first!)</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">bands_masked</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">masked_where</span><span class="p">(</span><span class="n">bands</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">bands</span> <span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;bands&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -603,15 +552,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">bands_masked</span><span class="p">[</span><span class="mi">100</span><span class="p">])</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;bands_masked&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x117c2fd00&gt;
 </pre></div>
 </div>
+<img alt="../../_images/bfb5f48296bb17b147eb5e5d4bb54740e0d6b8f8799042488f9936df52dbe1c6.png" src="../../_images/bfb5f48296bb17b147eb5e5d4bb54740e0d6b8f8799042488f9936df52dbe1c6.png" />
 </div>
 </div>
 </section>

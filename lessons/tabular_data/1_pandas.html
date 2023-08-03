@@ -490,7 +490,7 @@ document.write(`
 <section id="libraries">
 <h2>🗃️ Libraries<a class="headerlink" href="#libraries" title="Permalink to this headline">#</a></h2>
 <p>Today we are going to dig into our first library in Python!  A <strong>library</strong> is a like an “extras” package for a programming language (think Settlers of Catan expansion pack).  It is a set of commands that doesn’t automatically come activated when you use Python, but that you can still use if you just tell Python that you plan to do so.  You let python know you are going to use a library with an <code class="docutils literal notranslate"><span class="pre">import</span></code> statment.  After you do that the additional commands become availble.</p>
-<div class="cell docutils container">
+<div class="cell tag_raises-exception docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Attempting to use the `math` library before importing</span>
 <span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -1321,6 +1321,8 @@ Name: 2, dtype: int64
 <span class="c1"># Rename the columns from their USGS codes to more human-readible names</span>
 <span class="n">name_codes</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;210920_00060&#39;</span><span class="p">:</span> <span class="s1">&#39;discharge&#39;</span><span class="p">,</span><span class="s1">&#39;210922_00010&#39;</span><span class="p">:</span> <span class="s1">&#39;temperature&#39;</span><span class="p">,</span> <span class="s1">&#39;210924_00300&#39;</span><span class="p">:</span> <span class="s1">&#39;dissolved oxygen&#39;</span><span class="p">,</span> <span class="s1">&#39;210925_00400&#39;</span><span class="p">:</span> <span class="s1">&#39;pH&#39;</span><span class="p">}</span>
 <span class="n">water_vars</span> <span class="o">=</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">name_codes</span><span class="p">)</span>
+<span class="c1"># Convert columns with numbers to numeric data types</span>
+<span class="n">water_vars</span> <span class="o">=</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1581,6 +1583,132 @@ Some common aggregations:</p>
 <p><em>Table from <a class="reference external" href="https://jakevdp.github.io/PythonDataScienceHandbook/03.08-aggregation-and-grouping.html">jakevdp’s Python Data Science Handbook</a></em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">water_vars</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>datetime</th>
+      <th>discharge</th>
+      <th>temperature</th>
+      <th>dissolved oxygen</th>
+      <th>pH</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>2021-03-12 00:00</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.3</td>
+      <td>8.1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2021-03-12 00:15</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.2</td>
+      <td>8.1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2021-03-12 00:30</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.2</td>
+      <td>8.1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2021-03-12 00:45</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.1</td>
+      <td>8.1</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2021-03-12 01:00</td>
+      <td>44.5</td>
+      <td>8.1</td>
+      <td>8.1</td>
+      <td>8.1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>142</th>
+      <td>2021-03-13 11:15</td>
+      <td>42.6</td>
+      <td>6.7</td>
+      <td>9.8</td>
+      <td>7.9</td>
+    </tr>
+    <tr>
+      <th>143</th>
+      <td>2021-03-13 11:30</td>
+      <td>42.6</td>
+      <td>6.7</td>
+      <td>9.9</td>
+      <td>7.9</td>
+    </tr>
+    <tr>
+      <th>144</th>
+      <td>2021-03-13 11:45</td>
+      <td>42.6</td>
+      <td>6.7</td>
+      <td>10.2</td>
+      <td>7.9</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>2021-03-13 12:00</td>
+      <td>46.5</td>
+      <td>6.7</td>
+      <td>10.3</td>
+      <td>7.9</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>2021-03-13 12:15</td>
+      <td>NaN</td>
+      <td>6.6</td>
+      <td>10.3</td>
+      <td>7.9</td>
+    </tr>
+  </tbody>
+</table>
+<p>146 rows × 5 columns</p>
+</div></div></div>
+</div>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">water_vars</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1588,10 +1716,10 @@ Some common aggregations:</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">25</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">26</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/core/generic.py:11646,</span> in <span class="ni">NDFrame._add_numeric_operations.&lt;locals&gt;.max</span><span class="nt">(self, axis, skipna, numeric_only, **kwargs)</span>
+<span class="nn">File ~/miniconda3/envs/sarp/lib/python3.10/site-packages/pandas/core/generic.py:11646,</span> in <span class="ni">NDFrame._add_numeric_operations.&lt;locals&gt;.max</span><span class="nt">(self, axis, skipna, numeric_only, **kwargs)</span>
 <span class="g g-Whitespace">  </span><span class="mi">11627</span> <span class="nd">@doc</span><span class="p">(</span>
 <span class="g g-Whitespace">  </span><span class="mi">11628</span>     <span class="n">_num_doc</span><span class="p">,</span>
 <span class="g g-Whitespace">  </span><span class="mi">11629</span>     <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;Return the maximum of the values over the requested axis.</span><span class="se">\n\n</span><span class="s2">&quot;</span>
@@ -1600,7 +1728,7 @@ Some common aggregations:</p>
 <span class="g g-Whitespace">  </span><span class="mi">11645</span> <span class="p">):</span>
 <span class="ne">&gt; </span><span class="mi">11646</span>     <span class="k">return</span> <span class="n">NDFrame</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">skipna</span><span class="p">,</span> <span class="n">numeric_only</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/core/generic.py:11185,</span> in <span class="ni">NDFrame.max</span><span class="nt">(self, axis, skipna, numeric_only, **kwargs)</span>
+<span class="nn">File ~/miniconda3/envs/sarp/lib/python3.10/site-packages/pandas/core/generic.py:11185,</span> in <span class="ni">NDFrame.max</span><span class="nt">(self, axis, skipna, numeric_only, **kwargs)</span>
 <span class="g g-Whitespace">  </span><span class="mi">11178</span> <span class="k">def</span> <span class="nf">max</span><span class="p">(</span>
 <span class="g g-Whitespace">  </span><span class="mi">11179</span>     <span class="bp">self</span><span class="p">,</span>
 <span class="g g-Whitespace">  </span><span class="mi">11180</span>     <span class="n">axis</span><span class="p">:</span> <span class="n">Axis</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
@@ -1616,14 +1744,14 @@ Some common aggregations:</p>
 <span class="g g-Whitespace">  </span><span class="mi">11191</span>         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
 <span class="g g-Whitespace">  </span><span class="mi">11192</span>     <span class="p">)</span>
 
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/core/generic.py:11158,</span> in <span class="ni">NDFrame._stat_function</span><span class="nt">(self, name, func, axis, skipna, numeric_only, **kwargs)</span>
+<span class="nn">File ~/miniconda3/envs/sarp/lib/python3.10/site-packages/pandas/core/generic.py:11158,</span> in <span class="ni">NDFrame._stat_function</span><span class="nt">(self, name, func, axis, skipna, numeric_only, **kwargs)</span>
 <span class="g g-Whitespace">  </span><span class="mi">11154</span>     <span class="n">nv</span><span class="o">.</span><span class="n">validate_stat_func</span><span class="p">((),</span> <span class="n">kwargs</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
 <span class="g g-Whitespace">  </span><span class="mi">11156</span> <span class="n">validate_bool_kwarg</span><span class="p">(</span><span class="n">skipna</span><span class="p">,</span> <span class="s2">&quot;skipna&quot;</span><span class="p">,</span> <span class="n">none_allowed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="ne">&gt; </span><span class="mi">11158</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reduce</span><span class="p">(</span>
 <span class="g g-Whitespace">  </span><span class="mi">11159</span>     <span class="n">func</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="n">skipna</span><span class="p">,</span> <span class="n">numeric_only</span><span class="o">=</span><span class="n">numeric_only</span>
 <span class="g g-Whitespace">  </span><span class="mi">11160</span> <span class="p">)</span>
 
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/core/frame.py:10519,</span> in <span class="ni">DataFrame._reduce</span><span class="nt">(self, op, name, axis, skipna, numeric_only, filter_type, **kwds)</span>
+<span class="nn">File ~/miniconda3/envs/sarp/lib/python3.10/site-packages/pandas/core/frame.py:10519,</span> in <span class="ni">DataFrame._reduce</span><span class="nt">(self, op, name, axis, skipna, numeric_only, filter_type, **kwds)</span>
 <span class="g g-Whitespace">  </span><span class="mi">10515</span>     <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">T</span>
 <span class="g g-Whitespace">  </span><span class="mi">10517</span> <span class="c1"># After possibly _get_data and transposing, we are now in the</span>
 <span class="g g-Whitespace">  </span><span class="mi">10518</span> <span class="c1">#  simple case where we can use BlockManager.reduce</span>
@@ -1631,14 +1759,14 @@ Some common aggregations:</p>
 <span class="g g-Whitespace">  </span><span class="mi">10520</span> <span class="n">out</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">_constructor</span><span class="p">(</span><span class="n">res</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="g g-Whitespace">  </span><span class="mi">10521</span> <span class="k">if</span> <span class="n">out_dtype</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
 
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/core/internals/managers.py:1534,</span> in <span class="ni">BlockManager.reduce</span><span class="nt">(self, func)</span>
+<span class="nn">File ~/miniconda3/envs/sarp/lib/python3.10/site-packages/pandas/core/internals/managers.py:1534,</span> in <span class="ni">BlockManager.reduce</span><span class="nt">(self, func)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1532</span> <span class="n">res_blocks</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Block</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="g g-Whitespace">   </span><span class="mi">1533</span> <span class="k">for</span> <span class="n">blk</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">blocks</span><span class="p">:</span>
 <span class="ne">-&gt; </span><span class="mi">1534</span>     <span class="n">nbs</span> <span class="o">=</span> <span class="n">blk</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1535</span>     <span class="n">res_blocks</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">nbs</span><span class="p">)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1537</span> <span class="n">index</span> <span class="o">=</span> <span class="n">Index</span><span class="p">([</span><span class="kc">None</span><span class="p">])</span>  <span class="c1"># placeholder</span>
 
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/core/internals/blocks.py:339,</span> in <span class="ni">Block.reduce</span><span class="nt">(self, func)</span>
+<span class="nn">File ~/miniconda3/envs/sarp/lib/python3.10/site-packages/pandas/core/internals/blocks.py:339,</span> in <span class="ni">Block.reduce</span><span class="nt">(self, func)</span>
 <span class="g g-Whitespace">    </span><span class="mi">333</span> <span class="nd">@final</span>
 <span class="g g-Whitespace">    </span><span class="mi">334</span> <span class="k">def</span> <span class="nf">reduce</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">Block</span><span class="p">]:</span>
 <span class="g g-Whitespace">    </span><span class="mi">335</span>     <span class="c1"># We will apply the function and reshape the result into a single-row</span>
@@ -1649,32 +1777,32 @@ Some common aggregations:</p>
 <span class="g g-Whitespace">    </span><span class="mi">342</span>         <span class="c1"># TODO(EA2D): special case not needed with 2D EAs</span>
 <span class="g g-Whitespace">    </span><span class="mi">343</span>         <span class="n">res_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">result</span><span class="p">]])</span>
 
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/core/frame.py:10482,</span> in <span class="ni">DataFrame._reduce.&lt;locals&gt;.blk_func</span><span class="nt">(values, axis)</span>
+<span class="nn">File ~/miniconda3/envs/sarp/lib/python3.10/site-packages/pandas/core/frame.py:10482,</span> in <span class="ni">DataFrame._reduce.&lt;locals&gt;.blk_func</span><span class="nt">(values, axis)</span>
 <span class="g g-Whitespace">  </span><span class="mi">10480</span>     <span class="k">return</span> <span class="n">values</span><span class="o">.</span><span class="n">_reduce</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="n">skipna</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
 <span class="g g-Whitespace">  </span><span class="mi">10481</span> <span class="k">else</span><span class="p">:</span>
 <span class="ne">&gt; </span><span class="mi">10482</span>     <span class="k">return</span> <span class="n">op</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="n">skipna</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
 
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/core/nanops.py:158,</span> in <span class="ni">bottleneck_switch.__call__.&lt;locals&gt;.f</span><span class="nt">(values, axis, skipna, **kwds)</span>
+<span class="nn">File ~/miniconda3/envs/sarp/lib/python3.10/site-packages/pandas/core/nanops.py:158,</span> in <span class="ni">bottleneck_switch.__call__.&lt;locals&gt;.f</span><span class="nt">(values, axis, skipna, **kwds)</span>
 <span class="g g-Whitespace">    </span><span class="mi">156</span>         <span class="n">result</span> <span class="o">=</span> <span class="n">alt</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="n">skipna</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">157</span> <span class="k">else</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">158</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">alt</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="n">skipna</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">160</span> <span class="k">return</span> <span class="n">result</span>
 
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/core/nanops.py:421,</span> in <span class="ni">_datetimelike_compat.&lt;locals&gt;.new_func</span><span class="nt">(values, axis, skipna, mask, **kwargs)</span>
+<span class="nn">File ~/miniconda3/envs/sarp/lib/python3.10/site-packages/pandas/core/nanops.py:421,</span> in <span class="ni">_datetimelike_compat.&lt;locals&gt;.new_func</span><span class="nt">(values, axis, skipna, mask, **kwargs)</span>
 <span class="g g-Whitespace">    </span><span class="mi">418</span> <span class="k">if</span> <span class="n">datetimelike</span> <span class="ow">and</span> <span class="n">mask</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">419</span>     <span class="n">mask</span> <span class="o">=</span> <span class="n">isna</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
 <span class="ne">--&gt; </span><span class="mi">421</span> <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="n">skipna</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">423</span> <span class="k">if</span> <span class="n">datetimelike</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">424</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">_wrap_results</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">orig_values</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="n">iNaT</span><span class="p">)</span>
 
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/core/nanops.py:1094,</span> in <span class="ni">_nanminmax.&lt;locals&gt;.reduction</span><span class="nt">(values, axis, skipna, mask)</span>
+<span class="nn">File ~/miniconda3/envs/sarp/lib/python3.10/site-packages/pandas/core/nanops.py:1094,</span> in <span class="ni">_nanminmax.&lt;locals&gt;.reduction</span><span class="nt">(values, axis, skipna, mask)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1092</span>         <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
 <span class="g g-Whitespace">   </span><span class="mi">1093</span> <span class="k">else</span><span class="p">:</span>
 <span class="ne">-&gt; </span><span class="mi">1094</span>     <span class="n">result</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">meth</span><span class="p">)(</span><span class="n">axis</span><span class="p">)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1096</span> <span class="n">result</span> <span class="o">=</span> <span class="n">_maybe_null_out</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">mask</span><span class="p">,</span> <span class="n">values</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1097</span> <span class="k">return</span> <span class="n">result</span>
 
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/numpy/core/_methods.py:41,</span> in <span class="ni">_amax</span><span class="nt">(a, axis, out, keepdims, initial, where)</span>
+<span class="nn">File ~/miniconda3/envs/sarp/lib/python3.10/site-packages/numpy/core/_methods.py:41,</span> in <span class="ni">_amax</span><span class="nt">(a, axis, out, keepdims, initial, where)</span>
 <span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="k">def</span> <span class="nf">_amax</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
 <span class="g g-Whitespace">     </span><span class="mi">40</span>           <span class="n">initial</span><span class="o">=</span><span class="n">_NoValue</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="ne">---&gt; </span><span class="mi">41</span>     <span class="k">return</span> <span class="n">umr_maximum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">keepdims</span><span class="p">,</span> <span class="n">initial</span><span class="p">,</span> <span class="n">where</span><span class="p">)</span>
@@ -1684,7 +1812,7 @@ Some common aggregations:</p>
 </div>
 </div>
 </div>
-<p>One thing to notice is that the dataframe only returns the aggregation for the columns that do not have any NaN values.  If you would like to get all the columns you need to first drop the nan values with <code class="docutils literal notranslate"><span class="pre">.dropna()</span></code>.</p>
+<p>That is a long error, but what it is telling us is that we have strings in our columns that are otherwise full of numbers, or floats. To find the max values we will need to first drop the nan values with <code class="docutils literal notranslate"><span class="pre">.dropna()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">water_vars</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>

@@ -476,16 +476,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;xarray&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <ol class="arabic simple">
 <li><p>The relative filepath for the SST dataset we saw in the lesson is <code class="docutils literal notranslate"><span class="pre">../data/oisst-avhrr-v02r01.20220304.nc</span></code>.  Use the <code class="docutils literal notranslate"><span class="pre">open_dataset()</span></code> function to access the file.</p></li>
@@ -532,22 +522,6 @@ document.write(`
     <span class="n">dims</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;longitude&#39;</span><span class="p">],</span>
     <span class="n">coords</span><span class="o">=</span><span class="p">[</span><span class="n">time</span><span class="p">,</span> <span class="n">latitude</span><span class="p">,</span> <span class="n">longitude</span><span class="p">]</span>
     <span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">latitude</span>  <span class="o">=</span> <span class="p">[</span><span class="mf">34.3</span><span class="p">,</span> <span class="mf">34.4</span><span class="p">,</span> <span class="mf">34.5</span><span class="p">,</span> <span class="mf">34.6</span><span class="p">,</span> <span class="mf">34.7</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">longitude</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">118.3</span><span class="p">,</span> <span class="o">-</span><span class="mf">118.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">118.1</span><span class="p">,</span> <span class="o">-</span><span class="mf">118.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">117.9</span><span class="p">,</span> <span class="o">-</span><span class="mf">117.8</span><span class="p">]</span>
-<span class="ne">----&gt; </span><span class="mi">7</span> <span class="n">ndvi</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="n">ndvi_values</span><span class="p">,</span> 
-<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">dims</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;longitude&#39;</span><span class="p">],</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="n">coords</span><span class="o">=</span><span class="p">[</span><span class="n">time</span><span class="p">,</span> <span class="n">latitude</span><span class="p">,</span> <span class="n">longitude</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;xr&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -615,7 +589,7 @@ document.write(`
 <span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">line</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
 
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/IPython/core/interactiveshell.py:284,</span> in <span class="ni">_modified_open</span><span class="nt">(file, *args, **kwargs)</span>
+<span class="nn">File ~/miniconda3/envs/sarp/lib/python3.10/site-packages/IPython/core/interactiveshell.py:284,</span> in <span class="ni">_modified_open</span><span class="nt">(file, *args, **kwargs)</span>
 <span class="g g-Whitespace">    </span><span class="mi">277</span> <span class="k">if</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}:</span>
 <span class="g g-Whitespace">    </span><span class="mi">278</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
 <span class="g g-Whitespace">    </span><span class="mi">279</span>         <span class="sa">f</span><span class="s2">&quot;IPython won&#39;t let you open fd=</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> by default &quot;</span>
@@ -643,25 +617,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">absolute_filepath</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Don&#39;t this code here. Just change the `absolute_filepath` variable above</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">relative_filepath</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">line</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/IPython/core/interactiveshell.py:284,</span> in <span class="ni">_modified_open</span><span class="nt">(file, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">277</span> <span class="k">if</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}:</span>
-<span class="g g-Whitespace">    </span><span class="mi">278</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">279</span>         <span class="sa">f</span><span class="s2">&quot;IPython won&#39;t let you open fd=</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> by default &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">280</span>         <span class="s2">&quot;as it is likely to crash IPython. If you know what you are doing, &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">281</span>         <span class="s2">&quot;you can use builtins&#39; open.&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">282</span>     <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">284</span> <span class="k">return</span> <span class="n">io_open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Congrats! You came up with the correct path to this file!
 </pre></div>
 </div>
 </div>
@@ -699,16 +655,6 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sst</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;../data/oisst-avhrr-v02r01.20220304.nc&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">sst</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;../data/oisst-avhrr-v02r01.20220304.nc&#39;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;xr&#39; is not defined
 </pre></div>
 </div>
 </div>

@@ -471,34 +471,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;xarray&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sst_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;../lessons/gridded_data/data/oisst-avhrr-v02r01.20220304.nc&#39;</span><span class="p">)</span>
 <span class="n">sst</span> <span class="o">=</span> <span class="n">sst_ds</span><span class="o">.</span><span class="n">sst</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">zlev</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">sst_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;../lessons/gridded_data/data/oisst-avhrr-v02r01.20220304.nc&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">sst</span> <span class="o">=</span> <span class="n">sst_ds</span><span class="o">.</span><span class="n">sst</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">zlev</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;xr&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -508,18 +485,6 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Preprocessing - convert longitude to -180 -&gt; 180 degrees</span>
 <span class="n">sst</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">sst</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">180</span><span class="p">)</span> <span class="o">%</span> <span class="mi">360</span> <span class="o">-</span> <span class="mi">180</span>
 <span class="n">sst</span> <span class="o">=</span> <span class="n">sst</span><span class="o">.</span><span class="n">sortby</span><span class="p">(</span><span class="n">sst</span><span class="o">.</span><span class="n">lon</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Preprocessing - convert longitude to -180 -&gt; 180 degrees</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">sst</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">sst</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">180</span><span class="p">)</span> <span class="o">%</span> <span class="mi">360</span> <span class="o">-</span> <span class="mi">180</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">sst</span> <span class="o">=</span> <span class="n">sst</span><span class="o">.</span><span class="n">sortby</span><span class="p">(</span><span class="n">sst</span><span class="o">.</span><span class="n">lon</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;sst&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -534,15 +499,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Selecting one time step to plot</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">sst</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;sst&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x16772b5e0&gt;
 </pre></div>
 </div>
+<img alt="../_images/9f3dcb3c7ad39acd8246d5e0f14ca06a24289a451f698623b054dde9437b0d7f.png" src="../_images/9f3dcb3c7ad39acd8246d5e0f14ca06a24289a451f698623b054dde9437b0d7f.png" />
 </div>
 </div>
 <section id="set-the-nodata-value-to-grey">
@@ -559,15 +519,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Extract the colormap that I want &quot;bwr&quot;</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">bwr_badgrey</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s2">&quot;bwr&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">bwr_badgrey</span><span class="o">.</span><span class="n">set_bad</span><span class="p">(</span><span class="s1">&#39;grey&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># bwr_badgrey.set_bad(&#39;#c0c0c0&#39;)</span>
-
-<span class="ne">NameError</span>: name &#39;plt&#39; is not defined
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/p8/985fq4dx1356qtcv5dd4zgyr0000gn/T/ipykernel_20757/1320405681.py:2: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed two minor releases later. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap(obj)`` instead.
+  bwr_badgrey = plt.cm.get_cmap(&quot;bwr&quot;).copy()
 </pre></div>
 </div>
 </div>
@@ -579,14 +532,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">sst</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">bwr_badgrey</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;sst&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x1681fada0&gt;
 </pre></div>
 </div>
+<img alt="../_images/c740768014c2115b0438f2154c0a185f4ef8c235d68c5e635139d877004c0c33.png" src="../_images/c740768014c2115b0438f2154c0a185f4ef8c235d68c5e635139d877004c0c33.png" />
 </div>
 </div>
 </section>
@@ -601,32 +550,10 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Set the projection. PlateCarree is &quot;regular&quot; lat/lon</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">map_proj</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">data_proj</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;ccrs&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sst_AK</span> <span class="o">=</span> <span class="n">sst</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">120</span><span class="p">),</span> <span class="n">lat</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">75</span><span class="p">))</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">sst_AK</span> <span class="o">=</span> <span class="n">sst</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">120</span><span class="p">),</span> <span class="n">lat</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">75</span><span class="p">))</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;sst&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -638,14 +565,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">sst_AK</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;sst_AK&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x16830c820&gt;
 </pre></div>
 </div>
+<img alt="../_images/15cb8fd5519ebce23bf068a91d22d7ac3f62b605fc76e7ec4cc13967aa31bfd3.png" src="../_images/15cb8fd5519ebce23bf068a91d22d7ac3f62b605fc76e7ec4cc13967aa31bfd3.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -675,16 +598,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">map_proj</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Add the data to the plot</span>
-
-<span class="ne">NameError</span>: name &#39;plt&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x167fd9f60&gt;
 </pre></div>
 </div>
+<img alt="../_images/d4cd6a7681c85e7fa8ec7b29f9e48710e4bd9557d1ace0851c59c9da571dd246.png" src="../_images/d4cd6a7681c85e7fa8ec7b29f9e48710e4bd9557d1ace0851c59c9da571dd246.png" />
 </div>
 </div>
 <section id="transforming-the-map-to-another-projection">
@@ -694,17 +611,6 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a new map projection</span>
 <span class="n">map_proj</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">AlbersEqualArea</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=-</span><span class="mi">150</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Define a new map projection</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">map_proj</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">AlbersEqualArea</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=-</span><span class="mi">150</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;ccrs&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -737,16 +643,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">map_proj</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Add the data to the plot</span>
-
-<span class="ne">NameError</span>: name &#39;plt&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x16838beb0&gt;
 </pre></div>
 </div>
+<img alt="../_images/94c9898a404f10bedc645b475f02d15bcaa96858230a10cc6e66b3e471da9213.png" src="../_images/94c9898a404f10bedc645b475f02d15bcaa96858230a10cc6e66b3e471da9213.png" />
 </div>
 </div>
 <p>Much less distorted!</p>

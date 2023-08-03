@@ -536,7 +536,7 @@ document.write(`
 <blockquote>
 <div><p>If Python knows it’s a date it can help you find errors.</p>
 </div></blockquote>
-<div class="cell docutils container">
+<div class="cell tag_raises-exception docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">date</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
 </pre></div>
@@ -555,7 +555,8 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">date</span><span class="p">(</span><span class="mi">2012</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="mi">29</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Feb 29 exists during a leap year</span>
+<span class="n">date</span><span class="p">(</span><span class="mi">2012</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">29</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -565,17 +566,19 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_raises-exception docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">date</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">29</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># But not during other years!</span>
+<span class="n">date</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">29</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">date</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">29</span><span class="p">)</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># But not during other years!</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">date</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">29</span><span class="p">)</span>
 
 <span class="ne">ValueError</span>: day is out of range for month
 </pre></div>
@@ -827,7 +830,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.date(2023, 7, 27)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.date(2023, 8, 6)
 </pre></div>
 </div>
 </div>
@@ -840,7 +843,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.date(2023, 7, 21)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.date(2023, 7, 31)
 </pre></div>
 </div>
 </div>
@@ -854,7 +857,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.datetime(2023, 7, 27, 15, 39, 30, 642259)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.datetime(2023, 8, 6, 17, 31, 38, 601208)
 </pre></div>
 </div>
 </div>
@@ -867,7 +870,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.timedelta(days=606)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.timedelta(days=616)
 </pre></div>
 </div>
 </div>
@@ -913,8 +916,8 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>independence day was on the day of week : 0
 flight month: 12
 I&#39;m a datetime object: 2019-01-29 00:00:00
-one week from today will be: 2023-07-31 14:39:30.663663
-this year started  569 days, 14:39:30.663748 ago
+one week from today will be: 2023-08-10 16:31:38.619370
+this year started  579 days, 16:31:38.619419 ago
 </pre></div>
 </div>
 </div>

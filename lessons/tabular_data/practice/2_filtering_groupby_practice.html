@@ -559,7 +559,7 @@ document.write(`
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">water_vars</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
 
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/core/accessor.py:224,</span> in <span class="ni">CachedAccessor.__get__</span><span class="nt">(self, obj, cls)</span>
+<span class="nn">File ~/miniconda3/envs/sarp/lib/python3.10/site-packages/pandas/core/accessor.py:224,</span> in <span class="ni">CachedAccessor.__get__</span><span class="nt">(self, obj, cls)</span>
 <span class="g g-Whitespace">    </span><span class="mi">221</span> <span class="k">if</span> <span class="n">obj</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">222</span>     <span class="c1"># we&#39;re accessing the attribute of the class, i.e., Dataset.geo</span>
 <span class="g g-Whitespace">    </span><span class="mi">223</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_accessor</span>
@@ -570,14 +570,14 @@ document.write(`
 <span class="g g-Whitespace">    </span><span class="mi">228</span> <span class="c1"># NDFrame</span>
 <span class="g g-Whitespace">    </span><span class="mi">229</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">,</span> <span class="n">accessor_obj</span><span class="p">)</span>
 
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/core/strings/accessor.py:181,</span> in <span class="ni">StringMethods.__init__</span><span class="nt">(self, data)</span>
+<span class="nn">File ~/miniconda3/envs/sarp/lib/python3.10/site-packages/pandas/core/strings/accessor.py:181,</span> in <span class="ni">StringMethods.__init__</span><span class="nt">(self, data)</span>
 <span class="g g-Whitespace">    </span><span class="mi">178</span> <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">179</span>     <span class="kn">from</span> <span class="nn">pandas.core.arrays.string_</span> <span class="kn">import</span> <span class="n">StringDtype</span>
 <span class="ne">--&gt; </span><span class="mi">181</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_inferred_dtype</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_validate</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">182</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_is_categorical</span> <span class="o">=</span> <span class="n">is_categorical_dtype</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">183</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_is_string</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">StringDtype</span><span class="p">)</span>
 
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/core/strings/accessor.py:235,</span> in <span class="ni">StringMethods._validate</span><span class="nt">(data)</span>
+<span class="nn">File ~/miniconda3/envs/sarp/lib/python3.10/site-packages/pandas/core/strings/accessor.py:235,</span> in <span class="ni">StringMethods._validate</span><span class="nt">(data)</span>
 <span class="g g-Whitespace">    </span><span class="mi">232</span> <span class="n">inferred_dtype</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">infer_dtype</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">234</span> <span class="k">if</span> <span class="n">inferred_dtype</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">allowed_types</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">235</span>     <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="s2">&quot;Can only use .str accessor with string values!&quot;</span><span class="p">)</span>
@@ -635,75 +635,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/compat/_optional.py:142,</span> in <span class="ni">import_optional_dependency</span><span class="nt">(name, extra, errors, min_version)</span>
-<span class="g g-Whitespace">    </span><span class="mi">141</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">142</span>     <span class="n">module</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">143</span> <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/importlib/__init__.py:126,</span> in <span class="ni">import_module</span><span class="nt">(name, package)</span>
-<span class="g g-Whitespace">    </span><span class="mi">125</span>         <span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="ne">--&gt; </span><span class="mi">126</span> <span class="k">return</span> <span class="n">_bootstrap</span><span class="o">.</span><span class="n">_gcd_import</span><span class="p">(</span><span class="n">name</span><span class="p">[</span><span class="n">level</span><span class="p">:],</span> <span class="n">package</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1204,</span> in <span class="ni">_gcd_import</span><span class="nt">(name, package, level)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1176,</span> in <span class="ni">_find_and_load</span><span class="nt">(name, import_)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1140,</span> in <span class="ni">_find_and_load_unlocked</span><span class="nt">(name, import_)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;openpyxl&#39;
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">was_2020_filepath</span> <span class="o">=</span> <span class="s2">&quot;../data/SARP 2020 final.xlsx&quot;</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">was_2020</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">was_2020_filepath</span><span class="p">,</span> <span class="s2">&quot;INPUT&quot;</span><span class="p">,</span> <span class="n">skipfooter</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/io/excel/_base.py:478,</span> in <span class="ni">read_excel</span><span class="nt">(io, sheet_name, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skiprows, nrows, na_values, keep_default_na, na_filter, verbose, parse_dates, date_parser, date_format, thousands, decimal, comment, skipfooter, storage_options, dtype_backend)</span>
-<span class="g g-Whitespace">    </span><span class="mi">476</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">io</span><span class="p">,</span> <span class="n">ExcelFile</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">477</span>     <span class="n">should_close</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="ne">--&gt; </span><span class="mi">478</span>     <span class="n">io</span> <span class="o">=</span> <span class="n">ExcelFile</span><span class="p">(</span><span class="n">io</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="n">engine</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">479</span> <span class="k">elif</span> <span class="n">engine</span> <span class="ow">and</span> <span class="n">engine</span> <span class="o">!=</span> <span class="n">io</span><span class="o">.</span><span class="n">engine</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">480</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">481</span>         <span class="s2">&quot;Engine should not be specified when passing &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">482</span>         <span class="s2">&quot;an ExcelFile - ExcelFile already has the engine set&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">483</span>     <span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/io/excel/_base.py:1513,</span> in <span class="ni">ExcelFile.__init__</span><span class="nt">(self, path_or_buffer, engine, storage_options)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1510</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span> <span class="o">=</span> <span class="n">engine</span>
-<span class="g g-Whitespace">   </span><span class="mi">1511</span> <span class="bp">self</span><span class="o">.</span><span class="n">storage_options</span> <span class="o">=</span> <span class="n">storage_options</span>
-<span class="ne">-&gt; </span><span class="mi">1513</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engines</span><span class="p">[</span><span class="n">engine</span><span class="p">](</span><span class="bp">self</span><span class="o">.</span><span class="n">_io</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/io/excel/_openpyxl.py:548,</span> in <span class="ni">OpenpyxlReader.__init__</span><span class="nt">(self, filepath_or_buffer, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">533</span> <span class="nd">@doc</span><span class="p">(</span><span class="n">storage_options</span><span class="o">=</span><span class="n">_shared_docs</span><span class="p">[</span><span class="s2">&quot;storage_options&quot;</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">534</span> <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">535</span>     <span class="bp">self</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">536</span>     <span class="n">filepath_or_buffer</span><span class="p">:</span> <span class="n">FilePath</span> <span class="o">|</span> <span class="n">ReadBuffer</span><span class="p">[</span><span class="nb">bytes</span><span class="p">],</span>
-<span class="g g-Whitespace">    </span><span class="mi">537</span>     <span class="n">storage_options</span><span class="p">:</span> <span class="n">StorageOptions</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">538</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">539</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">540</span><span class="sd">     Reader using openpyxl engine.</span>
-<span class="g g-Whitespace">    </span><span class="mi">541</span><span class="sd"> </span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">546</span><span class="sd">     {storage_options}</span>
-<span class="g g-Whitespace">    </span><span class="mi">547</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">548</span>     <span class="n">import_optional_dependency</span><span class="p">(</span><span class="s2">&quot;openpyxl&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">549</span>     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/sarp_docs/lib/python3.11/site-packages/pandas/compat/_optional.py:145,</span> in <span class="ni">import_optional_dependency</span><span class="nt">(name, extra, errors, min_version)</span>
-<span class="g g-Whitespace">    </span><span class="mi">143</span> <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">144</span>     <span class="k">if</span> <span class="n">errors</span> <span class="o">==</span> <span class="s2">&quot;raise&quot;</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">145</span>         <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">146</span>     <span class="k">return</span> <span class="kc">None</span>
-<span class="g g-Whitespace">    </span><span class="mi">148</span> <span class="c1"># Handle submodules: if we have submodule, grab parent module from sys.modules</span>
-
-<span class="ne">ImportError</span>: Missing optional dependency &#39;openpyxl&#39;.  Use pip or conda to install openpyxl.
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -712,15 +643,316 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">was_2020</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;was_2020&#39; is not defined
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Can #</th>
+      <th>Snake can #</th>
+      <th>Location</th>
+      <th>State</th>
+      <th>Box</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Altitude (m)</th>
+      <th>Temp. Celsius</th>
+      <th>Wind Spd (mph)</th>
+      <th>...</th>
+      <th>3-Ethyltoluene (MS)</th>
+      <th>4-Ethyltoluene (MS)</th>
+      <th>2-Ethyltoluene (MS)</th>
+      <th>1,3,5-Trimethylbenzene (MS)</th>
+      <th>1,2,4-Trimethylbenzene (MS)</th>
+      <th>alpha-Pinene (B/MS)</th>
+      <th>beta-Pinene (B/MS)</th>
+      <th>Unnamed: 113</th>
+      <th>Box.1</th>
+      <th>CH4 (ppmv height).1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5044</td>
+      <td>3701</td>
+      <td>Mars Hill/Lowell Observatory, Flagstaff, Arizona</td>
+      <td>Arizona</td>
+      <td>37</td>
+      <td>2020-04-24</td>
+      <td>11:23:00</td>
+      <td>2200</td>
+      <td>18</td>
+      <td>5</td>
+      <td>...</td>
+      <td>12</td>
+      <td>17</td>
+      <td>17</td>
+      <td>15</td>
+      <td>23</td>
+      <td>12</td>
+      <td>7</td>
+      <td>NaN</td>
+      <td>37</td>
+      <td>1.914</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>7338</td>
+      <td>3716</td>
+      <td>Buffalo Park, Flagstaff, Arizona</td>
+      <td>Arizona</td>
+      <td>37</td>
+      <td>2020-04-24</td>
+      <td>11:44:00</td>
+      <td>2100</td>
+      <td>18</td>
+      <td>5</td>
+      <td>...</td>
+      <td>12</td>
+      <td>16</td>
+      <td>15</td>
+      <td>14</td>
+      <td>22</td>
+      <td>31</td>
+      <td>9</td>
+      <td>NaN</td>
+      <td>37</td>
+      <td>1.916</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6027</td>
+      <td>3717</td>
+      <td>Downtown Sedona, Arizona</td>
+      <td>Arizona</td>
+      <td>37</td>
+      <td>2020-04-24</td>
+      <td>12:47:00</td>
+      <td>1350</td>
+      <td>27</td>
+      <td>5</td>
+      <td>...</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>6</td>
+      <td>11</td>
+      <td>-888</td>
+      <td>NaN</td>
+      <td>37</td>
+      <td>1.914</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5012</td>
+      <td>3702</td>
+      <td>Buffalo Park, Flagstaff, Arizona</td>
+      <td>Arizona</td>
+      <td>37</td>
+      <td>2020-05-01</td>
+      <td>11:16:00</td>
+      <td>2100</td>
+      <td>19</td>
+      <td>16</td>
+      <td>...</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>22</td>
+      <td>-888</td>
+      <td>NaN</td>
+      <td>37</td>
+      <td>1.895</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>7330</td>
+      <td>3715</td>
+      <td>Mars Hill/Lowell Observatory, Flagstaff, Arizona</td>
+      <td>Arizona</td>
+      <td>37</td>
+      <td>2020-05-01</td>
+      <td>11:49:00</td>
+      <td>2200</td>
+      <td>19</td>
+      <td>16</td>
+      <td>...</td>
+      <td>6</td>
+      <td>3</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>8</td>
+      <td>23</td>
+      <td>-888</td>
+      <td>NaN</td>
+      <td>37</td>
+      <td>1.900</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>924</th>
+      <td>7267</td>
+      <td>2610</td>
+      <td>Oakwood Manor, Oshkosh, Wisconsin</td>
+      <td>Wisconsin</td>
+      <td>26</td>
+      <td>2020-06-24</td>
+      <td>10:28:00</td>
+      <td>234.696</td>
+      <td>20</td>
+      <td>7</td>
+      <td>...</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>3</td>
+      <td>68</td>
+      <td>45</td>
+      <td>NaN</td>
+      <td>26</td>
+      <td>2.131</td>
+    </tr>
+    <tr>
+      <th>925</th>
+      <td>8257</td>
+      <td>2623</td>
+      <td>South Park, Oshkosh, Wisconsin</td>
+      <td>Wisconsin</td>
+      <td>26</td>
+      <td>2020-06-24</td>
+      <td>10:42:00</td>
+      <td>231.64</td>
+      <td>21.67</td>
+      <td>6</td>
+      <td>...</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>4</td>
+      <td>33</td>
+      <td>18</td>
+      <td>NaN</td>
+      <td>26</td>
+      <td>2.074</td>
+    </tr>
+    <tr>
+      <th>926</th>
+      <td>5194</td>
+      <td>2608</td>
+      <td>Carl Traeger middle school, Oshkosh, Wisconsin</td>
+      <td>Wisconsin</td>
+      <td>26</td>
+      <td>2020-07-01</td>
+      <td>13:09:00</td>
+      <td>243.84</td>
+      <td>28.89</td>
+      <td>9</td>
+      <td>...</td>
+      <td>4</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>5</td>
+      <td>7</td>
+      <td>-888</td>
+      <td>NaN</td>
+      <td>26</td>
+      <td>2.017</td>
+    </tr>
+    <tr>
+      <th>927</th>
+      <td>7101</td>
+      <td>2609</td>
+      <td>Oakwood Manor, Oshkosh, Wisconsin</td>
+      <td>Wisconsin</td>
+      <td>26</td>
+      <td>2020-07-01</td>
+      <td>13:26:00</td>
+      <td>234.696</td>
+      <td>30.5</td>
+      <td>8</td>
+      <td>...</td>
+      <td>3</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>5</td>
+      <td>23</td>
+      <td>5</td>
+      <td>NaN</td>
+      <td>26</td>
+      <td>2.027</td>
+    </tr>
+    <tr>
+      <th>928</th>
+      <td>8190</td>
+      <td>2624</td>
+      <td>South Park, Oshkosh, Wisconsin</td>
+      <td>Wisconsin</td>
+      <td>26</td>
+      <td>2020-07-01</td>
+      <td>13:50:00</td>
+      <td>231.64</td>
+      <td>30.5</td>
+      <td>9</td>
+      <td>...</td>
+      <td>3</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>-888</td>
+      <td>5</td>
+      <td>11</td>
+      <td>3</td>
+      <td>NaN</td>
+      <td>26</td>
+      <td>1.983</td>
+    </tr>
+  </tbody>
+</table>
+<p>929 rows × 116 columns</p>
+</div></div></div>
 </div>
 <section id="question-1">
 <h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">#</a></h3>
@@ -808,12 +1040,12 @@ document.write(`
     <tr>
       <th>False</th>
       <td>48.5</td>
-      <td>9.466216</td>
+      <td>9.428788</td>
     </tr>
     <tr>
       <th>True</th>
       <td>48.5</td>
-      <td>9.340278</td>
+      <td>9.383750</td>
     </tr>
   </tbody>
 </table>
