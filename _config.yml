@@ -7,9 +7,9 @@ logo: sarp_logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
-execute:
-  # execute_notebooks: force
-  allow_errors: true
+# execute:
+#   execute_notebooks: force
+  # allow_errors: true
 
 # Disable building files that aren't in the table of contents
 only_build_toc_files: true
