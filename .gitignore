@@ -1,6 +1,0 @@
-*.ipynb_checkpoints*
-*/data/*
-*.DS_Store*
-.vscode/
-_build/
-*/output_data/*

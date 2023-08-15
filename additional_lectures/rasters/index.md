@@ -1,4 +1,0 @@
-# Raster Data Lessons
-
-```{tableofcontents}
-```
