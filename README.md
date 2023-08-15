@@ -1,3 +1,8 @@
+# SARP Lessons Update
+
+SARP Lessons is in the process of migrating to the NASA-SARP github org. We're excited to be expanding. Check out [https://nasa-sarp.github.io/sarp_lessons](https://nasa-sarp.github.io/sarp_lessons) for the most up-to-date content.
+
+---------------------------------
 # SARP Lessons
 
 This repository holds the less content that is used for instruction during the [NASA Student Airborne Research Program (SARP)](https://www.nasa.gov/centers/ames/earthscience/programs/airbornescience/studentairborneresearchprogram)  summer internship.
